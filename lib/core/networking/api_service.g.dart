@@ -50,11 +50,12 @@ class _ApiService implements ApiService {
 
   @override
   Future<RegisterBodyResponse> register(
-      RegisterBodyResponse registerBodyResponse) async {
+      RegisterBodyRequest registerBodyRequest) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = registerBodyResponse;
+    final _data = <String, dynamic>{};
+    _data.addAll(registerBodyRequest.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<RegisterBodyResponse>(Options(
       method: 'POST',

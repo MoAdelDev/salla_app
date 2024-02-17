@@ -1,15 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-part 'register_body_model.g.dart';
+part 'register_body_request.g.dart';
 
 @JsonSerializable()
-class RegisterBodyModel {
+class RegisterBodyRequest {
   final String name;
   final String email;
   final String phone;
   final String image;
   final String password;
 
-  RegisterBodyModel(
+  RegisterBodyRequest(
     this.name,
     this.email,
     this.phone,
@@ -17,5 +17,5 @@ class RegisterBodyModel {
     this.password,
   );
 
-  Map<String, dynamic> toJson() => _$RegisterBodyModelToJson(this);
+  Map<String, dynamic> toJson() => _$RegisterBodyRequestToJson(this);
 }
