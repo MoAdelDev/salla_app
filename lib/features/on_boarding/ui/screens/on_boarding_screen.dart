@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_text_button.dart';
@@ -37,7 +38,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       appBar: AppBar(
         actions: [
           CustomTextButton(
-            onPressed: () {},
+            onPressed: () => context.push(Routes.login),
             text: 'SKIP',
           ),
         ],
@@ -118,6 +119,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               currentIndex++;
                               carouselController.animateToPage(currentIndex);
                             });
+                          } else {
+                            context.push(Routes.login);
                           }
                         },
                         icon: const Icon(
