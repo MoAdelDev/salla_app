@@ -5,6 +5,7 @@ import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -35,17 +36,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       backgroundColor: context.colorScheme.background,
       appBar: AppBar(
         actions: [
-          TextButton(
+          CustomTextButton(
             onPressed: () {},
-            style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            )),
-            child: Text(
-              'SKIP',
-              style: AppTexts.text16PrimaryLatoBold,
-            ),
-          )
+            text: 'SKIP',
+          ),
         ],
       ),
       body: SafeArea(
