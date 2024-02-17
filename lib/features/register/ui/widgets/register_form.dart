@@ -4,14 +4,14 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class RegisterForm extends StatefulWidget {
+  const RegisterForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<RegisterForm> createState() => _RegisterFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _RegisterFormState extends State<RegisterForm> {
   bool isPasswordHidden = true;
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,25 @@ class _LoginFormState extends State<LoginForm> {
       children: [
         CustomTextField(
           controller: TextEditingController(),
+          hintText: S.of(context).nameHintTitle,
+          errorMsg: S.of(context).nameTitle,
+          keyboardType: TextInputType.name,
+          textInputAction: TextInputAction.next,
+        ),
+        verticalSpace(10.0),
+        CustomTextField(
+          controller: TextEditingController(),
           hintText: S.of(context).emailHintTitle,
           errorMsg: S.of(context).emailTitle,
           keyboardType: TextInputType.emailAddress,
+          textInputAction: TextInputAction.next,
+        ),
+        verticalSpace(10.0),
+        CustomTextField(
+          controller: TextEditingController(),
+          hintText: S.of(context).phoneHintTitle,
+          errorMsg: S.of(context).phoneTitle,
+          keyboardType: TextInputType.phone,
           textInputAction: TextInputAction.next,
         ),
         verticalSpace(10.0),

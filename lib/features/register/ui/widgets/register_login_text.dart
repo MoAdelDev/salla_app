@@ -6,8 +6,8 @@ import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class LoginRegisterText extends StatelessWidget {
-  const LoginRegisterText({super.key});
+class RegisterLoginText extends StatelessWidget {
+  const RegisterLoginText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,13 @@ class LoginRegisterText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          S.of(context).registerQuestion,
+          S.of(context).loginQuestion,
           style: AppTexts.text14BlackLatoRegular,
         ),
         horizontalSpace(5.0),
         CustomTextButton(
-          onPressed: () => context.pushReplacement(Routes.register),
-          text: S.of(context).registerTitle,
+          onPressed: () => context.pushReplacement(Routes.login),
+          text: S.of(context).loginTitle,
         )
       ],
     );

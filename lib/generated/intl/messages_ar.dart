@@ -82,6 +82,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageTitle": MessageLookupByLibrary.simpleMessage("اللغة"),
         "loadingDataErrorTitle": MessageLookupByLibrary.simpleMessage(
             "فشل في تحميل البيانات. حاول مرة أخرى"),
+        "loginMessage": MessageLookupByLibrary.simpleMessage(
+            "!مرحبًا بعودتك! سعيد لرؤيتك مرة أخرى"),
+        "loginQuestion": MessageLookupByLibrary.simpleMessage("هل لديك حساب ؟"),
         "loginSuccessMsg":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -122,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "quantityTitle": MessageLookupByLibrary.simpleMessage("الكمية"),
         "regionHintTitle": MessageLookupByLibrary.simpleMessage("أدخل منطقتك"),
         "regionTitle": MessageLookupByLibrary.simpleMessage("المنطقة"),
+        "registerMessage":
+            MessageLookupByLibrary.simpleMessage("مرحبًا! قم بالتسجيل للبدء"),
         "registerQuestion":
             MessageLookupByLibrary.simpleMessage("أليس لديك حساب ؟"),
         "registerSuccessMsg":
