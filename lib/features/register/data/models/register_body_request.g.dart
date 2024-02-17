@@ -1,23 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_model.dart';
+part of 'register_body_request.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
+RegisterBodyRequest _$RegisterBodyRequestFromJson(Map<String, dynamic> json) =>
+    RegisterBodyRequest(
       json['name'] as String,
       json['email'] as String,
       json['phone'] as String,
-      json['id'] as int,
-      json['token'] as String,
+      json['image'] as String,
+      json['password'] as String,
     );
 
-Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
+Map<String, dynamic> _$RegisterBodyRequestToJson(
+        RegisterBodyRequest instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'email': instance.email,
       'phone': instance.phone,
-      'id': instance.id,
-      'token': instance.token,
+      'image': instance.image,
+      'password': instance.password,
     };

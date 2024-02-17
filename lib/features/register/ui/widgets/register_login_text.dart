@@ -22,7 +22,7 @@ class RegisterLoginText extends StatelessWidget {
         CustomTextButton(
           onPressed: () => context.pushReplacement(Routes.login),
           text: S.of(context).loginTitle,
-        )
+        ),
       ],
     );
   }
