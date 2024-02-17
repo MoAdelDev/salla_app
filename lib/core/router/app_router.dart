@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/features/home/ui/screens/home_screen.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
@@ -32,6 +33,13 @@ class AppRouter {
           builder: (context) => BlocProvider<RegisterCubit>(
             create: (context) => getIt(),
             child: const RegisterScreen(),
+          ),
+        );
+      case Routes.home:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<RegisterCubit>(
+            create: (context) => getIt(),
+            child: const HomeScreen(),
           ),
         );
       default:
