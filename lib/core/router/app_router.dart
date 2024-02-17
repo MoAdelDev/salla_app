@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/on_boarding_screen.dart';
@@ -18,7 +21,10 @@ class AppRouter {
         );
       case Routes.login:
         return MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => BlocProvider<LoginCubit>(
+            create: (context) => getIt(),
+            child: const LoginScreen(),
+          ),
         );
       case Routes.register:
         return MaterialPageRoute(
