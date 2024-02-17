@@ -1,6 +1,13 @@
 {
   "appName": "Shop",
   "appTitle" : "Convenient mobile shopping anytime, anywhere",
+  "appTitle1" : "Start Shopping Now",
+  "appDescription1" : "Begin shopping journey, endless possibilities",
+  "appTitle2" : "Explore & Save",
+  "appDescription2" : "Unlock offers, begin shopping journey",
+  "appTitle3" : "Join Us Today",
+  "appDescription3" : "Welcome aboard, shop hassle-free",
+  "getStarted" : "Get Started",
   "signInTitle": "Sign In",
   "signUpTitle": "Sign Up",
   "emailHintTitle": "Enter your email",

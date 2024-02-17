@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/style/colors.dart';
-import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/generated/l10n.dart';
+import 'package:salla_app/features/on_boarding/ui/widgets/intro_button.dart';
+import 'package:salla_app/features/on_boarding/ui/widgets/intro_image.dart';
+import 'package:salla_app/features/on_boarding/ui/widgets/intro_title.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -10,21 +11,12 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColorLight.primaryColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: const Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Center(
-            child: Text(
-              'Salla',
-              style: AppTexts.text60WhiteLatoBold,
-            ),
-          ),
-          Center(
-            child: Text(
-              S.of(context).appTitle,
-              style: AppTexts.text60WhiteLatoBold,
-            ),
-          ),
+          IntroTitle(),
+          IntroImage(),
+          IntroButton(),
         ],
       ),
     );

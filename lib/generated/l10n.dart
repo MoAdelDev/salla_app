@@ -1,6 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -67,6 +65,76 @@ class S {
     return Intl.message(
       'Convenient mobile shopping anytime, anywhere',
       name: 'appTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Shopping Now`
+  String get appTitle1 {
+    return Intl.message(
+      'Start Shopping Now',
+      name: 'appTitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Begin shopping journey, endless possibilities`
+  String get appDescription1 {
+    return Intl.message(
+      'Begin shopping journey, endless possibilities',
+      name: 'appDescription1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explore & Save`
+  String get appTitle2 {
+    return Intl.message(
+      'Explore & Save',
+      name: 'appTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlock offers, begin shopping journey`
+  String get appDescription2 {
+    return Intl.message(
+      'Unlock offers, begin shopping journey',
+      name: 'appDescription2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Join Us Today`
+  String get appTitle3 {
+    return Intl.message(
+      'Join Us Today',
+      name: 'appTitle3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome aboard, shop hassle-free`
+  String get appDescription3 {
+    return Intl.message(
+      'Welcome aboard, shop hassle-free',
+      name: 'appDescription3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get getStarted {
+    return Intl.message(
+      'Get Started',
+      name: 'getStarted',
       desc: '',
       args: [],
     );

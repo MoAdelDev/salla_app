@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -28,9 +28,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "addressHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your address"),
         "addressTitle": MessageLookupByLibrary.simpleMessage("Address"),
+        "appDescription1": MessageLookupByLibrary.simpleMessage(
+            "Begin shopping journey, endless possibilities"),
+        "appDescription2": MessageLookupByLibrary.simpleMessage(
+            "Unlock offers, begin shopping journey"),
+        "appDescription3": MessageLookupByLibrary.simpleMessage(
+            "Welcome aboard, shop hassle-free"),
         "appName": MessageLookupByLibrary.simpleMessage("Shop"),
         "appTitle": MessageLookupByLibrary.simpleMessage(
             "Convenient mobile shopping anytime, anywhere"),
+        "appTitle1": MessageLookupByLibrary.simpleMessage("Start Shopping Now"),
+        "appTitle2": MessageLookupByLibrary.simpleMessage("Explore & Save"),
+        "appTitle3": MessageLookupByLibrary.simpleMessage("Join Us Today"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("APPLY"),
         "arabicTitleTitle": MessageLookupByLibrary.simpleMessage("Arabic"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("Cancel order"),
@@ -70,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullNameHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full name"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("Item\'s total"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Items"),
         "languageTitle": MessageLookupByLibrary.simpleMessage("Language"),

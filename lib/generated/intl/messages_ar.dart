@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -27,9 +27,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCartTitle": MessageLookupByLibrary.simpleMessage("أضف الى السلة"),
         "addressHintTitle": MessageLookupByLibrary.simpleMessage("أدخل عنوانك"),
         "addressTitle": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "appDescription1": MessageLookupByLibrary.simpleMessage(
+            "ابدأ رحلة التسوق، وإمكانيات لا نهاية لها"),
+        "appDescription2": MessageLookupByLibrary.simpleMessage(
+            "افتح العروض، وابدأ رحلة التسوق"),
+        "appDescription3": MessageLookupByLibrary.simpleMessage(
+            "مرحبًا بك على متن الطائرة، تسوق خاليًا من المتاعب"),
         "appName": MessageLookupByLibrary.simpleMessage("المتجر"),
         "appTitle": MessageLookupByLibrary.simpleMessage(
             "تسوق مريح عبر الهاتف المحمول في أي وقت وفي أي مكان"),
+        "appTitle1": MessageLookupByLibrary.simpleMessage("ابدأ التسوق الآن"),
+        "appTitle2": MessageLookupByLibrary.simpleMessage("استكشاف وحفظ"),
+        "appTitle3": MessageLookupByLibrary.simpleMessage("انضم إلينا اليوم"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "arabicTitleTitle": MessageLookupByLibrary.simpleMessage("العربية"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
@@ -67,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullNameHintTitle":
             MessageLookupByLibrary.simpleMessage("أدخل إسمك بالكامل"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("الإسم بالكامل"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("لنبدأ"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("عدد العناصر"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("العناصر"),
         "languageTitle": MessageLookupByLibrary.simpleMessage("اللغة"),
