@@ -190,6 +190,26 @@ class S {
     );
   }
 
+  /// `Welcome back! Glad to see you, Again!`
+  String get loginMessage {
+    return Intl.message(
+      'Welcome back! Glad to see you, Again!',
+      name: 'loginMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome! Sign up to get started`
+  String get registerMessage {
+    return Intl.message(
+      'Welcome! Sign up to get started',
+      name: 'registerMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Register`
   String get registerTitle {
     return Intl.message(
@@ -205,6 +225,16 @@ class S {
     return Intl.message(
       'Aren\'t you have an account ?',
       name: 'registerQuestion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account ?`
+  String get loginQuestion {
+    return Intl.message(
+      'Already have an account ?',
+      name: 'loginQuestion',
       desc: '',
       args: [],
     );

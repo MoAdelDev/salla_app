@@ -3,23 +3,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
-import 'package:salla_app/features/login/ui/widgets/login_form.dart';
-import 'package:salla_app/features/login/ui/widgets/login_register_text.dart';
-import 'package:salla_app/features/login/ui/widgets/login_submit.dart';
-import 'package:salla_app/features/login/ui/widgets/login_welcome_text.dart';
+import 'package:salla_app/features/register/ui/widgets/register_form.dart';
+import 'package:salla_app/features/register/ui/widgets/register_login_text.dart';
+import 'package:salla_app/features/register/ui/widgets/register_submit.dart';
+import 'package:salla_app/features/register/ui/widgets/register_welcome_text.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.0.h),
@@ -29,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomAppBar(
                 onTap1: () => context.pop(),
                 icon1: Icons.chevron_left,
-                title: S.of(context).loginTitle,
+                title: S.of(context).registerTitle,
               ),
               Expanded(
                 child: Padding(
@@ -41,17 +42,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const LoginWelcomeText(),
+                        const RegisterWelcomeText(),
                         verticalSpace(20.0),
-                        const LoginForm(),
+                        const RegisterForm(),
                         verticalSpace(20.0),
-                        const LoginSubmit(),
+                        const RegisterSubmit(),
                       ],
                     ),
                   ),
                 ),
               ),
-              const LoginRegisterText(),
+              const RegisterLoginText(),
             ],
           ),
         ),

@@ -85,6 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "languageTitle": MessageLookupByLibrary.simpleMessage("Language"),
         "loadingDataErrorTitle": MessageLookupByLibrary.simpleMessage(
             "Failed to load data, try again"),
+        "loginMessage": MessageLookupByLibrary.simpleMessage(
+            "Welcome back! Glad to see you, Again!"),
+        "loginQuestion":
+            MessageLookupByLibrary.simpleMessage("Already have an account ?"),
         "loginSuccessMsg": MessageLookupByLibrary.simpleMessage(
             "you have been logged in successfully"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
@@ -131,6 +135,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "regionHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your region"),
         "regionTitle": MessageLookupByLibrary.simpleMessage("Region"),
+        "registerMessage": MessageLookupByLibrary.simpleMessage(
+            "Welcome! Sign up to get started"),
         "registerQuestion": MessageLookupByLibrary.simpleMessage(
             "Aren\'t you have an account ?"),
         "registerSuccessMsg": MessageLookupByLibrary.simpleMessage(
