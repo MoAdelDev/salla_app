@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:salla_app/features/login/data/user_model.dart';
+import 'package:salla_app/features/login/data/models/user_model.dart';
 part 'login_response_body.g.dart';
 
 @JsonSerializable()
