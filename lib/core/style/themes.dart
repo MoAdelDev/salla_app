@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:salla_app/core/style/texts.dart';
 import 'colors.dart';
 
 ThemeData lightTheme(context) => ThemeData(
