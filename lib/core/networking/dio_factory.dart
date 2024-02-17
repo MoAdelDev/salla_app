@@ -6,7 +6,7 @@ class DioFactory {
 
   static Dio? instance;
 
-  static Dio getInstance() {
+  static Future<Dio> getInstance() async {
     const Duration timeout = Duration(seconds: 60);
     if (instance == null) {
       BaseOptions baseOptions = BaseOptions(
