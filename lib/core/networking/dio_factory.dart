@@ -15,9 +15,9 @@ class DioFactory {
         sendTimeout: timeout,
         receiveDataWhenStatusError: true,
       );
-      _addInterceptors();
       instance = Dio(baseOptions);
     }
+    _addInterceptors();
     return instance!;
   }
 

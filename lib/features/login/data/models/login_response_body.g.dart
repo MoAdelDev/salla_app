@@ -10,7 +10,9 @@ LoginResponseBody _$LoginResponseBodyFromJson(Map<String, dynamic> json) =>
     LoginResponseBody(
       json['status'] as bool,
       json['message'] as String,
-      UserModel.fromJson(json['data'] as Map<String, dynamic>),
+      json['data'] == null
+          ? null
+          : UserModel.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$LoginResponseBodyToJson(LoginResponseBody instance) =>

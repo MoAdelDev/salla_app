@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/networking/api_error_model.dart';
 import 'package:salla_app/core/networking/api_result.dart';
 import 'package:salla_app/core/networking/api_service.dart';
@@ -13,6 +14,7 @@ class LoginRepo {
     try {
       final result = await apiService.login(loginRequestBody);
       if (result.status) {
+        await CacheHelper.saveToken(result.data?.token ?? '');
         return ApiResult.success(result);
       }
       return ApiResult.failure(

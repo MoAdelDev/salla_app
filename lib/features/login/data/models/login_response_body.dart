@@ -6,7 +6,7 @@ part 'login_response_body.g.dart';
 class LoginResponseBody {
   final bool status;
   final String message;
-  final UserModel data;
+  final UserModel? data;
 
   LoginResponseBody(
     this.status,
