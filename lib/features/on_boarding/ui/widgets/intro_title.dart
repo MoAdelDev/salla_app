@@ -18,7 +18,7 @@ class IntroTitle extends StatelessWidget {
         Center(
           child: Text(
             S.of(context).appTitle,
-            style: AppTexts.text14WhiteLatoNormal,
+            style: AppTexts.text14WhiteLatoRegular,
           ),
         ),
       ],

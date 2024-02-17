@@ -17,6 +17,7 @@ class SallaApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
+      useInheritedMediaQuery: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: lightTheme(context),
