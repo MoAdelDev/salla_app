@@ -62,8 +62,8 @@ class _IntroButtonState extends State<IntroButton> {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  width: 70.0.w,
-                  height: 55.0.h,
+                  height: 58.0.h,
+                  width: 70.0.h,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.red,

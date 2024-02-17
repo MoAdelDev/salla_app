@@ -37,6 +37,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         actions: [
           TextButton(
             onPressed: () {},
+            style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            )),
             child: Text(
               'SKIP',
               style: AppTexts.text16PrimaryLatoBold,
@@ -46,7 +50,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0.w),
+          padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 20.0.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
