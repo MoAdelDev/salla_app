@@ -87,7 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Failed to load data, try again"),
         "loginSuccessMsg": MessageLookupByLibrary.simpleMessage(
             "you have been logged in successfully"),
-        "loginTitle": MessageLookupByLibrary.simpleMessage("LOGIN"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "logoutTitle": MessageLookupByLibrary.simpleMessage("Log out"),
         "modifyCartTitle": MessageLookupByLibrary.simpleMessage("Modify cart"),
         "myAddressesTitle":

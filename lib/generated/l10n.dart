@@ -180,10 +180,10 @@ class S {
     );
   }
 
-  /// `LOGIN`
+  /// `Login`
   String get loginTitle {
     return Intl.message(
-      'LOGIN',
+      'Login',
       name: 'loginTitle',
       desc: '',
       args: [],

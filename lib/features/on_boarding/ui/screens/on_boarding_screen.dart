@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/core/widgets/custom_text_button.dart';
+import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -34,20 +35,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     ];
     return Scaffold(
       backgroundColor: context.colorScheme.background,
-      appBar: AppBar(
-        actions: [
-          CustomTextButton(
-            onPressed: () {},
-            text: 'SKIP',
-          ),
-        ],
-      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 20.0.h),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              CustomAppBar(
+                onTap1: () => context.pop(),
+                icon1: Icons.chevron_left,
+                onTap2: () => context.push(Routes.login),
+                icon2: Icons.skip_next,
+              ),
               Expanded(
                 child: CarouselSlider.builder(
                   itemCount: titles.length,
@@ -118,6 +117,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               currentIndex++;
                               carouselController.animateToPage(currentIndex);
                             });
+                          } else {
+                            context.push(Routes.login);
                           }
                         },
                         icon: const Icon(
