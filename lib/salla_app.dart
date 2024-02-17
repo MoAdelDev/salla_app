@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/themes.dart';
@@ -21,7 +22,7 @@ class SallaApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: lightTheme(context),
-        initialRoute: Routes.intro,
+        initialRoute: CacheHelper.token != '' ? Routes.home : Routes.intro,
         onGenerateRoute: (settings) => appRouter.onGenerateRoute(settings),
         locale: const Locale('en', 'US'),
         localizationsDelegates: const [
