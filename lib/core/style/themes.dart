@@ -36,4 +36,5 @@ ThemeData lightTheme(context) => ThemeData(
         ),
         titleSpacing: 10.0,
       ),
+      useMaterial3: true,
     );
