@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 context.read<HomeCubit>().screens[currentIndex],
                 Positioned(
-                  bottom: 0,
+                  bottom: AppData.isIos ? 0 : 20.0.h,
                   left: 0,
                   right: 0,
                   child: Container(
