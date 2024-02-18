@@ -40,7 +40,7 @@ class CustomHomeNavigation extends StatelessWidget {
               ),
               child: Icon(
                 iconData,
-                color: isSelected ? Colors.white : Colors.white,
+                color: Colors.white,
               ),
             ),
             if (isSelected)

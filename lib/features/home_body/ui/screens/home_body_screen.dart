@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:salla_app/core/helpers/extensions.dart';
-import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/core/widgets/custom_app_bar.dart';
+import 'package:salla_app/features/home_body/ui/widgets/home_app_bar.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_banner.dart';
+import 'package:salla_app/features/home_body/ui/widgets/home_categories.dart';
+import 'package:salla_app/features/home_body/ui/widgets/home_products.dart';
+import 'package:salla_app/features/home_body/ui/widgets/home_title.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class HomeBodyScreen extends StatelessWidget {
@@ -11,55 +12,25 @@ class HomeBodyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: CustomAppBar(
-            firstWidegt: Icon(
-              Icons.search,
-              color: context.colorScheme.onBackground,
-              size: 30,
-            ),
-            firstTap: () {},
-            secondTap: () {},
-            secondWidget: Image.asset('assets/images/splash.png'),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const HomeAppBar(),
+          const HomeBanner(),
+          HomeTitle(
+            text: S.of(context).categoriesTitle,
           ),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0.w),
-            child: const HomeBanner(),
+          SizedBox(
+            height: 40.0.h,
+            child: const HomeCategories(),
           ),
-        ),
-        SliverFillRemaining(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 10.0.h,
-                  horizontal: 20.0.w,
-                ),
-                child: Text(
-                  S.of(context).productsTitle,
-                  style: AppTexts.text22BlackLatoBold,
-                ),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 10,
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) => Container(
-                    height: 200,
-                    color: Colors.green,
-                  ),
-                ),
-              )
-            ],
+          HomeTitle(
+            text: S.of(context).productsTitle,
           ),
-        ),
-      ],
+          const HomeProducts(),
+        ],
+      ),
     );
   }
 }
