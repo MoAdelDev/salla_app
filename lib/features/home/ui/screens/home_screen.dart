@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
-import 'package:salla_app/features/home/ui/widgets/home_navigation_destination.dart';
+import 'package:salla_app/features/home/ui/widgets/custom_home_navigation.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,19 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
             ));
           }
           return SafeArea(
+            bottom: false,
             child: Stack(
               children: [
                 context.read<HomeCubit>().screens[currentIndex],
                 Positioned(
-                  bottom: AppData.isIos ? 0 : 20.0.h,
+                  bottom: 20.0.h,
                   left: 0,
                   right: 0,
                   child: Container(
-                    height: 50.0.h,
-                    clipBehavior: Clip.antiAlias,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 10.0.w,
+                      vertical: 10.0.h,
+                    ),
                     margin: EdgeInsets.symmetric(horizontal: 10.0.w),
                     decoration: BoxDecoration(
-                      color: context.colorScheme.onBackground,
+                      color: context.colorScheme.primary.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(20.0),
                       boxShadow: [
                         BoxShadow(
@@ -53,47 +55,48 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    child: NavigationBar(
-                      selectedIndex: currentIndex,
-                      onDestinationSelected: (index) {
-                        setState(() {
-                          currentIndex = index;
-                        });
-                      },
-                      elevation: 2.0,
-                      labelBehavior:
-                          NavigationDestinationLabelBehavior.onlyShowSelected,
-                      animationDuration: const Duration(milliseconds: 300),
-                      indicatorColor: context.colorScheme.primary,
-                      overlayColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                      surfaceTintColor: context.colorScheme.primary,
-                      shadowColor: context.colorScheme.primary,
-                      destinations: [
-                        HomeNavigationDestination(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CustomHomeNavigation(
                           iconData: Icons.home_filled,
                           label: S.of(context).homeTitle,
                           isSelected: currentIndex == 0,
+                          onTap: () => setState(() {
+                            currentIndex = 0;
+                          }),
                         ),
-                        HomeNavigationDestination(
+                        CustomHomeNavigation(
                           iconData: Icons.apps,
                           label: S.of(context).categoriesTitle,
                           isSelected: currentIndex == 1,
+                          onTap: () => setState(() {
+                            currentIndex = 1;
+                          }),
                         ),
-                        HomeNavigationDestination(
-                          iconData: Icons.favorite_rounded,
+                        CustomHomeNavigation(
+                          iconData: Icons.favorite,
                           label: S.of(context).favoritesTitle,
                           isSelected: currentIndex == 2,
+                          onTap: () => setState(() {
+                            currentIndex = 2;
+                          }),
                         ),
-                        HomeNavigationDestination(
+                        CustomHomeNavigation(
                           iconData: Icons.shopping_cart,
                           label: S.of(context).cartTitle,
                           isSelected: currentIndex == 3,
+                          onTap: () => setState(() {
+                            currentIndex = 3;
+                          }),
                         ),
-                        HomeNavigationDestination(
+                        CustomHomeNavigation(
                           iconData: Icons.settings,
                           label: S.of(context).settingsTitle,
                           isSelected: currentIndex == 4,
+                          onTap: () => setState(() {
+                            currentIndex = 4;
+                          }),
                         ),
                       ],
                     ),

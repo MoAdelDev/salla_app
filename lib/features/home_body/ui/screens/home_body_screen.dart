@@ -28,19 +28,35 @@ class HomeBodyScreen extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const HomeBanner(),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: Text(
-                    S.of(context).productsTitle,
-                    style: AppTexts.text22BlackLatoBold,
+            child: const HomeBanner(),
+          ),
+        ),
+        SliverFillRemaining(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 10.0.h,
+                  horizontal: 20.0.w,
+                ),
+                child: Text(
+                  S.of(context).productsTitle,
+                  style: AppTexts.text22BlackLatoBold,
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 10,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) => Container(
+                    height: 200,
+                    color: Colors.green,
                   ),
                 ),
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ],
