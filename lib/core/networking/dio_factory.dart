@@ -14,6 +14,10 @@ class DioFactory {
         connectTimeout: timeout,
         sendTimeout: timeout,
         receiveDataWhenStatusError: true,
+        headers: {
+          'Content-Type': 'application/json',
+          'lang': 'en',
+        },
       );
       instance = Dio(baseOptions);
     }

@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/repos/login_repo.dart';
 import 'package:salla_app/features/login/logic/cubit/login_state.dart';
@@ -26,7 +25,6 @@ class LoginCubit extends Cubit<LoginState> {
       );
       response.when(
         success: (data) {
-          AppData.userModel = data.data!;
           emit(LoginState.success(data));
         },
         failure: (error) => emit(LoginState.failure(error.message)),
