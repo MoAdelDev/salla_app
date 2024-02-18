@@ -106,13 +106,13 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<BannerResponse> getBanners() async {
+  Future<BannersResponse> getBanners() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<BannerResponse>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<BannersResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -128,7 +128,7 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = BannerResponse.fromJson(_result.data!);
+    final value = BannersResponse.fromJson(_result.data!);
     return value;
   }
 

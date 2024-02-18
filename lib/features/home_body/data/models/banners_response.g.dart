@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'banner_response.dart';
+part of 'banners_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BannerResponse _$BannerResponseFromJson(Map<String, dynamic> json) =>
-    BannerResponse(
+BannersResponse _$BannersResponseFromJson(Map<String, dynamic> json) =>
+    BannersResponse(
       json['status'] as bool,
       json['message'] as String?,
       (json['data'] as List<dynamic>?)
@@ -15,9 +15,9 @@ BannerResponse _$BannerResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$BannerResponseToJson(BannerResponse instance) =>
+Map<String, dynamic> _$BannersResponseToJson(BannersResponse instance) =>
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,
-      'data': instance.banner,
+      'data': instance.banners,
     };
