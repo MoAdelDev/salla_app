@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Shop`
+  /// `Salla`
   String get appName {
     return Intl.message(
-      'Shop',
+      'Salla',
       name: 'appName',
       desc: '',
       args: [],
@@ -325,6 +325,36 @@ class S {
     return Intl.message(
       'Favorites',
       name: 'favoritesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome`
+  String get welcomeTitle {
+    return Intl.message(
+      'Welcome',
+      name: 'welcomeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's get shopping`
+  String get welcomeMessage {
+    return Intl.message(
+      'Let\'s get shopping',
+      name: 'welcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Our products`
+  String get ourProductsTitle {
+    return Intl.message(
+      'Our products',
+      name: 'ourProductsTitle',
       desc: '',
       args: [],
     );

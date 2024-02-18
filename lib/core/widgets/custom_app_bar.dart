@@ -44,12 +44,17 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
           if (title != null)
-            Text(
-              title ?? '',
-              style: GoogleFonts.lato(
-                fontSize: 22.0,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                child: Text(
+                  title ?? '',
+                  style: GoogleFonts.lato(
+                    fontSize: 22.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           if (secondTap != null)

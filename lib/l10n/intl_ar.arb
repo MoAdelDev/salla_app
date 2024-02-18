@@ -28,6 +28,8 @@
   "settingsTitle": "الإعدادات",
   "favoritesTitle": "المفضلة",
   "productsTitle": "المنتجات",
+  "welcomeTitle": "مرحبا",
+  "welcomeMessage": "لنبدأ التسوق الآن",
   "descriptionTitle": "الوصف",
   "discountTitle": "خصم",
   "loadingDataErrorTitle": "فشل في تحميل البيانات. حاول مرة أخرى",

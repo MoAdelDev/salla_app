@@ -34,7 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Unlock offers, begin shopping journey"),
         "appDescription3": MessageLookupByLibrary.simpleMessage(
             "Welcome aboard, shop hassle-free"),
-        "appName": MessageLookupByLibrary.simpleMessage("Shop"),
+        "appName": MessageLookupByLibrary.simpleMessage("Salla"),
         "appTitle": MessageLookupByLibrary.simpleMessage(
             "Convenient mobile shopping anytime, anywhere"),
         "appTitle1": MessageLookupByLibrary.simpleMessage("Start Shopping Now"),
@@ -124,6 +124,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Order summary"),
         "orderTitle": MessageLookupByLibrary.simpleMessage("Order"),
         "ordersTitle": MessageLookupByLibrary.simpleMessage("Orders"),
+        "ourProductsTitle":
+            MessageLookupByLibrary.simpleMessage("Our products"),
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
@@ -158,6 +160,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUpTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("Total"),
         "updateProfileTitle":
-            MessageLookupByLibrary.simpleMessage("Update profile")
+            MessageLookupByLibrary.simpleMessage("Update profile"),
+        "welcomeMessage":
+            MessageLookupByLibrary.simpleMessage("Let\'s get shopping"),
+        "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }

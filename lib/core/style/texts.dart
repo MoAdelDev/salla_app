@@ -45,6 +45,12 @@ class AppTexts {
         color: Colors.black,
         fontWeight: AppFontWeight.bold,
       );
+
+  static TextStyle get text22GreyLatoBold => GoogleFonts.lato(
+        fontSize: 22.0.sp,
+        color: Colors.grey,
+        fontWeight: AppFontWeight.bold,
+      );
   static TextStyle get text22BlackLatoNormal => GoogleFonts.lato(
         fontSize: 16.0.sp,
         color: Colors.black.withOpacity(0.7),
