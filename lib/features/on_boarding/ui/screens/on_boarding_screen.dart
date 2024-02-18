@@ -42,10 +42,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomAppBar(
-                onTap1: () => context.pop(),
-                icon1: Icons.chevron_left,
-                onTap2: () => context.push(Routes.login),
-                icon2: Icons.skip_next,
+                firstTap: () => context.pop(),
+                firstWidegt: Icon(
+                  Icons.chevron_left,
+                  size: 30.0,
+                  color: context.colorScheme.onBackground,
+                ),
+                secondTap: () => context.push(Routes.login),
+                secondWidget: Icon(
+                  Icons.skip_next,
+                  size: 30.0,
+                  color: context.colorScheme.onBackground,
+                ),
               ),
               Expanded(
                 child: CarouselSlider.builder(

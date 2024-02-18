@@ -1,5 +1,5 @@
 {
-  "appName": "Shop",
+  "appName": "Salla",
   "appTitle" : "Convenient mobile shopping anytime, anywhere",
   "appTitle1" : "Start Shopping Now",
   "appDescription1" : "Begin shopping journey, endless possibilities",
@@ -27,6 +27,9 @@
   "cartTitle": "Cart",
   "settingsTitle": "Settings",
   "favoritesTitle": "Favorites",
+  "welcomeTitle": "Welcome",
+  "welcomeMessage": "Let's get shopping",
+  "ourProductsTitle": "Our products",
   "productsTitle": "Products",
   "descriptionTitle": "Description",
   "discountTitle": "DISCOUNT",

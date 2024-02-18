@@ -1,6 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:salla_app/core/networking/api_constance.dart';
+import 'package:salla_app/features/home_body/data/models/banners_response.dart';
+import 'package:salla_app/features/home_body/data/models/categories_response.dart';
+import 'package:salla_app/features/home_body/data/models/change_favorite_request.dart';
+import 'package:salla_app/features/home_body/data/models/change_favorite_response.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
@@ -25,4 +30,25 @@ abstract class ApiService {
 
   @GET(ApiConstance.profile)
   Future<UserResponseBody> getUser(@Header('Authorization') String token);
+
+  @GET(ApiConstance.banners)
+  Future<BannersResponse> getBanners();
+
+  @GET(ApiConstance.categories)
+  Future<CategoriesResponse> getCategories();
+
+  @GET(ApiConstance.products)
+  Future<ProductsReponsne> getProducts(@Header('Authorization') String token);
+
+  @POST(ApiConstance.favorites)
+  Future<ChangeFavoriteResponse> changeFavorite(
+    @Header('Authorization') String token,
+    @Body() ChangeFavoriteRequest changeFavoriteRequest,
+  );
+
+  @GET(ApiConstance.products)
+  Future<ProductsReponsne> getProductsByCategory(
+    @Header('Authorization') String token,
+    @Query('category_id') int categoryId,
+  );
 }

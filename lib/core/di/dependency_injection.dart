@@ -4,6 +4,8 @@ import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
+import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
+import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/login/data/repos/login_repo.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/register/data/repos/register_repo.dart';
@@ -26,4 +28,8 @@ Future<void> setupGetIt() async {
   // home
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+
+  // home body
+  getIt.registerLazySingleton<HomeBodyRepo>(() => HomeBodyRepo(getIt()));
+  getIt.registerFactory<HomeBodyCubit>(() => HomeBodyCubit(getIt()));
 }

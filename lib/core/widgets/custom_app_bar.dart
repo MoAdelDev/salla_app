@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:salla_app/core/style/colors.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String? title;
-  final VoidCallback? onTap1;
-  final IconData? icon1;
-  final VoidCallback? onTap2;
-  final IconData? icon2;
+  final VoidCallback? firstTap;
+  final Widget? firstWidegt;
+  final VoidCallback? secondTap;
+  final Widget? secondWidget;
   const CustomAppBar({
     super.key,
-    this.onTap1,
-    this.icon1 = Icons.chevron_left,
+    this.firstTap,
+    this.firstWidegt,
     this.title = '',
-    this.onTap2,
-    this.icon2 = Icons.chevron_right,
+    this.secondTap,
+    this.secondWidget,
   });
 
   @override
@@ -28,9 +27,9 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if (onTap1 != null)
+          if (firstTap != null)
             InkWell(
-              onTap: onTap1,
+              onTap: firstTap,
               borderRadius: BorderRadius.circular(5.0),
               child: Container(
                 height: 41.0.h,
@@ -41,25 +40,26 @@ class CustomAppBar extends StatelessWidget {
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),
-                child: Icon(
-                  icon1,
-                  size: 30.0,
-                  color: AppColorLight.onBackgroundColor,
-                ),
+                child: firstWidegt,
               ),
             ),
           if (title != null)
-            Text(
-              title ?? '',
-              style: GoogleFonts.lato(
-                fontSize: 22.0,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+                child: Text(
+                  title ?? '',
+                  style: GoogleFonts.lato(
+                    fontSize: 22.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
-          if (onTap2 != null)
+          if (secondTap != null)
             InkWell(
-              onTap: onTap2,
+              onTap: secondTap,
               borderRadius: BorderRadius.circular(5.0),
               child: Container(
                 height: 41.0.h,
@@ -70,14 +70,10 @@ class CustomAppBar extends StatelessWidget {
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),
-                child: Icon(
-                  icon2,
-                  size: 30.0,
-                  color: AppColorLight.onBackgroundColor,
-                ),
+                child: secondWidget,
               ),
             ),
-          if (onTap2 == null) const SizedBox.shrink()
+          if (secondTap == null) const SizedBox.shrink()
         ],
       ),
     );

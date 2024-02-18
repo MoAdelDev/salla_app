@@ -23,8 +23,20 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text16WhiteLatoBold => GoogleFonts.lato(
+        fontSize: 16.0.sp,
+        color: Colors.white,
+        fontWeight: AppFontWeight.bold,
+      );
+
   static TextStyle get text14BlackLatoBold => GoogleFonts.lato(
         fontSize: 14.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.bold,
+      );
+
+  static TextStyle get text16BlackLatoBold => GoogleFonts.lato(
+        fontSize: 16.0.sp,
         color: Colors.black,
         fontWeight: AppFontWeight.bold,
       );
@@ -45,6 +57,18 @@ class AppTexts {
         color: Colors.black,
         fontWeight: AppFontWeight.bold,
       );
+
+  static TextStyle get text22GreyLatoBold => GoogleFonts.lato(
+        fontSize: 22.0.sp,
+        color: Colors.grey,
+        fontWeight: AppFontWeight.bold,
+      );
+
+  static TextStyle get text14GreyLatoBold => GoogleFonts.lato(
+        fontSize: 12.0.sp,
+        color: Colors.grey,
+        fontWeight: AppFontWeight.bold,
+      );
   static TextStyle get text22BlackLatoNormal => GoogleFonts.lato(
         fontSize: 16.0.sp,
         color: Colors.black.withOpacity(0.7),
@@ -53,6 +77,17 @@ class AppTexts {
   static TextStyle get text16PrimaryLatoBold => GoogleFonts.lato(
         fontSize: 16.0.sp,
         color: AppColorLight.primaryColor,
+        fontWeight: AppFontWeight.bold,
+      );
+  static TextStyle get text28BlackShadowLatoBold => GoogleFonts.lato(
+        fontSize: 28.0.sp,
+        color: Colors.black,
+        shadows: [
+          const Shadow(
+            color: Colors.black,
+            blurRadius: 1.0,
+          )
+        ],
         fontWeight: AppFontWeight.bold,
       );
 }

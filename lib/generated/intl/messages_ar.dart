@@ -147,6 +147,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "signUpTitle": MessageLookupByLibrary.simpleMessage("طلب تسجيل حساب"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("إجمالي"),
         "updateProfileTitle":
-            MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية")
+            MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية"),
+        "welcomeMessage":
+            MessageLookupByLibrary.simpleMessage("لنبدأ التسوق الآن"),
+        "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا")
       };
 }
