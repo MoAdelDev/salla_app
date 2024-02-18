@@ -6,4 +6,5 @@ class ApiConstance {
   static const String profile = 'profile';
   static const String banners = 'banners';
   static const String categories = 'categories';
+  static const String products = 'products';
 }

@@ -3,6 +3,7 @@ import 'package:retrofit/retrofit.dart';
 import 'package:salla_app/core/networking/api_constance.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
@@ -33,4 +34,7 @@ abstract class ApiService {
 
   @GET(ApiConstance.categories)
   Future<CategoriesResponse> getCategories();
+
+  @GET(ApiConstance.products)
+  Future<ProductsReponsne> getProducts(@Header('Authorization') String token);
 }

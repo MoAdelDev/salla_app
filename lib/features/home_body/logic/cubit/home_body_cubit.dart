@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 
@@ -31,6 +32,27 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
         emit(const HomeBodyState.categoriesSuccess());
       },
       failure: (error) => emit(const HomeBodyState.categoriesError()),
+    );
+  }
+
+  List<ProductModel> products = [];
+  Map<int, bool> favorites = {};
+  void emitProductsState() async {
+    emit(const HomeBodyState.productsLoading());
+    final response = await _homeBodyRepo.getProducts();
+    response.when(
+      success: (productsResponse) {
+        products = productsResponse.productsData.products ?? [];
+        List.generate(
+          products.length,
+          (index) => favorites.addAll(
+            {products[index].id: products[index].inFavorites},
+          ),
+        );
+        print(favorites);
+        emit(const HomeBodyState.productsSuccess());
+      },
+      failure: (error) => emit(const HomeBodyState.productsError()),
     );
   }
 }

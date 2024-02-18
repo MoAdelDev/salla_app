@@ -17,4 +17,10 @@ sealed class HomeBodyState with _$HomeBodyState {
   const factory HomeBodyState.categoriesSuccess() = CategoriesSuccess;
 
   const factory HomeBodyState.categoriesError() = CategoriesError;
+
+  const factory HomeBodyState.productsLoading() = ProductsLoading;
+
+  const factory HomeBodyState.productsSuccess() = ProductsSuccess;
+
+  const factory HomeBodyState.productsError() = ProductsError;
 }

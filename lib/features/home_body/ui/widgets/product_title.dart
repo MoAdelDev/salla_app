@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:salla_app/core/style/texts.dart';
 
 class ProductTitle extends StatelessWidget {
-  const ProductTitle({super.key});
+  final String title;
+  const ProductTitle({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
