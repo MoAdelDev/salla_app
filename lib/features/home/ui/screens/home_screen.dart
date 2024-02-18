@@ -45,35 +45,27 @@ class _HomeScreenState extends State<HomeScreen> {
               }),
             ),
             CustomHomeNavigation(
-              iconData: Icons.apps,
-              label: S.of(context).categoriesTitle,
+              iconData: Icons.favorite,
+              label: S.of(context).favoritesTitle,
               isSelected: currentIndex == 1,
               onTap: () => setState(() {
                 currentIndex = 1;
               }),
             ),
             CustomHomeNavigation(
-              iconData: Icons.favorite,
-              label: S.of(context).favoritesTitle,
+              iconData: Icons.shopping_cart,
+              label: S.of(context).cartTitle,
               isSelected: currentIndex == 2,
               onTap: () => setState(() {
                 currentIndex = 2;
               }),
             ),
             CustomHomeNavigation(
-              iconData: Icons.shopping_cart,
-              label: S.of(context).cartTitle,
+              iconData: Icons.settings,
+              label: S.of(context).settingsTitle,
               isSelected: currentIndex == 3,
               onTap: () => setState(() {
                 currentIndex = 3;
-              }),
-            ),
-            CustomHomeNavigation(
-              iconData: Icons.settings,
-              label: S.of(context).settingsTitle,
-              isSelected: currentIndex == 4,
-              onTap: () => setState(() {
-                currentIndex = 4;
               }),
             ),
           ],

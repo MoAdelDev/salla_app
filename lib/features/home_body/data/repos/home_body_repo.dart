@@ -81,4 +81,24 @@ class HomeBodyRepo {
       );
     }
   }
+
+  Future<ApiResult<ProductsReponsne>> getProductsByCategory({
+    required int categoryId,
+  }) async {
+    final String token = CacheHelper.token;
+    try {
+      final response =
+          await _apiService.getProductsByCategory(token, categoryId);
+      if (response.status) {
+        return ApiResult.success(response);
+      }
+      return ApiResult.failure(
+        ApiErrorModel(status: response.status, message: response.message ?? ''),
+      );
+    } on DioException catch (e) {
+      return ApiResult.failure(
+        ApiErrorModel(status: false, message: e.message ?? ''),
+      );
+    }
+  }
 }

@@ -38,11 +38,14 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
 
   List<ProductModel> products = [];
   Map<int, bool> favorites = {};
+  bool isProductsLoading = false;
   void emitProductsState() async {
+    isProductsLoading = true;
     emit(const HomeBodyState.productsLoading());
     final response = await _homeBodyRepo.getProducts();
     response.when(
       success: (productsResponse) {
+        isProductsLoading = false;
         products = productsResponse.productsData.products ?? [];
         List.generate(
           products.length,
@@ -52,7 +55,10 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
         );
         emit(const HomeBodyState.productsSuccess());
       },
-      failure: (error) => emit(const HomeBodyState.productsError()),
+      failure: (error) {
+        isProductsLoading = false;
+        emit(const HomeBodyState.productsError());
+      },
     );
   }
 
@@ -69,6 +75,25 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
       failure: (error) {
         favorites[productId] = !favorites[productId]!;
         emit(const HomeBodyState.changeFavoriteError());
+      },
+    );
+  }
+
+  void emitGetProductsByCategoryState({required int categoryId}) async {
+    isProductsLoading = true;
+    emit(const HomeBodyState.productsLoading());
+    final response = await _homeBodyRepo.getProductsByCategory(
+      categoryId: categoryId,
+    );
+    response.when(
+      success: (productsResponse) {
+        products = productsResponse.productsData.products ?? [];
+        isProductsLoading = false;
+        emit(const HomeBodyState.productsSuccess());
+      },
+      failure: (error) {
+        isProductsLoading = false;
+        emit(const HomeBodyState.productsError());
       },
     );
   }

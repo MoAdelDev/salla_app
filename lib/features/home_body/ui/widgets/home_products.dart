@@ -15,7 +15,8 @@ class HomeProducts extends StatelessWidget {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
       builder: (context, state) {
         List<ProductModel> products = context.read<HomeBodyCubit>().products;
-        if (products.isEmpty) {
+        if (products.isEmpty ||
+            context.read<HomeBodyCubit>().isProductsLoading) {
           return Container(
             color: Colors.grey.shade400,
             padding: EdgeInsets.symmetric(vertical: 2.0.h),

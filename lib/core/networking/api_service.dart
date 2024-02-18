@@ -45,4 +45,10 @@ abstract class ApiService {
     @Header('Authorization') String token,
     @Body() ChangeFavoriteRequest changeFavoriteRequest,
   );
+
+  @GET(ApiConstance.products)
+  Future<ProductsReponsne> getProductsByCategory(
+    @Header('Authorization') String token,
+    @Query('category_id') int categoryId,
+  );
 }
