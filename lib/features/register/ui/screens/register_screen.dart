@@ -28,12 +28,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomAppBar(
-                firstTap: () => context.pop(),
-                firstWidegt: Icon(
-                  Icons.chevron_left,
-                  size: 30.0,
-                  color: context.colorScheme.onBackground,
-                ),
+                onTap1: () => context.pop(),
+                icon2: Icons.chevron_left,
                 title: S.of(context).registerTitle,
               ),
               Expanded(

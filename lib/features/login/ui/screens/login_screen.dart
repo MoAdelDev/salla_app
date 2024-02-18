@@ -27,12 +27,8 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomAppBar(
-                firstTap: () => context.pop(),
-                firstWidegt: Icon(
-                  Icons.chevron_left,
-                  size: 30.0,
-                  color: context.colorScheme.onBackground,
-                ),
+                onTap1: () => context.pop(),
+                icon1: Icons.chevron_left,
                 title: S.of(context).loginTitle,
               ),
               Expanded(

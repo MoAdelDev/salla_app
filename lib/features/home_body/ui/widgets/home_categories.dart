@@ -49,10 +49,12 @@ class _HomeCategoriesState extends State<HomeCategories> {
                   isSelected: selectedIndex == -1,
                   categoryModel: CategoryModel(0, 'All', ''),
                   onTap: () {
-                    setState(() {
+                    if (selectedIndex != -1 &&
+                        context.read<HomeBodyCubit>().isProductsLoading ==
+                            false) {
                       selectedIndex = -1;
-                    });
-                    context.read<HomeBodyCubit>().emitProductsState();
+                      context.read<HomeBodyCubit>().emitProductsState();
+                    }
                   },
                 ),
                 horizontalSpace(10.0),
@@ -68,10 +70,10 @@ class _HomeCategoriesState extends State<HomeCategories> {
                     itemBuilder: (BuildContext context, int index) {
                       return CategoryTile(
                         onTap: () {
-                          if (selectedIndex != index) {
-                            setState(() {
-                              selectedIndex = index;
-                            });
+                          if (selectedIndex != index &&
+                              context.read<HomeBodyCubit>().isProductsLoading ==
+                                  false) {
+                            selectedIndex = index;
                             context
                                 .read<HomeBodyCubit>()
                                 .emitGetProductsByCategoryState(

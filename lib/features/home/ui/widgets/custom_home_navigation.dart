@@ -40,13 +40,13 @@ class CustomHomeNavigation extends StatelessWidget {
               ),
               child: Icon(
                 iconData,
-                color: Colors.white,
+                color: isSelected ? Colors.white : Colors.black,
               ),
             ),
             if (isSelected)
               Text(
                 label,
-                style: AppTexts.text14WhiteLatoRegular,
+                style: AppTexts.text14BlackLatoBold,
               ),
           ],
         ),

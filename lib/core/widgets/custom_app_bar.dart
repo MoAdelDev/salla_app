@@ -4,17 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String? title;
-  final VoidCallback? firstTap;
-  final Widget? firstWidegt;
-  final VoidCallback? secondTap;
-  final Widget? secondWidget;
+  final VoidCallback? onTap1;
+  final IconData? icon1;
+  final VoidCallback? onTap2;
+  final IconData? icon2;
   const CustomAppBar({
     super.key,
-    this.firstTap,
-    this.firstWidegt,
+    this.onTap1,
+    this.icon1 = Icons.chevron_left,
     this.title = '',
-    this.secondTap,
-    this.secondWidget,
+    this.onTap2,
+    this.icon2 = Icons.chevron_right,
   });
 
   @override
@@ -27,53 +27,56 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if (firstTap != null)
+          if (onTap1 != null)
             InkWell(
-              onTap: firstTap,
+              onTap: onTap1,
               borderRadius: BorderRadius.circular(5.0),
               child: Container(
                 height: 41.0.h,
                 width: 41.0.w,
                 margin: const EdgeInsets.all(1),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),
-                child: firstWidegt,
+                child: Icon(
+                  icon1,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
               ),
             ),
           if (title != null)
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-                child: Text(
-                  title ?? '',
-                  style: GoogleFonts.lato(
-                    fontSize: 22.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+            Text(
+              title ?? '',
+              style: GoogleFonts.lato(
+                fontSize: 22.0,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          if (secondTap != null)
+          if (onTap2 != null)
             InkWell(
-              onTap: secondTap,
+              onTap: onTap2,
               borderRadius: BorderRadius.circular(5.0),
               child: Container(
                 height: 41.0.h,
                 width: 41.0.w,
                 margin: const EdgeInsets.all(1),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),
-                child: secondWidget,
+                child: Icon(
+                  icon2,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
               ),
             ),
-          if (secondTap == null) const SizedBox.shrink()
+          if (onTap2 == null) const SizedBox.shrink()
         ],
       ),
     );

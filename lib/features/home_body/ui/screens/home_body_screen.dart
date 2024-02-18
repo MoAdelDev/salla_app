@@ -12,25 +12,43 @@ class HomeBodyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const HomeAppBar(),
-          const HomeBanner(),
-          HomeTitle(
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(
+          child: HomeAppBar(),
+        ),
+        const SliverToBoxAdapter(
+          child: HomeBanner(),
+        ),
+        SliverToBoxAdapter(
+          child: HomeTitle(
             text: S.of(context).categoriesTitle,
           ),
-          SizedBox(
-            height: 40.0.h,
-            child: const HomeCategories(),
+        ),
+        SliverAppBar(
+          pinned: true,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          flexibleSpace: const HomeCategories(),
+          expandedHeight: 40.0.h,
+          floating: true,
+          snap: true,
+          elevation: 0.0,
+          foregroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          surfaceTintColor: Colors.white,
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              HomeTitle(
+                text: S.of(context).productsTitle,
+              ),
+              const HomeProducts(),
+            ],
           ),
-          HomeTitle(
-            text: S.of(context).productsTitle,
-          ),
-          const HomeProducts(),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
