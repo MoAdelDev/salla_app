@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
+import 'package:salla_app/features/home_body/data/models/change_favorite_request.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
@@ -49,10 +50,26 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
             {products[index].id: products[index].inFavorites},
           ),
         );
-        print(favorites);
         emit(const HomeBodyState.productsSuccess());
       },
       failure: (error) => emit(const HomeBodyState.productsError()),
+    );
+  }
+
+  void emitChangeFavoriteState({required int productId}) async {
+    favorites[productId] = !favorites[productId]!;
+    emit(const HomeBodyState.changeFavoriteLoading());
+    final response = await _homeBodyRepo.changeFavorite(
+      changeFavoriteRequest: ChangeFavoriteRequest(productId),
+    );
+    response.when(
+      success: (favoriteResponse) {
+        emit(const HomeBodyState.changeFavoriteSuccess());
+      },
+      failure: (error) {
+        favorites[productId] = !favorites[productId]!;
+        emit(const HomeBodyState.changeFavoriteError());
+      },
     );
   }
 }

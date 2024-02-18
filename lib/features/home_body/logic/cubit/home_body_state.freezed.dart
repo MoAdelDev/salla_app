@@ -28,6 +28,9 @@ mixin _$HomeBodyState {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +45,9 @@ mixin _$HomeBodyState {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +62,9 @@ mixin _$HomeBodyState {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +80,11 @@ mixin _$HomeBodyState {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +99,9 @@ mixin _$HomeBodyState {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +116,9 @@ mixin _$HomeBodyState {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +190,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return initial();
   }
@@ -187,6 +210,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return initial?.call();
   }
@@ -204,6 +230,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -225,6 +254,11 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return initial(this);
   }
@@ -242,6 +276,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return initial?.call(this);
   }
@@ -259,6 +296,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -320,6 +360,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return bannersLoading();
   }
@@ -337,6 +380,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return bannersLoading?.call();
   }
@@ -354,6 +400,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -375,6 +424,11 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return bannersLoading(this);
   }
@@ -392,6 +446,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return bannersLoading?.call(this);
   }
@@ -409,6 +466,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -470,6 +530,9 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return bannersSuccess();
   }
@@ -487,6 +550,9 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return bannersSuccess?.call();
   }
@@ -504,6 +570,9 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -525,6 +594,11 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return bannersSuccess(this);
   }
@@ -542,6 +616,9 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return bannersSuccess?.call(this);
   }
@@ -559,6 +636,9 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -620,6 +700,9 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return bannersError();
   }
@@ -637,6 +720,9 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return bannersError?.call();
   }
@@ -654,6 +740,9 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -675,6 +764,11 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return bannersError(this);
   }
@@ -692,6 +786,9 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return bannersError?.call(this);
   }
@@ -709,6 +806,9 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -770,6 +870,9 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return categoriesLoading();
   }
@@ -787,6 +890,9 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return categoriesLoading?.call();
   }
@@ -804,6 +910,9 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -825,6 +934,11 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return categoriesLoading(this);
   }
@@ -842,6 +956,9 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return categoriesLoading?.call(this);
   }
@@ -859,6 +976,9 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -920,6 +1040,9 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return categoriesSuccess();
   }
@@ -937,6 +1060,9 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return categoriesSuccess?.call();
   }
@@ -954,6 +1080,9 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -975,6 +1104,11 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return categoriesSuccess(this);
   }
@@ -992,6 +1126,9 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return categoriesSuccess?.call(this);
   }
@@ -1009,6 +1146,9 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1070,6 +1210,9 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return categoriesError();
   }
@@ -1087,6 +1230,9 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return categoriesError?.call();
   }
@@ -1104,6 +1250,9 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1125,6 +1274,11 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return categoriesError(this);
   }
@@ -1142,6 +1296,9 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return categoriesError?.call(this);
   }
@@ -1159,6 +1316,9 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1220,6 +1380,9 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return productsLoading();
   }
@@ -1237,6 +1400,9 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return productsLoading?.call();
   }
@@ -1254,6 +1420,9 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1275,6 +1444,11 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return productsLoading(this);
   }
@@ -1292,6 +1466,9 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return productsLoading?.call(this);
   }
@@ -1309,6 +1486,9 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1370,6 +1550,9 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return productsSuccess();
   }
@@ -1387,6 +1570,9 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return productsSuccess?.call();
   }
@@ -1404,6 +1590,9 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1425,6 +1614,11 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return productsSuccess(this);
   }
@@ -1442,6 +1636,9 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return productsSuccess?.call(this);
   }
@@ -1459,6 +1656,9 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1520,6 +1720,9 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
   }) {
     return productsError();
   }
@@ -1537,6 +1740,9 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
   }) {
     return productsError?.call();
   }
@@ -1554,6 +1760,9 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1575,6 +1784,11 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
   }) {
     return productsError(this);
   }
@@ -1592,6 +1806,9 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
   }) {
     return productsError?.call(this);
   }
@@ -1609,6 +1826,9 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1620,4 +1840,519 @@ class _$ProductsErrorImpl implements ProductsError {
 
 abstract class ProductsError implements HomeBodyState {
   const factory ProductsError() = _$ProductsErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeFavoriteLoadingImplCopyWith<$Res> {
+  factory _$$ChangeFavoriteLoadingImplCopyWith(
+          _$ChangeFavoriteLoadingImpl value,
+          $Res Function(_$ChangeFavoriteLoadingImpl) then) =
+      __$$ChangeFavoriteLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeFavoriteLoadingImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$ChangeFavoriteLoadingImpl>
+    implements _$$ChangeFavoriteLoadingImplCopyWith<$Res> {
+  __$$ChangeFavoriteLoadingImplCopyWithImpl(_$ChangeFavoriteLoadingImpl _value,
+      $Res Function(_$ChangeFavoriteLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
+  const _$ChangeFavoriteLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.changeFavoriteLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeFavoriteLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+  }) {
+    return changeFavoriteLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+  }) {
+    return changeFavoriteLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteLoading != null) {
+      return changeFavoriteLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+  }) {
+    return changeFavoriteLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+  }) {
+    return changeFavoriteLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteLoading != null) {
+      return changeFavoriteLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeFavoriteLoading implements HomeBodyState {
+  const factory ChangeFavoriteLoading() = _$ChangeFavoriteLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeFavoriteSuccessImplCopyWith<$Res> {
+  factory _$$ChangeFavoriteSuccessImplCopyWith(
+          _$ChangeFavoriteSuccessImpl value,
+          $Res Function(_$ChangeFavoriteSuccessImpl) then) =
+      __$$ChangeFavoriteSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeFavoriteSuccessImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$ChangeFavoriteSuccessImpl>
+    implements _$$ChangeFavoriteSuccessImplCopyWith<$Res> {
+  __$$ChangeFavoriteSuccessImplCopyWithImpl(_$ChangeFavoriteSuccessImpl _value,
+      $Res Function(_$ChangeFavoriteSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
+  const _$ChangeFavoriteSuccessImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.changeFavoriteSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeFavoriteSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+  }) {
+    return changeFavoriteSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+  }) {
+    return changeFavoriteSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteSuccess != null) {
+      return changeFavoriteSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+  }) {
+    return changeFavoriteSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+  }) {
+    return changeFavoriteSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteSuccess != null) {
+      return changeFavoriteSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeFavoriteSuccess implements HomeBodyState {
+  const factory ChangeFavoriteSuccess() = _$ChangeFavoriteSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ChangeFavoriteErrorImplCopyWith<$Res> {
+  factory _$$ChangeFavoriteErrorImplCopyWith(_$ChangeFavoriteErrorImpl value,
+          $Res Function(_$ChangeFavoriteErrorImpl) then) =
+      __$$ChangeFavoriteErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ChangeFavoriteErrorImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$ChangeFavoriteErrorImpl>
+    implements _$$ChangeFavoriteErrorImplCopyWith<$Res> {
+  __$$ChangeFavoriteErrorImplCopyWithImpl(_$ChangeFavoriteErrorImpl _value,
+      $Res Function(_$ChangeFavoriteErrorImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
+  const _$ChangeFavoriteErrorImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.changeFavoriteError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeFavoriteErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+  }) {
+    return changeFavoriteError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+  }) {
+    return changeFavoriteError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteError != null) {
+      return changeFavoriteError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+  }) {
+    return changeFavoriteError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+  }) {
+    return changeFavoriteError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    required TResult orElse(),
+  }) {
+    if (changeFavoriteError != null) {
+      return changeFavoriteError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeFavoriteError implements HomeBodyState {
+  const factory ChangeFavoriteError() = _$ChangeFavoriteErrorImpl;
 }

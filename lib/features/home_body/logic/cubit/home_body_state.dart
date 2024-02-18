@@ -23,4 +23,10 @@ sealed class HomeBodyState with _$HomeBodyState {
   const factory HomeBodyState.productsSuccess() = ProductsSuccess;
 
   const factory HomeBodyState.productsError() = ProductsError;
+
+  const factory HomeBodyState.changeFavoriteLoading() = ChangeFavoriteLoading;
+
+  const factory HomeBodyState.changeFavoriteSuccess() = ChangeFavoriteSuccess;
+
+  const factory HomeBodyState.changeFavoriteError() = ChangeFavoriteError;
 }

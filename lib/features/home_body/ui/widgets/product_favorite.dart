@@ -13,7 +13,9 @@ class ProductFavorite extends StatelessWidget {
       builder: (context, state) {
         return IconButton(
           onPressed: () {
-            // add to favorites
+            context.read<HomeBodyCubit>().emitChangeFavoriteState(
+                  productId: productId,
+                );
           },
           icon: Icon(
             context.read<HomeBodyCubit>().favorites[productId] ?? false
