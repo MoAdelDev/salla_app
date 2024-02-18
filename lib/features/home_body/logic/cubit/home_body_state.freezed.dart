@@ -22,6 +22,9 @@ mixin _$HomeBodyState {
     required TResult Function() bannersLoading,
     required TResult Function() bannersSuccess,
     required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$HomeBodyState {
     TResult? Function()? bannersLoading,
     TResult? Function()? bannersSuccess,
     TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$HomeBodyState {
     TResult Function()? bannersLoading,
     TResult Function()? bannersSuccess,
     TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -45,24 +54,33 @@ mixin _$HomeBodyState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_BannersLoading value) bannersLoading,
-    required TResult Function(_BannersSuccess value) bannersSuccess,
-    required TResult Function(_BannersError value) bannersError,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_BannersLoading value)? bannersLoading,
-    TResult? Function(_BannersSuccess value)? bannersSuccess,
-    TResult? Function(_BannersError value)? bannersError,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_BannersLoading value)? bannersLoading,
-    TResult Function(_BannersSuccess value)? bannersSuccess,
-    TResult Function(_BannersError value)? bannersError,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +146,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() bannersLoading,
     required TResult Function() bannersSuccess,
     required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
   }) {
     return initial();
   }
@@ -139,6 +160,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? bannersLoading,
     TResult? Function()? bannersSuccess,
     TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
   }) {
     return initial?.call();
   }
@@ -150,6 +174,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? bannersLoading,
     TResult Function()? bannersSuccess,
     TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -163,8 +190,11 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_BannersLoading value) bannersLoading,
-    required TResult Function(_BannersSuccess value) bannersSuccess,
-    required TResult Function(_BannersError value) bannersError,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
   }) {
     return initial(this);
   }
@@ -174,8 +204,11 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_BannersLoading value)? bannersLoading,
-    TResult? Function(_BannersSuccess value)? bannersSuccess,
-    TResult? Function(_BannersError value)? bannersError,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
   }) {
     return initial?.call(this);
   }
@@ -185,8 +218,11 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_BannersLoading value)? bannersLoading,
-    TResult Function(_BannersSuccess value)? bannersSuccess,
-    TResult Function(_BannersError value)? bannersError,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -242,6 +278,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() bannersLoading,
     required TResult Function() bannersSuccess,
     required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
   }) {
     return bannersLoading();
   }
@@ -253,6 +292,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? bannersLoading,
     TResult? Function()? bannersSuccess,
     TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
   }) {
     return bannersLoading?.call();
   }
@@ -264,6 +306,9 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? bannersLoading,
     TResult Function()? bannersSuccess,
     TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -277,8 +322,11 @@ class _$BannersLoadingImpl implements _BannersLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_BannersLoading value) bannersLoading,
-    required TResult Function(_BannersSuccess value) bannersSuccess,
-    required TResult Function(_BannersError value) bannersError,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
   }) {
     return bannersLoading(this);
   }
@@ -288,8 +336,11 @@ class _$BannersLoadingImpl implements _BannersLoading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_BannersLoading value)? bannersLoading,
-    TResult? Function(_BannersSuccess value)? bannersSuccess,
-    TResult? Function(_BannersError value)? bannersError,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
   }) {
     return bannersLoading?.call(this);
   }
@@ -299,8 +350,11 @@ class _$BannersLoadingImpl implements _BannersLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_BannersLoading value)? bannersLoading,
-    TResult Function(_BannersSuccess value)? bannersSuccess,
-    TResult Function(_BannersError value)? bannersError,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -332,7 +386,7 @@ class __$$BannersSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BannersSuccessImpl implements _BannersSuccess {
+class _$BannersSuccessImpl implements BannersSuccess {
   const _$BannersSuccessImpl();
 
   @override
@@ -356,6 +410,9 @@ class _$BannersSuccessImpl implements _BannersSuccess {
     required TResult Function() bannersLoading,
     required TResult Function() bannersSuccess,
     required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
   }) {
     return bannersSuccess();
   }
@@ -367,6 +424,9 @@ class _$BannersSuccessImpl implements _BannersSuccess {
     TResult? Function()? bannersLoading,
     TResult? Function()? bannersSuccess,
     TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
   }) {
     return bannersSuccess?.call();
   }
@@ -378,6 +438,9 @@ class _$BannersSuccessImpl implements _BannersSuccess {
     TResult Function()? bannersLoading,
     TResult Function()? bannersSuccess,
     TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -391,8 +454,11 @@ class _$BannersSuccessImpl implements _BannersSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_BannersLoading value) bannersLoading,
-    required TResult Function(_BannersSuccess value) bannersSuccess,
-    required TResult Function(_BannersError value) bannersError,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
   }) {
     return bannersSuccess(this);
   }
@@ -402,8 +468,11 @@ class _$BannersSuccessImpl implements _BannersSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_BannersLoading value)? bannersLoading,
-    TResult? Function(_BannersSuccess value)? bannersSuccess,
-    TResult? Function(_BannersError value)? bannersError,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
   }) {
     return bannersSuccess?.call(this);
   }
@@ -413,8 +482,11 @@ class _$BannersSuccessImpl implements _BannersSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_BannersLoading value)? bannersLoading,
-    TResult Function(_BannersSuccess value)? bannersSuccess,
-    TResult Function(_BannersError value)? bannersError,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -424,8 +496,8 @@ class _$BannersSuccessImpl implements _BannersSuccess {
   }
 }
 
-abstract class _BannersSuccess implements HomeBodyState {
-  const factory _BannersSuccess() = _$BannersSuccessImpl;
+abstract class BannersSuccess implements HomeBodyState {
+  const factory BannersSuccess() = _$BannersSuccessImpl;
 }
 
 /// @nodoc
@@ -446,7 +518,7 @@ class __$$BannersErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BannersErrorImpl implements _BannersError {
+class _$BannersErrorImpl implements BannersError {
   const _$BannersErrorImpl();
 
   @override
@@ -470,6 +542,9 @@ class _$BannersErrorImpl implements _BannersError {
     required TResult Function() bannersLoading,
     required TResult Function() bannersSuccess,
     required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
   }) {
     return bannersError();
   }
@@ -481,6 +556,9 @@ class _$BannersErrorImpl implements _BannersError {
     TResult? Function()? bannersLoading,
     TResult? Function()? bannersSuccess,
     TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
   }) {
     return bannersError?.call();
   }
@@ -492,6 +570,9 @@ class _$BannersErrorImpl implements _BannersError {
     TResult Function()? bannersLoading,
     TResult Function()? bannersSuccess,
     TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -505,8 +586,11 @@ class _$BannersErrorImpl implements _BannersError {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_BannersLoading value) bannersLoading,
-    required TResult Function(_BannersSuccess value) bannersSuccess,
-    required TResult Function(_BannersError value) bannersError,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
   }) {
     return bannersError(this);
   }
@@ -516,8 +600,11 @@ class _$BannersErrorImpl implements _BannersError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_BannersLoading value)? bannersLoading,
-    TResult? Function(_BannersSuccess value)? bannersSuccess,
-    TResult? Function(_BannersError value)? bannersError,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
   }) {
     return bannersError?.call(this);
   }
@@ -527,8 +614,11 @@ class _$BannersErrorImpl implements _BannersError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_BannersLoading value)? bannersLoading,
-    TResult Function(_BannersSuccess value)? bannersSuccess,
-    TResult Function(_BannersError value)? bannersError,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -538,6 +628,402 @@ class _$BannersErrorImpl implements _BannersError {
   }
 }
 
-abstract class _BannersError implements HomeBodyState {
-  const factory _BannersError() = _$BannersErrorImpl;
+abstract class BannersError implements HomeBodyState {
+  const factory BannersError() = _$BannersErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$CategoriesLoadingImplCopyWith<$Res> {
+  factory _$$CategoriesLoadingImplCopyWith(_$CategoriesLoadingImpl value,
+          $Res Function(_$CategoriesLoadingImpl) then) =
+      __$$CategoriesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CategoriesLoadingImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$CategoriesLoadingImpl>
+    implements _$$CategoriesLoadingImplCopyWith<$Res> {
+  __$$CategoriesLoadingImplCopyWithImpl(_$CategoriesLoadingImpl _value,
+      $Res Function(_$CategoriesLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CategoriesLoadingImpl implements CategoriesLoading {
+  const _$CategoriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.categoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CategoriesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+  }) {
+    return categoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+  }) {
+    return categoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+  }) {
+    return categoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+  }) {
+    return categoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesLoading != null) {
+      return categoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesLoading implements HomeBodyState {
+  const factory CategoriesLoading() = _$CategoriesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$CategoriesSuccessImplCopyWith<$Res> {
+  factory _$$CategoriesSuccessImplCopyWith(_$CategoriesSuccessImpl value,
+          $Res Function(_$CategoriesSuccessImpl) then) =
+      __$$CategoriesSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CategoriesSuccessImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$CategoriesSuccessImpl>
+    implements _$$CategoriesSuccessImplCopyWith<$Res> {
+  __$$CategoriesSuccessImplCopyWithImpl(_$CategoriesSuccessImpl _value,
+      $Res Function(_$CategoriesSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CategoriesSuccessImpl implements CategoriesSuccess {
+  const _$CategoriesSuccessImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.categoriesSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CategoriesSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+  }) {
+    return categoriesSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+  }) {
+    return categoriesSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesSuccess != null) {
+      return categoriesSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+  }) {
+    return categoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+  }) {
+    return categoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesSuccess != null) {
+      return categoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesSuccess implements HomeBodyState {
+  const factory CategoriesSuccess() = _$CategoriesSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$CategoriesErrorImplCopyWith<$Res> {
+  factory _$$CategoriesErrorImplCopyWith(_$CategoriesErrorImpl value,
+          $Res Function(_$CategoriesErrorImpl) then) =
+      __$$CategoriesErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CategoriesErrorImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$CategoriesErrorImpl>
+    implements _$$CategoriesErrorImplCopyWith<$Res> {
+  __$$CategoriesErrorImplCopyWithImpl(
+      _$CategoriesErrorImpl _value, $Res Function(_$CategoriesErrorImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CategoriesErrorImpl implements CategoriesError {
+  const _$CategoriesErrorImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.categoriesError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CategoriesErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+  }) {
+    return categoriesError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+  }) {
+    return categoriesError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesError != null) {
+      return categoriesError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+  }) {
+    return categoriesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+  }) {
+    return categoriesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    required TResult orElse(),
+  }) {
+    if (categoriesError != null) {
+      return categoriesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CategoriesError implements HomeBodyState {
+  const factory CategoriesError() = _$CategoriesErrorImpl;
 }

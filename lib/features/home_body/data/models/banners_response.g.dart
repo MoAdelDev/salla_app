@@ -21,3 +21,14 @@ Map<String, dynamic> _$BannersResponseToJson(BannersResponse instance) =>
       'message': instance.message,
       'data': instance.banners,
     };
+
+BannerModel _$BannerModelFromJson(Map<String, dynamic> json) => BannerModel(
+      json['id'] as int,
+      json['image'] as String,
+    );
+
+Map<String, dynamic> _$BannerModelToJson(BannerModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'image': instance.image,
+    };

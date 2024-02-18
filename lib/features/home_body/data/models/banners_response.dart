@@ -1,6 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:salla_app/features/home_body/data/models/banner_model.dart';
-
 part 'banners_response.g.dart';
 
 @JsonSerializable()
@@ -14,4 +12,15 @@ class BannersResponse {
 
   factory BannersResponse.fromJson(Map<String, dynamic> json) =>
       _$BannersResponseFromJson(json);
+}
+
+@JsonSerializable()
+class BannerModel {
+  final int id;
+  final String image;
+
+  BannerModel(this.id, this.image);
+
+  factory BannerModel.fromJson(Map<String, dynamic> json) =>
+      _$BannerModelFromJson(json);
 }

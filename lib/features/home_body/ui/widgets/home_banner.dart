@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
-import 'package:salla_app/features/home_body/data/models/banner_model.dart';
+import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 

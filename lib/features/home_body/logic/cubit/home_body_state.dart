@@ -8,7 +8,13 @@ sealed class HomeBodyState with _$HomeBodyState {
 
   const factory HomeBodyState.bannersLoading() = _BannersLoading;
 
-  const factory HomeBodyState.bannersSuccess() = _BannersSuccess;
+  const factory HomeBodyState.bannersSuccess() = BannersSuccess;
 
-  const factory HomeBodyState.bannersError() = _BannersError;
+  const factory HomeBodyState.bannersError() = BannersError;
+
+  const factory HomeBodyState.categoriesLoading() = CategoriesLoading;
+
+  const factory HomeBodyState.categoriesSuccess() = CategoriesSuccess;
+
+  const factory HomeBodyState.categoriesError() = CategoriesError;
 }

@@ -45,7 +45,9 @@ class AppRouter {
                 create: (context) => getIt()..emitUserState(),
               ),
               BlocProvider<HomeBodyCubit>(
-                create: (context) => getIt()..emitBannersState(),
+                create: (context) => getIt()
+                  ..emitBannersState()
+                  ..emitCategoriesState(),
               ),
             ],
             child: const HomeScreen(),

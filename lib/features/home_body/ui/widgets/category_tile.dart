@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 
 class CategoryTile extends StatelessWidget {
   final bool isSelected;
-  const CategoryTile({super.key, required this.isSelected});
-
+  final CategoryModel categoryModel;
+  final VoidCallback onTap;
+  const CategoryTile({
+    super.key,
+    required this.isSelected,
+    required this.categoryModel,
+    required this.onTap,
+  });
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       borderRadius: BorderRadius.circular(24.0),
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 800),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
           border: Border.all(
@@ -23,9 +31,10 @@ class CategoryTile extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.0.w),
         child: Center(
           child: Text(
-            'Sports',
-            style: AppTexts.text16WhiteLatoBold
-                .copyWith(color: isSelected ? Colors.white : Colors.black),
+            categoryModel.name,
+            style: AppTexts.text16WhiteLatoBold.copyWith(
+              color: isSelected ? Colors.white : Colors.black,
+            ),
             textAlign: TextAlign.center,
           ),
         ),
