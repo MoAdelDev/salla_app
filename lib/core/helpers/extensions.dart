@@ -12,13 +12,15 @@ extension SnackBarEx on BuildContext {
     ScaffoldMessenger.of(this).showSnackBar(
       SnackBar(
         backgroundColor: isError ? Colors.red : Colors.green,
-        content: Text(
-          message,
-          textAlign: TextAlign.center,
-          style: GoogleFonts.lato(
-            color: Colors.white,
-            fontSize: 16.0.sp,
-            fontWeight: FontWeight.bold,
+        content: SafeArea(
+          child: Text(
+            message,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.lato(
+              color: Colors.white,
+              fontSize: 16.0.sp,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

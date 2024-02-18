@@ -280,6 +280,56 @@ class S {
     );
   }
 
+  /// `Home`
+  String get homeTitle {
+    return Intl.message(
+      'Home',
+      name: 'homeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categoriesTitle {
+    return Intl.message(
+      'Categories',
+      name: 'categoriesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cartTitle {
+    return Intl.message(
+      'Cart',
+      name: 'cartTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Settings`
+  String get settingsTitle {
+    return Intl.message(
+      'Settings',
+      name: 'settingsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorites`
+  String get favoritesTitle {
+    return Intl.message(
+      'Favorites',
+      name: 'favoritesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Products`
   String get productsTitle {
     return Intl.message(

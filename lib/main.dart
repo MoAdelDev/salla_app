@@ -10,6 +10,7 @@ void main() async {
   await setupGetIt();
   await ScreenUtil.ensureScreenSize();
   await CacheHelper.init();
+
   runApp(SallaApp(
     appRouter: AppRouter(),
   ));

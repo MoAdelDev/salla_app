@@ -1,12 +1,7 @@
-import 'package:salla_app/features/login/data/models/user_model.dart';
+import 'dart:io';
 
 class AppData {
   AppData._();
-  static UserModel userModel = UserModel(
-    '',
-    '',
-    '',
-    0,
-    '',
-  );
+
+  static bool get isIos => Platform.isIOS;
 }

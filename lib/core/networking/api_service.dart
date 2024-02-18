@@ -5,9 +5,13 @@ import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
 import 'package:salla_app/features/register/data/models/register_body_response.dart';
+
+import '../../features/home/data/models/user_response_body.dart';
 part 'api_service.g.dart';
 
-@RestApi(baseUrl: ApiConstance.baseUrl)
+@RestApi(
+  baseUrl: ApiConstance.baseUrl,
+)
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
@@ -18,4 +22,7 @@ abstract class ApiService {
   Future<RegisterBodyResponse> register(
     @Body() RegisterBodyRequest registerBodyRequest,
   );
+
+  @GET(ApiConstance.profile)
+  Future<UserResponseBody> getUser(@Header('Authorization') String token);
 }

@@ -9,6 +9,8 @@ class UserModel {
   final String phone;
   final int id;
   final String token;
+  final int? points;
+  final dynamic credits;
 
   UserModel(
     this.name,
@@ -16,6 +18,8 @@ class UserModel {
     this.phone,
     this.id,
     this.token,
+    this.points,
+    this.credits,
   );
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

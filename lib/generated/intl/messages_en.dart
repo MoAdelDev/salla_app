@@ -43,10 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "applyTitle": MessageLookupByLibrary.simpleMessage("APPLY"),
         "arabicTitleTitle": MessageLookupByLibrary.simpleMessage("Arabic"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("Cancel order"),
+        "cartTitle": MessageLookupByLibrary.simpleMessage("Cart"),
         "cashOnDeliveryBody": MessageLookupByLibrary.simpleMessage(
             "COD is a type of transaction where the recipient pays for a good at the time of delivery rather than using credit"),
         "cashOnDeliveryTitle":
             MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
+        "categoriesTitle": MessageLookupByLibrary.simpleMessage("Categories"),
         "changeTitle": MessageLookupByLibrary.simpleMessage("CHANGE"),
         "checkoutTitle": MessageLookupByLibrary.simpleMessage("Checkout"),
         "cityHintTitle":
@@ -73,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),
         "englishTitle": MessageLookupByLibrary.simpleMessage("English"),
         "faqsTitle": MessageLookupByLibrary.simpleMessage("FAQS"),
+        "favoritesTitle": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgotPasswordTitle":
             MessageLookupByLibrary.simpleMessage("Forgot password ?"),
         "freeTitle": MessageLookupByLibrary.simpleMessage("Free"),
@@ -80,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full name"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "homeTitle": MessageLookupByLibrary.simpleMessage("Home"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("Item\'s total"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Items"),
         "languageTitle": MessageLookupByLibrary.simpleMessage("Language"),
@@ -147,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "removeTitle": MessageLookupByLibrary.simpleMessage("Remove"),
         "searchHereTitle":
             MessageLookupByLibrary.simpleMessage("Search here ..."),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("Shipping Address"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("Sign In"),
