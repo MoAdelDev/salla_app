@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
@@ -18,7 +19,7 @@ class HomeProducts extends StatelessWidget {
         if (products.isEmpty ||
             context.read<HomeBodyCubit>().isProductsLoading) {
           return Container(
-            color: Colors.grey.shade400,
+            color: AppColor.greyColor,
             padding: EdgeInsets.symmetric(vertical: 2.0.h),
             child: GridView.count(
               crossAxisCount: 2,

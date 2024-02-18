@@ -5,24 +5,24 @@ import 'colors.dart';
 
 ThemeData lightTheme(context) => ThemeData(
       colorScheme: ColorScheme(
-        primary: AppColorLight.primaryColor,
-        primaryContainer: AppColorLight.primaryVariantColor,
-        background: AppColorLight.backgroundColor,
-        secondary: AppColorLight.secondaryColor,
-        secondaryContainer: AppColorLight.secondaryVariantColor,
-        error: AppColorLight.errorColor,
-        surface: AppColorLight.surfaceColor,
-        onSurface: AppColorLight.onSurfaceColor,
-        onPrimary: AppColorLight.onPrimaryColor,
-        onSecondary: AppColorLight.onSecondaryColor,
-        onError: AppColorLight.onErrorColor,
-        onBackground: AppColorLight.onBackgroundColor,
+        primary: AppColor.primaryColor,
+        primaryContainer: AppColor.primaryVariantColor,
+        background: AppColor.backgroundColor,
+        secondary: AppColor.secondaryColor,
+        secondaryContainer: AppColor.secondaryVariantColor,
+        error: AppColor.errorColor,
+        surface: AppColor.surfaceColor,
+        onSurface: AppColor.onSurfaceColor,
+        onPrimary: AppColor.onPrimaryColor,
+        onSecondary: AppColor.onSecondaryColor,
+        onError: AppColor.onErrorColor,
+        onBackground: AppColor.onBackgroundColor,
         brightness: Brightness.light,
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColorLight.backgroundColor,
+        backgroundColor: AppColor.backgroundColor,
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: AppColorLight.primaryColor,
+          statusBarColor: AppColor.primaryColor,
           statusBarIconBrightness: Brightness.light,
         ),
         titleTextStyle: GoogleFonts.lato(
@@ -32,7 +32,7 @@ ThemeData lightTheme(context) => ThemeData(
         ),
         elevation: 0.0,
         iconTheme: const IconThemeData(
-          color: AppColorLight.onBackgroundColor,
+          color: AppColor.onBackgroundColor,
         ),
         titleSpacing: 10.0,
       ),

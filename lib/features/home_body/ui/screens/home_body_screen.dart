@@ -40,6 +40,7 @@ class HomeBodyScreen extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HomeTitle(
                 text: S.of(context).productsTitle,
