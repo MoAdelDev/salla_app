@@ -6,6 +6,7 @@ import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
 import 'package:salla_app/features/home/ui/widgets/home_navigation_destination.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           return SafeArea(
             child: Stack(
               children: [
+                context.read<HomeCubit>().screens[currentIndex],
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -69,27 +71,27 @@ class _HomeScreenState extends State<HomeScreen> {
                       destinations: [
                         HomeNavigationDestination(
                           iconData: Icons.home_filled,
-                          label: 'Home',
+                          label: S.of(context).homeTitle,
                           isSelected: currentIndex == 0,
                         ),
                         HomeNavigationDestination(
                           iconData: Icons.apps,
-                          label: 'Categories',
+                          label: S.of(context).categoriesTitle,
                           isSelected: currentIndex == 1,
                         ),
                         HomeNavigationDestination(
                           iconData: Icons.favorite_rounded,
-                          label: 'Favorites',
+                          label: S.of(context).favoritesTitle,
                           isSelected: currentIndex == 2,
                         ),
                         HomeNavigationDestination(
                           iconData: Icons.shopping_cart,
-                          label: 'Cart',
+                          label: S.of(context).cartTitle,
                           isSelected: currentIndex == 3,
                         ),
                         HomeNavigationDestination(
                           iconData: Icons.settings,
-                          label: 'Settings',
+                          label: S.of(context).settingsTitle,
                           isSelected: currentIndex == 4,
                         ),
                       ],

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/features/home/data/models/user_model.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
@@ -7,6 +8,15 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
 
+  List<Widget> screens = [
+    const Center(
+      child: Text('Home'),
+    ),
+    Container(),
+    Container(),
+    Container(),
+    Container(),
+  ];
   UserModel? userModel;
   void emitUserState() async {
     emit(const HomeState.userLoading());
