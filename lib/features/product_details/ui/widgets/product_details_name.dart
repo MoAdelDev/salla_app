@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/style/texts.dart';
 
-class ProductTitle extends StatelessWidget {
-  final String title;
-  const ProductTitle({super.key, required this.title});
+class ProductDetailsName extends StatelessWidget {
+  final String name;
+  const ProductDetailsName({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      title,
-      maxLines: 2,
-      overflow: TextOverflow.ellipsis,
+      name,
       style: AppTexts.text16BlackLatoBold,
+      overflow: TextOverflow.visible,
     );
   }
 }

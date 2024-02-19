@@ -29,20 +29,21 @@ extension SnackBarEx on BuildContext {
 }
 
 extension NavigationEx on BuildContext {
-  void push(String routeName) {
-    Navigator.pushNamed(this, routeName);
+  void push(String routeName, {Object? arguments}) {
+    Navigator.pushNamed(this, routeName, arguments: arguments);
   }
 
   void pop() {
     Navigator.pop(this);
   }
 
-  void pushAndRemoveUntil(String routeName) {
-    Navigator.pushNamedAndRemoveUntil(this, routeName, (route) => false);
+  void pushAndRemoveUntil(String routeName, {Object? arguments}) {
+    Navigator.pushNamedAndRemoveUntil(
+        this, routeName, arguments: arguments, (route) => false);
   }
 
-  void pushReplacement(String routeName) {
-    Navigator.pushReplacementNamed(this, routeName);
+  void pushReplacement(String routeName, {Object? arguments}) {
+    Navigator.pushReplacementNamed(this, routeName, arguments: arguments);
   }
 }
 
