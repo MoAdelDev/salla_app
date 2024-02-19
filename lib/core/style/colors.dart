@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColorLight {
+class AppColor {
   static MaterialColor primaryColor =
       MaterialColorGenerator.from(const Color(0xff000000));
   static const Color primaryVariantColor = Color(0xff4510c0);
@@ -14,6 +14,8 @@ class AppColorLight {
   static const Color onBackgroundColor = Color(0xff212121);
   static const Color onSurfaceColor = Color(0xff212121);
   static const Color onErrorColor = Color(0xffFFFFFF);
+
+  static Color greyColor = Colors.grey.shade400;
 }
 
 class MaterialColorGenerator {

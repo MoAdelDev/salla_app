@@ -41,6 +41,12 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text18BlackLatoBold => GoogleFonts.lato(
+        fontSize: 18.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.bold,
+      );
+
   static TextStyle get text14BlackLatoRegular => GoogleFonts.lato(
         fontSize: 14.0.sp,
         color: Colors.black,
@@ -49,7 +55,7 @@ class AppTexts {
 
   static TextStyle get text18primaryLatoBold => GoogleFonts.lato(
         fontSize: 18.0.sp,
-        color: AppColorLight.primaryColor,
+        color: AppColor.primaryColor,
         fontWeight: AppFontWeight.bold,
       );
   static TextStyle get text22BlackLatoBold => GoogleFonts.lato(
@@ -76,7 +82,7 @@ class AppTexts {
       );
   static TextStyle get text16PrimaryLatoBold => GoogleFonts.lato(
         fontSize: 16.0.sp,
-        color: AppColorLight.primaryColor,
+        color: AppColor.primaryColor,
         fontWeight: AppFontWeight.bold,
       );
   static TextStyle get text28BlackShadowLatoBold => GoogleFonts.lato(

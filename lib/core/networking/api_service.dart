@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:salla_app/core/networking/api_constance.dart';
+import 'package:salla_app/features/favorites/data/models/favorite_remove_response.dart';
+import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 import 'package:salla_app/features/home_body/data/models/change_favorite_request.dart';
@@ -50,5 +52,16 @@ abstract class ApiService {
   Future<ProductsReponsne> getProductsByCategory(
     @Header('Authorization') String token,
     @Query('category_id') int categoryId,
+  );
+
+  @GET(ApiConstance.favorites)
+  Future<FavoritesResponse> getFavorites(
+    @Header('Authorization') String token,
+  );
+
+  @DELETE("${ApiConstance.favorites}/{id}")
+  Future<FavoriteRemoveResponse> removeFavorite(
+    @Header('Authorization') String token,
+    @Path("id") int id,
   );
 }

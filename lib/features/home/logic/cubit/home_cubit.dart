@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/features/favorites/ui/screens/favorites_screen.dart';
 import 'package:salla_app/features/home/data/models/user_model.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
@@ -11,7 +12,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   List<Widget> screens = [
     const HomeBodyScreen(),
-    Container(),
+    const FavoritesScreen(),
     Container(),
     Container(),
     Container(),
@@ -26,7 +27,7 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.userSuccess(userModel: userModel!));
       },
       failure: (error) {
-        emit(HomeState.userError(message: error.message));
+        emit(HomeState.userError(message: error));
       },
     );
   }

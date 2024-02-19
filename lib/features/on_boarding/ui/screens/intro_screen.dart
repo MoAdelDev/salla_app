@@ -10,7 +10,7 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColorLight.primaryColor,
+      backgroundColor: AppColor.primaryColor,
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

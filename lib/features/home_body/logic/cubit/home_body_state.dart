@@ -29,4 +29,6 @@ sealed class HomeBodyState with _$HomeBodyState {
   const factory HomeBodyState.changeFavoriteSuccess() = ChangeFavoriteSuccess;
 
   const factory HomeBodyState.changeFavoriteError() = ChangeFavoriteError;
+
+  const factory HomeBodyState.updateFavorites() = UpdateFavorites;
 }

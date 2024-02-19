@@ -1,4 +1,6 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 import 'package:salla_app/features/home_body/data/models/change_favorite_request.dart';
@@ -62,7 +64,13 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
     );
   }
 
-  void emitChangeFavoriteState({required int productId}) async {
+  void updateFavorites(int id, bool isFavorite) {
+    favorites[id] = isFavorite;
+    emit(const HomeBodyState.updateFavorites());
+  }
+
+  void emitChangeFavoriteState(
+      {required int productId, required BuildContext context}) async {
     favorites[productId] = !favorites[productId]!;
     emit(const HomeBodyState.changeFavoriteLoading());
     final response = await _homeBodyRepo.changeFavorite(
@@ -70,6 +78,9 @@ class HomeBodyCubit extends Cubit<HomeBodyState> {
     );
     response.when(
       success: (favoriteResponse) {
+        if (context.mounted) {
+          context.read<FavoritesCubit>().emitFavoritesState();
+        }
         emit(const HomeBodyState.changeFavoriteSuccess());
       },
       failure: (error) {

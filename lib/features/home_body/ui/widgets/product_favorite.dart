@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 
@@ -9,12 +10,18 @@ class ProductFavorite extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeBodyCubit, HomeBodyState>(
+    return BlocConsumer<HomeBodyCubit, HomeBodyState>(
+      listener: (context, state) {
+        if (state is UpdateFavorites) {
+          context.showSnackBar('Updated');
+        }
+      },
       builder: (context, state) {
         return IconButton(
           onPressed: () {
             context.read<HomeBodyCubit>().emitChangeFavoriteState(
                   productId: productId,
+                  context: context,
                 );
           },
           icon: Icon(

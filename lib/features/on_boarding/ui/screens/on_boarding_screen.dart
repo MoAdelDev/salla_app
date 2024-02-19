@@ -92,7 +92,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       activeIndex: currentIndex,
                       count: titles.length,
                       effect: ExpandingDotsEffect(
-                        activeDotColor: AppColorLight.primaryColor,
+                        activeDotColor: AppColor.primaryColor,
                         expansionFactor: 3,
                         spacing: 10.0,
                       ),
@@ -105,7 +105,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundColor: AppColorLight.primaryColor,
+                    backgroundColor: AppColor.primaryColor,
                     radius: 35.0,
                     child: SizedBox(
                       height: double.infinity,

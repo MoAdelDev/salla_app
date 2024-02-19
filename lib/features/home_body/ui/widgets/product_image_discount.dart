@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_discount_container.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 
@@ -30,17 +30,7 @@ class ProductImageDiscount extends StatelessWidget {
             ),
           ),
           if (productModel.discount != 0)
-            Container(
-              color: Theme.of(context).colorScheme.primary,
-              padding: EdgeInsets.symmetric(
-                horizontal: 5.0.w,
-                vertical: 3.0.h,
-              ),
-              child: Text(
-                '- ${productModel.discount} %',
-                style: AppTexts.text14WhiteLatoRegular,
-              ),
-            )
+            CustomDiscountContainer(discount: productModel.discount),
         ],
       ),
     );
