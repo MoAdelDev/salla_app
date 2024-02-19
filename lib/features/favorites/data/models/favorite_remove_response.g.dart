@@ -1,18 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'api_error_model.dart';
+part of 'favorite_remove_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ApiErrorModel _$ApiErrorModelFromJson(Map<String, dynamic> json) =>
-    ApiErrorModel(
-      status: json['status'] as bool,
-      message: json['message'] as String,
+FavoriteRemoveResponse _$FavoriteRemoveResponseFromJson(
+        Map<String, dynamic> json) =>
+    FavoriteRemoveResponse(
+      json['status'] as bool,
+      json['message'] as String?,
     );
 
-Map<String, dynamic> _$ApiErrorModelToJson(ApiErrorModel instance) =>
+Map<String, dynamic> _$FavoriteRemoveResponseToJson(
+        FavoriteRemoveResponse instance) =>
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,

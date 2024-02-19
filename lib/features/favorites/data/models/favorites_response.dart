@@ -1,22 +1,23 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../home_body/data/models/products_response.dart';
-part 'favorites_response_body.g.dart';
+import '../../../home_body/data/models/products_response.dart';
+
+part 'favorites_response.g.dart';
 
 @JsonSerializable()
-class FavoritesResponseBody {
+class FavoritesResponse {
   final bool status;
   final String? message;
   @JsonKey(name: 'data')
   final FavoritesData data;
-  FavoritesResponseBody(
+  FavoritesResponse(
     this.status,
     this.message,
     this.data,
   );
 
-  factory FavoritesResponseBody.fromJson(Map<String, dynamic> json) =>
-      _$FavoritesResponseBodyFromJson(json);
+  factory FavoritesResponse.fromJson(Map<String, dynamic> json) =>
+      _$FavoritesResponseFromJson(json);
 }
 
 @JsonSerializable()

@@ -1,21 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'favorites_response_body.dart';
+part of 'favorites_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-FavoritesResponseBody _$FavoritesResponseBodyFromJson(
-        Map<String, dynamic> json) =>
-    FavoritesResponseBody(
+FavoritesResponse _$FavoritesResponseFromJson(Map<String, dynamic> json) =>
+    FavoritesResponse(
       json['status'] as bool,
       json['message'] as String?,
       FavoritesData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$FavoritesResponseBodyToJson(
-        FavoritesResponseBody instance) =>
+Map<String, dynamic> _$FavoritesResponseToJson(FavoritesResponse instance) =>
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,
