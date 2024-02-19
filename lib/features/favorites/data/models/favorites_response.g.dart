@@ -39,11 +39,35 @@ Map<String, dynamic> _$FavoritesDataToJson(FavoritesData instance) =>
 FavoriteModel _$FavoriteModelFromJson(Map<String, dynamic> json) =>
     FavoriteModel(
       json['id'] as int,
-      ProductModel.fromJson(json['product'] as Map<String, dynamic>),
+      FavoriteProductModel.fromJson(json['product'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$FavoriteModelToJson(FavoriteModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'product': instance.product,
+    };
+
+FavoriteProductModel _$FavoriteProductModelFromJson(
+        Map<String, dynamic> json) =>
+    FavoriteProductModel(
+      json['id'] as int,
+      json['name'] as String,
+      json['description'] as String,
+      json['image'] as String,
+      json['price'],
+      json['oldPrice'],
+      json['discount'] as int,
+    );
+
+Map<String, dynamic> _$FavoriteProductModelToJson(
+        FavoriteProductModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'description': instance.description,
+      'image': instance.image,
+      'price': instance.price,
+      'oldPrice': instance.oldPrice,
+      'discount': instance.discount,
     };

@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 
 class FavoritePrice extends StatelessWidget {
-  const FavoritePrice({super.key});
+  final FavoriteProductModel product;
+  const FavoritePrice({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'EGP ${2000}',
+          'EGP ${product.price}',
           style: AppTexts.text14BlackLatoBold,
         ),
         const SizedBox(
           width: 5.0,
         ),
-        if (true)
+        if (product.discount != 0)
           Text(
-            'EGP ${1000}',
+            'EGP ${product.oldPrice}',
             style: AppTexts.text14GreyLatoBold.copyWith(
               decoration: TextDecoration.lineThrough,
             ),

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_image_discount.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_name.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_price.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_remove.dart';
 
 class FavoriteTile extends StatelessWidget {
-  const FavoriteTile({super.key});
+  final FavoriteModel favoriteModel;
+  const FavoriteTile({super.key, required this.favoriteModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class FavoriteTile extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const FavoriteImageDiscount(),
+                  FavoriteImageDiscount(product: favoriteModel.product),
                   horizontalSpace(5.0),
                   Expanded(
                     child: Padding(
@@ -29,18 +31,18 @@ class FavoriteTile extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const FavoriteName(),
+                          FavoriteName(name: favoriteModel.product.name),
                           verticalSpace(8.0),
-                          const FavoritePrice()
+                          FavoritePrice(product: favoriteModel.product)
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-              const Align(
+              Align(
                 alignment: AlignmentDirectional.centerEnd,
-                child: FavoriteRemove(),
+                child: FavoriteRemove(favoriteModel: favoriteModel),
               )
             ],
           ),

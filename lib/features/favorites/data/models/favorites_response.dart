@@ -1,7 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-
-import '../../../home_body/data/models/products_response.dart';
-
 part 'favorites_response.g.dart';
 
 @JsonSerializable()
@@ -37,10 +34,27 @@ class FavoritesData {
 @JsonSerializable()
 class FavoriteModel {
   final int id;
-  final ProductModel product;
+  final FavoriteProductModel product;
 
   FavoriteModel(this.id, this.product);
 
   factory FavoriteModel.fromJson(Map<String, dynamic> json) =>
       _$FavoriteModelFromJson(json);
+}
+
+@JsonSerializable()
+class FavoriteProductModel {
+  final int id;
+  final String name;
+  final String description;
+  final String image;
+  final dynamic price;
+  final dynamic oldPrice;
+  final int discount;
+
+  FavoriteProductModel(this.id, this.name, this.description, this.image,
+      this.price, this.oldPrice, this.discount);
+
+  factory FavoriteProductModel.fromJson(Map<String, dynamic> json) =>
+      _$FavoriteProductModelFromJson(json);
 }

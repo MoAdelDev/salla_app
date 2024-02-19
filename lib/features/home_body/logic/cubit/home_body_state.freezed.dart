@@ -31,6 +31,7 @@ mixin _$HomeBodyState {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +49,7 @@ mixin _$HomeBodyState {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +67,7 @@ mixin _$HomeBodyState {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -85,6 +88,7 @@ mixin _$HomeBodyState {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -102,6 +106,7 @@ mixin _$HomeBodyState {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -119,6 +124,7 @@ mixin _$HomeBodyState {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -193,6 +199,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return initial();
   }
@@ -213,6 +220,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return initial?.call();
   }
@@ -233,6 +241,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -259,6 +268,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return initial(this);
   }
@@ -279,6 +289,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return initial?.call(this);
   }
@@ -299,6 +310,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -363,6 +375,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return bannersLoading();
   }
@@ -383,6 +396,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return bannersLoading?.call();
   }
@@ -403,6 +417,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -429,6 +444,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return bannersLoading(this);
   }
@@ -449,6 +465,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return bannersLoading?.call(this);
   }
@@ -469,6 +486,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -533,6 +551,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return bannersSuccess();
   }
@@ -553,6 +572,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return bannersSuccess?.call();
   }
@@ -573,6 +593,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -599,6 +620,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return bannersSuccess(this);
   }
@@ -619,6 +641,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return bannersSuccess?.call(this);
   }
@@ -639,6 +662,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -703,6 +727,7 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return bannersError();
   }
@@ -723,6 +748,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return bannersError?.call();
   }
@@ -743,6 +769,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -769,6 +796,7 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return bannersError(this);
   }
@@ -789,6 +817,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return bannersError?.call(this);
   }
@@ -809,6 +838,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -873,6 +903,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return categoriesLoading();
   }
@@ -893,6 +924,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return categoriesLoading?.call();
   }
@@ -913,6 +945,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -939,6 +972,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return categoriesLoading(this);
   }
@@ -959,6 +993,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return categoriesLoading?.call(this);
   }
@@ -979,6 +1014,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1043,6 +1079,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return categoriesSuccess();
   }
@@ -1063,6 +1100,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return categoriesSuccess?.call();
   }
@@ -1083,6 +1121,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1109,6 +1148,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return categoriesSuccess(this);
   }
@@ -1129,6 +1169,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return categoriesSuccess?.call(this);
   }
@@ -1149,6 +1190,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1213,6 +1255,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return categoriesError();
   }
@@ -1233,6 +1276,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return categoriesError?.call();
   }
@@ -1253,6 +1297,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1279,6 +1324,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return categoriesError(this);
   }
@@ -1299,6 +1345,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return categoriesError?.call(this);
   }
@@ -1319,6 +1366,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1383,6 +1431,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return productsLoading();
   }
@@ -1403,6 +1452,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return productsLoading?.call();
   }
@@ -1423,6 +1473,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1449,6 +1500,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return productsLoading(this);
   }
@@ -1469,6 +1521,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return productsLoading?.call(this);
   }
@@ -1489,6 +1542,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1553,6 +1607,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return productsSuccess();
   }
@@ -1573,6 +1628,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return productsSuccess?.call();
   }
@@ -1593,6 +1649,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1619,6 +1676,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return productsSuccess(this);
   }
@@ -1639,6 +1697,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return productsSuccess?.call(this);
   }
@@ -1659,6 +1718,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1723,6 +1783,7 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return productsError();
   }
@@ -1743,6 +1804,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return productsError?.call();
   }
@@ -1763,6 +1825,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1789,6 +1852,7 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return productsError(this);
   }
@@ -1809,6 +1873,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return productsError?.call(this);
   }
@@ -1829,6 +1894,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1895,6 +1961,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return changeFavoriteLoading();
   }
@@ -1915,6 +1982,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return changeFavoriteLoading?.call();
   }
@@ -1935,6 +2003,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteLoading != null) {
@@ -1961,6 +2030,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return changeFavoriteLoading(this);
   }
@@ -1981,6 +2051,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return changeFavoriteLoading?.call(this);
   }
@@ -2001,6 +2072,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteLoading != null) {
@@ -2067,6 +2139,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return changeFavoriteSuccess();
   }
@@ -2087,6 +2160,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return changeFavoriteSuccess?.call();
   }
@@ -2107,6 +2181,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteSuccess != null) {
@@ -2133,6 +2208,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return changeFavoriteSuccess(this);
   }
@@ -2153,6 +2229,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return changeFavoriteSuccess?.call(this);
   }
@@ -2173,6 +2250,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteSuccess != null) {
@@ -2238,6 +2316,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function() changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
   }) {
     return changeFavoriteError();
   }
@@ -2258,6 +2337,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function()? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
   }) {
     return changeFavoriteError?.call();
   }
@@ -2278,6 +2358,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function()? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteError != null) {
@@ -2304,6 +2385,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function(ChangeFavoriteSuccess value)
         changeFavoriteSuccess,
     required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
   }) {
     return changeFavoriteError(this);
   }
@@ -2324,6 +2406,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
   }) {
     return changeFavoriteError?.call(this);
   }
@@ -2344,6 +2427,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
     TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
     TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
     required TResult orElse(),
   }) {
     if (changeFavoriteError != null) {
@@ -2355,4 +2439,180 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
 
 abstract class ChangeFavoriteError implements HomeBodyState {
   const factory ChangeFavoriteError() = _$ChangeFavoriteErrorImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateFavoritesImplCopyWith<$Res> {
+  factory _$$UpdateFavoritesImplCopyWith(_$UpdateFavoritesImpl value,
+          $Res Function(_$UpdateFavoritesImpl) then) =
+      __$$UpdateFavoritesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateFavoritesImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$UpdateFavoritesImpl>
+    implements _$$UpdateFavoritesImplCopyWith<$Res> {
+  __$$UpdateFavoritesImplCopyWithImpl(
+      _$UpdateFavoritesImpl _value, $Res Function(_$UpdateFavoritesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateFavoritesImpl implements UpdateFavorites {
+  const _$UpdateFavoritesImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.updateFavorites()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateFavoritesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
+  }) {
+    return updateFavorites();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
+  }) {
+    return updateFavorites?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
+    required TResult orElse(),
+  }) {
+    if (updateFavorites != null) {
+      return updateFavorites();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
+  }) {
+    return updateFavorites(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
+  }) {
+    return updateFavorites?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
+    required TResult orElse(),
+  }) {
+    if (updateFavorites != null) {
+      return updateFavorites(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateFavorites implements HomeBodyState {
+  const factory UpdateFavorites() = _$UpdateFavoritesImpl;
 }

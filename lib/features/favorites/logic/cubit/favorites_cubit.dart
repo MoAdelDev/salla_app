@@ -25,12 +25,16 @@ class FavoritesCubit extends Cubit<FavoritesState> {
     );
   }
 
-  void emitRemoveFavoriteState(int id, BuildContext context) async {
+  Future<void> emitRemoveFavoriteState(
+      FavoriteModel favoriteModel, BuildContext context) async {
     emit(const FavoritesState.removeFavoriteLoading());
-    final response = await favoritesRepo.removeFavorite(id: id);
+    final response = await favoritesRepo.removeFavorite(id: favoriteModel.id);
     response.when(
       success: (response) {
-        context.read<HomeBodyCubit>().favorites[id] = false;
+        context
+            .read<HomeBodyCubit>()
+            .updateFavorites(favoriteModel.product.id, false);
+        favorites.removeWhere((element) => element.id == favoriteModel.id);
         emit(
           FavoritesState.removeFavoriteSuccess(response),
         );
@@ -41,11 +45,11 @@ class FavoritesCubit extends Cubit<FavoritesState> {
     );
   }
 
-  void emitRemoveAllFavoriteState(BuildContext context) async {
-    emit(const FavoritesState.removeFavoriteLoading());
-    favorites.map((e) {
-      context.read<HomeBodyCubit>().favorites[e.id] = false;
-      emit(const FavoritesState.removeAllFavoritesSuccess());
-    });
+  Future<void> emitRemoveAllFavoriteState(BuildContext context) async {
+    emit(const FavoritesState.removeAllFavoritesLoading());
+    List<FavoriteModel> favoritesCopy = List.from(favorites);
+    for (FavoriteModel favorite in favoritesCopy) {
+      await emitRemoveFavoriteState(favorite, context);
+    }
   }
 }

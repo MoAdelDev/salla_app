@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/widgets/custom_discount_container.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
+import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 
 class FavoriteImageDiscount extends StatelessWidget {
-  const FavoriteImageDiscount({super.key});
+  final FavoriteProductModel product;
+  const FavoriteImageDiscount({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +15,7 @@ class FavoriteImageDiscount extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         CachedNetworkImage(
-          imageUrl:
-              'https://student.valuxapps.com/storage/uploads/products/1644375298DjMDB.14.jpg',
+          imageUrl: product.image,
           height: 100.h,
           width: 100.w,
           errorWidget: (context, url, error) => const CustomShimmer(),
@@ -28,11 +29,11 @@ class FavoriteImageDiscount extends StatelessWidget {
             ),
           ),
         ),
-        if (true)
-          const Positioned(
+        if (product.discount != 0)
+          Positioned(
             left: 0,
             right: 0,
-            child: CustomDiscountContainer(discount: 25),
+            child: CustomDiscountContainer(discount: product.discount),
           ),
       ],
     );
