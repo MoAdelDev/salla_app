@@ -56,7 +56,7 @@ FavoriteProductModel _$FavoriteProductModelFromJson(
       json['description'] as String,
       json['image'] as String,
       json['price'],
-      json['oldPrice'],
+      json['old_price'],
       json['discount'] as int,
     );
 
@@ -68,6 +68,6 @@ Map<String, dynamic> _$FavoriteProductModelToJson(
       'description': instance.description,
       'image': instance.image,
       'price': instance.price,
-      'oldPrice': instance.oldPrice,
+      'old_price': instance.oldPrice,
       'discount': instance.discount,
     };
