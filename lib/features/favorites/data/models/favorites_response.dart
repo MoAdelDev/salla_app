@@ -49,6 +49,7 @@ class FavoriteProductModel {
   final String description;
   final String image;
   final dynamic price;
+  @JsonKey(name: 'old_price')
   final dynamic oldPrice;
   final int discount;
 
