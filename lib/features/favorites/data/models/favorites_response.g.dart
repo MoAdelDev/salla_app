@@ -10,7 +10,9 @@ FavoritesResponse _$FavoritesResponseFromJson(Map<String, dynamic> json) =>
     FavoritesResponse(
       json['status'] as bool,
       json['message'] as String?,
-      FavoritesData.fromJson(json['data'] as Map<String, dynamic>),
+      json['data'] == null
+          ? null
+          : FavoritesData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$FavoritesResponseToJson(FavoritesResponse instance) =>

@@ -9,7 +9,7 @@ class FavoritesResponse {
   final bool status;
   final String? message;
   @JsonKey(name: 'data')
-  final FavoritesData data;
+  final FavoritesData? data;
   FavoritesResponse(
     this.status,
     this.message,
