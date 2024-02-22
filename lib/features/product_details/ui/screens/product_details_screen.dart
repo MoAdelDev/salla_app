@@ -58,7 +58,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               ),
             ),
             verticalSpace(10.0),
-            const AddToCartSubmit(),
+            AddToCartSubmit(
+              product: widget.args.productModel,
+            ),
             verticalSpace(8.0),
           ],
         ),
