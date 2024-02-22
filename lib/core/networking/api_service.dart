@@ -10,6 +10,9 @@ import 'package:salla_app/features/home_body/data/models/change_favorite_respons
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
+import 'package:salla_app/features/product_details/data/models/add_to_cart_request.dart';
+import 'package:salla_app/features/product_details/data/models/add_to_cart_response.dart';
+import 'package:salla_app/features/product_details/data/models/product_details_response.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
 import 'package:salla_app/features/register/data/models/register_body_response.dart';
 
@@ -63,5 +66,16 @@ abstract class ApiService {
   Future<FavoriteRemoveResponse> removeFavorite(
     @Header('Authorization') String token,
     @Path("id") int id,
+  );
+
+  @GET("${ApiConstance.products}/{id}")
+  Future<ProductDetailsResponse> getProductDetails(
+    @Header('Authorization') String token,
+    @Path("id") int id,
+  );
+  @POST(ApiConstance.carts)
+  Future<AddToCartResponse> addToCart(
+    @Header('Authorization') String token,
+    @Body() AddToCartRequest addToCartRequest,
   );
 }

@@ -11,6 +11,7 @@ import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/on_boarding_screen.dart';
+import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/ui/screens/product_details_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
@@ -65,8 +66,10 @@ class AppRouter {
         ProductDetailsScreenArgs args =
             settings.arguments as ProductDetailsScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => ProductDetailsScreen(
-            args: args,
+          builder: (context) => BlocProvider<ProductDetailsCubit>(
+            create: (context) =>
+                getIt()..emitProductDeatilsState(args.productId),
+            child: const ProductDetailsScreen(),
           ),
         );
       default:

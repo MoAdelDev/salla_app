@@ -18,7 +18,7 @@ class HomeProductTile extends StatelessWidget {
       onTap: () {
         context.push(
           Routes.productDetails,
-          arguments: ProductDetailsScreenArgs(productModel: productModel),
+          arguments: ProductDetailsScreenArgs(productId: productModel.id),
         );
       },
       child: Container(

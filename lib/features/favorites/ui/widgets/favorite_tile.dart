@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_image_discount.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_name.dart';
@@ -15,7 +18,12 @@ class FavoriteTile extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: InkWell(
-        onTap: () {},
+        onTap: () => context.push(
+          Routes.productDetails,
+          arguments: ProductDetailsScreenArgs(
+            productId: favoriteModel.product.id,
+          ),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14.0),
           child: Column(
