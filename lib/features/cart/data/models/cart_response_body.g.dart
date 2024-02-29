@@ -10,7 +10,9 @@ CartResponseBody _$CartResponseBodyFromJson(Map<String, dynamic> json) =>
     CartResponseBody(
       json['status'] as bool,
       json['message'] as String?,
-      CartData.fromJson(json['data'] as Map<String, dynamic>),
+      json['data'] == null
+          ? null
+          : CartData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CartResponseBodyToJson(CartResponseBody instance) =>
@@ -20,15 +22,14 @@ Map<String, dynamic> _$CartResponseBodyToJson(CartResponseBody instance) =>
       'data': instance.data,
     };
 
-CartData _$CartDataModelFromJson(Map<String, dynamic> json) => CartData(
+CartData _$CartDataFromJson(Map<String, dynamic> json) => CartData(
       (json['cart_items'] as List<dynamic>)
           .map((e) => CartProductModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       json['total'] as int,
     );
 
-Map<String, dynamic> _$CartDataModelToJson(CartData instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$CartDataToJson(CartData instance) => <String, dynamic>{
       'cart_items': instance.cartProducts,
       'total': instance.total,
     };

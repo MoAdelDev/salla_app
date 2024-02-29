@@ -80,7 +80,7 @@ abstract class ApiService {
     @Body() AddToCartRequest addToCartRequest,
   );
 
-  @POST(ApiConstance.carts)
+  @GET(ApiConstance.carts)
   Future<CartResponseBody> getCart(
     @Header('Authorization') String token,
   );

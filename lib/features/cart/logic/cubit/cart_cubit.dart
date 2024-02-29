@@ -14,7 +14,7 @@ class CartCubit extends Cubit<CartState> {
     final response = await _cartRepo.getCart();
     response.when(
       success: (data) {
-        cartProducts = data.data.cartProducts;
+        cartProducts = data.data?.cartProducts ?? [];
         emit(CartState.success(data));
       },
       failure: (message) {

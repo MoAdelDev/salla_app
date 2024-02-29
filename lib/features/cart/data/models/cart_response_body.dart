@@ -6,7 +6,7 @@ part 'cart_response_body.g.dart';
 class CartResponseBody {
   final bool status;
   final String? message;
-  final CartData data;
+  final CartData? data;
 
   CartResponseBody(this.status, this.message, this.data);
 
@@ -23,7 +23,7 @@ class CartData {
   CartData(this.cartProducts, this.total);
 
   factory CartData.fromJson(Map<String, dynamic> json) =>
-      _$CartDataModelFromJson(json);
+      _$CartDataFromJson(json);
 }
 
 @JsonSerializable()
