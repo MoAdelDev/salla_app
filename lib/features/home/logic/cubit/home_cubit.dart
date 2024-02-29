@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/features/cart/ui/screens/cart_screen.dart';
 import 'package:salla_app/features/favorites/ui/screens/favorites_screen.dart';
 import 'package:salla_app/features/home/data/models/user_model.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
@@ -13,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   List<Widget> screens = [
     const HomeBodyScreen(),
     const FavoritesScreen(),
-    Container(),
+    const CartScreen(),
     Container(),
     Container(),
   ];
