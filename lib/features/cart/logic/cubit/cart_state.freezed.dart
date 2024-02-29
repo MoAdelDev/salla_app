@@ -22,6 +22,7 @@ mixin _$CartState {
     required TResult Function() loading,
     required TResult Function(CartResponseBody data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$CartState {
     TResult? Function()? loading,
     TResult? Function(CartResponseBody data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$CartState {
     TResult Function()? loading,
     TResult Function(CartResponseBody data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateCart,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$CartState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$CartState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$CartState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(CartResponseBody data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateCart,
   }) {
     return initial();
   }
@@ -138,6 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(CartResponseBody data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
   }) {
     return initial?.call();
   }
@@ -149,6 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(CartResponseBody data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateCart,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -164,6 +173,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
   }) {
     return initial(this);
   }
@@ -175,6 +185,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
   }) {
     return initial?.call(this);
   }
@@ -186,6 +197,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,6 +253,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(CartResponseBody data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateCart,
   }) {
     return loading();
   }
@@ -252,6 +265,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(CartResponseBody data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
   }) {
     return loading?.call();
   }
@@ -263,6 +277,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(CartResponseBody data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateCart,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -278,6 +293,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
   }) {
     return loading(this);
   }
@@ -289,6 +305,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
   }) {
     return loading?.call(this);
   }
@@ -300,6 +317,7 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -381,6 +399,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(CartResponseBody data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateCart,
   }) {
     return success(data);
   }
@@ -392,6 +411,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(CartResponseBody data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
   }) {
     return success?.call(data);
   }
@@ -403,6 +423,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(CartResponseBody data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateCart,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -418,6 +439,7 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
   }) {
     return success(this);
   }
@@ -429,6 +451,7 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
   }) {
     return success?.call(this);
   }
@@ -440,6 +463,7 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -526,6 +550,7 @@ class _$FailureImpl implements Failure {
     required TResult Function() loading,
     required TResult Function(CartResponseBody data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateCart,
   }) {
     return failure(message);
   }
@@ -537,6 +562,7 @@ class _$FailureImpl implements Failure {
     TResult? Function()? loading,
     TResult? Function(CartResponseBody data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
   }) {
     return failure?.call(message);
   }
@@ -548,6 +574,7 @@ class _$FailureImpl implements Failure {
     TResult Function()? loading,
     TResult Function(CartResponseBody data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateCart,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -563,6 +590,7 @@ class _$FailureImpl implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
   }) {
     return failure(this);
   }
@@ -574,6 +602,7 @@ class _$FailureImpl implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
   }) {
     return failure?.call(this);
   }
@@ -585,6 +614,7 @@ class _$FailureImpl implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -601,4 +631,124 @@ abstract class Failure implements CartState {
   @JsonKey(ignore: true)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateCartImplCopyWith<$Res> {
+  factory _$$UpdateCartImplCopyWith(
+          _$UpdateCartImpl value, $Res Function(_$UpdateCartImpl) then) =
+      __$$UpdateCartImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$UpdateCartImpl>
+    implements _$$UpdateCartImplCopyWith<$Res> {
+  __$$UpdateCartImplCopyWithImpl(
+      _$UpdateCartImpl _value, $Res Function(_$UpdateCartImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateCartImpl implements UpdateCart {
+  const _$UpdateCartImpl();
+
+  @override
+  String toString() {
+    return 'CartState.updateCart()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateCartImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(CartResponseBody data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateCart,
+  }) {
+    return updateCart();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(CartResponseBody data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateCart,
+  }) {
+    return updateCart?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(CartResponseBody data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateCart,
+    required TResult orElse(),
+  }) {
+    if (updateCart != null) {
+      return updateCart();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateCart value) updateCart,
+  }) {
+    return updateCart(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateCart value)? updateCart,
+  }) {
+    return updateCart?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateCart value)? updateCart,
+    required TResult orElse(),
+  }) {
+    if (updateCart != null) {
+      return updateCart(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateCart implements CartState {
+  const factory UpdateCart() = _$UpdateCartImpl;
 }

@@ -12,4 +12,6 @@ class CartState with _$CartState {
   const factory CartState.success(CartResponseBody data) = Success;
 
   const factory CartState.failure(String message) = Failure;
+
+  const factory CartState.updateCart() = UpdateCart;
 }
