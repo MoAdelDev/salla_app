@@ -7,11 +7,11 @@ class CustomShimmer extends StatelessWidget {
   final ShapeBorder shapeBorder;
 
   const CustomShimmer({
-    Key? key,
+    super.key,
     this.width = double.infinity,
     this.height = double.infinity,
     this.shapeBorder = const RoundedRectangleBorder(),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
