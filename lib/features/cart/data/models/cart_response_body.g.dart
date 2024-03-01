@@ -26,7 +26,7 @@ CartData _$CartDataFromJson(Map<String, dynamic> json) => CartData(
       (json['cart_items'] as List<dynamic>)
           .map((e) => CartProductModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      json['total'] as int,
+      (json['total'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$CartDataToJson(CartData instance) => <String, dynamic>{

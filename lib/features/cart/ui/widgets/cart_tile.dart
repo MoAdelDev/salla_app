@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
-import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_name.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_price.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_quantity.dart';
-import 'package:salla_app/generated/l10n.dart';
+import 'package:salla_app/features/cart/ui/widgets/cart_remove.dart';
 
 class CartTile extends StatelessWidget {
   final CartProductModel cartProduct;
@@ -52,10 +51,9 @@ class CartTile extends StatelessWidget {
                 cartProduct: cartProduct,
               ),
               const Spacer(),
-              CustomTextButton(
-                onPressed: () {},
-                text: S.of(context).removeTitle,
-              )
+              CartRemove(
+                cartId: cartProduct.id,
+              ),
             ],
           ),
         ],

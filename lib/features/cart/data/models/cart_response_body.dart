@@ -18,7 +18,7 @@ class CartResponseBody {
 class CartData {
   @JsonKey(name: 'cart_items')
   final List<CartProductModel> cartProducts;
-  final int total;
+  final double total;
 
   CartData(this.cartProducts, this.total);
 

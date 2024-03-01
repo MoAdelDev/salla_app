@@ -38,4 +38,17 @@ class CartRepo {
       return ApiResult.failure(e.message ?? '');
     }
   }
+
+  Future<ApiResult<CartUpdateResponse>> deleteCart(int cartId) async {
+    final String token = CacheHelper.token;
+    try {
+      final response = await _apiService.deleteCart(token, cartId);
+      if (response.status) {
+        return ApiResult.success(response);
+      }
+      return ApiResult.failure(response.message);
+    } on DioException catch (e) {
+      return ApiResult.failure(e.message ?? '');
+    }
+  }
 }

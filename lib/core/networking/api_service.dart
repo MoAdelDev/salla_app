@@ -93,4 +93,10 @@ abstract class ApiService {
     @Path("id") int id,
     @Body() CartUpdateRequest cartUpdateRequest,
   );
+
+  @DELETE("${ApiConstance.carts}/{id}")
+  Future<CartUpdateResponse> deleteCart(
+    @Header('Authorization') String token,
+    @Path("id") int id,
+  );
 }
