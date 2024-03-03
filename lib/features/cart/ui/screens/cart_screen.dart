@@ -21,8 +21,6 @@ class CartScreen extends StatelessWidget {
         children: [
           CustomAppBar(
             title: S.of(context).cartTitle,
-            icon2: Icons.clear_all,
-            onTap2: () {},
           ),
           Expanded(
             child: BlocBuilder<CartCubit, CartState>(

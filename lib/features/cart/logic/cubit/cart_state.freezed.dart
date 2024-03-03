@@ -28,9 +28,6 @@ mixin _$CartState {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,9 +42,6 @@ mixin _$CartState {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,9 +56,6 @@ mixin _$CartState {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -74,15 +65,12 @@ mixin _$CartState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -91,15 +79,12 @@ mixin _$CartState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -108,15 +93,12 @@ mixin _$CartState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -187,9 +169,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return initial();
   }
@@ -207,9 +186,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return initial?.call();
   }
@@ -227,9 +203,6 @@ class _$InitialImpl implements _Initial {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -245,15 +218,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return initial(this);
   }
@@ -265,15 +235,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return initial?.call(this);
   }
@@ -285,15 +252,12 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -355,9 +319,6 @@ class _$LoadingImpl implements Loading {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return loading();
   }
@@ -375,9 +336,6 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return loading?.call();
   }
@@ -395,9 +353,6 @@ class _$LoadingImpl implements Loading {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -413,15 +368,12 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return loading(this);
   }
@@ -433,15 +385,12 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return loading?.call(this);
   }
@@ -453,15 +402,12 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -549,9 +495,6 @@ class _$SuccessImpl implements Success {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return success(data);
   }
@@ -569,9 +512,6 @@ class _$SuccessImpl implements Success {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return success?.call(data);
   }
@@ -589,9 +529,6 @@ class _$SuccessImpl implements Success {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -607,15 +544,12 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return success(this);
   }
@@ -627,15 +561,12 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return success?.call(this);
   }
@@ -647,15 +578,12 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -748,9 +676,6 @@ class _$FailureImpl implements Failure {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return failure(message);
   }
@@ -768,9 +693,6 @@ class _$FailureImpl implements Failure {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return failure?.call(message);
   }
@@ -788,9 +710,6 @@ class _$FailureImpl implements Failure {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -806,15 +725,12 @@ class _$FailureImpl implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return failure(this);
   }
@@ -826,15 +742,12 @@ class _$FailureImpl implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return failure?.call(this);
   }
@@ -846,15 +759,12 @@ class _$FailureImpl implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -874,25 +784,25 @@ abstract class Failure implements CartState {
 }
 
 /// @nodoc
-abstract class _$$UpdateLoadingCartImplCopyWith<$Res> {
-  factory _$$UpdateLoadingCartImplCopyWith(_$UpdateLoadingCartImpl value,
-          $Res Function(_$UpdateLoadingCartImpl) then) =
-      __$$UpdateLoadingCartImplCopyWithImpl<$Res>;
+abstract class _$$UpdateCartLoadingImplCopyWith<$Res> {
+  factory _$$UpdateCartLoadingImplCopyWith(_$UpdateCartLoadingImpl value,
+          $Res Function(_$UpdateCartLoadingImpl) then) =
+      __$$UpdateCartLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UpdateLoadingCartImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$UpdateLoadingCartImpl>
-    implements _$$UpdateLoadingCartImplCopyWith<$Res> {
-  __$$UpdateLoadingCartImplCopyWithImpl(_$UpdateLoadingCartImpl _value,
-      $Res Function(_$UpdateLoadingCartImpl) _then)
+class __$$UpdateCartLoadingImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$UpdateCartLoadingImpl>
+    implements _$$UpdateCartLoadingImplCopyWith<$Res> {
+  __$$UpdateCartLoadingImplCopyWithImpl(_$UpdateCartLoadingImpl _value,
+      $Res Function(_$UpdateCartLoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
-  const _$UpdateLoadingCartImpl();
+class _$UpdateCartLoadingImpl implements UpdateCartLoading {
+  const _$UpdateCartLoadingImpl();
 
   @override
   String toString() {
@@ -902,7 +812,7 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdateLoadingCartImpl);
+        (other.runtimeType == runtimeType && other is _$UpdateCartLoadingImpl);
   }
 
   @override
@@ -921,9 +831,6 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return updateCartLoading();
   }
@@ -941,9 +848,6 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return updateCartLoading?.call();
   }
@@ -961,9 +865,6 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartLoading != null) {
@@ -979,15 +880,12 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return updateCartLoading(this);
   }
@@ -999,15 +897,12 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return updateCartLoading?.call(this);
   }
@@ -1019,15 +914,12 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartLoading != null) {
@@ -1037,30 +929,30 @@ class _$UpdateLoadingCartImpl implements UpdateLoadingCart {
   }
 }
 
-abstract class UpdateLoadingCart implements CartState {
-  const factory UpdateLoadingCart() = _$UpdateLoadingCartImpl;
+abstract class UpdateCartLoading implements CartState {
+  const factory UpdateCartLoading() = _$UpdateCartLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$UpdateSuccessCartImplCopyWith<$Res> {
-  factory _$$UpdateSuccessCartImplCopyWith(_$UpdateSuccessCartImpl value,
-          $Res Function(_$UpdateSuccessCartImpl) then) =
-      __$$UpdateSuccessCartImplCopyWithImpl<$Res>;
+abstract class _$$UpdateCartSuccessImplCopyWith<$Res> {
+  factory _$$UpdateCartSuccessImplCopyWith(_$UpdateCartSuccessImpl value,
+          $Res Function(_$UpdateCartSuccessImpl) then) =
+      __$$UpdateCartSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UpdateSuccessCartImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$UpdateSuccessCartImpl>
-    implements _$$UpdateSuccessCartImplCopyWith<$Res> {
-  __$$UpdateSuccessCartImplCopyWithImpl(_$UpdateSuccessCartImpl _value,
-      $Res Function(_$UpdateSuccessCartImpl) _then)
+class __$$UpdateCartSuccessImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$UpdateCartSuccessImpl>
+    implements _$$UpdateCartSuccessImplCopyWith<$Res> {
+  __$$UpdateCartSuccessImplCopyWithImpl(_$UpdateCartSuccessImpl _value,
+      $Res Function(_$UpdateCartSuccessImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
-  const _$UpdateSuccessCartImpl();
+class _$UpdateCartSuccessImpl implements UpdateCartSuccess {
+  const _$UpdateCartSuccessImpl();
 
   @override
   String toString() {
@@ -1070,7 +962,7 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdateSuccessCartImpl);
+        (other.runtimeType == runtimeType && other is _$UpdateCartSuccessImpl);
   }
 
   @override
@@ -1089,9 +981,6 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return updateCartSuccess();
   }
@@ -1109,9 +998,6 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return updateCartSuccess?.call();
   }
@@ -1129,9 +1015,6 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartSuccess != null) {
@@ -1147,15 +1030,12 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return updateCartSuccess(this);
   }
@@ -1167,15 +1047,12 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return updateCartSuccess?.call(this);
   }
@@ -1187,15 +1064,12 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartSuccess != null) {
@@ -1205,30 +1079,30 @@ class _$UpdateSuccessCartImpl implements UpdateSuccessCart {
   }
 }
 
-abstract class UpdateSuccessCart implements CartState {
-  const factory UpdateSuccessCart() = _$UpdateSuccessCartImpl;
+abstract class UpdateCartSuccess implements CartState {
+  const factory UpdateCartSuccess() = _$UpdateCartSuccessImpl;
 }
 
 /// @nodoc
-abstract class _$$UpdateCartFailureImplCopyWith<$Res> {
-  factory _$$UpdateCartFailureImplCopyWith(_$UpdateCartFailureImpl value,
-          $Res Function(_$UpdateCartFailureImpl) then) =
-      __$$UpdateCartFailureImplCopyWithImpl<$Res>;
+abstract class _$$UpdateFailureCartImplCopyWith<$Res> {
+  factory _$$UpdateFailureCartImplCopyWith(_$UpdateFailureCartImpl value,
+          $Res Function(_$UpdateFailureCartImpl) then) =
+      __$$UpdateFailureCartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UpdateCartFailureImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$UpdateCartFailureImpl>
-    implements _$$UpdateCartFailureImplCopyWith<$Res> {
-  __$$UpdateCartFailureImplCopyWithImpl(_$UpdateCartFailureImpl _value,
-      $Res Function(_$UpdateCartFailureImpl) _then)
+class __$$UpdateFailureCartImplCopyWithImpl<$Res>
+    extends _$CartStateCopyWithImpl<$Res, _$UpdateFailureCartImpl>
+    implements _$$UpdateFailureCartImplCopyWith<$Res> {
+  __$$UpdateFailureCartImplCopyWithImpl(_$UpdateFailureCartImpl _value,
+      $Res Function(_$UpdateFailureCartImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UpdateCartFailureImpl implements UpdateCartFailure {
-  const _$UpdateCartFailureImpl();
+class _$UpdateFailureCartImpl implements UpdateFailureCart {
+  const _$UpdateFailureCartImpl();
 
   @override
   String toString() {
@@ -1238,7 +1112,7 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UpdateCartFailureImpl);
+        (other.runtimeType == runtimeType && other is _$UpdateFailureCartImpl);
   }
 
   @override
@@ -1257,9 +1131,6 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return updateCartFailure();
   }
@@ -1277,9 +1148,6 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return updateCartFailure?.call();
   }
@@ -1297,9 +1165,6 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartFailure != null) {
@@ -1315,15 +1180,12 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return updateCartFailure(this);
   }
@@ -1335,15 +1197,12 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return updateCartFailure?.call(this);
   }
@@ -1355,15 +1214,12 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (updateCartFailure != null) {
@@ -1373,8 +1229,8 @@ class _$UpdateCartFailureImpl implements UpdateCartFailure {
   }
 }
 
-abstract class UpdateCartFailure implements CartState {
-  const factory UpdateCartFailure() = _$UpdateCartFailureImpl;
+abstract class UpdateFailureCart implements CartState {
+  const factory UpdateFailureCart() = _$UpdateFailureCartImpl;
 }
 
 /// @nodoc
@@ -1425,9 +1281,6 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return deleteCartLoading();
   }
@@ -1445,9 +1298,6 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return deleteCartLoading?.call();
   }
@@ -1465,9 +1315,6 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartLoading != null) {
@@ -1483,15 +1330,12 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return deleteCartLoading(this);
   }
@@ -1503,15 +1347,12 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return deleteCartLoading?.call(this);
   }
@@ -1523,15 +1364,12 @@ class _$DeleteCartLoadingImpl implements DeleteCartLoading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartLoading != null) {
@@ -1593,9 +1431,6 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return deleteCartSuccess();
   }
@@ -1613,9 +1448,6 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return deleteCartSuccess?.call();
   }
@@ -1633,9 +1465,6 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartSuccess != null) {
@@ -1651,15 +1480,12 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return deleteCartSuccess(this);
   }
@@ -1671,15 +1497,12 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return deleteCartSuccess?.call(this);
   }
@@ -1691,15 +1514,12 @@ class _$DeleteCartSuccessImpl implements DeleteCartSuccess {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartSuccess != null) {
@@ -1761,9 +1581,6 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     required TResult Function() deleteCartLoading,
     required TResult Function() deleteCartSuccess,
     required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
   }) {
     return deleteCartFailure();
   }
@@ -1781,9 +1598,6 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     TResult? Function()? deleteCartLoading,
     TResult? Function()? deleteCartSuccess,
     TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
   }) {
     return deleteCartFailure?.call();
   }
@@ -1801,9 +1615,6 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     TResult Function()? deleteCartLoading,
     TResult Function()? deleteCartSuccess,
     TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartFailure != null) {
@@ -1819,15 +1630,12 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
+    required TResult Function(UpdateCartLoading value) updateCartLoading,
+    required TResult Function(UpdateCartSuccess value) updateCartSuccess,
+    required TResult Function(UpdateFailureCart value) updateCartFailure,
     required TResult Function(DeleteCartLoading value) deleteCartLoading,
     required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
     required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
   }) {
     return deleteCartFailure(this);
   }
@@ -1839,15 +1647,12 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
+    TResult? Function(UpdateCartLoading value)? updateCartLoading,
+    TResult? Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult? Function(UpdateFailureCart value)? updateCartFailure,
     TResult? Function(DeleteCartLoading value)? deleteCartLoading,
     TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
   }) {
     return deleteCartFailure?.call(this);
   }
@@ -1859,15 +1664,12 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
+    TResult Function(UpdateCartLoading value)? updateCartLoading,
+    TResult Function(UpdateCartSuccess value)? updateCartSuccess,
+    TResult Function(UpdateFailureCart value)? updateCartFailure,
     TResult Function(DeleteCartLoading value)? deleteCartLoading,
     TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
     TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
     required TResult orElse(),
   }) {
     if (deleteCartFailure != null) {
@@ -1879,511 +1681,4 @@ class _$DeleteCartFailureImpl implements DeleteCartFailure {
 
 abstract class DeleteCartFailure implements CartState {
   const factory DeleteCartFailure() = _$DeleteCartFailureImpl;
-}
-
-/// @nodoc
-abstract class _$$DeleteAllCartLoadingImplCopyWith<$Res> {
-  factory _$$DeleteAllCartLoadingImplCopyWith(_$DeleteAllCartLoadingImpl value,
-          $Res Function(_$DeleteAllCartLoadingImpl) then) =
-      __$$DeleteAllCartLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$DeleteAllCartLoadingImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$DeleteAllCartLoadingImpl>
-    implements _$$DeleteAllCartLoadingImplCopyWith<$Res> {
-  __$$DeleteAllCartLoadingImplCopyWithImpl(_$DeleteAllCartLoadingImpl _value,
-      $Res Function(_$DeleteAllCartLoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$DeleteAllCartLoadingImpl implements DeleteAllCartLoading {
-  const _$DeleteAllCartLoadingImpl();
-
-  @override
-  String toString() {
-    return 'CartState.deleteAllCartLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteAllCartLoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(CartResponseBody data) success,
-    required TResult Function(String message) failure,
-    required TResult Function() updateCartLoading,
-    required TResult Function() updateCartSuccess,
-    required TResult Function() updateCartFailure,
-    required TResult Function() deleteCartLoading,
-    required TResult Function() deleteCartSuccess,
-    required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
-  }) {
-    return deleteAllCartLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(CartResponseBody data)? success,
-    TResult? Function(String message)? failure,
-    TResult? Function()? updateCartLoading,
-    TResult? Function()? updateCartSuccess,
-    TResult? Function()? updateCartFailure,
-    TResult? Function()? deleteCartLoading,
-    TResult? Function()? deleteCartSuccess,
-    TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
-  }) {
-    return deleteAllCartLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(CartResponseBody data)? success,
-    TResult Function(String message)? failure,
-    TResult Function()? updateCartLoading,
-    TResult Function()? updateCartSuccess,
-    TResult Function()? updateCartFailure,
-    TResult Function()? deleteCartLoading,
-    TResult Function()? deleteCartSuccess,
-    TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartLoading != null) {
-      return deleteAllCartLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
-    required TResult Function(DeleteCartLoading value) deleteCartLoading,
-    required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
-    required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
-  }) {
-    return deleteAllCartLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
-    TResult? Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-  }) {
-    return deleteAllCartLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
-    TResult Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartLoading != null) {
-      return deleteAllCartLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteAllCartLoading implements CartState {
-  const factory DeleteAllCartLoading() = _$DeleteAllCartLoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$DeleteAllCartSuccessImplCopyWith<$Res> {
-  factory _$$DeleteAllCartSuccessImplCopyWith(_$DeleteAllCartSuccessImpl value,
-          $Res Function(_$DeleteAllCartSuccessImpl) then) =
-      __$$DeleteAllCartSuccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$DeleteAllCartSuccessImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$DeleteAllCartSuccessImpl>
-    implements _$$DeleteAllCartSuccessImplCopyWith<$Res> {
-  __$$DeleteAllCartSuccessImplCopyWithImpl(_$DeleteAllCartSuccessImpl _value,
-      $Res Function(_$DeleteAllCartSuccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$DeleteAllCartSuccessImpl implements DeleteAllCartSuccess {
-  const _$DeleteAllCartSuccessImpl();
-
-  @override
-  String toString() {
-    return 'CartState.deleteAllCartSuccess()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteAllCartSuccessImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(CartResponseBody data) success,
-    required TResult Function(String message) failure,
-    required TResult Function() updateCartLoading,
-    required TResult Function() updateCartSuccess,
-    required TResult Function() updateCartFailure,
-    required TResult Function() deleteCartLoading,
-    required TResult Function() deleteCartSuccess,
-    required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
-  }) {
-    return deleteAllCartSuccess();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(CartResponseBody data)? success,
-    TResult? Function(String message)? failure,
-    TResult? Function()? updateCartLoading,
-    TResult? Function()? updateCartSuccess,
-    TResult? Function()? updateCartFailure,
-    TResult? Function()? deleteCartLoading,
-    TResult? Function()? deleteCartSuccess,
-    TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
-  }) {
-    return deleteAllCartSuccess?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(CartResponseBody data)? success,
-    TResult Function(String message)? failure,
-    TResult Function()? updateCartLoading,
-    TResult Function()? updateCartSuccess,
-    TResult Function()? updateCartFailure,
-    TResult Function()? deleteCartLoading,
-    TResult Function()? deleteCartSuccess,
-    TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartSuccess != null) {
-      return deleteAllCartSuccess();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
-    required TResult Function(DeleteCartLoading value) deleteCartLoading,
-    required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
-    required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
-  }) {
-    return deleteAllCartSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
-    TResult? Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-  }) {
-    return deleteAllCartSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
-    TResult Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartSuccess != null) {
-      return deleteAllCartSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteAllCartSuccess implements CartState {
-  const factory DeleteAllCartSuccess() = _$DeleteAllCartSuccessImpl;
-}
-
-/// @nodoc
-abstract class _$$DeleteAllCartFailureImplCopyWith<$Res> {
-  factory _$$DeleteAllCartFailureImplCopyWith(_$DeleteAllCartFailureImpl value,
-          $Res Function(_$DeleteAllCartFailureImpl) then) =
-      __$$DeleteAllCartFailureImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$DeleteAllCartFailureImplCopyWithImpl<$Res>
-    extends _$CartStateCopyWithImpl<$Res, _$DeleteAllCartFailureImpl>
-    implements _$$DeleteAllCartFailureImplCopyWith<$Res> {
-  __$$DeleteAllCartFailureImplCopyWithImpl(_$DeleteAllCartFailureImpl _value,
-      $Res Function(_$DeleteAllCartFailureImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$DeleteAllCartFailureImpl implements DeleteAllCartFailure {
-  const _$DeleteAllCartFailureImpl();
-
-  @override
-  String toString() {
-    return 'CartState.deleteAllCartFailure()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteAllCartFailureImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(CartResponseBody data) success,
-    required TResult Function(String message) failure,
-    required TResult Function() updateCartLoading,
-    required TResult Function() updateCartSuccess,
-    required TResult Function() updateCartFailure,
-    required TResult Function() deleteCartLoading,
-    required TResult Function() deleteCartSuccess,
-    required TResult Function() deleteCartFailure,
-    required TResult Function() deleteAllCartLoading,
-    required TResult Function() deleteAllCartSuccess,
-    required TResult Function() deleteAllCartFailure,
-  }) {
-    return deleteAllCartFailure();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(CartResponseBody data)? success,
-    TResult? Function(String message)? failure,
-    TResult? Function()? updateCartLoading,
-    TResult? Function()? updateCartSuccess,
-    TResult? Function()? updateCartFailure,
-    TResult? Function()? deleteCartLoading,
-    TResult? Function()? deleteCartSuccess,
-    TResult? Function()? deleteCartFailure,
-    TResult? Function()? deleteAllCartLoading,
-    TResult? Function()? deleteAllCartSuccess,
-    TResult? Function()? deleteAllCartFailure,
-  }) {
-    return deleteAllCartFailure?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(CartResponseBody data)? success,
-    TResult Function(String message)? failure,
-    TResult Function()? updateCartLoading,
-    TResult Function()? updateCartSuccess,
-    TResult Function()? updateCartFailure,
-    TResult Function()? deleteCartLoading,
-    TResult Function()? deleteCartSuccess,
-    TResult Function()? deleteCartFailure,
-    TResult Function()? deleteAllCartLoading,
-    TResult Function()? deleteAllCartSuccess,
-    TResult Function()? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartFailure != null) {
-      return deleteAllCartFailure();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(Loading value) loading,
-    required TResult Function(Success value) success,
-    required TResult Function(Failure value) failure,
-    required TResult Function(UpdateLoadingCart value) updateCartLoading,
-    required TResult Function(UpdateSuccessCart value) updateCartSuccess,
-    required TResult Function(UpdateCartFailure value) updateCartFailure,
-    required TResult Function(DeleteCartLoading value) deleteCartLoading,
-    required TResult Function(DeleteCartSuccess value) deleteCartSuccess,
-    required TResult Function(DeleteCartFailure value) deleteCartFailure,
-    required TResult Function(DeleteAllCartLoading value) deleteAllCartLoading,
-    required TResult Function(DeleteAllCartSuccess value) deleteAllCartSuccess,
-    required TResult Function(DeleteAllCartFailure value) deleteAllCartFailure,
-  }) {
-    return deleteAllCartFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(Loading value)? loading,
-    TResult? Function(Success value)? success,
-    TResult? Function(Failure value)? failure,
-    TResult? Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult? Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult? Function(UpdateCartFailure value)? updateCartFailure,
-    TResult? Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult? Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult? Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult? Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult? Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult? Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-  }) {
-    return deleteAllCartFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(Loading value)? loading,
-    TResult Function(Success value)? success,
-    TResult Function(Failure value)? failure,
-    TResult Function(UpdateLoadingCart value)? updateCartLoading,
-    TResult Function(UpdateSuccessCart value)? updateCartSuccess,
-    TResult Function(UpdateCartFailure value)? updateCartFailure,
-    TResult Function(DeleteCartLoading value)? deleteCartLoading,
-    TResult Function(DeleteCartSuccess value)? deleteCartSuccess,
-    TResult Function(DeleteCartFailure value)? deleteCartFailure,
-    TResult Function(DeleteAllCartLoading value)? deleteAllCartLoading,
-    TResult Function(DeleteAllCartSuccess value)? deleteAllCartSuccess,
-    TResult Function(DeleteAllCartFailure value)? deleteAllCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteAllCartFailure != null) {
-      return deleteAllCartFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteAllCartFailure implements CartState {
-  const factory DeleteAllCartFailure() = _$DeleteAllCartFailureImpl;
 }

@@ -13,21 +13,15 @@ sealed class CartState with _$CartState {
 
   const factory CartState.failure(String message) = Failure;
 
-  const factory CartState.updateCartLoading() = UpdateLoadingCart;
+  const factory CartState.updateCartLoading() = UpdateCartLoading;
 
-  const factory CartState.updateCartSuccess() = UpdateSuccessCart;
+  const factory CartState.updateCartSuccess() = UpdateCartSuccess;
 
-  const factory CartState.updateCartFailure() = UpdateCartFailure;
+  const factory CartState.updateCartFailure() = UpdateFailureCart;
 
   const factory CartState.deleteCartLoading() = DeleteCartLoading;
 
   const factory CartState.deleteCartSuccess() = DeleteCartSuccess;
 
   const factory CartState.deleteCartFailure() = DeleteCartFailure;
-
-  const factory CartState.deleteAllCartLoading() = DeleteAllCartLoading;
-
-  const factory CartState.deleteAllCartSuccess() = DeleteAllCartSuccess;
-
-  const factory CartState.deleteAllCartFailure() = DeleteAllCartFailure;
 }
