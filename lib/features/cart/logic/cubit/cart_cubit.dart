@@ -32,7 +32,7 @@ class CartCubit extends Cubit<CartState> {
 
   bool isCartUpdateLoading = false;
 
-  void emitUpdateCartState(int cartId, int quantity) async {
+  void emitUpdateCartState(int cartId, int quantity, double price) async {
     isCartUpdateLoading = true;
     emit(const CartState.updateCartLoading());
     final response = await _cartRepo.updateCart(
@@ -42,7 +42,8 @@ class CartCubit extends Cubit<CartState> {
     response.when(
       success: (data) {
         isCartUpdateLoading = false;
-        _updateTotalPriceAndQuantity(quantity, cartId);
+        cartQuantities[cartId] = quantity;
+        totalPrice += price;
         emit(const CartState.updateCartSuccess());
       },
       failure: (message) {
@@ -52,7 +53,7 @@ class CartCubit extends Cubit<CartState> {
     );
   }
 
-  void emitDeleteCartState({required int cartId}) async {
+  void emitDeleteCartState({required int cartId, required double price}) async {
     isCartUpdateLoading = true;
     emit(const CartState.deleteCartLoading());
     final response = await _cartRepo.deleteCart(cartId);
@@ -60,7 +61,8 @@ class CartCubit extends Cubit<CartState> {
       success: (data) {
         isCartUpdateLoading = false;
         cartProducts.removeWhere((element) => element.id == cartId);
-        _updateTotalPriceAndQuantity(0, cartId);
+        cartQuantities[cartId] = 0;
+        totalPrice -= price;
         emit(const CartState.deleteCartSuccess());
       },
       failure: (message) {
@@ -68,13 +70,5 @@ class CartCubit extends Cubit<CartState> {
         emit(const CartState.deleteCartFailure());
       },
     );
-  }
-
-  void _updateTotalPriceAndQuantity(int quantity, int cartId) {
-    cartQuantities[cartId] = quantity;
-    for (CartProductModel product in cartProducts) {
-      dynamic price = (product.product.price) + 0.0;
-      totalPrice += price * quantity;
-    }
   }
 }

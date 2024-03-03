@@ -40,11 +40,15 @@ class CartQuantity extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     if (cubit.cartQuantities[cartProduct.id] == 1) {
-                      cubit.emitDeleteCartState(cartId: cartProduct.id);
+                      cubit.emitDeleteCartState(
+                        cartId: cartProduct.id,
+                        price: -cartProduct.product.price + 0.0,
+                      );
                     } else {
                       cubit.emitUpdateCartState(
                         cartProduct.id,
                         (cubit.cartQuantities[cartProduct.id] ?? 1) - 1,
+                        -cartProduct.product.price + 0.0,
                       );
                     }
                   },
@@ -81,6 +85,7 @@ class CartQuantity extends StatelessWidget {
                     cubit.emitUpdateCartState(
                       cartProduct.id,
                       (cubit.cartQuantities[cartProduct.id] ?? 1) + 1,
+                      cartProduct.product.price + 0.0,
                     );
                   },
                   child: Icon(

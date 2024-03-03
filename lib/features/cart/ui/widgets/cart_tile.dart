@@ -52,7 +52,7 @@ class CartTile extends StatelessWidget {
               ),
               const Spacer(),
               CartRemove(
-                cartId: cartProduct.id,
+                cartProduct: cartProduct,
               ),
             ],
           ),
