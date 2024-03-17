@@ -10,7 +10,7 @@ class CustomDiscountContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: context.colorScheme.primary.withOpacity(0.6),
+      color: context.colorScheme.primary.withOpacity(0.7),
       margin: EdgeInsets.symmetric(horizontal: 10.0.w),
       padding: EdgeInsets.symmetric(
         horizontal: 5.0.w,
@@ -18,7 +18,7 @@ class CustomDiscountContainer extends StatelessWidget {
       ),
       child: Text(
         '- $discount %',
-        style: AppTexts.text14WhiteLatoRegular,
+        style: AppTexts.text14WhiteLatoBold,
         textAlign: TextAlign.center,
       ),
     );

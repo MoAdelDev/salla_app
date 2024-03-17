@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
-import 'package:salla_app/features/favorites/ui/widgets/favorite_image_discount.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_name.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_price.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_remove.dart';
@@ -25,13 +26,16 @@ class FavoriteTile extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14.0),
+          padding: EdgeInsets.symmetric(horizontal: 14.0.w),
           child: Column(
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FavoriteImageDiscount(product: favoriteModel.product),
+                  CustomImageAndDiscount(
+                    image: favoriteModel.product.image,
+                    discount: favoriteModel.product.discount,
+                  ),
                   horizontalSpace(5.0),
                   Expanded(
                     child: Padding(

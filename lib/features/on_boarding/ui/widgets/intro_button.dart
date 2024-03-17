@@ -16,7 +16,7 @@ class _IntroButtonState extends State<IntroButton> {
   double buttonOffset = 0.0;
   @override
   Widget build(BuildContext context) {
-    double buttonWidth = context.width - 70.0.w;
+    double buttonWidth = 300.w;
     return GestureDetector(
       onPanUpdate: (details) {
         if (details.delta.dx > 0 && buttonOffset <= buttonWidth) {

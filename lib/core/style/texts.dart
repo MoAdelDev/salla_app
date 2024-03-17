@@ -17,6 +17,12 @@ class AppTexts {
         fontWeight: AppFontWeight.regular,
       );
 
+  static TextStyle get text14WhiteLatoBold => GoogleFonts.lato(
+        fontSize: 14.0.sp,
+        color: Colors.white,
+        fontWeight: AppFontWeight.bold,
+      );
+
   static TextStyle get text20WhiteLatoBold => GoogleFonts.lato(
         fontSize: 20.0.sp,
         color: Colors.white,
