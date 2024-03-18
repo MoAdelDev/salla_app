@@ -4,10 +4,12 @@ import 'package:salla_app/core/style/texts.dart';
 class CustomTextButton extends StatelessWidget {
   final Function() onPressed;
   final String text;
+  final TextStyle? textStyle;
   const CustomTextButton({
     super.key,
     required this.onPressed,
     required this.text,
+    this.textStyle,
   });
 
   @override
@@ -20,7 +22,7 @@ class CustomTextButton extends StatelessWidget {
       )),
       child: Text(
         text,
-        style: AppTexts.text16PrimaryLatoBold,
+        style: textStyle ?? AppTexts.text16PrimaryLatoBold,
       ),
     );
   }

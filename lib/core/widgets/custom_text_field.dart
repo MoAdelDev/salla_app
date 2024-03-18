@@ -30,46 +30,44 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: TextFormField(
-        controller: controller,
-        keyboardType: keyboardType,
-        onFieldSubmitted: onSubmit,
-        cursorColor: Theme.of(context).colorScheme.primary,
-        textInputAction: textInputAction,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            borderSide: const BorderSide(color: Color(0xffE8ECF4)),
-          ),
-          fillColor: const Color(0xffF7F8F9),
-          filled: true,
-          hintText: hintText,
-          hintStyle: const TextStyle(
-            fontSize: 14.0,
-            color: Color(0xff8391A1),
-          ),
-          suffixIcon: IconButton(
-            icon: Icon(suffixIcon),
-            onPressed: onSuffixIcon,
-            color: const Color(0xff6A707C),
-          ),
+    return TextFormField(
+      controller: controller,
+      keyboardType: keyboardType,
+      onFieldSubmitted: onSubmit,
+      cursorColor: Theme.of(context).colorScheme.primary,
+      textInputAction: textInputAction,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
         ),
-        style: Theme.of(context).textTheme.bodyMedium,
-        maxLines: 1,
-        textAlign: TextAlign.start,
-        obscureText: obscureText ?? false,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return errorMsg;
-          }
-          return null;
-        },
-        onChanged: onChange,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: const BorderSide(color: Color(0xffE8ECF4)),
+        ),
+        fillColor: const Color(0xffF7F8F9),
+        filled: true,
+        hintText: hintText,
+        hintStyle: const TextStyle(
+          fontSize: 14.0,
+          color: Color(0xff8391A1),
+        ),
+        suffixIcon: IconButton(
+          icon: Icon(suffixIcon),
+          onPressed: onSuffixIcon,
+          color: const Color(0xff6A707C),
+        ),
       ),
+      style: Theme.of(context).textTheme.bodyMedium,
+      maxLines: 1,
+      textAlign: TextAlign.start,
+      obscureText: obscureText ?? false,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return errorMsg;
+        }
+        return null;
+      },
+      onChanged: onChange,
     );
   }
 }
