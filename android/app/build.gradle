@@ -45,11 +45,27 @@ android {
         applicationId "com.example.salla_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        production {
+            dimension "default"
+            resValue "string", "app_name", "Salla Production"
+        }
+
+        development {
+            dimension "default"
+            resValue "string", "app_name", "Salla Development"
+            applicationIdSuffix ".dev"
+        }
+    }
+
 
     buildTypes {
         release {
