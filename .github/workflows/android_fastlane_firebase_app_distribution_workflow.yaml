@@ -34,7 +34,7 @@ jobs:
         env:
           FIREBASE_CLIENT_TOKEN: ${{ secrets.FIREBASE_CLIENT_TOKEN }}
         run: |
-          build exec fastlane android firebase_distribution
+          fastlane android firebase_distribution
         working-directory: android
         
 
