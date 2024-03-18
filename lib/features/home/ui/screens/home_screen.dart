@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,54 +21,57 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: 10.0.w,
-          vertical: 10.0.h,
-        ),
-        height: 70.0.h,
-        decoration: BoxDecoration(color: Colors.white, boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-          )
-        ]),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomHomeNavigation(
-              iconData: Icons.home_filled,
-              label: S.of(context).homeTitle,
-              isSelected: currentIndex == 0,
-              onTap: () => setState(() {
-                currentIndex = 0;
-              }),
-            ),
-            CustomHomeNavigation(
-              iconData: Icons.favorite,
-              label: S.of(context).favoritesTitle,
-              isSelected: currentIndex == 1,
-              onTap: () => setState(() {
-                currentIndex = 1;
-              }),
-            ),
-            CustomHomeNavigation(
-              iconData: Icons.shopping_cart,
-              label: S.of(context).cartTitle,
-              isSelected: currentIndex == 2,
-              onTap: () => setState(() {
-                currentIndex = 2;
-              }),
-            ),
-            CustomHomeNavigation(
-              iconData: Icons.settings,
-              label: S.of(context).settingsTitle,
-              isSelected: currentIndex == 3,
-              onTap: () => setState(() {
-                currentIndex = 3;
-              }),
-            ),
-          ],
+      bottomNavigationBar: SafeArea(
+        bottom: Platform.isAndroid ? true : false,
+        child: Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: 10.0.w,
+            vertical: 10.0.h,
+          ),
+          height: 70.0.h,
+          decoration: BoxDecoration(color: Colors.white, boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 2,
+            )
+          ]),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomHomeNavigation(
+                iconData: Icons.home_filled,
+                label: S.of(context).homeTitle,
+                isSelected: currentIndex == 0,
+                onTap: () => setState(() {
+                  currentIndex = 0;
+                }),
+              ),
+              CustomHomeNavigation(
+                iconData: Icons.favorite,
+                label: S.of(context).favoritesTitle,
+                isSelected: currentIndex == 1,
+                onTap: () => setState(() {
+                  currentIndex = 1;
+                }),
+              ),
+              CustomHomeNavigation(
+                iconData: Icons.shopping_cart,
+                label: S.of(context).cartTitle,
+                isSelected: currentIndex == 2,
+                onTap: () => setState(() {
+                  currentIndex = 2;
+                }),
+              ),
+              CustomHomeNavigation(
+                iconData: Icons.settings,
+                label: S.of(context).settingsTitle,
+                isSelected: currentIndex == 3,
+                onTap: () => setState(() {
+                  currentIndex = 3;
+                }),
+              ),
+            ],
+          ),
         ),
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
