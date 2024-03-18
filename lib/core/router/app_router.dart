@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/features/checkout/ui/screens/checkout_screen.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/ui/screens/home_screen.dart';
@@ -71,6 +72,11 @@ class AppRouter {
                 getIt()..emitProductDeatilsState(args.productId),
             child: const ProductDetailsScreen(),
           ),
+        );
+
+      case Routes.checkout:
+        return MaterialPageRoute(
+          builder: (context) => const CheckoutScreen(),
         );
       default:
         return null;
