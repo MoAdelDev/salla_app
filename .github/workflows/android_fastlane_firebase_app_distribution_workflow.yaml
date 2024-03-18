@@ -34,7 +34,9 @@ jobs:
         env:
           FIREBASE_CLIENT_TOKEN: ${{ secrets.FIREBASE_CLIENT_TOKEN }}
         run: |
-          fastlane android firebase_distribution
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+          bundle exec fastlane android firebase_distribution
         working-directory: android
         
 
