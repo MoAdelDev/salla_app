@@ -1039,6 +1039,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Payment method via paypal or master card`
+  String get paymentBody {
+    return Intl.message(
+      'Payment method via paypal or master card',
+      name: 'paymentBody',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

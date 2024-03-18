@@ -96,5 +96,6 @@
   "nOfItemsTitle": "عدد العناصر",
   "paymentTitle": "الدفع",
   "shippingAddressTitle": "عنوان التوصيل",
-  "itemsTitle": "العناصر"
+  "itemsTitle": "العناصر",
+  "paymentBody" : "طريقة الدفع عن طريق ماستر كارد او باي بال"
 }

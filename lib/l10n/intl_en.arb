@@ -97,5 +97,6 @@
   "nOfItemsTitle" : "N of items",
   "paymentTitle" : "Payment",
   "shippingAddressTitle" : "Shipping Address",
-  "itemsTitle" : "Items"
+  "itemsTitle" : "Items",
+  "paymentBody" : "Payment method via paypal or master card"
 }

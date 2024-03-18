@@ -129,6 +129,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+        "paymentBody": MessageLookupByLibrary.simpleMessage(
+            "Payment method via paypal or master card"),
         "paymentMethodTitle":
             MessageLookupByLibrary.simpleMessage("Payment Method"),
         "paymentTitle": MessageLookupByLibrary.simpleMessage("Payment"),

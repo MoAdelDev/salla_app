@@ -8,7 +8,7 @@ class CheckoutCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.deepPurpleAccent.shade200.withOpacity(0.8),
+      color: Colors.black87,
       elevation: 3.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0.r),
