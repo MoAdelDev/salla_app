@@ -29,12 +29,12 @@ jobs:
           ruby-version: 3.3.0
           bundler-cache: true
           working-directory: android
-
+        
       - name: Create .env file
-        run: |
-          echo "STRIPE_PUBLISHED_KEY=${{ secrets.STRIPE_PUBLISHED_KEY }}" >> .env
-          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
-        working-directory: android
+        uses: ozaytsev86/create-env-file@v1
+        with:
+          STRIPE_PUBLISHED_KEY: ${{ secrets.STRIPE_PUBLISHED_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
 
       - name: Build and Distribute App
         env:
