@@ -31,10 +31,10 @@ jobs:
           working-directory: android
 
       - name: Create .env file
-          run: |
-            echo "STRIPE_PUBLISHED_KEY=${{ secrets.STRIPE_PUBLISHED_KEY }}" >> .env
-            echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
-          working-directory: android
+        run: |
+          echo "STRIPE_PUBLISHED_KEY=${{ secrets.STRIPE_PUBLISHED_KEY }}" >> .env
+          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
+        working-directory: android
 
       - name: Build and Distribute App
         env:
