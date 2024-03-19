@@ -465,9 +465,9 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<PromoCodeResponse> applyPromoCode(
+  Future<PromoCodeResponseBody> applyPromoCode(
     String token,
-    PromoCodeRequest promoCodeRequest,
+    PromoCodeRequestBody promoCodeRequest,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -475,8 +475,8 @@ class _ApiService implements ApiService {
     _headers.removeWhere((k, v) => v == null);
     final _data = <String, dynamic>{};
     _data.addAll(promoCodeRequest.toJson());
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<PromoCodeResponse>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PromoCodeResponseBody>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -492,19 +492,19 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = PromoCodeResponse.fromJson(_result.data!);
+    final value = PromoCodeResponseBody.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<AddressesResponse> getAddresses(String token) async {
+  Future<AddressesResponseBody> getAddresses(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<AddressesResponse>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<AddressesResponseBody>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -520,7 +520,39 @@ class _ApiService implements ApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = AddressesResponse.fromJson(_result.data!);
+    final value = AddressesResponseBody.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<AddOrderResponseBody> addOrder(
+    String token,
+    AddOrderRequestBody addOrderRequestBody,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    final _data = <String, dynamic>{};
+    _data.addAll(addOrderRequestBody.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<AddOrderResponseBody>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'orders',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = AddOrderResponseBody.fromJson(_result.data!);
     return value;
   }
 

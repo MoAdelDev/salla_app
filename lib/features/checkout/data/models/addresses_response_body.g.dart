@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'addresses_response.dart';
+part of 'addresses_response_body.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddressesResponse _$AddressesResponseFromJson(Map<String, dynamic> json) =>
-    AddressesResponse(
+AddressesResponseBody _$AddressesResponseBodyFromJson(
+        Map<String, dynamic> json) =>
+    AddressesResponseBody(
       json['message'] as String?,
       json['status'] as bool,
       json['data'] == null
@@ -15,7 +16,8 @@ AddressesResponse _$AddressesResponseFromJson(Map<String, dynamic> json) =>
           : AddressesData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$AddressesResponseToJson(AddressesResponse instance) =>
+Map<String, dynamic> _$AddressesResponseBodyToJson(
+        AddressesResponseBody instance) =>
     <String, dynamic>{
       'message': instance.message,
       'status': instance.status,

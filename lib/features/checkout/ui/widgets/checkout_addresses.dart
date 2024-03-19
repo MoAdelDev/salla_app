@@ -38,8 +38,9 @@ class CheckoutAddresses extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return CheckoutAddressItem(
-                onChanged: (p0) =>
-                    cubit.emitSelectAddressState(cubit.addresses![index].id),
+                onChanged: (p0) => state is AddOrderLoading
+                    ? null
+                    : cubit.emitSelectAddressState(cubit.addresses![index].id),
                 value: cubit.addresses![index].id,
                 radioSelected: cubit.addressSelectedId,
                 address: cubit.addresses![index],

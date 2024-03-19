@@ -1,16 +1,16 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'addresses_response.g.dart';
+part 'addresses_response_body.g.dart';
 
 @JsonSerializable()
-class AddressesResponse {
+class AddressesResponseBody {
   final String? message;
   final bool status;
   final AddressesData? data;
 
-  AddressesResponse(this.message, this.status, this.data);
+  AddressesResponseBody(this.message, this.status, this.data);
 
-  factory AddressesResponse.fromJson(Map<String, dynamic> json) =>
-      _$AddressesResponseFromJson(json);
+  factory AddressesResponseBody.fromJson(Map<String, dynamic> json) =>
+      _$AddressesResponseBodyFromJson(json);
 }
 
 @JsonSerializable()

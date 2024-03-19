@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:salla_app/features/checkout/data/models/addresses_response.dart';
+import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 part 'checkout_state.freezed.dart';
 
 @freezed
@@ -21,4 +21,10 @@ class CheckoutState with _$CheckoutState {
       ApplyPromoCodeFailure;
 
   const factory CheckoutState.selectItem() = SelectItem;
+
+  const factory CheckoutState.addOrderLoading() = AddOrderLoading;
+
+  const factory CheckoutState.addOrderSuccess(String message) = AddOrderSuccess;
+
+  const factory CheckoutState.addOrderFailure(String message) = AddOrderFailure;
 }

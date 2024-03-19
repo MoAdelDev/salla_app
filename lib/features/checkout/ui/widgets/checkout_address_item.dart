@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/features/checkout/data/models/addresses_response.dart';
+import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 
 class CheckoutAddressItem extends StatelessWidget {
   final Function(int?) onChanged;

@@ -19,7 +19,9 @@ class CheckoutPaymentMethods extends StatelessWidget {
           child: Column(
             children: [
               CheckoutPaymentMethodItem(
-                onChanged: (p0) => cubit.emitSelectPaymentState(1),
+                onChanged: (p0) => state is AddOrderLoading
+                    ? null
+                    : cubit.emitSelectPaymentState(1),
                 radioSelected: cubit.paymentMethodSelected,
                 radioValue: 1,
                 title: S.of(context).cashOnDeliveryTitle,
@@ -28,7 +30,9 @@ class CheckoutPaymentMethods extends StatelessWidget {
               ),
               verticalSpace(10.0),
               CheckoutPaymentMethodItem(
-                onChanged: (p0) => cubit.emitSelectPaymentState(2),
+                onChanged: (p0) => state is AddOrderLoading
+                    ? null
+                    : cubit.emitSelectPaymentState(2),
                 radioSelected: cubit.paymentMethodSelected,
                 radioValue: 2,
                 title: S.of(context).paymentTitle,

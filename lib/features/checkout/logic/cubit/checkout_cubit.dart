@@ -1,8 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
-import 'package:salla_app/features/checkout/data/models/addresses_response.dart';
-import 'package:salla_app/features/checkout/data/models/promo_code_request.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
+import 'package:salla_app/features/checkout/data/models/add_order_request_body.dart';
+import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
+import 'package:salla_app/features/checkout/data/models/promo_code_request_body.dart';
+import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
@@ -10,9 +13,11 @@ import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 class CheckoutCubit extends Cubit<CheckoutState> {
   final PromoCodeRepo _promoCodeRepo;
   final AddressesRepo _addressesRepo;
+  final AddOrderRepo _addOrderRepo;
   CheckoutCubit(
     this._promoCodeRepo,
     this._addressesRepo,
+    this._addOrderRepo,
   ) : super(const CheckoutState.initial());
 
   final TextEditingController promoCodeController = TextEditingController();
@@ -23,7 +28,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     emit(const CheckoutState.applyPromoCodeLoading());
     if (promoCodeController.text.isNumber()) {
       final result = await _promoCodeRepo.applyPromoCode(
-        PromoCodeRequest(code: int.parse(promoCodeController.text)),
+        PromoCodeRequestBody(code: int.parse(promoCodeController.text)),
       );
       result.when(
         success: (response) {
@@ -68,5 +73,25 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     emit(const CheckoutState.initial());
     paymentMethodSelected = paymentSelected;
     emit(const CheckoutState.selectItem());
+  }
+
+  void emitAddOrderState() async {
+    if (addressSelectedId == 0) {
+      showToast('Please select or add new address');
+      return;
+    }
+    emit(const CheckoutState.addOrderLoading());
+    final result = await _addOrderRepo.addOrder(
+      AddOrderRequestBody(
+        addressId: addressSelectedId,
+        paymentMethod: paymentMethodSelected,
+        usePoints: false,
+      ),
+    );
+    result.when(success: (response) {
+      emit(CheckoutState.addOrderSuccess(response.message));
+    }, failure: (message) {
+      emit(CheckoutState.addOrderFailure(message));
+    });
   }
 }
