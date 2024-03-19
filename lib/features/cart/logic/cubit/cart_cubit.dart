@@ -10,6 +10,7 @@ class CartCubit extends Cubit<CartState> {
 
   List<CartProductModel> cartProducts = [];
 
+  CartData? cartData;
   Map<int, int> cartQuantities = {};
   double totalPrice = 0;
   void emitCartState() async {
@@ -18,6 +19,7 @@ class CartCubit extends Cubit<CartState> {
     response.when(
       success: (data) {
         cartProducts = data.data?.cartProducts ?? [];
+        cartData = data.data;
         for (var element in cartProducts) {
           cartQuantities[element.id] = element.quantity;
         }
