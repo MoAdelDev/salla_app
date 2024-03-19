@@ -51,7 +51,7 @@ class CheckoutProductItem extends StatelessWidget {
                 'Product Name',
                 style: AppTexts.text16WhiteLatoBold,
               ),
-              verticalSpace(10.0),
+              verticalSpace(5.0),
               Row(
                 children: [
                   Text(

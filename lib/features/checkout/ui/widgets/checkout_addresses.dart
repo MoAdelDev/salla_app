@@ -3,20 +3,21 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 
-class CheckoutAddress extends StatefulWidget {
-  const CheckoutAddress({super.key});
+class CheckoutAddresses extends StatefulWidget {
+  const CheckoutAddresses({super.key});
 
   @override
-  State<CheckoutAddress> createState() => _CheckoutAddressState();
+  State<CheckoutAddresses> createState() => _CheckoutAddressesState();
 }
 
-class _CheckoutAddressState extends State<CheckoutAddress> {
+class _CheckoutAddressesState extends State<CheckoutAddresses> {
   int radioSelected = 0;
   @override
   Widget build(BuildContext context) {
     return CheckoutCart(
       child: ListView.separated(
         shrinkWrap: true,
+        padding: EdgeInsets.zero,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return CheckoutAddressItem(

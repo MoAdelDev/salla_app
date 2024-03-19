@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_address.dart';
+import 'package:salla_app/features/checkout/ui/widgets/checkout_addresses.dart';
+import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_button.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_products.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_summary.dart';
@@ -16,6 +17,7 @@ class CheckoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,7 +47,7 @@ class CheckoutScreen extends StatelessWidget {
                       onTap: () {},
                       textButton: S.of(context).changeTitle,
                     ),
-                    const CheckoutAddress(),
+                    const CheckoutAddresses(),
                     CheckoutTitle(
                       text: S.of(context).productsTitle,
                       onTap: () {},
@@ -56,6 +58,7 @@ class CheckoutScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const CheckoutConfirmOrderButton(),
           ],
         ),
       ),

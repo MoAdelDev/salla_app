@@ -15,6 +15,7 @@ class CheckoutProducts extends StatelessWidget {
         itemBuilder: (context, index) {
           return const CheckoutProductItem();
         },
+        padding: EdgeInsets.zero,
         separatorBuilder: (context, index) => verticalSpace(10.0),
         itemCount: 4,
       ),
