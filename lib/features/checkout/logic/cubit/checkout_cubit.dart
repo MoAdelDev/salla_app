@@ -53,7 +53,9 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     result.when(
       success: (response) {
         addresses = response.data?.addresses;
-        addressSelectedId = response.data?.addresses.first.id ?? 0;
+        if (addresses != null && addresses!.isNotEmpty) {
+          addressSelectedId = addresses!.first.id;
+        }
         emit(CheckoutState.success(response.data?.addresses ?? []));
       },
       failure: (message) {
