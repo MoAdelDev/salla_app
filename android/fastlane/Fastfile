@@ -11,7 +11,7 @@ platform :android do
     android_artifact_type: "APK",
     android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
     groups: "testers",
-    release_notes: "This is a test release"
+    release_notes: "Checkout Feature Added to the App",
   )
   end
 end
