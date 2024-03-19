@@ -465,12 +465,16 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<PromoCodeResponse> applyPromoCode(String token) async {
+  Future<PromoCodeResponse> applyPromoCode(
+    String token,
+    PromoCodeRequest promoCodeRequest,
+  ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
-    const Map<String, dynamic>? _data = null;
+    final _data = <String, dynamic>{};
+    _data.addAll(promoCodeRequest.toJson());
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<PromoCodeResponse>(Options(
       method: 'POST',
@@ -479,7 +483,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'promo-codes',
+              'promo-codes/validate',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -489,6 +493,34 @@ class _ApiService implements ApiService {
               baseUrl,
             ))));
     final value = PromoCodeResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<AddressesResponse> getAddresses(String token) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<AddressesResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'addresses',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = AddressesResponse.fromJson(_result.data!);
     return value;
   }
 

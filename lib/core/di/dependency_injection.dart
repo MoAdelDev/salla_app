@@ -4,6 +4,9 @@ import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/features/cart/data/repos/cart_repo.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
+import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
+import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
+import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/favorites/data/repos/favorites_repo.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
@@ -52,4 +55,14 @@ Future<void> setupGetIt() async {
   // cart
   getIt.registerLazySingleton<CartRepo>(() => CartRepo(getIt()));
   getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
+
+  // checkout
+  getIt.registerLazySingleton<AddressesRepo>(() => AddressesRepo(getIt()));
+  getIt.registerLazySingleton<PromoCodeRepo>(() => PromoCodeRepo(getIt()));
+  getIt.registerFactory<CheckoutCubit>(
+    () => CheckoutCubit(
+      getIt<PromoCodeRepo>(),
+      getIt<AddressesRepo>(),
+    ),
+  );
 }

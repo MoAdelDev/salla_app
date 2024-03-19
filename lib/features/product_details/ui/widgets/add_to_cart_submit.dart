@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
@@ -29,7 +29,7 @@ class _AddToCartSubmitState extends State<AddToCartSubmit> {
     return BlocConsumer<ProductDetailsCubit, ProductDetailsState>(
         listener: (context, state) {
       state.whenOrNull(
-        addToCartError: (error) => context.showSnackBar(error),
+        addToCartError: (error) => showToast(error, isError: true),
       );
     }, builder: (context, state) {
       if (state is AddToCartLoading) {

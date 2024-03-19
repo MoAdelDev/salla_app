@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
@@ -18,11 +19,11 @@ class RegisterSubmit extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           success: (data) {
-            context.showSnackBar(data.message);
+            showToast(data.message);
             if (context.mounted) context.pushAndRemoveUntil(Routes.home);
           },
           error: (message) {
-            context.showSnackBar(message, isError: true);
+            showToast(message, isError: true);
           },
         );
       },

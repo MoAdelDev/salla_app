@@ -20,7 +20,7 @@ mixin _$CheckoutState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -31,7 +31,7 @@ mixin _$CheckoutState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -42,7 +42,7 @@ mixin _$CheckoutState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -147,7 +147,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -161,7 +161,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -175,7 +175,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -282,7 +282,7 @@ class _$LoadingImpl implements Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -296,7 +296,7 @@ class _$LoadingImpl implements Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -310,7 +310,7 @@ class _$LoadingImpl implements Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -382,6 +382,8 @@ abstract class _$$SuccessImplCopyWith<$Res> {
   factory _$$SuccessImplCopyWith(
           _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<AddressModel> addresses});
 }
 
 /// @nodoc
@@ -391,39 +393,71 @@ class __$$SuccessImplCopyWithImpl<$Res>
   __$$SuccessImplCopyWithImpl(
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? addresses = null,
+  }) {
+    return _then(_$SuccessImpl(
+      null == addresses
+          ? _value._addresses
+          : addresses // ignore: cast_nullable_to_non_nullable
+              as List<AddressModel>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SuccessImpl implements Success {
-  const _$SuccessImpl();
+  const _$SuccessImpl(final List<AddressModel> addresses)
+      : _addresses = addresses;
+
+  final List<AddressModel> _addresses;
+  @override
+  List<AddressModel> get addresses {
+    if (_addresses is EqualUnmodifiableListView) return _addresses;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_addresses);
+  }
 
   @override
   String toString() {
-    return 'CheckoutState.success()';
+    return 'CheckoutState.success(addresses: $addresses)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$SuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._addresses, _addresses));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_addresses));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
   }) {
-    return success();
+    return success(addresses);
   }
 
   @override
@@ -431,13 +465,13 @@ class _$SuccessImpl implements Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
   }) {
-    return success?.call();
+    return success?.call(addresses);
   }
 
   @override
@@ -445,7 +479,7 @@ class _$SuccessImpl implements Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -453,7 +487,7 @@ class _$SuccessImpl implements Success {
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success();
+      return success(addresses);
     }
     return orElse();
   }
@@ -509,7 +543,12 @@ class _$SuccessImpl implements Success {
 }
 
 abstract class Success implements CheckoutState {
-  const factory Success() = _$SuccessImpl;
+  const factory Success(final List<AddressModel> addresses) = _$SuccessImpl;
+
+  List<AddressModel> get addresses;
+  @JsonKey(ignore: true)
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -578,7 +617,7 @@ class _$FailureImpl implements Failure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -592,7 +631,7 @@ class _$FailureImpl implements Failure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -606,7 +645,7 @@ class _$FailureImpl implements Failure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -720,7 +759,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -734,7 +773,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -748,7 +787,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -883,7 +922,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -897,7 +936,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -911,7 +950,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
@@ -1052,7 +1091,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<AddressModel> addresses) success,
     required TResult Function(String message) failure,
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
@@ -1066,7 +1105,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function(List<AddressModel> addresses)? success,
     TResult? Function(String message)? failure,
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
@@ -1080,7 +1119,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<AddressModel> addresses)? success,
     TResult Function(String message)? failure,
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,

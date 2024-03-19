@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/networking/api_result.dart';
 import 'package:salla_app/core/networking/api_service.dart';
+import 'package:salla_app/features/checkout/data/models/promo_code_request.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_response.dart';
 
 class PromoCodeRepo {
@@ -9,10 +10,12 @@ class PromoCodeRepo {
 
   PromoCodeRepo(this._apiService);
 
-  Future<ApiResult<PromoCodeResponse>> applyPromoCode() async {
+  Future<ApiResult<PromoCodeResponse>> applyPromoCode(
+      PromoCodeRequest promoCodeRequest) async {
     final String token = CacheHelper.token;
     try {
-      final response = await _apiService.applyPromoCode(token);
+      final response =
+          await _apiService.applyPromoCode(token, promoCodeRequest);
       if (response.status) {
         return ApiResult.success(response);
       }

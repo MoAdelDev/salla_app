@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
@@ -20,10 +21,10 @@ class LoginSubmit extends StatelessWidget {
       child: BlocConsumer<LoginCubit, LoginState>(
         listener: (context, state) {
           state.whenOrNull(success: (data) {
-            context.showSnackBar(data.message);
+            showToast(data.message);
             if (context.mounted) context.pushAndRemoveUntil(Routes.home);
           }, failure: (error) {
-            context.showSnackBar(error, isError: true);
+            showToast(error, isError: true);
           });
         },
         builder: (context, state) {

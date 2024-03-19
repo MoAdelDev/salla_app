@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:salla_app/features/checkout/data/models/addresses_response.dart';
 part 'checkout_state.freezed.dart';
 
 @freezed
@@ -7,7 +8,7 @@ class CheckoutState with _$CheckoutState {
 
   const factory CheckoutState.loading() = Loading;
 
-  const factory CheckoutState.success() = Success;
+  const factory CheckoutState.success(List<AddressModel> addresses) = Success;
 
   const factory CheckoutState.failure(String message) = Failure;
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
+import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_apply_promo_code.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -78,11 +80,14 @@ class CheckoutSummary extends StatelessWidget {
             children: [
               Expanded(
                 child: CustomTextField(
-                  controller: TextEditingController(),
+                  controller: context.read<CheckoutCubit>().promoCodeController,
                   hintText: 'Enter Promo Code',
                   errorMsg: 'Please enter promo code',
-                  keyboardType: TextInputType.text,
+                  keyboardType: TextInputType.number,
                   textInputAction: TextInputAction.done,
+                  onSubmit: (value) {
+                    context.read<CheckoutCubit>().emitPromoCodeState();
+                  },
                 ),
               ),
               horizontalSpace(3.0),
