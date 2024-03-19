@@ -49,12 +49,24 @@ class CartScreen extends StatelessWidget {
                       right: 20.w,
                       bottom: 16.h,
                       child: CustomButton(
-                        onPressed: () => context.push(
-                          Routes.checkout,
-                          arguments: CheckoutScreenArgs(
-                            data: context.read<CartCubit>().cartData!,
-                          ),
-                        ),
+                        onPressed: () {
+                          int totalItems = 0;
+                          for (var item
+                              in context.read<CartCubit>().cartProducts) {
+                            totalItems += context
+                                    .read<CartCubit>()
+                                    .cartQuantities[item.id] ??
+                                0;
+                          }
+                          context.push(
+                            Routes.checkout,
+                            arguments: CheckoutScreenArgs(
+                              products: context.read<CartCubit>().cartProducts,
+                              totalItems: totalItems,
+                              totalPrice: context.read<CartCubit>().totalPrice,
+                            ),
+                          );
+                        },
                         text:
                             '${S.of(context).checkoutTitle} ${context.read<CartCubit>().totalPrice} EGP',
                       ),

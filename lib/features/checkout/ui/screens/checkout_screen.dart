@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
-import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_addresses.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_button.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
@@ -12,8 +12,11 @@ import 'package:salla_app/features/checkout/ui/widgets/checkout_title.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutScreen extends StatelessWidget {
-  final CartData data;
-  const CheckoutScreen({super.key, required this.data});
+  final CheckoutScreenArgs args;
+  const CheckoutScreen({
+    super.key,
+    required this.args,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +42,10 @@ class CheckoutScreen extends StatelessWidget {
                     CheckoutTitle(
                       text: S.of(context).orderSummaryTitle,
                     ),
-                    const CheckoutSummary(),
+                    CheckoutSummary(
+                      totalPrice: args.totalPrice,
+                      totalItems: args.totalItems,
+                    ),
                     CheckoutTitle(
                       text: S.of(context).paymentMethodTitle,
                     ),
@@ -55,7 +61,9 @@ class CheckoutScreen extends StatelessWidget {
                       onTap: () {},
                       textButton: S.of(context).modifyCartTitle.toUpperCase(),
                     ),
-                    const CheckoutProducts(),
+                    CheckoutProducts(
+                      cartProducts: args.products,
+                    ),
                   ],
                 ),
               ),

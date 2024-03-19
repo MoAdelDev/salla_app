@@ -4,17 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
+import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 
 class CheckoutProductItem extends StatelessWidget {
-  const CheckoutProductItem({super.key});
+  final CartProductModel cartProduct;
+  const CheckoutProductItem({super.key, required this.cartProduct});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         CachedNetworkImage(
-          imageUrl:
-              'https://student.valuxapps.com/storage/uploads/products/1615440322UAwSF.81KcqNGQIsL._SL1500_.jpg',
+          imageUrl: cartProduct.product.image,
           width: 70.0.w,
           height: 70.0.h,
           errorListener: (value) => const CustomShimmer(),
@@ -42,25 +43,27 @@ class CheckoutProductItem extends StatelessWidget {
             );
           },
         ),
-        horizontalSpace(5.0),
+        horizontalSpace(8.0),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Product Name',
+                cartProduct.product.name,
                 style: AppTexts.text16WhiteLatoBold,
               ),
               verticalSpace(5.0),
               Row(
                 children: [
                   Text(
-                    'Quantity -> 1',
+                    'Quantity -> ${cartProduct.quantity}',
                     style: AppTexts.text14WhiteLatoRegular,
                   ),
                   const Spacer(),
                   Text(
-                    '200 EGP',
+                    '${cartProduct.product.price} EGP',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                     style: AppTexts.text14WhiteLatoBold,
                   )
                 ],

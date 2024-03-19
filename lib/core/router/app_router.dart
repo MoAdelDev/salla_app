@@ -78,7 +78,7 @@ class AppRouter {
         CheckoutScreenArgs args = settings.arguments as CheckoutScreenArgs;
         return MaterialPageRoute(
           builder: (context) => CheckoutScreen(
-            data: args.data,
+            args: args,
           ),
         );
       default:

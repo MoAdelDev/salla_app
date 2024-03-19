@@ -7,7 +7,13 @@ import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutSummary extends StatelessWidget {
-  const CheckoutSummary({super.key});
+  final double totalPrice;
+  final int totalItems;
+  const CheckoutSummary({
+    super.key,
+    required this.totalPrice,
+    required this.totalItems,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +23,12 @@ class CheckoutSummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                '${S.of(context).itemTotalTitle} ( 2 )',
+                '${S.of(context).itemTotalTitle} ( ${totalItems} )',
                 style: AppTexts.text14WhiteLatoRegular,
               ),
               const Spacer(),
               Text(
-                '200 EGP',
+                '$totalPrice EGP',
                 style: AppTexts.text16WhiteLatoBold,
               ),
             ],
@@ -56,7 +62,7 @@ class CheckoutSummary extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                '200 EGP',
+                '$totalPrice EGP',
                 style: AppTexts.text16WhiteLatoBold,
               )
             ],

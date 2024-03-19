@@ -8,6 +8,12 @@ class ProductDetailsScreenArgs extends ScreenArgs {
 }
 
 class CheckoutScreenArgs extends ScreenArgs {
-  final CartData data;
-  CheckoutScreenArgs({required this.data});
+  final List<CartProductModel> products;
+  final int totalItems;
+  final double totalPrice;
+  CheckoutScreenArgs({
+    required this.products,
+    required this.totalItems,
+    required this.totalPrice,
+  });
 }
