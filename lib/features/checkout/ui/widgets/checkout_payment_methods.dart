@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_payemnt_method_item.dart';
+import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_method_item.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class CheckoutPayemntMethods extends StatefulWidget {
-  const CheckoutPayemntMethods({super.key});
+class CheckoutPaymentMethods extends StatefulWidget {
+  const CheckoutPaymentMethods({super.key});
 
   @override
-  State<CheckoutPayemntMethods> createState() => _CheckoutPayemntMethodsState();
+  State<CheckoutPaymentMethods> createState() => _CheckoutPaymentMethodsState();
 }
 
-class _CheckoutPayemntMethodsState extends State<CheckoutPayemntMethods> {
+class _CheckoutPaymentMethodsState extends State<CheckoutPaymentMethods> {
   int selectedRadio = 1;
   @override
   Widget build(BuildContext context) {
     return CheckoutCart(
       child: Column(
         children: [
-          CheckoutPayemntMethodItem(
+          CheckoutPaymentMethodItem(
             onChanged: (p0) {
               setState(() {
                 selectedRadio = p0!;
@@ -31,7 +31,7 @@ class _CheckoutPayemntMethodsState extends State<CheckoutPayemntMethods> {
             icon: Icons.clean_hands,
           ),
           verticalSpace(10.0),
-          CheckoutPayemntMethodItem(
+          CheckoutPaymentMethodItem(
             onChanged: (p0) {
               setState(() {
                 selectedRadio = p0!;

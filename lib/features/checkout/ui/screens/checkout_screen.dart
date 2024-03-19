@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_payemnt_methods.dart';
+import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
+import 'package:salla_app/features/checkout/ui/widgets/checkout_products.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_summary.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_title.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -38,11 +39,19 @@ class CheckoutScreen extends StatelessWidget {
                     CheckoutTitle(
                       text: S.of(context).paymentMethodTitle,
                     ),
-                    const CheckoutPayemntMethods(),
+                    const CheckoutPaymentMethods(),
                     CheckoutTitle(
                       text: S.of(context).myAddressesTitle,
+                      onTap: () {},
+                      textButton: S.of(context).changeTitle,
                     ),
                     const CheckoutAddress(),
+                    CheckoutTitle(
+                      text: S.of(context).productsTitle,
+                      onTap: () {},
+                      textButton: S.of(context).modifyCartTitle.toUpperCase(),
+                    ),
+                    const CheckoutProducts(),
                   ],
                 ),
               ),

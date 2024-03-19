@@ -3,14 +3,14 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 
-class CheckoutPayemntMethodItem extends StatelessWidget {
+class CheckoutPaymentMethodItem extends StatelessWidget {
   final Function(int?) onChanged;
   final int radioSelected;
   final int radioValue;
   final String title;
   final String subtitle;
   final IconData icon;
-  const CheckoutPayemntMethodItem({
+  const CheckoutPaymentMethodItem({
     super.key,
     required this.onChanged,
     required this.radioSelected,
