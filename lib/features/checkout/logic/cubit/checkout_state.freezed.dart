@@ -29,6 +29,9 @@ mixin _$CheckoutState {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +47,9 @@ mixin _$CheckoutState {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +65,9 @@ mixin _$CheckoutState {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -78,6 +87,9 @@ mixin _$CheckoutState {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,6 +105,9 @@ mixin _$CheckoutState {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -108,6 +123,9 @@ mixin _$CheckoutState {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -180,6 +198,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return initial();
   }
@@ -198,6 +219,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return initial?.call();
   }
@@ -216,6 +240,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,6 +268,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return initial(this);
   }
@@ -259,6 +289,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return initial?.call(this);
   }
@@ -277,6 +310,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -339,6 +375,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return loading();
   }
@@ -357,6 +396,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return loading?.call();
   }
@@ -375,6 +417,9 @@ class _$LoadingImpl implements Loading {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -400,6 +445,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return loading(this);
   }
@@ -418,6 +466,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return loading?.call(this);
   }
@@ -436,6 +487,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -532,6 +586,9 @@ class _$SuccessImpl implements Success {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return success(addresses);
   }
@@ -550,6 +607,9 @@ class _$SuccessImpl implements Success {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return success?.call(addresses);
   }
@@ -568,6 +628,9 @@ class _$SuccessImpl implements Success {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -593,6 +656,9 @@ class _$SuccessImpl implements Success {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return success(this);
   }
@@ -611,6 +677,9 @@ class _$SuccessImpl implements Success {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return success?.call(this);
   }
@@ -629,6 +698,9 @@ class _$SuccessImpl implements Success {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -722,6 +794,9 @@ class _$FailureImpl implements Failure {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return failure(message);
   }
@@ -740,6 +815,9 @@ class _$FailureImpl implements Failure {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return failure?.call(message);
   }
@@ -758,6 +836,9 @@ class _$FailureImpl implements Failure {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -783,6 +864,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return failure(this);
   }
@@ -801,6 +885,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return failure?.call(this);
   }
@@ -819,6 +906,9 @@ class _$FailureImpl implements Failure {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -888,6 +978,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return applyPromoCodeLoading();
   }
@@ -906,6 +999,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return applyPromoCodeLoading?.call();
   }
@@ -924,6 +1020,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeLoading != null) {
@@ -949,6 +1048,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return applyPromoCodeLoading(this);
   }
@@ -967,6 +1069,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return applyPromoCodeLoading?.call(this);
   }
@@ -985,6 +1090,9 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeLoading != null) {
@@ -1075,6 +1183,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return applyPromoCodeSuccess(message);
   }
@@ -1093,6 +1204,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return applyPromoCodeSuccess?.call(message);
   }
@@ -1111,6 +1225,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeSuccess != null) {
@@ -1136,6 +1253,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return applyPromoCodeSuccess(this);
   }
@@ -1154,6 +1274,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return applyPromoCodeSuccess?.call(this);
   }
@@ -1172,6 +1295,9 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeSuccess != null) {
@@ -1268,6 +1394,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return applyPromoCodeFailure(message);
   }
@@ -1286,6 +1415,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return applyPromoCodeFailure?.call(message);
   }
@@ -1304,6 +1436,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeFailure != null) {
@@ -1329,6 +1464,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return applyPromoCodeFailure(this);
   }
@@ -1347,6 +1485,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return applyPromoCodeFailure?.call(this);
   }
@@ -1365,6 +1506,9 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (applyPromoCodeFailure != null) {
@@ -1433,6 +1577,9 @@ class _$SelectItemImpl implements SelectItem {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return selectItem();
   }
@@ -1451,6 +1598,9 @@ class _$SelectItemImpl implements SelectItem {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return selectItem?.call();
   }
@@ -1469,6 +1619,9 @@ class _$SelectItemImpl implements SelectItem {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (selectItem != null) {
@@ -1494,6 +1647,9 @@ class _$SelectItemImpl implements SelectItem {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return selectItem(this);
   }
@@ -1512,6 +1668,9 @@ class _$SelectItemImpl implements SelectItem {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return selectItem?.call(this);
   }
@@ -1530,6 +1689,9 @@ class _$SelectItemImpl implements SelectItem {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (selectItem != null) {
@@ -1592,6 +1754,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return addOrderLoading();
   }
@@ -1610,6 +1775,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return addOrderLoading?.call();
   }
@@ -1628,6 +1796,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderLoading != null) {
@@ -1653,6 +1824,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return addOrderLoading(this);
   }
@@ -1671,6 +1845,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return addOrderLoading?.call(this);
   }
@@ -1689,6 +1866,9 @@ class _$AddOrderLoadingImpl implements AddOrderLoading {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderLoading != null) {
@@ -1778,6 +1958,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return addOrderSuccess(message);
   }
@@ -1796,6 +1979,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return addOrderSuccess?.call(message);
   }
@@ -1814,6 +2000,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderSuccess != null) {
@@ -1839,6 +2028,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return addOrderSuccess(this);
   }
@@ -1857,6 +2049,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return addOrderSuccess?.call(this);
   }
@@ -1875,6 +2070,9 @@ class _$AddOrderSuccessImpl implements AddOrderSuccess {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderSuccess != null) {
@@ -1969,6 +2167,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     required TResult Function() addOrderLoading,
     required TResult Function(String message) addOrderSuccess,
     required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
   }) {
     return addOrderFailure(message);
   }
@@ -1987,6 +2188,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     TResult? Function()? addOrderLoading,
     TResult? Function(String message)? addOrderSuccess,
     TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
   }) {
     return addOrderFailure?.call(message);
   }
@@ -2005,6 +2209,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     TResult Function()? addOrderLoading,
     TResult Function(String message)? addOrderSuccess,
     TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderFailure != null) {
@@ -2030,6 +2237,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     required TResult Function(AddOrderLoading value) addOrderLoading,
     required TResult Function(AddOrderSuccess value) addOrderSuccess,
     required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
   }) {
     return addOrderFailure(this);
   }
@@ -2048,6 +2258,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     TResult? Function(AddOrderLoading value)? addOrderLoading,
     TResult? Function(AddOrderSuccess value)? addOrderSuccess,
     TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
   }) {
     return addOrderFailure?.call(this);
   }
@@ -2066,6 +2279,9 @@ class _$AddOrderFailureImpl implements AddOrderFailure {
     TResult Function(AddOrderLoading value)? addOrderLoading,
     TResult Function(AddOrderSuccess value)? addOrderSuccess,
     TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
     required TResult orElse(),
   }) {
     if (addOrderFailure != null) {
@@ -2081,5 +2297,602 @@ abstract class AddOrderFailure implements CheckoutState {
   String get message;
   @JsonKey(ignore: true)
   _$$AddOrderFailureImplCopyWith<_$AddOrderFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MakePaymentLoadingImplCopyWith<$Res> {
+  factory _$$MakePaymentLoadingImplCopyWith(_$MakePaymentLoadingImpl value,
+          $Res Function(_$MakePaymentLoadingImpl) then) =
+      __$$MakePaymentLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MakePaymentLoadingImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$MakePaymentLoadingImpl>
+    implements _$$MakePaymentLoadingImplCopyWith<$Res> {
+  __$$MakePaymentLoadingImplCopyWithImpl(_$MakePaymentLoadingImpl _value,
+      $Res Function(_$MakePaymentLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$MakePaymentLoadingImpl implements MakePaymentLoading {
+  const _$MakePaymentLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CheckoutState.makePaymentLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$MakePaymentLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<AddressModel> addresses) success,
+    required TResult Function(String message) failure,
+    required TResult Function() applyPromoCodeLoading,
+    required TResult Function(String message) applyPromoCodeSuccess,
+    required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
+    required TResult Function() addOrderLoading,
+    required TResult Function(String message) addOrderSuccess,
+    required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
+  }) {
+    return makePaymentLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<AddressModel> addresses)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? applyPromoCodeLoading,
+    TResult? Function(String message)? applyPromoCodeSuccess,
+    TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? addOrderLoading,
+    TResult? Function(String message)? addOrderSuccess,
+    TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
+  }) {
+    return makePaymentLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<AddressModel> addresses)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? applyPromoCodeLoading,
+    TResult Function(String message)? applyPromoCodeSuccess,
+    TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
+    TResult Function()? addOrderLoading,
+    TResult Function(String message)? addOrderSuccess,
+    TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentLoading != null) {
+      return makePaymentLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(ApplyPromoCodeLoading value)
+        applyPromoCodeLoading,
+    required TResult Function(ApplyPromoCodeSuccess value)
+        applyPromoCodeSuccess,
+    required TResult Function(ApplyPromoCodeFailure value)
+        applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(AddOrderLoading value) addOrderLoading,
+    required TResult Function(AddOrderSuccess value) addOrderSuccess,
+    required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
+  }) {
+    return makePaymentLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(AddOrderLoading value)? addOrderLoading,
+    TResult? Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
+  }) {
+    return makePaymentLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(AddOrderLoading value)? addOrderLoading,
+    TResult Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentLoading != null) {
+      return makePaymentLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MakePaymentLoading implements CheckoutState {
+  const factory MakePaymentLoading() = _$MakePaymentLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$MakePaymentSuccessImplCopyWith<$Res> {
+  factory _$$MakePaymentSuccessImplCopyWith(_$MakePaymentSuccessImpl value,
+          $Res Function(_$MakePaymentSuccessImpl) then) =
+      __$$MakePaymentSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$MakePaymentSuccessImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$MakePaymentSuccessImpl>
+    implements _$$MakePaymentSuccessImplCopyWith<$Res> {
+  __$$MakePaymentSuccessImplCopyWithImpl(_$MakePaymentSuccessImpl _value,
+      $Res Function(_$MakePaymentSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$MakePaymentSuccessImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MakePaymentSuccessImpl implements MakePaymentSuccess {
+  const _$MakePaymentSuccessImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CheckoutState.makePaymentSuccess(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MakePaymentSuccessImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MakePaymentSuccessImplCopyWith<_$MakePaymentSuccessImpl> get copyWith =>
+      __$$MakePaymentSuccessImplCopyWithImpl<_$MakePaymentSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<AddressModel> addresses) success,
+    required TResult Function(String message) failure,
+    required TResult Function() applyPromoCodeLoading,
+    required TResult Function(String message) applyPromoCodeSuccess,
+    required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
+    required TResult Function() addOrderLoading,
+    required TResult Function(String message) addOrderSuccess,
+    required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
+  }) {
+    return makePaymentSuccess(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<AddressModel> addresses)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? applyPromoCodeLoading,
+    TResult? Function(String message)? applyPromoCodeSuccess,
+    TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? addOrderLoading,
+    TResult? Function(String message)? addOrderSuccess,
+    TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
+  }) {
+    return makePaymentSuccess?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<AddressModel> addresses)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? applyPromoCodeLoading,
+    TResult Function(String message)? applyPromoCodeSuccess,
+    TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
+    TResult Function()? addOrderLoading,
+    TResult Function(String message)? addOrderSuccess,
+    TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentSuccess != null) {
+      return makePaymentSuccess(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(ApplyPromoCodeLoading value)
+        applyPromoCodeLoading,
+    required TResult Function(ApplyPromoCodeSuccess value)
+        applyPromoCodeSuccess,
+    required TResult Function(ApplyPromoCodeFailure value)
+        applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(AddOrderLoading value) addOrderLoading,
+    required TResult Function(AddOrderSuccess value) addOrderSuccess,
+    required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
+  }) {
+    return makePaymentSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(AddOrderLoading value)? addOrderLoading,
+    TResult? Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
+  }) {
+    return makePaymentSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(AddOrderLoading value)? addOrderLoading,
+    TResult Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentSuccess != null) {
+      return makePaymentSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MakePaymentSuccess implements CheckoutState {
+  const factory MakePaymentSuccess(final String message) =
+      _$MakePaymentSuccessImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$MakePaymentSuccessImplCopyWith<_$MakePaymentSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MakePaymentFailureImplCopyWith<$Res> {
+  factory _$$MakePaymentFailureImplCopyWith(_$MakePaymentFailureImpl value,
+          $Res Function(_$MakePaymentFailureImpl) then) =
+      __$$MakePaymentFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$MakePaymentFailureImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$MakePaymentFailureImpl>
+    implements _$$MakePaymentFailureImplCopyWith<$Res> {
+  __$$MakePaymentFailureImplCopyWithImpl(_$MakePaymentFailureImpl _value,
+      $Res Function(_$MakePaymentFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$MakePaymentFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MakePaymentFailureImpl implements MakePaymentFailure {
+  const _$MakePaymentFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CheckoutState.makePaymentFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MakePaymentFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MakePaymentFailureImplCopyWith<_$MakePaymentFailureImpl> get copyWith =>
+      __$$MakePaymentFailureImplCopyWithImpl<_$MakePaymentFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<AddressModel> addresses) success,
+    required TResult Function(String message) failure,
+    required TResult Function() applyPromoCodeLoading,
+    required TResult Function(String message) applyPromoCodeSuccess,
+    required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
+    required TResult Function() addOrderLoading,
+    required TResult Function(String message) addOrderSuccess,
+    required TResult Function(String message) addOrderFailure,
+    required TResult Function() makePaymentLoading,
+    required TResult Function(String message) makePaymentSuccess,
+    required TResult Function(String message) makePaymentFailure,
+  }) {
+    return makePaymentFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<AddressModel> addresses)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? applyPromoCodeLoading,
+    TResult? Function(String message)? applyPromoCodeSuccess,
+    TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
+    TResult? Function()? addOrderLoading,
+    TResult? Function(String message)? addOrderSuccess,
+    TResult? Function(String message)? addOrderFailure,
+    TResult? Function()? makePaymentLoading,
+    TResult? Function(String message)? makePaymentSuccess,
+    TResult? Function(String message)? makePaymentFailure,
+  }) {
+    return makePaymentFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<AddressModel> addresses)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? applyPromoCodeLoading,
+    TResult Function(String message)? applyPromoCodeSuccess,
+    TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
+    TResult Function()? addOrderLoading,
+    TResult Function(String message)? addOrderSuccess,
+    TResult Function(String message)? addOrderFailure,
+    TResult Function()? makePaymentLoading,
+    TResult Function(String message)? makePaymentSuccess,
+    TResult Function(String message)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentFailure != null) {
+      return makePaymentFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(ApplyPromoCodeLoading value)
+        applyPromoCodeLoading,
+    required TResult Function(ApplyPromoCodeSuccess value)
+        applyPromoCodeSuccess,
+    required TResult Function(ApplyPromoCodeFailure value)
+        applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
+    required TResult Function(AddOrderLoading value) addOrderLoading,
+    required TResult Function(AddOrderSuccess value) addOrderSuccess,
+    required TResult Function(AddOrderFailure value) addOrderFailure,
+    required TResult Function(MakePaymentLoading value) makePaymentLoading,
+    required TResult Function(MakePaymentSuccess value) makePaymentSuccess,
+    required TResult Function(MakePaymentFailure value) makePaymentFailure,
+  }) {
+    return makePaymentFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
+    TResult? Function(AddOrderLoading value)? addOrderLoading,
+    TResult? Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult? Function(AddOrderFailure value)? addOrderFailure,
+    TResult? Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult? Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult? Function(MakePaymentFailure value)? makePaymentFailure,
+  }) {
+    return makePaymentFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
+    TResult Function(AddOrderLoading value)? addOrderLoading,
+    TResult Function(AddOrderSuccess value)? addOrderSuccess,
+    TResult Function(AddOrderFailure value)? addOrderFailure,
+    TResult Function(MakePaymentLoading value)? makePaymentLoading,
+    TResult Function(MakePaymentSuccess value)? makePaymentSuccess,
+    TResult Function(MakePaymentFailure value)? makePaymentFailure,
+    required TResult orElse(),
+  }) {
+    if (makePaymentFailure != null) {
+      return makePaymentFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MakePaymentFailure implements CheckoutState {
+  const factory MakePaymentFailure(final String message) =
+      _$MakePaymentFailureImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$MakePaymentFailureImplCopyWith<_$MakePaymentFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

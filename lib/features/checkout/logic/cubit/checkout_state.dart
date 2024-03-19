@@ -27,4 +27,12 @@ class CheckoutState with _$CheckoutState {
   const factory CheckoutState.addOrderSuccess(String message) = AddOrderSuccess;
 
   const factory CheckoutState.addOrderFailure(String message) = AddOrderFailure;
+
+  const factory CheckoutState.makePaymentLoading() = MakePaymentLoading;
+
+  const factory CheckoutState.makePaymentSuccess(String message) =
+      MakePaymentSuccess;
+
+  const factory CheckoutState.makePaymentFailure(String message) =
+      MakePaymentFailure;
 }

@@ -1,12 +1,15 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
+import 'package:salla_app/core/stripe/payment_intent_request_body.dart';
 import 'package:salla_app/features/checkout/data/models/add_order_request_body.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_request_body.dart';
 import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
+import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 
@@ -14,10 +17,12 @@ class CheckoutCubit extends Cubit<CheckoutState> {
   final PromoCodeRepo _promoCodeRepo;
   final AddressesRepo _addressesRepo;
   final AddOrderRepo _addOrderRepo;
+  final PaymentRepo _paymentRepo;
   CheckoutCubit(
     this._promoCodeRepo,
     this._addressesRepo,
     this._addOrderRepo,
+    this._paymentRepo,
   ) : super(const CheckoutState.initial());
 
   final TextEditingController promoCodeController = TextEditingController();
@@ -95,5 +100,23 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     }, failure: (message) {
       emit(CheckoutState.addOrderFailure(message));
     });
+  }
+
+  void emitPaymentState(double totalPrice) async {
+    final result = await _paymentRepo.makePayment(
+      PaymentIntentRequestBody(
+        totalPrice.toString(),
+        'EGP',
+        CacheHelper.getString(key: 'customer_id'),
+      ),
+    );
+    result.when(
+      success: (response) {
+        emitAddOrderState();
+      },
+      failure: (message) {
+        emit(CheckoutState.addOrderFailure(message));
+      },
+    );
   }
 }

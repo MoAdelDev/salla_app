@@ -10,7 +10,8 @@ import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 
 class CheckoutConfirmOrderButton extends StatelessWidget {
-  const CheckoutConfirmOrderButton({super.key});
+  final double totalPrice;
+  const CheckoutConfirmOrderButton({super.key, required this.totalPrice});
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
         });
       },
       builder: (context, state) {
+        CheckoutCubit cubit = context.read<CheckoutCubit>();
         if (state is AddOrderLoading) {
           return const Center(
             child: CustomLoadingIndicator(),
@@ -38,7 +40,9 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
             bottom: 10.0.h,
           ),
           child: CustomButton(
-            onPressed: () => context.read<CheckoutCubit>().emitAddOrderState(),
+            onPressed: () => cubit.paymentMethodSelected == 1
+                ? context.read<CheckoutCubit>().emitAddOrderState()
+                : cubit.emitPaymentState(totalPrice),
             text: 'Confirm Order',
           ),
         );
