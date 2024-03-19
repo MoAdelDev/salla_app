@@ -490,10 +490,10 @@ class S {
     );
   }
 
-  /// `My addresses`
+  /// `My Addresses`
   String get myAddressesTitle {
     return Intl.message(
-      'My addresses',
+      'My Addresses',
       name: 'myAddressesTitle',
       desc: '',
       args: [],
@@ -740,10 +740,10 @@ class S {
     );
   }
 
-  /// `No addresses yet`
+  /// `No Addresses yet`
   String get noAddressTitle {
     return Intl.message(
-      'No addresses yet',
+      'No Addresses yet',
       name: 'noAddressTitle',
       desc: '',
       args: [],
