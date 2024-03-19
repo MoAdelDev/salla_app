@@ -490,10 +490,10 @@ class S {
     );
   }
 
-  /// `My addresses`
+  /// `My Addresses`
   String get myAddressesTitle {
     return Intl.message(
-      'My addresses',
+      'My Addresses',
       name: 'myAddressesTitle',
       desc: '',
       args: [],
@@ -740,10 +740,10 @@ class S {
     );
   }
 
-  /// `No addresses yet`
+  /// `No Addresses yet`
   String get noAddressTitle {
     return Intl.message(
-      'No addresses yet',
+      'No Addresses yet',
       name: 'noAddressTitle',
       desc: '',
       args: [],
@@ -1035,6 +1035,16 @@ class S {
     return Intl.message(
       'Items',
       name: 'itemsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment method via paypal or master card`
+  String get paymentBody {
+    return Intl.message(
+      'Payment method via paypal or master card',
+      name: 'paymentBody',
       desc: '',
       args: [],
     );

@@ -118,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "paymentBody": MessageLookupByLibrary.simpleMessage(
+            "طريقة الدفع عن طريق ماستر كارد او باي بال"),
         "paymentMethodTitle":
             MessageLookupByLibrary.simpleMessage("طريقة الدفع"),
         "paymentTitle": MessageLookupByLibrary.simpleMessage("الدفع"),

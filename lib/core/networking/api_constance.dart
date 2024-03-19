@@ -9,4 +9,7 @@ class ApiConstance {
   static const String products = 'products';
   static const String favorites = 'favorites';
   static const String carts = 'carts';
+  static const String promoCodes = 'promo-codes';
+  static const String addresses = 'addresses';
+  static const String orders = 'orders';
 }

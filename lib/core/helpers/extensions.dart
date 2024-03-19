@@ -1,27 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-extension SnackBarEx on BuildContext {
-  void showSnackBar(String message, {bool isError = false}) {
-    ScaffoldMessenger.of(this).showSnackBar(
-      SnackBar(
-        backgroundColor: isError ? Colors.red : Colors.green,
-        content: SafeArea(
-          child: Text(
-            message,
-            textAlign: TextAlign.center,
-            style: GoogleFonts.lato(
-              color: Colors.white,
-              fontSize: 16.0.sp,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 extension NavigationEx on BuildContext {
   void push(String routeName, {Object? arguments}) {
@@ -44,4 +21,11 @@ extension NavigationEx on BuildContext {
 
 extension ThemeEx on BuildContext {
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
+}
+
+extension RegEx on String {
+  bool isNumber() {
+    final numericRegex = RegExp(r'^-?(([0-9]*)|(([0-9]*)\.([0-9]*)))$');
+    return numericRegex.hasMatch(this);
+  }
 }

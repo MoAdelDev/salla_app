@@ -99,14 +99,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "logoutTitle": MessageLookupByLibrary.simpleMessage("Log out"),
         "modifyCartTitle": MessageLookupByLibrary.simpleMessage("Modify cart"),
         "myAddressesTitle":
-            MessageLookupByLibrary.simpleMessage("My addresses"),
+            MessageLookupByLibrary.simpleMessage("My Addresses"),
         "nOfItemsTitle": MessageLookupByLibrary.simpleMessage("N of items"),
         "nameHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your name"),
         "nameTitle": MessageLookupByLibrary.simpleMessage("Name"),
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("Night mode"),
         "noAddressTitle":
-            MessageLookupByLibrary.simpleMessage("No addresses yet"),
+            MessageLookupByLibrary.simpleMessage("No Addresses yet"),
         "noProductsTitle":
             MessageLookupByLibrary.simpleMessage("No Products yet"),
         "noteHintTitle":
@@ -129,6 +129,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+        "paymentBody": MessageLookupByLibrary.simpleMessage(
+            "Payment method via paypal or master card"),
         "paymentMethodTitle":
             MessageLookupByLibrary.simpleMessage("Payment Method"),
         "paymentTitle": MessageLookupByLibrary.simpleMessage("Payment"),
