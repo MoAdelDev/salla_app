@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_no_products.dart';
@@ -48,7 +49,12 @@ class CartScreen extends StatelessWidget {
                       right: 20.w,
                       bottom: 16.h,
                       child: CustomButton(
-                        onPressed: () => context.push(Routes.checkout),
+                        onPressed: () => context.push(
+                          Routes.checkout,
+                          arguments: CheckoutScreenArgs(
+                            data: context.read<CartCubit>().cartData!,
+                          ),
+                        ),
                         text:
                             '${S.of(context).checkoutTitle} ${context.read<CartCubit>().totalPrice} EGP',
                       ),

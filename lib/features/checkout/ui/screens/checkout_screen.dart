@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
+import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_addresses.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_button.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
@@ -11,7 +12,8 @@ import 'package:salla_app/features/checkout/ui/widgets/checkout_title.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutScreen extends StatelessWidget {
-  const CheckoutScreen({super.key});
+  final CartData data;
+  const CheckoutScreen({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {

@@ -75,8 +75,11 @@ class AppRouter {
         );
 
       case Routes.checkout:
+        CheckoutScreenArgs args = settings.arguments as CheckoutScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => const CheckoutScreen(),
+          builder: (context) => CheckoutScreen(
+            data: args.data,
+          ),
         );
       default:
         return null;
