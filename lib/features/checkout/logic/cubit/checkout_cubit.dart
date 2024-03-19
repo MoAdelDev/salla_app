@@ -105,7 +105,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
   void emitPaymentState(double totalPrice) async {
     final result = await _paymentRepo.makePayment(
       PaymentIntentRequestBody(
-        totalPrice.toString(),
+        (totalPrice.toInt() * 100).toString(),
         'EGP',
         CacheHelper.getString(key: 'customer_id'),
       ),
@@ -115,7 +115,11 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         emitAddOrderState();
       },
       failure: (message) {
-        emit(CheckoutState.addOrderFailure(message));
+        emit(
+          const CheckoutState.addOrderFailure(
+            'Failed to order the products',
+          ),
+        );
       },
     );
   }

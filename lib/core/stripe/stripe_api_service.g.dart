@@ -58,44 +58,43 @@ class _StripeApiService implements StripeApiService {
   }
 
   @override
-  Future<String> createCustomerId(
-    Map<String, dynamic>? data,
+  Future<CustomerResponseBody> createCustomerId(
     String contentType,
     String token,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{
       r'Content-Type': contentType,
       r'Authorization': token,
     };
     _headers.removeWhere((k, v) => v == null);
-    final _data = <String, dynamic>{};
-    _data.addAll(data!);
-    final _result = await _dio.fetch<String>(_setStreamType<String>(Options(
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<CustomerResponseBody>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: contentType,
     )
-        .compose(
-          _dio.options,
-          'customers',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = _result.data!;
+            .compose(
+              _dio.options,
+              'customers',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = CustomerResponseBody.fromJson(_result.data!);
     return value;
   }
 
   @override
   Future<EphemeralKeyModel> createEphemeralKey(
+    EphemeralKeyRequestBody ephemeralKeyRequestBody,
     String token,
     String contentType,
     String stripeVersion,
@@ -108,10 +107,11 @@ class _StripeApiService implements StripeApiService {
       r'Stripe-Version': stripeVersion,
     };
     _headers.removeWhere((k, v) => v == null);
-    const Map<String, dynamic>? _data = null;
+    final _data = <String, dynamic>{};
+    _data.addAll(ephemeralKeyRequestBody.toJson());
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<EphemeralKeyModel>(Options(
-      method: 'GET',
+      method: 'POST',
       headers: _headers,
       extra: _extra,
       contentType: contentType,

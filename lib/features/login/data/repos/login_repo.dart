@@ -11,7 +11,9 @@ import 'package:salla_app/features/login/data/models/login_response_body.dart';
 class LoginRepo {
   final ApiService apiService;
 
-  LoginRepo(this.apiService);
+  LoginRepo(
+    this.apiService,
+  );
 
   Future<ApiResult<LoginResponseBody>> login(
       LoginRequestBody loginRequestBody) async {
