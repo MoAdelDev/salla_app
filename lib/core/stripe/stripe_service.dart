@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:salla_app/core/networking/stripe_keys.dart';
 import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_model.dart';
+import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_request_body.dart';
 import 'package:salla_app/core/stripe/payment_intent_model/payment_intent_model.dart';
 import 'package:salla_app/core/stripe/payment_intent_request_body.dart';
 import 'package:salla_app/core/stripe/stripe_api_service.dart';
@@ -15,18 +16,17 @@ class StripeService {
     final response = await stripeApiService.createPaymentIntent(
       paymentIntentRequestBody,
       Headers.formUrlEncodedContentType,
-      'Bearer ${StripeKeys.secretKey}',
+      'Bearer ${dotenv.env['STRIPE_SECRET_KEY']}',
     );
     return response;
   }
 
   Future<String> createCustomerId() async {
     final response = await stripeApiService.createCustomerId(
-      null,
       Headers.formUrlEncodedContentType,
-      'Bearer ${StripeKeys.secretKey}',
+      'Bearer ${dotenv.env['STRIPE_SECRET_KEY']}',
     );
-    return response;
+    return response.id;
   }
 
   Future<void> initPaymentSheet({
@@ -68,7 +68,8 @@ class StripeService {
     required String customerId,
   }) async {
     final response = await stripeApiService.createEphemeralKey(
-      'Bearer ${StripeKeys.secretKey}',
+      EphemeralKeyRequestBody(customerId),
+      'Bearer ${dotenv.env['STRIPE_SECRET_KEY']}',
       Headers.formUrlEncodedContentType,
       '2023-10-16',
     );

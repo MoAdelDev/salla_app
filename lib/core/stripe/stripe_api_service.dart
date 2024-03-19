@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:salla_app/core/stripe/customer_response_body.dart';
 import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_model.dart';
+import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_request_body.dart';
 import 'package:salla_app/core/stripe/payment_intent_model/payment_intent_model.dart';
 import 'package:salla_app/core/stripe/payment_intent_request_body.dart';
 part 'stripe_api_service.g.dart';
@@ -17,14 +19,14 @@ abstract class StripeApiService {
   );
 
   @POST('customers')
-  Future<String> createCustomerId(
-    @Body() Map<String, dynamic>? data,
+  Future<CustomerResponseBody> createCustomerId(
     @Header('Content-Type') String contentType,
     @Header('Authorization') String token,
   );
 
-  @GET('ephemeral_keys')
+  @POST('ephemeral_keys')
   Future<EphemeralKeyModel> createEphemeralKey(
+    @Body() EphemeralKeyRequestBody ephemeralKeyRequestBody,
     @Header('Authorization') String token,
     @Header('Content-Type') String contentType,
     @Header('Stripe-Version') String stripeVersion,

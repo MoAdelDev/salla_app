@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/networking/api_result.dart';
 import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/stripe/stripe_api_service.dart';
@@ -22,6 +23,7 @@ class RegisterRepo {
         await CacheHelper.saveToken(response.data?.token ?? '');
         final String customerId =
             await StripeService(getIt<StripeApiService>()).createCustomerId();
+        showToast(customerId);
         await CacheHelper.saveString(key: 'customer_id', value: customerId);
         return ApiResult.success(response);
       } else {
