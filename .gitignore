@@ -31,7 +31,8 @@ migrate_working_dir/
 .pub/
 /build/
 pubspec.lock
-/lib/core/networking/stripe_keys.dart
+lib/core/networking/stripe_keys.dart
+
 # Symbolication related
 app.*.symbols
 # Obfuscation related
