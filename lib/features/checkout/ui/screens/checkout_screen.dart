@@ -68,7 +68,9 @@ class CheckoutScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const CheckoutConfirmOrderButton(),
+            CheckoutConfirmOrderButton(
+              totalPrice: args.totalPrice,
+            ),
           ],
         ),
       ),

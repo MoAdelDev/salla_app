@@ -2,10 +2,13 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
+import 'package:salla_app/core/stripe/stripe_api_service.dart';
+import 'package:salla_app/core/stripe/stripe_service.dart';
 import 'package:salla_app/features/cart/data/repos/cart_repo.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
+import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/favorites/data/repos/favorites_repo.dart';
@@ -26,6 +29,10 @@ final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
   Dio dio = await DioFactory.getInstance();
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
+
+  // Stripe Api Service
+  getIt.registerLazySingleton<StripeApiService>(() => StripeApiService(dio));
+  getIt.registerLazySingleton<StripeService>(() => StripeService(getIt()));
 
   // login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt<ApiService>()));
@@ -61,11 +68,13 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<AddressesRepo>(() => AddressesRepo(getIt()));
   getIt.registerLazySingleton<PromoCodeRepo>(() => PromoCodeRepo(getIt()));
   getIt.registerLazySingleton<AddOrderRepo>(() => AddOrderRepo(getIt()));
+  getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(getIt()));
   getIt.registerFactory<CheckoutCubit>(
     () => CheckoutCubit(
       getIt<PromoCodeRepo>(),
       getIt<AddressesRepo>(),
       getIt<AddOrderRepo>(),
+      getIt<PaymentRepo>(),
     ),
   );
 }

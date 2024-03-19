@@ -31,9 +31,10 @@ migrate_working_dir/
 .pub/
 /build/
 pubspec.lock
+lib/core/networking/stripe_keys.dart
+
 # Symbolication related
 app.*.symbols
-
 # Obfuscation related
 app.*.map.json
 
@@ -41,5 +42,3 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-
-pubspec.lock
