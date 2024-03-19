@@ -58,7 +58,7 @@ class CheckoutScreen extends StatelessWidget {
                     const CheckoutAddresses(),
                     CheckoutTitle(
                       text: S.of(context).productsTitle,
-                      onTap: () {},
+                      onTap: () => context.pop(),
                       textButton: S.of(context).modifyCartTitle.toUpperCase(),
                     ),
                     CheckoutProducts(

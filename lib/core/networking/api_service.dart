@@ -4,6 +4,7 @@ import 'package:salla_app/core/networking/api_constance.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/data/models/cart_update_request.dart';
 import 'package:salla_app/features/cart/data/models/cart_update_response.dart';
+import 'package:salla_app/features/checkout/data/models/promo_code_response.dart';
 import 'package:salla_app/features/favorites/data/models/favorite_remove_response.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
@@ -98,5 +99,10 @@ abstract class ApiService {
   Future<CartUpdateResponse> deleteCart(
     @Header('Authorization') String token,
     @Path("id") int id,
+  );
+
+  @POST(ApiConstance.promoCodes)
+  Future<PromoCodeResponse> applyPromoCode(
+    @Header('Authorization') String token,
   );
 }
