@@ -40,6 +40,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     }
   }
 
+  int addressSelectedId = 0;
   List<AddressModel>? addresses;
   void emitAddressesState() async {
     emit(const CheckoutState.loading());
@@ -47,11 +48,25 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     result.when(
       success: (response) {
         addresses = response.data?.addresses;
+        addressSelectedId = response.data?.addresses.first.id ?? 0;
         emit(CheckoutState.success(response.data?.addresses ?? []));
       },
       failure: (message) {
         emit(CheckoutState.failure(message));
       },
     );
+  }
+
+  void emitSelectAddressState(int addressId) {
+    emit(const CheckoutState.initial());
+    addressSelectedId = addressId;
+    emit(const CheckoutState.selectItem());
+  }
+
+  int paymentMethodSelected = 1;
+  void emitSelectPaymentState(int paymentSelected) {
+    emit(const CheckoutState.initial());
+    paymentMethodSelected = paymentSelected;
+    emit(const CheckoutState.selectItem());
   }
 }

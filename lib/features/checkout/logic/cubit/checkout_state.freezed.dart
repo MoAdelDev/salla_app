@@ -25,6 +25,7 @@ mixin _$CheckoutState {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$CheckoutState {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$CheckoutState {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +65,7 @@ mixin _$CheckoutState {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,6 +77,7 @@ mixin _$CheckoutState {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,6 +89,7 @@ mixin _$CheckoutState {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -152,6 +158,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return initial();
   }
@@ -166,6 +173,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return initial?.call();
   }
@@ -180,6 +188,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -201,6 +210,7 @@ class _$InitialImpl implements _Initial {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return initial(this);
   }
@@ -215,6 +225,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return initial?.call(this);
   }
@@ -229,6 +240,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -287,6 +299,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return loading();
   }
@@ -301,6 +314,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return loading?.call();
   }
@@ -315,6 +329,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -336,6 +351,7 @@ class _$LoadingImpl implements Loading {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return loading(this);
   }
@@ -350,6 +366,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return loading?.call(this);
   }
@@ -364,6 +381,7 @@ class _$LoadingImpl implements Loading {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -456,6 +474,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return success(addresses);
   }
@@ -470,6 +489,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return success?.call(addresses);
   }
@@ -484,6 +504,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -505,6 +526,7 @@ class _$SuccessImpl implements Success {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return success(this);
   }
@@ -519,6 +541,7 @@ class _$SuccessImpl implements Success {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return success?.call(this);
   }
@@ -533,6 +556,7 @@ class _$SuccessImpl implements Success {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -622,6 +646,7 @@ class _$FailureImpl implements Failure {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return failure(message);
   }
@@ -636,6 +661,7 @@ class _$FailureImpl implements Failure {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return failure?.call(message);
   }
@@ -650,6 +676,7 @@ class _$FailureImpl implements Failure {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -671,6 +698,7 @@ class _$FailureImpl implements Failure {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return failure(this);
   }
@@ -685,6 +713,7 @@ class _$FailureImpl implements Failure {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return failure?.call(this);
   }
@@ -699,6 +728,7 @@ class _$FailureImpl implements Failure {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -764,6 +794,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return applyPromoCodeLoading();
   }
@@ -778,6 +809,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return applyPromoCodeLoading?.call();
   }
@@ -792,6 +824,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeLoading != null) {
@@ -813,6 +846,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return applyPromoCodeLoading(this);
   }
@@ -827,6 +861,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return applyPromoCodeLoading?.call(this);
   }
@@ -841,6 +876,7 @@ class _$ApplyPromoCodeLoadingImpl implements ApplyPromoCodeLoading {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeLoading != null) {
@@ -927,6 +963,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return applyPromoCodeSuccess(message);
   }
@@ -941,6 +978,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return applyPromoCodeSuccess?.call(message);
   }
@@ -955,6 +993,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeSuccess != null) {
@@ -976,6 +1015,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return applyPromoCodeSuccess(this);
   }
@@ -990,6 +1030,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return applyPromoCodeSuccess?.call(this);
   }
@@ -1004,6 +1045,7 @@ class _$ApplyPromoCodeSuccessImpl implements ApplyPromoCodeSuccess {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeSuccess != null) {
@@ -1096,6 +1138,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     required TResult Function() applyPromoCodeLoading,
     required TResult Function(String message) applyPromoCodeSuccess,
     required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
   }) {
     return applyPromoCodeFailure(message);
   }
@@ -1110,6 +1153,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult? Function()? applyPromoCodeLoading,
     TResult? Function(String message)? applyPromoCodeSuccess,
     TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
   }) {
     return applyPromoCodeFailure?.call(message);
   }
@@ -1124,6 +1168,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult Function()? applyPromoCodeLoading,
     TResult Function(String message)? applyPromoCodeSuccess,
     TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeFailure != null) {
@@ -1145,6 +1190,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
         applyPromoCodeSuccess,
     required TResult Function(ApplyPromoCodeFailure value)
         applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
   }) {
     return applyPromoCodeFailure(this);
   }
@@ -1159,6 +1205,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
   }) {
     return applyPromoCodeFailure?.call(this);
   }
@@ -1173,6 +1220,7 @@ class _$ApplyPromoCodeFailureImpl implements ApplyPromoCodeFailure {
     TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
     TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
     TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
     required TResult orElse(),
   }) {
     if (applyPromoCodeFailure != null) {
@@ -1190,4 +1238,145 @@ abstract class ApplyPromoCodeFailure implements CheckoutState {
   @JsonKey(ignore: true)
   _$$ApplyPromoCodeFailureImplCopyWith<_$ApplyPromoCodeFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SelectItemImplCopyWith<$Res> {
+  factory _$$SelectItemImplCopyWith(
+          _$SelectItemImpl value, $Res Function(_$SelectItemImpl) then) =
+      __$$SelectItemImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SelectItemImplCopyWithImpl<$Res>
+    extends _$CheckoutStateCopyWithImpl<$Res, _$SelectItemImpl>
+    implements _$$SelectItemImplCopyWith<$Res> {
+  __$$SelectItemImplCopyWithImpl(
+      _$SelectItemImpl _value, $Res Function(_$SelectItemImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SelectItemImpl implements SelectItem {
+  const _$SelectItemImpl();
+
+  @override
+  String toString() {
+    return 'CheckoutState.selectItem()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SelectItemImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<AddressModel> addresses) success,
+    required TResult Function(String message) failure,
+    required TResult Function() applyPromoCodeLoading,
+    required TResult Function(String message) applyPromoCodeSuccess,
+    required TResult Function(String message) applyPromoCodeFailure,
+    required TResult Function() selectItem,
+  }) {
+    return selectItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<AddressModel> addresses)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? applyPromoCodeLoading,
+    TResult? Function(String message)? applyPromoCodeSuccess,
+    TResult? Function(String message)? applyPromoCodeFailure,
+    TResult? Function()? selectItem,
+  }) {
+    return selectItem?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<AddressModel> addresses)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? applyPromoCodeLoading,
+    TResult Function(String message)? applyPromoCodeSuccess,
+    TResult Function(String message)? applyPromoCodeFailure,
+    TResult Function()? selectItem,
+    required TResult orElse(),
+  }) {
+    if (selectItem != null) {
+      return selectItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(ApplyPromoCodeLoading value)
+        applyPromoCodeLoading,
+    required TResult Function(ApplyPromoCodeSuccess value)
+        applyPromoCodeSuccess,
+    required TResult Function(ApplyPromoCodeFailure value)
+        applyPromoCodeFailure,
+    required TResult Function(SelectItem value) selectItem,
+  }) {
+    return selectItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult? Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult? Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult? Function(SelectItem value)? selectItem,
+  }) {
+    return selectItem?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(ApplyPromoCodeLoading value)? applyPromoCodeLoading,
+    TResult Function(ApplyPromoCodeSuccess value)? applyPromoCodeSuccess,
+    TResult Function(ApplyPromoCodeFailure value)? applyPromoCodeFailure,
+    TResult Function(SelectItem value)? selectItem,
+    required TResult orElse(),
+  }) {
+    if (selectItem != null) {
+      return selectItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SelectItem implements CheckoutState {
+  const factory SelectItem() = _$SelectItemImpl;
 }

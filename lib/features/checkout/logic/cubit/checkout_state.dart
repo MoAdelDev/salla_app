@@ -19,4 +19,6 @@ class CheckoutState with _$CheckoutState {
 
   const factory CheckoutState.applyPromoCodeFailure(String message) =
       ApplyPromoCodeFailure;
+
+  const factory CheckoutState.selectItem() = SelectItem;
 }

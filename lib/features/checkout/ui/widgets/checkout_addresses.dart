@@ -9,15 +9,9 @@ import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dar
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class CheckoutAddresses extends StatefulWidget {
+class CheckoutAddresses extends StatelessWidget {
   const CheckoutAddresses({super.key});
 
-  @override
-  State<CheckoutAddresses> createState() => _CheckoutAddressesState();
-}
-
-class _CheckoutAddressesState extends State<CheckoutAddresses> {
-  int radioSelected = 0;
   @override
   Widget build(BuildContext context) {
     return CheckoutCart(
@@ -44,13 +38,11 @@ class _CheckoutAddressesState extends State<CheckoutAddresses> {
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return CheckoutAddressItem(
-                onChanged: (p0) {
-                  setState(() {
-                    radioSelected = p0!;
-                  });
-                },
-                value: index,
-                radioSelected: radioSelected,
+                onChanged: (p0) =>
+                    cubit.emitSelectAddressState(cubit.addresses![index].id),
+                value: cubit.addresses![index].id,
+                radioSelected: cubit.addressSelectedId,
+                address: cubit.addresses![index],
               );
             },
             separatorBuilder: (context, index) => verticalSpace(10.0),
