@@ -116,9 +116,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
       },
       failure: (message) {
         emit(
-          const CheckoutState.addOrderFailure(
-            'Failed to order the products',
-          ),
+          CheckoutState.addOrderFailure(message),
         );
       },
     );

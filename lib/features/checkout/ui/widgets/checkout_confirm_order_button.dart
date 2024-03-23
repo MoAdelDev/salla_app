@@ -17,12 +17,12 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<CheckoutCubit, CheckoutState>(
       listener: (context, state) {
-        state.whenOrNull(addOrderSuccess: (message) {
-          showToast(message);
-          context.pushAndRemoveUntil(Routes.home);
-        }, addOrderFailure: (message) {
-          showToast(message, isError: true);
-        });
+        state.whenOrNull(
+          addOrderSuccess: (message) {
+            showToast(message);
+            context.pushAndRemoveUntil(Routes.home);
+          },
+        );
       },
       builder: (context, state) {
         CheckoutCubit cubit = context.read<CheckoutCubit>();
