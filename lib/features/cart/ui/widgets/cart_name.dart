@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/style/texts.dart';
 
-class CartName extends StatelessWidget {
+class ProductName extends StatelessWidget {
   final String name;
-  const CartName({super.key, required this.name});
+  const ProductName({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
