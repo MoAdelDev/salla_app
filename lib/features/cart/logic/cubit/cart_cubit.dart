@@ -1,10 +1,10 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/data/models/cart_update_request.dart';
 import 'package:salla_app/features/cart/data/repos/cart_repo.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_state.dart';
 
-class CartCubit extends Cubit<CartState> {
+class CartCubit extends BaseSafeCubit<CartState> {
   final CartRepo _cartRepo;
   CartCubit(this._cartRepo) : super(const CartState.initial());
 
@@ -14,7 +14,7 @@ class CartCubit extends Cubit<CartState> {
   Map<int, int> cartQuantities = {};
   double totalPrice = 0;
   void emitCartState() async {
-    emit(const CartState.loading());
+    safeEmit(const CartState.loading());
     final response = await _cartRepo.getCart();
     response.when(
       success: (data) {
@@ -24,10 +24,10 @@ class CartCubit extends Cubit<CartState> {
           cartQuantities[element.id] = element.quantity;
         }
         totalPrice = data.data?.total ?? 0.0;
-        emit(CartState.success(data));
+        safeEmit(CartState.success(data));
       },
       failure: (message) {
-        emit(CartState.failure(message));
+        safeEmit(CartState.failure(message));
       },
     );
   }
@@ -36,7 +36,7 @@ class CartCubit extends Cubit<CartState> {
 
   void emitUpdateCartState(int cartId, int quantity, double price) async {
     isCartUpdateLoading = true;
-    emit(const CartState.updateCartLoading());
+    safeEmit(const CartState.updateCartLoading());
     final response = await _cartRepo.updateCart(
       cartId,
       CartUpdateRequest(quantity),
@@ -46,18 +46,18 @@ class CartCubit extends Cubit<CartState> {
         isCartUpdateLoading = false;
         cartQuantities[cartId] = quantity;
         totalPrice += price;
-        emit(const CartState.updateCartSuccess());
+        safeEmit(const CartState.updateCartSuccess());
       },
       failure: (message) {
         isCartUpdateLoading = false;
-        emit(const CartState.updateCartFailure());
+        safeEmit(const CartState.updateCartFailure());
       },
     );
   }
 
   void emitDeleteCartState({required int cartId, required double price}) async {
     isCartUpdateLoading = true;
-    emit(const CartState.deleteCartLoading());
+    safeEmit(const CartState.deleteCartLoading());
     final response = await _cartRepo.deleteCart(cartId);
     response.when(
       success: (data) {
@@ -65,11 +65,11 @@ class CartCubit extends Cubit<CartState> {
         cartProducts.removeWhere((element) => element.id == cartId);
         cartQuantities[cartId] = 0;
         totalPrice -= price;
-        emit(const CartState.deleteCartSuccess());
+        safeEmit(const CartState.deleteCartSuccess());
       },
       failure: (message) {
         isCartUpdateLoading = false;
-        emit(const CartState.deleteCartFailure());
+        safeEmit(const CartState.deleteCartFailure());
       },
     );
   }

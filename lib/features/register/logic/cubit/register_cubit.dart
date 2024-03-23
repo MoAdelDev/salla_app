@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
 import 'package:salla_app/features/register/data/repos/register_repo.dart';
 import 'package:salla_app/features/register/logic/cubit/register_state.dart';
 
-class RegisterCubit extends Cubit<RegisterState> {
+class RegisterCubit extends BaseSafeCubit<RegisterState> {
   final RegisterRepo registerRepo;
   RegisterCubit(this.registerRepo) : super(const RegisterState.initial());
 
@@ -14,7 +14,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey();
   void emitRegisterState() async {
-    emit(const RegisterState.loading());
+    safeEmit(const RegisterState.loading());
     final response = await registerRepo.register(
       registerBodyRequest: RegisterBodyRequest(
         nameController.text,
@@ -26,10 +26,10 @@ class RegisterCubit extends Cubit<RegisterState> {
     );
     response.when(
       success: (data) {
-        emit(RegisterState.success(data));
+        safeEmit(RegisterState.success(data));
       },
       failure: (error) {
-        emit(RegisterState.error(error));
+        safeEmit(RegisterState.error(error));
       },
     );
   }
