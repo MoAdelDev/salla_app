@@ -33,8 +33,11 @@ jobs:
       - name: Create .env file
         run: |
           echo "STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHED_KEY }}" > .env
-          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
-        working-directory: android
+          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" > .env
+
+      - name: Install dependencies
+      run: flutter pub get
+
 
       - name: Build and Distribute App
         env:
