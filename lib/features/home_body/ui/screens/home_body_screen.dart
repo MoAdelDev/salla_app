@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_app_bar.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_banner.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_categories.dart';
@@ -14,8 +16,10 @@ class HomeBodyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        const SliverToBoxAdapter(
-          child: HomeAppBar(),
+        SliverToBoxAdapter(
+          child: HomeAppBar(
+            products: context.read<HomeBodyCubit>().products,
+          ),
         ),
         const SliverToBoxAdapter(
           child: HomeBanner(),

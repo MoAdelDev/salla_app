@@ -1,10 +1,10 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/repos/login_repo.dart';
 import 'package:salla_app/features/login/logic/cubit/login_state.dart';
 
-class LoginCubit extends Cubit<LoginState> {
+class LoginCubit extends BaseSafeCubit<LoginState> {
   final LoginRepo loginRepo;
   LoginCubit(
     this.loginRepo,
@@ -16,7 +16,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   void emitLoginState() async {
     if (formKey.currentState!.validate()) {
-      emit(const LoginState.loading());
+      safeEmit(const LoginState.loading());
       final response = await loginRepo.login(
         LoginRequestBody(
           emailController.text,
@@ -25,9 +25,9 @@ class LoginCubit extends Cubit<LoginState> {
       );
       response.when(
         success: (data) {
-          emit(LoginState.success(data));
+          safeEmit(LoginState.success(data));
         },
-        failure: (error) => emit(LoginState.failure(error)),
+        failure: (error) => safeEmit(LoginState.failure(error)),
       );
     }
   }

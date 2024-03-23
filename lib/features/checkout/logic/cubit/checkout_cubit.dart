@@ -1,5 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
@@ -13,7 +13,7 @@ import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 
-class CheckoutCubit extends Cubit<CheckoutState> {
+class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
   final PromoCodeRepo _promoCodeRepo;
   final AddressesRepo _addressesRepo;
   final AddOrderRepo _addOrderRepo;
@@ -30,30 +30,31 @@ class CheckoutCubit extends Cubit<CheckoutState> {
 
   void emitPromoCodeState() async {
     isPromoCodeApplyLoading = true;
-    emit(const CheckoutState.applyPromoCodeLoading());
+    safeEmit(const CheckoutState.applyPromoCodeLoading());
     if (promoCodeController.text.isNumber()) {
       final result = await _promoCodeRepo.applyPromoCode(
         PromoCodeRequestBody(code: int.parse(promoCodeController.text)),
       );
       result.when(
         success: (response) {
-          emit(CheckoutState.applyPromoCodeSuccess(response.message));
+          safeEmit(CheckoutState.applyPromoCodeSuccess(response.message));
         },
         failure: (message) {
-          emit(CheckoutState.applyPromoCodeFailure(message));
+          safeEmit(CheckoutState.applyPromoCodeFailure(message));
         },
       );
       isPromoCodeApplyLoading = false;
     } else {
       isPromoCodeApplyLoading = false;
-      emit(const CheckoutState.applyPromoCodeFailure('Please enter number'));
+      safeEmit(
+          const CheckoutState.applyPromoCodeFailure('Please enter number'));
     }
   }
 
   int addressSelectedId = 0;
   List<AddressModel>? addresses;
   void emitAddressesState() async {
-    emit(const CheckoutState.loading());
+    safeEmit(const CheckoutState.loading());
     final result = await _addressesRepo.getAddresses();
     result.when(
       success: (response) {
@@ -61,25 +62,25 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         if (addresses != null && addresses!.isNotEmpty) {
           addressSelectedId = addresses!.first.id;
         }
-        emit(CheckoutState.success(response.data?.addresses ?? []));
+        safeEmit(CheckoutState.success(response.data?.addresses ?? []));
       },
       failure: (message) {
-        emit(CheckoutState.failure(message));
+        safeEmit(CheckoutState.failure(message));
       },
     );
   }
 
   void emitSelectAddressState(int addressId) {
-    emit(const CheckoutState.initial());
+    safeEmit(const CheckoutState.initial());
     addressSelectedId = addressId;
-    emit(const CheckoutState.selectItem());
+    safeEmit(const CheckoutState.selectItem());
   }
 
   int paymentMethodSelected = 1;
   void emitSelectPaymentState(int paymentSelected) {
-    emit(const CheckoutState.initial());
+    safeEmit(const CheckoutState.initial());
     paymentMethodSelected = paymentSelected;
-    emit(const CheckoutState.selectItem());
+    safeEmit(const CheckoutState.selectItem());
   }
 
   void emitAddOrderState() async {
@@ -87,7 +88,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
       showToast('Please select or add new address');
       return;
     }
-    emit(const CheckoutState.addOrderLoading());
+    safeEmit(const CheckoutState.addOrderLoading());
     final result = await _addOrderRepo.addOrder(
       AddOrderRequestBody(
         addressId: addressSelectedId,
@@ -96,9 +97,9 @@ class CheckoutCubit extends Cubit<CheckoutState> {
       ),
     );
     result.when(success: (response) {
-      emit(CheckoutState.addOrderSuccess(response.message));
+      safeEmit(CheckoutState.addOrderSuccess(response.message));
     }, failure: (message) {
-      emit(CheckoutState.addOrderFailure(message));
+      safeEmit(CheckoutState.addOrderFailure(message));
     });
   }
 
@@ -115,7 +116,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         emitAddOrderState();
       },
       failure: (message) {
-        emit(
+        safeEmit(
           CheckoutState.addOrderFailure(message),
         );
       },

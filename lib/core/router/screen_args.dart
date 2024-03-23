@@ -1,4 +1,5 @@
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 
 class ScreenArgs {}
 
@@ -16,4 +17,9 @@ class CheckoutScreenArgs extends ScreenArgs {
     required this.totalItems,
     required this.totalPrice,
   });
+}
+
+class SearchScreenArgs extends ScreenArgs {
+  final List<ProductModel> products;
+  SearchScreenArgs({required this.products});
 }
