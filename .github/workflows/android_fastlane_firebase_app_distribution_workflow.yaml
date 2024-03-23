@@ -29,17 +29,6 @@ jobs:
           ruby-version: 3.3.0
           bundler-cache: true
           working-directory: android
-        
-      - name: Create .env file
-        run: |
-          echo "STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHED_KEY }}" > .env
-          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" > .env
-
-      - name: Flutter build
-        run: |
-          flutter pub get
-        working-directory: android
-
 
       - name: Build and Distribute App
         env:
