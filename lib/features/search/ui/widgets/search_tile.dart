@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
-import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_name.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_price.dart';
-import 'package:salla_app/features/cart/ui/widgets/cart_quantity.dart';
-import 'package:salla_app/features/cart/ui/widgets/cart_remove.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 
-class CartTile extends StatelessWidget {
-  final CartProductModel cartProduct;
-  const CartTile({super.key, required this.cartProduct});
+class SearchTile extends StatelessWidget {
+  final ProductModel product;
+  const SearchTile({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +23,8 @@ class CartTile extends StatelessWidget {
           Row(
             children: [
               CustomImageAndDiscount(
-                image: cartProduct.product.image,
-                discount: cartProduct.product.discount,
+                image: product.image,
+                discount: product.discount,
               ),
               horizontalSpace(5.0),
               Expanded(
@@ -35,24 +33,12 @@ class CartTile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ProductName(name: cartProduct.product.name),
+                      ProductName(name: product.name),
                       verticalSpace(8.0),
-                      ProductPrice(product: cartProduct.product)
+                      ProductPrice(product: product)
                     ],
                   ),
                 ),
-              ),
-            ],
-          ),
-          verticalSpace(8.0),
-          Row(
-            children: [
-              CartQuantity(
-                cartProduct: cartProduct,
-              ),
-              const Spacer(),
-              CartRemove(
-                cartProduct: cartProduct,
               ),
             ],
           ),

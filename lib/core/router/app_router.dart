@@ -17,6 +17,8 @@ import 'package:salla_app/features/product_details/logic/cubit/product_details_c
 import 'package:salla_app/features/product_details/ui/screens/product_details_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
+import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
+import 'package:salla_app/features/search/ui/screens/search_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -82,6 +84,18 @@ class AppRouter {
             create: (context) => getIt<CheckoutCubit>()..emitAddressesState(),
             child: CheckoutScreen(
               args: args,
+            ),
+          ),
+        );
+
+      case Routes.search:
+        SearchScreenArgs args = settings.arguments as SearchScreenArgs;
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<SearchCubit>()..emitGetProducts(args.products),
+            child: SearchScreen(
+              products: args.products,
             ),
           ),
         );
