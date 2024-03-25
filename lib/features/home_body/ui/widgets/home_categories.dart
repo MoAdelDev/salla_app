@@ -26,7 +26,6 @@ class _HomeCategoriesState extends State<HomeCategories> {
         builder: (context, state) {
           List<CategoryModel> categories =
               context.read<HomeBodyCubit>().categories;
-
           if (categories.isEmpty) {
             return ListView.separated(
               itemBuilder: (contex, index) => SizedBox(
@@ -41,50 +40,56 @@ class _HomeCategoriesState extends State<HomeCategories> {
               physics: const NeverScrollableScrollPhysics(),
             );
           }
-          return SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                CategoryTile(
-                  isSelected: selectedIndex == -1,
-                  categoryModel: CategoryModel(0, 'All', ''),
-                  onTap: () {
-                    if (selectedIndex != -1 &&
-                        context.read<HomeBodyCubit>().isProductsLoading ==
-                            false) {
-                      selectedIndex = -1;
-                      context.read<HomeBodyCubit>().emitProductsState();
-                    }
-                  },
-                ),
-                horizontalSpace(10.0),
-                ListView.separated(
-                    shrinkWrap: true,
-                    reverse: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 5,
-                    separatorBuilder: (BuildContext context, int index) {
-                      return horizontalSpace(10.0);
+          return SizedBox(
+            height: 60.0.h,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(vertical: 5.0),
+              child: Row(
+                children: [
+                  CategoryTile(
+                    isSelected: selectedIndex == -1,
+                    categoryModel: CategoryModel(0, 'All', ''),
+                    onTap: () {
+                      if (selectedIndex != -1 &&
+                          context.read<HomeBodyCubit>().isProductsLoading ==
+                              false) {
+                        selectedIndex = -1;
+                        context.read<HomeBodyCubit>().emitProductsState();
+                      }
                     },
-                    itemBuilder: (BuildContext context, int index) {
-                      return CategoryTile(
-                        onTap: () {
-                          if (selectedIndex != index &&
-                              context.read<HomeBodyCubit>().isProductsLoading ==
-                                  false) {
-                            selectedIndex = index;
-                            context
-                                .read<HomeBodyCubit>()
-                                .emitGetProductsByCategoryState(
-                                    categoryId: categories[index].id);
-                          }
-                        },
-                        isSelected: selectedIndex == index,
-                        categoryModel: categories[index],
-                      );
-                    }),
-              ],
+                  ),
+                  horizontalSpace(10.0),
+                  ListView.separated(
+                      shrinkWrap: true,
+                      reverse: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 5,
+                      separatorBuilder: (BuildContext context, int index) {
+                        return horizontalSpace(10.0);
+                      },
+                      itemBuilder: (BuildContext context, int index) {
+                        return CategoryTile(
+                          onTap: () {
+                            if (selectedIndex != index &&
+                                context
+                                        .read<HomeBodyCubit>()
+                                        .isProductsLoading ==
+                                    false) {
+                              selectedIndex = index;
+                              context
+                                  .read<HomeBodyCubit>()
+                                  .emitGetProductsByCategoryState(
+                                      categoryId: categories[index].id);
+                            }
+                          },
+                          isSelected: selectedIndex == index,
+                          categoryModel: categories[index],
+                        );
+                      }),
+                ],
+              ),
             ),
           );
         },

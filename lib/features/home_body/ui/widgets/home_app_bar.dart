@@ -19,8 +19,9 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomAppBar(
-      icon1: CupertinoIcons.search,
-      onTap1: () {
+      title: 'Home',
+      icon2: CupertinoIcons.search,
+      onTap2: () {
         if (context.read<HomeBodyCubit>().products.isNotEmpty) {
           context.push(
             Routes.search,
@@ -31,8 +32,6 @@ class HomeAppBar extends StatelessWidget {
           showToast('Please wait to load products');
         }
       },
-      onTap2: () {},
-      icon2: Icons.language,
     );
   }
 }
