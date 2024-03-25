@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_app_bar.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_banner.dart';
@@ -29,15 +28,14 @@ class HomeBodyScreen extends StatelessWidget {
             text: S.of(context).categoriesTitle,
           ),
         ),
-        SliverAppBar(
+        const SliverAppBar(
           pinned: true,
           automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
-          flexibleSpace: const HomeCategories(),
-          expandedHeight: 40.0.h,
+          flexibleSpace: HomeCategories(),
           floating: true,
           snap: true,
-          elevation: 0.0,
+          elevation: 3.0,
           foregroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           surfaceTintColor: Colors.white,
