@@ -25,7 +25,7 @@ class CheckoutSummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                '${S.of(context).itemTotalTitle} ( ${totalItems} )',
+                '${S.of(context).itemTotalTitle} ( $totalItems )',
                 style: AppTexts.text14WhiteLatoRegular,
               ),
               const Spacer(),

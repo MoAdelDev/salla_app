@@ -22,6 +22,9 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
             showToast(message);
             context.pushAndRemoveUntil(Routes.home);
           },
+          failure: (message) {
+            showToast(message, isError: true);
+          },
         );
       },
       builder: (context, state) {
