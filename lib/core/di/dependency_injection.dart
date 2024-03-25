@@ -24,6 +24,8 @@ import 'package:salla_app/features/product_details/logic/cubit/product_details_c
 import 'package:salla_app/features/register/data/repos/register_repo.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
+import 'package:salla_app/features/settings/data/repos/logout_repo.dart';
+import 'package:salla_app/features/settings/logic/cubit/settings_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -81,4 +83,11 @@ Future<void> setupGetIt() async {
 
   // search
   getIt.registerFactory<SearchCubit>(() => SearchCubit());
+
+  // settings
+  getIt
+      .registerLazySingleton<LogoutRepo>(() => LogoutRepo(getIt<ApiService>()));
+
+  getIt
+      .registerFactory<SettingsCubit>(() => SettingsCubit(getIt<LogoutRepo>()));
 }

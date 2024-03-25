@@ -11,7 +11,7 @@ platform :android do
     android_artifact_type: "APK",
     android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
     groups: "testers",
-    release_notes: "Payment via Stripe Added to the App",
+    release_notes: "- Payment via Stripe Added to the App .\n- Search for products by name .\n- Settings Screen added .\n- Logout functionality added .",
   )
   end
 end

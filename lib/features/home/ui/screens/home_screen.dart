@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: SafeArea(
-        bottom: Platform.isAndroid ? true : false,
+        bottom: Platform.isAndroid,
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: 10.0.w,
