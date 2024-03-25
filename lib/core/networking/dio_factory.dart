@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:salla_app/core/data/app_data.dart';
 
 class DioFactory {
   DioFactory._();
@@ -16,7 +17,7 @@ class DioFactory {
         receiveDataWhenStatusError: true,
         headers: {
           'Content-Type': 'application/json',
-          'lang': 'en',
+          'lang': AppData.isArabic ? 'ar' : 'en',
         },
       );
       instance = Dio(baseOptions);
