@@ -18,12 +18,9 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   await CacheHelper.init();
 
-  // for splash screen duration
-  await Future.delayed(const Duration(milliseconds: 1700));
-
   await dotenv.load(fileName: ".env");
 
-  Stripe.publishableKey = dotenv.env['STRIPE_PUBLISHED_KEY']!;
+  Stripe.publishableKey = dotenv.env['STRIPE_PUBLISHABLE_KEY']!;
   runApp(SallaApp(
     appRouter: AppRouter(),
   ));

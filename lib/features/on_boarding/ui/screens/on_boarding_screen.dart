@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
@@ -33,6 +34,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       S.of(context).appDescription2,
       S.of(context).appDescription3,
     ];
+    final List<String> images = [
+      'assets/lottie/on_boarding_1.json',
+      'assets/lottie/on_boarding_3.json',
+      'assets/lottie/on_boarding_2.json',
+    ];
     return Scaffold(
       backgroundColor: context.colorScheme.background,
       body: SafeArea(
@@ -52,10 +58,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   itemCount: titles.length,
                   itemBuilder: (context, index, realIndex) {
                     return Column(children: [
-                      Image.asset(
-                        'assets/images/onboarding${index + 1}.jpg',
-                        width: 300.0.h,
-                        height: 300.0.h,
+                      Lottie.asset(
+                        images[index],
+                        animate: true,
+                        height: 300.h,
+                        width: 300.w,
                       ),
                       verticalSpace(10.0),
                       Text(
