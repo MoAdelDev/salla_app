@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_model.dart';
 import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_request_body.dart';
 import 'package:salla_app/core/stripe/payment_intent_model/payment_intent_model.dart';
@@ -67,6 +68,8 @@ class StripeService {
   Future<EphemeralKeyModel> createEphemeralKey({
     required String customerId,
   }) async {
+    showToast('${dotenv.env['STRIPE_SECRET_KEY']}');
+    showToast('${dotenv.env['STRIPE_PUBLISHABLE_KEY']}');
     final response = await stripeApiService.createEphemeralKey(
       EphemeralKeyRequestBody(customerId),
       'Bearer ${dotenv.env['STRIPE_SECRET_KEY']}',
