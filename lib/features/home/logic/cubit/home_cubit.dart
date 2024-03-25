@@ -6,6 +6,7 @@ import 'package:salla_app/features/home/data/models/user_model.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
 import 'package:salla_app/features/home_body/ui/screens/home_body_screen.dart';
+import 'package:salla_app/features/settings/ui/screens/settings_screen.dart';
 
 class HomeCubit extends BaseSafeCubit<HomeState> {
   final HomeRepo _homeRepo;
@@ -15,8 +16,7 @@ class HomeCubit extends BaseSafeCubit<HomeState> {
     const HomeBodyScreen(),
     const FavoritesScreen(),
     const CartScreen(),
-    Container(),
-    Container(),
+    const SettingsScreen(),
   ];
   UserModel? userModel;
   void emitUserState() async {

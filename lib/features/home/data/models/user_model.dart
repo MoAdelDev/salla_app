@@ -11,6 +11,7 @@ class UserModel {
   final String token;
   final int? points;
   final dynamic credits;
+  String? avatar;
 
   UserModel(
     this.name,
