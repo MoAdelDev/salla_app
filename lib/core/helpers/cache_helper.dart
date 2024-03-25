@@ -1,27 +1,32 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class CacheHelper {
   CacheHelper._();
-  static late SharedPreferences _sharedPreferences;
-
+  static late FlutterSecureStorage secureStorage;
   static Future<void> init() async {
-    _sharedPreferences = await SharedPreferences.getInstance();
-    if (!_sharedPreferences.containsKey('token')) {
-      _sharedPreferences.setString('token', '');
-    }
+    AndroidOptions androidOptions = const AndroidOptions(
+      encryptedSharedPreferences: true,
+    );
+    const iOSOptions = IOSOptions();
+
+    secureStorage = FlutterSecureStorage(
+      aOptions: androidOptions,
+      iOptions: iOSOptions,
+    );
   }
 
-  static String get token => _sharedPreferences.getString('token') ?? '';
+  static Future<String> get token async =>
+      await secureStorage.read(key: 'token') ?? '';
 
-  static Future<bool> saveToken(String token) async {
-    return await _sharedPreferences.setString('token', token);
+  static Future<void> saveToken(String token) async {
+    return await secureStorage.write(key: 'token', value: token);
   }
 
-  static Future<bool> saveString(
+  static Future<void> saveString(
       {required String key, required String value}) async {
-    return await _sharedPreferences.setString(key, value);
+    return await secureStorage.write(key: key, value: value);
   }
 
-  static String getString({required String key}) =>
-      _sharedPreferences.getString(key) ?? '';
+  static Future<String> getString({required String key}) async =>
+      await secureStorage.read(key: key) ?? '';
 }

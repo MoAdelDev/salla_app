@@ -11,7 +11,7 @@ class FavoritesRepo {
   FavoritesRepo(this._apiService);
 
   Future<ApiResult<FavoritesResponse>> getFavorites() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.getFavorites(token);
       if (response.status) {
@@ -26,7 +26,7 @@ class FavoritesRepo {
 
   Future<ApiResult<FavoriteRemoveResponse>> removeFavorite(
       {required int id}) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.removeFavorite(token, id);
       if (response.status) {

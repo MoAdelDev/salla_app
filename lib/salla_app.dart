@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/themes.dart';
@@ -11,7 +10,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 class SallaApp extends StatelessWidget {
   final AppRouter appRouter;
-  const SallaApp({super.key, required this.appRouter});
+  final String token;
+  const SallaApp({
+    super.key,
+    required this.appRouter,
+    required this.token,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,7 @@ class SallaApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: lightTheme(context),
-        initialRoute: CacheHelper.token != '' ? Routes.home : Routes.intro,
+        initialRoute: token != '' ? Routes.home : Routes.intro,
         onGenerateRoute: (settings) => appRouter.onGenerateRoute(settings),
         locale: const Locale('en', 'US'),
         localizationsDelegates: const [

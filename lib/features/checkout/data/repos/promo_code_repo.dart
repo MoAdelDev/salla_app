@@ -12,7 +12,7 @@ class PromoCodeRepo {
 
   Future<ApiResult<PromoCodeResponseBody>> applyPromoCode(
       PromoCodeRequestBody promoCodeRequest) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response =
           await _apiService.applyPromoCode(token, promoCodeRequest);

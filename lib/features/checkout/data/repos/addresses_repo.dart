@@ -10,7 +10,7 @@ class AddressesRepo {
   AddressesRepo(this._apiService);
 
   Future<ApiResult<AddressesResponseBody>> getAddresses() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.getAddresses(token);
       if (response.status) {

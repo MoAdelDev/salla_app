@@ -41,7 +41,7 @@ class HomeBodyRepo {
   }
 
   Future<ApiResult<ProductsReponsne>> getProducts() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.getProducts(token);
       if (response.status) {
@@ -56,7 +56,7 @@ class HomeBodyRepo {
   Future<ApiResult<ChangeFavoriteResponse>> changeFavorite({
     required ChangeFavoriteRequest changeFavoriteRequest,
   }) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response =
           await _apiService.changeFavorite(token, changeFavoriteRequest);
@@ -72,7 +72,7 @@ class HomeBodyRepo {
   Future<ApiResult<ProductsReponsne>> getProductsByCategory({
     required int categoryId,
   }) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response =
           await _apiService.getProductsByCategory(token, categoryId);

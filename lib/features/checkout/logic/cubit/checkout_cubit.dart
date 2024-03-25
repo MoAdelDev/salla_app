@@ -104,11 +104,13 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
   }
 
   void emitPaymentState(double totalPrice) async {
+    final String customerId = await CacheHelper.getString(key: 'customer_id');
+
     final result = await _paymentRepo.makePayment(
       PaymentIntentRequestBody(
         (totalPrice.toInt() * 100).toString(),
         'EGP',
-        CacheHelper.getString(key: 'customer_id'),
+        customerId,
       ),
     );
     result.when(

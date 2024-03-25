@@ -10,7 +10,7 @@ class LogoutRepo {
   LogoutRepo(this._apiService);
 
   Future<ApiResult<LogoutResponseBody>> logout() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.logout(token);
       if (response.status) {

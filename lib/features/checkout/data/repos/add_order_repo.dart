@@ -12,7 +12,7 @@ class AddOrderRepo {
 
   Future<ApiResult<AddOrderResponseBody>> addOrder(
       AddOrderRequestBody addOrderRequestBody) async {
-    final token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.addOrder(
         token,

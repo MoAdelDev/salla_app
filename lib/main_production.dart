@@ -22,7 +22,9 @@ void main() async {
   await CacheHelper.init();
   await dotenv.load(fileName: ".env");
   Stripe.publishableKey = dotenv.env['STRIPE_PUBLISHABLE_KEY'] ?? '';
+  final String token = await CacheHelper.token;
   runApp(SallaApp(
     appRouter: AppRouter(),
+    token: token,
   ));
 }

@@ -10,7 +10,7 @@ class HomeRepo {
   HomeRepo(this._apiService);
 
   Future<ApiResult<UserResponseBody>> getUser() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.getUser(token);
       if (response.status) {

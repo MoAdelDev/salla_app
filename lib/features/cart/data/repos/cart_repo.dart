@@ -12,7 +12,7 @@ class CartRepo {
   CartRepo(this._apiService);
 
   Future<ApiResult<CartResponseBody>> getCart() async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.getCart(token);
       if (response.status) {
@@ -26,7 +26,7 @@ class CartRepo {
 
   Future<ApiResult<CartUpdateResponse>> updateCart(
       int cartId, CartUpdateRequest cartUpdateRequest) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response =
           await _apiService.updateCart(token, cartId, cartUpdateRequest);
@@ -40,7 +40,7 @@ class CartRepo {
   }
 
   Future<ApiResult<CartUpdateResponse>> deleteCart(int cartId) async {
-    final String token = CacheHelper.token;
+    final String token = await CacheHelper.token;
     try {
       final response = await _apiService.deleteCart(token, cartId);
       if (response.status) {
