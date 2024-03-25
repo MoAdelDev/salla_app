@@ -23,6 +23,7 @@ import 'package:salla_app/features/product_details/data/models/add_to_cart_respo
 import 'package:salla_app/features/product_details/data/models/product_details_response.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
 import 'package:salla_app/features/register/data/models/register_body_response.dart';
+import 'package:salla_app/features/settings/data/models/logout_response_body.dart';
 
 import '../../features/home/data/models/user_response_body.dart';
 part 'api_service.g.dart';
@@ -119,5 +120,10 @@ abstract class ApiService {
   Future<AddOrderResponseBody> addOrder(
     @Header('Authorization') String token,
     @Body() AddOrderRequestBody addOrderRequestBody,
+  );
+
+  @POST(ApiConstance.logout)
+  Future<LogoutResponseBody> logout(
+    @Header('Authorization') String token,
   );
 }

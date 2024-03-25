@@ -12,4 +12,5 @@ class ApiConstance {
   static const String promoCodes = 'promo-codes';
   static const String addresses = 'addresses';
   static const String orders = 'orders';
+  static const String logout = 'logout';
 }
