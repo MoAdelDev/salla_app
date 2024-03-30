@@ -8,14 +8,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:salla_app/core/router/app_router.dart';
-
-import 'package:salla_app/salla_app.dart';
+import 'package:salla_app/salla_app/salla_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(SallaApp(
       appRouter: AppRouter(),
+      token: '',
     ));
 
     // Verify that our counter starts at 0.

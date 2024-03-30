@@ -5,6 +5,8 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/screens/checkout_screen.dart';
+import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
+import 'package:salla_app/features/edit_profile/ui/screens/edit_profile_screen.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/ui/screens/home_screen.dart';
@@ -19,6 +21,7 @@ import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 import 'package:salla_app/features/search/ui/screens/search_screen.dart';
+import 'package:salla_app/features/settings/ui/screens/language_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -98,6 +101,19 @@ class AppRouter {
               products: args.products,
             ),
           ),
+        );
+
+      case Routes.editProfile:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<EditProfileCubit>(),
+            child: const EditProfileScreen(),
+          ),
+        );
+
+      case Routes.language:
+        return MaterialPageRoute(
+          builder: (context) => const LanguageScreen(),
         );
       default:
         return null;

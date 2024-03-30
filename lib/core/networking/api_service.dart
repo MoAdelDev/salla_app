@@ -9,6 +9,8 @@ import 'package:salla_app/features/checkout/data/models/add_order_response_body.
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_request_body.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_response_body.dart';
+import 'package:salla_app/features/edit_profile/data/models/edit_profile_request_body.dart';
+import 'package:salla_app/features/edit_profile/data/models/edit_profile_response_body.dart';
 import 'package:salla_app/features/favorites/data/models/favorite_remove_response.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
@@ -26,6 +28,7 @@ import 'package:salla_app/features/register/data/models/register_body_response.d
 import 'package:salla_app/features/settings/data/models/logout_response_body.dart';
 
 import '../../features/home/data/models/user_response_body.dart';
+
 part 'api_service.g.dart';
 
 @RestApi(
@@ -125,5 +128,11 @@ abstract class ApiService {
   @POST(ApiConstance.logout)
   Future<LogoutResponseBody> logout(
     @Header('Authorization') String token,
+  );
+
+  @PUT(ApiConstance.updateProfile)
+  Future<EditProfileResponseBody> editProfile(
+    @Header('Authorization') String token,
+    @Body() EditProfileRequestBody editProfileRequestBody,
   );
 }

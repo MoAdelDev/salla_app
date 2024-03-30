@@ -13,7 +13,7 @@ class ProductDetailsRepo {
   Future<ApiResult<ProductDetailsResponse>> getProductDetails(
       int productId) async {
     try {
-      final String token = CacheHelper.token;
+      final String token = await CacheHelper.token;
       final result = await _apiService.getProductDetails(token, productId);
       if (result.status) {
         return ApiResult.success(result);
@@ -28,7 +28,7 @@ class ProductDetailsRepo {
   Future<ApiResult<AddToCartResponse>> addToCart(
       AddToCartRequest addToCartRequest) async {
     try {
-      final String token = CacheHelper.token;
+      final String token = await CacheHelper.token;
       final result = await _apiService.addToCart(token, addToCartRequest);
       if (result.status) {
         return ApiResult.success(result);

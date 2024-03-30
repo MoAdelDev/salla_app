@@ -10,10 +10,11 @@ class PaymentRepo {
 
   Future<ApiResult<void>> makePayment(
       PaymentIntentRequestBody paymentIntentRequestBody) async {
+    final String customerId = await CacheHelper.getString(key: 'customer_id');
     try {
       await _stripeService.makePayment(
         paymentIntentRequestBody: paymentIntentRequestBody,
-        customerId: CacheHelper.getString(key: 'customer_id'),
+        customerId: customerId,
       );
       return const ApiResult.success(null);
     } on StripeConfigException catch (e) {

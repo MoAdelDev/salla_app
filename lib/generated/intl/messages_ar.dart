@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCartTitle": MessageLookupByLibrary.simpleMessage("أضف الى السلة"),
         "addressHintTitle": MessageLookupByLibrary.simpleMessage("أدخل عنوانك"),
         "addressTitle": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "all": MessageLookupByLibrary.simpleMessage("الكل"),
         "appDescription1": MessageLookupByLibrary.simpleMessage(
             "ابدأ رحلة التسوق، وإمكانيات لا نهاية لها"),
         "appDescription2": MessageLookupByLibrary.simpleMessage(
@@ -40,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle2": MessageLookupByLibrary.simpleMessage("استكشاف وحفظ"),
         "appTitle3": MessageLookupByLibrary.simpleMessage("انضم إلينا اليوم"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("تطبيق"),
-        "arabicTitleTitle": MessageLookupByLibrary.simpleMessage("العربية"),
+        "arabicTitle": MessageLookupByLibrary.simpleMessage("العربية"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "cartTitle": MessageLookupByLibrary.simpleMessage("السلة"),
         "cashOnDeliveryBody": MessageLookupByLibrary.simpleMessage(
@@ -71,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "englishTitle": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
+        "enterProductName":
+            MessageLookupByLibrary.simpleMessage("اكتب اسم المنتج"),
         "faqsTitle": MessageLookupByLibrary.simpleMessage("FAQS"),
         "favoritesTitle": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "forgotPasswordTitle":
@@ -127,6 +130,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
         "phoneTitle": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("تم وضعه بتاريخ"),
+        "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
+            "من فضلك إنتظر لتحميل المنتجات"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("الكمية"),
         "regionHintTitle": MessageLookupByLibrary.simpleMessage("أدخل منطقتك"),
@@ -141,7 +146,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "removeFromCartTitle":
             MessageLookupByLibrary.simpleMessage("إزالة من السلة"),
         "removeTitle": MessageLookupByLibrary.simpleMessage("إزالة"),
+        "saveTitle": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchHereTitle": MessageLookupByLibrary.simpleMessage("إبحث هنا"),
+        "searchTitle": MessageLookupByLibrary.simpleMessage("بحث"),
+        "selectLanguageTitle":
+            MessageLookupByLibrary.simpleMessage("إختار اللغة"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),

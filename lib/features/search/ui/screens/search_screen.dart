@@ -7,6 +7,7 @@ import 'package:salla_app/features/home_body/data/models/products_response.dart'
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 import 'package:salla_app/features/search/logic/cubit/search_state.dart';
 import 'package:salla_app/features/search/ui/widgets/search_list.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class SearchScreen extends StatelessWidget {
   final List<ProductModel> products;
@@ -20,7 +21,7 @@ class SearchScreen extends StatelessWidget {
         return Scaffold(
           backgroundColor: AppColor.greyColor,
           appBar: AppBar(
-            title: const Text('Search'),
+            title: Text(S.of(context).searchTitle),
           ),
           body: Column(
             children: [
@@ -31,7 +32,7 @@ class SearchScreen extends StatelessWidget {
                 ),
                 child: CustomTextField(
                   controller: cubit.searchController,
-                  hintText: 'Enter product name',
+                  hintText: S.of(context).enterProductName,
                   errorMsg: '',
                   keyboardType: TextInputType.text,
                   textInputAction: TextInputAction.done,

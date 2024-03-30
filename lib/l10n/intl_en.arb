@@ -52,7 +52,7 @@
   "offTitle": "Off",
   "onTitle": "On",
   "englishTitle": "English",
-  "arabicTitleTitle": "Arabic",
+  "arabicTitle": "Arabic",
   "logoutTitle": "Log out",
   "addNewAddress": "Add new address",
   "editNewAddress": "Edit address",
@@ -98,5 +98,11 @@
   "paymentTitle" : "Payment",
   "shippingAddressTitle" : "Shipping Address",
   "itemsTitle" : "Items",
-  "paymentBody" : "Payment method via paypal or master card"
+  "paymentBody" : "Payment method via paypal or master card",
+  "selectLanguageTitle" : "Select Language",
+  "saveTitle" : "Save",
+  "all" : "All",
+  "searchTitle" : "Search",
+  "enterProductName" : "Enter product name",
+  "pleaseWaitToLoadProducts" : "Please wait to load products"
 }
