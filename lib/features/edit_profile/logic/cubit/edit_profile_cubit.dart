@@ -23,7 +23,7 @@ class EditProfileCubit extends BaseSafeCubit<EditProfileState> {
 
   File? imageFile;
   void emitPickImageState() async {
-    safeEmit(const EditProfileState.pickImageState());
+    safeEmit(const EditProfileState.initial());
     if (await requestStoragePermission()) {
       ImagePicker imagePicker = ImagePicker();
       XFile? image = await imagePicker.pickImage(source: ImageSource.gallery);
@@ -31,6 +31,7 @@ class EditProfileCubit extends BaseSafeCubit<EditProfileState> {
         imageFile = File(image.path);
       }
     }
+    safeEmit(const EditProfileState.pickImageState());
   }
 
   void emitEditProfileState() {

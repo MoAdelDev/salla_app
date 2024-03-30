@@ -15,8 +15,9 @@ class EditProfileAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<EditProfileCubit, EditProfileState>(
       builder: (context, state) {
+        EditProfileCubit cubit = context.read<EditProfileCubit>();
         return GestureDetector(
-          onTap: () => context.read<EditProfileCubit>().emitPickImageState(),
+          onTap: () => cubit.emitPickImageState(),
           child: Stack(
             children: [
               CircleAvatar(
@@ -26,25 +27,33 @@ class EditProfileAvatar extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 50.0.r,
                     backgroundColor: Colors.white,
-                    child: AppData.userModel.avatar == ''
-                        ? Image.asset(
-                            'assets/images/boy.png',
-                            fit: BoxFit.cover,
-                          )
-                        : CachedNetworkImage(
-                            imageUrl: AppData.userModel.avatar ?? '',
-                            placeholder: (context, url) =>
-                                const CustomShimmer(),
-                            errorWidget: (context, url, error) =>
-                                const CustomShimmer(),
-                            imageBuilder: (context, imageProvider) => Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: imageProvider,
-                                  fit: BoxFit.cover,
+                    child: cubit.imageFile == null
+                        ? AppData.userModel.avatar == ''
+                            ? Image.asset(
+                                'assets/images/boy.png',
+                                fit: BoxFit.cover,
+                              )
+                            : CachedNetworkImage(
+                                imageUrl: AppData.userModel.avatar ?? '',
+                                placeholder: (context, url) =>
+                                    const CustomShimmer(),
+                                errorWidget: (context, url, error) =>
+                                    const CustomShimmer(),
+                                imageBuilder: (context, imageProvider) =>
+                                    Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: imageProvider,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
+                              )
+                        : Image.file(
+                            cubit.imageFile!,
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.cover,
                           ),
                   ),
                 ),
