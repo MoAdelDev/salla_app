@@ -16,7 +16,6 @@ class LocaleCubit extends BaseSafeCubit<Locale> {
   Future<void> changeLocale(String languageCode, String countryCode) async {
     AppData.isArabic = languageCode == 'ar';
     await CacheHelper.changeLanguage(value: languageCode);
-    print('changeLanguage: ${await CacheHelper.language}');
     emit(Locale(languageCode, countryCode));
   }
 }
