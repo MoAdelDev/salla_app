@@ -14,23 +14,25 @@ class RegisterCubit extends BaseSafeCubit<RegisterState> {
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey();
   void emitRegisterState() async {
-    safeEmit(const RegisterState.loading());
-    final response = await registerRepo.register(
-      registerBodyRequest: RegisterBodyRequest(
-        nameController.text,
-        emailController.text,
-        phoneController.text,
-        '',
-        passwordController.text,
-      ),
-    );
-    response.when(
-      success: (data) {
-        safeEmit(RegisterState.success(data));
-      },
-      failure: (error) {
-        safeEmit(RegisterState.error(error));
-      },
-    );
+    if (formKey.currentState!.validate()) {
+      safeEmit(const RegisterState.loading());
+      final response = await registerRepo.register(
+        registerBodyRequest: RegisterBodyRequest(
+          nameController.text,
+          emailController.text,
+          phoneController.text,
+          '',
+          passwordController.text,
+        ),
+      );
+      response.when(
+        success: (data) {
+          safeEmit(RegisterState.success(data));
+        },
+        failure: (error) {
+          safeEmit(RegisterState.error(error));
+        },
+      );
+    }
   }
 }

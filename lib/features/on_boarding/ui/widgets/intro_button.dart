@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/texts.dart';
@@ -18,11 +19,19 @@ class _IntroButtonState extends State<IntroButton> {
   Widget build(BuildContext context) {
     double buttonWidth = 300.w;
     return GestureDetector(
-      onPanUpdate: (details) {
-        if (details.delta.dx > 0 && buttonOffset <= buttonWidth) {
-          setState(() {
-            buttonOffset = buttonOffset + details.delta.dx;
-          });
+      onPanUpdate: (details) async {
+        if (AppData.isArabic) {
+          if (details.delta.dx < 0 && buttonOffset <= buttonWidth) {
+            setState(() {
+              buttonOffset = buttonOffset - details.delta.dx;
+            });
+          }
+        } else {
+          if (details.delta.dx > 0 && buttonOffset <= buttonWidth) {
+            setState(() {
+              buttonOffset = buttonOffset + details.delta.dx;
+            });
+          }
         }
       },
       onPanEnd: (_) {
