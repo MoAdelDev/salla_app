@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:salla_app/core/data/app_data.dart';
+import 'package:salla_app/core/helpers/cache_helper.dart';
 
 class DioFactory {
   DioFactory._();
@@ -10,6 +10,7 @@ class DioFactory {
   static Future<Dio> getInstance() async {
     const Duration timeout = Duration(seconds: 60);
     if (instance == null) {
+      final String languageCode = await CacheHelper.language;
       BaseOptions baseOptions = BaseOptions(
         receiveTimeout: timeout,
         connectTimeout: timeout,
@@ -17,7 +18,7 @@ class DioFactory {
         receiveDataWhenStatusError: true,
         headers: {
           'Content-Type': 'application/json',
-          'lang': AppData.isArabic ? 'ar' : 'en',
+          'lang': languageCode == 'ar' ? 'ar' : 'en',
         },
       );
       instance = Dio(baseOptions);

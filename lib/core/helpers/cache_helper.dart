@@ -29,4 +29,10 @@ class CacheHelper {
 
   static Future<String> getString({required String key}) async =>
       await secureStorage.read(key: key) ?? '';
+
+  static Future<void> changeLanguage({required String value}) async {
+    return await secureStorage.write(key: 'language', value: value);
+  }
+
+  static Future<String> get language async => await getString(key: 'language');
 }

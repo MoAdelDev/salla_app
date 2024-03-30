@@ -581,10 +581,10 @@ class S {
   }
 
   /// `Arabic`
-  String get arabicTitleTitle {
+  String get arabicTitle {
     return Intl.message(
       'Arabic',
-      name: 'arabicTitleTitle',
+      name: 'arabicTitle',
       desc: '',
       args: [],
     );
@@ -1045,6 +1045,66 @@ class S {
     return Intl.message(
       'Payment method via paypal or master card',
       name: 'paymentBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Language`
+  String get selectLanguageTitle {
+    return Intl.message(
+      'Select Language',
+      name: 'selectLanguageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get saveTitle {
+    return Intl.message(
+      'Save',
+      name: 'saveTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message(
+      'All',
+      name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get searchTitle {
+    return Intl.message(
+      'Search',
+      name: 'searchTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter product name`
+  String get enterProductName {
+    return Intl.message(
+      'Enter product name',
+      name: 'enterProductName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please wait to load products`
+  String get pleaseWaitToLoadProducts {
+    return Intl.message(
+      'Please wait to load products',
+      name: 'pleaseWaitToLoadProducts',
       desc: '',
       args: [],
     );

@@ -7,5 +7,6 @@
       "source.fixAll":"always",
       "source.organizeImports":"always",
       "source.sortImports":"always",
-    }
-  }
+    },
+    "editor.fontFamily": "'Fira Code', Consolas, 'Segoe UI Emoji', 'EmojiOne Color'",
+}

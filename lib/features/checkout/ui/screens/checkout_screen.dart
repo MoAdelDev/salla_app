@@ -31,7 +31,7 @@ class CheckoutScreen extends StatelessWidget {
             CustomAppBar(
               onTap1: () => context.pop(),
               icon1: Icons.chevron_left,
-              title: 'Checkout',
+              title: S.of(context).checkoutTitle,
             ),
             Expanded(
               child: SingleChildScrollView(

@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addressHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your address"),
         "addressTitle": MessageLookupByLibrary.simpleMessage("Address"),
+        "all": MessageLookupByLibrary.simpleMessage("All"),
         "appDescription1": MessageLookupByLibrary.simpleMessage(
             "Begin shopping journey, endless possibilities"),
         "appDescription2": MessageLookupByLibrary.simpleMessage(
@@ -41,7 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle2": MessageLookupByLibrary.simpleMessage("Explore & Save"),
         "appTitle3": MessageLookupByLibrary.simpleMessage("Join Us Today"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("APPLY"),
-        "arabicTitleTitle": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "arabicTitle": MessageLookupByLibrary.simpleMessage("Arabic"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("Cancel order"),
         "cartTitle": MessageLookupByLibrary.simpleMessage("Cart"),
         "cashOnDeliveryBody": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),
         "englishTitle": MessageLookupByLibrary.simpleMessage("English"),
+        "enterProductName":
+            MessageLookupByLibrary.simpleMessage("Enter product name"),
         "faqsTitle": MessageLookupByLibrary.simpleMessage("FAQS"),
         "favoritesTitle": MessageLookupByLibrary.simpleMessage("Favorites"),
         "forgotPasswordTitle":
@@ -138,6 +141,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your phone"),
         "phoneTitle": MessageLookupByLibrary.simpleMessage("Phone"),
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("Placed On"),
+        "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
+            "Please wait to load products"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("Products"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("Quantity"),
         "regionHintTitle":
@@ -153,8 +158,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "removeFromCartTitle":
             MessageLookupByLibrary.simpleMessage("Remove from cart"),
         "removeTitle": MessageLookupByLibrary.simpleMessage("Remove"),
+        "saveTitle": MessageLookupByLibrary.simpleMessage("Save"),
         "searchHereTitle":
             MessageLookupByLibrary.simpleMessage("Search here ..."),
+        "searchTitle": MessageLookupByLibrary.simpleMessage("Search"),
+        "selectLanguageTitle":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("Shipping Address"),

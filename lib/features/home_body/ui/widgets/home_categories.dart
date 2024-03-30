@@ -6,6 +6,7 @@ import 'package:salla_app/features/home_body/data/models/categories_response.dar
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/category_tile.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 import '../../../../core/widgets/custom_shimmer.dart';
 
@@ -49,7 +50,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
                 children: [
                   CategoryTile(
                     isSelected: selectedIndex == -1,
-                    categoryModel: CategoryModel(0, 'All', ''),
+                    categoryModel: CategoryModel(0, S.of(context).all, ''),
                     onTap: () {
                       if (selectedIndex != -1 &&
                           context.read<HomeBodyCubit>().isProductsLoading ==

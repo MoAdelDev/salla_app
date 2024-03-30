@@ -51,7 +51,7 @@
   "offTitle": "إيقاف",
   "onTitle": "تشغيل",
   "englishTitle": "الإنجليزية",
-  "arabicTitleTitle": "العربية",
+  "arabicTitle": "العربية",
   "logoutTitle": "تسجيل الخروج",
   "addNewAddress": "إضافة عنوان جديد",
   "editNewAddress": "تعديل العنوان",
@@ -97,5 +97,11 @@
   "paymentTitle": "الدفع",
   "shippingAddressTitle": "عنوان التوصيل",
   "itemsTitle": "العناصر",
-  "paymentBody" : "طريقة الدفع عن طريق ماستر كارد او باي بال"
+  "paymentBody" : "طريقة الدفع عن طريق ماستر كارد او باي بال",
+  "selectLanguageTitle": "إختار اللغة",
+  "saveTitle": "حفظ",
+  "all": "الكل",
+  "searchTitle": "بحث",
+  "enterProductName": "اكتب اسم المنتج",
+  "pleaseWaitToLoadProducts" : "من فضلك إنتظر لتحميل المنتجات"
 }

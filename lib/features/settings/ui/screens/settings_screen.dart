@@ -55,7 +55,7 @@ class SettingsScreen extends StatelessWidget {
                   title: S.of(context).languageTitle,
                   icon: Icons.language,
                   subTitle: AppData.isArabic ? 'العربية' : 'English',
-                  onTap: () {},
+                  onTap: () => context.push(Routes.language),
                 ),
                 SettingsItem(
                   title: S.of(context).contactsTitle,
