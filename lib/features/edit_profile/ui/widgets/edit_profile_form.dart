@@ -11,6 +11,7 @@ class EditProfileForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: context.read<EditProfileCubit>().formKey,
       child: Column(
         children: [
           CustomTextField(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 extension NavigationEx on BuildContext {
-  void push(String routeName, {Object? arguments}) {
-    Navigator.pushNamed(this, routeName, arguments: arguments);
+  Future push(String routeName, {Object? arguments}) {
+    return Navigator.pushNamed(this, routeName, arguments: arguments);
   }
 
   void pop() {
