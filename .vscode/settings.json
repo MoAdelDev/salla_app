@@ -3,4 +3,9 @@
       "**/*.freezed.dart": true,
       "**/*.g.dart": true
     },
+    "editor.codeActionsOnSave": {
+      "source.fixAll":"always",
+      "source.organizeImports":"always",
+      "source.sortImports":"always",
+    }
   }
