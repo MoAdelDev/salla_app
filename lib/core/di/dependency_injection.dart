@@ -11,6 +11,7 @@ import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
+import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:salla_app/features/favorites/data/repos/favorites_repo.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home/data/repos/home_repo.dart';
@@ -90,4 +91,7 @@ Future<void> setupGetIt() async {
 
   getIt
       .registerFactory<SettingsCubit>(() => SettingsCubit(getIt<LogoutRepo>()));
+
+  // Edit Profile
+  getIt.registerFactory<EditProfileCubit>(() => EditProfileCubit());
 }
