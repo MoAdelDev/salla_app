@@ -10,9 +10,8 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/settings/logic/cubit/settings_cubit.dart';
 import 'package:salla_app/features/settings/logic/cubit/settings_state.dart';
-import 'package:salla_app/features/settings/ui/widgets/settings_edit_profile_button.dart';
 import 'package:salla_app/features/settings/ui/widgets/settings_item.dart';
-import 'package:salla_app/features/settings/ui/widgets/settings_user_data.dart';
+import 'package:salla_app/features/settings/ui/widgets/settings_user_data_and_button.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -40,9 +39,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                const SettingsUserData(),
-                verticalSpace(10.0),
-                const SettingsEditProfileButton(),
+                const SettingsUserDataAndButton(),
                 verticalSpace(10.0),
                 SettingsItem(
                   title: S.of(context).myAddressesTitle,

@@ -32,7 +32,7 @@ class _LoginFormState extends State<LoginForm> {
           CustomTextField(
             controller: context.read<LoginCubit>().passwordController,
             hintText: S.of(context).passwordHintTitle,
-            errorMsg: S.of(context).passwordTitle,
+            errorMsg: S.of(context).passwordHintTitle,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.done,
             obscureText: isPasswordHidden,

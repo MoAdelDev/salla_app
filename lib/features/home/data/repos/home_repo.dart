@@ -31,12 +31,12 @@ class HomeRepo {
           .doc(userId)
           .get();
       if (response.exists && response.data() != null) {
-        return ApiResult.success(response.data()!['imageUrl']);
+        return ApiResult.success(response.data()!['image']);
       } else {
         await FirebaseFirestore.instance
             .collection('images')
             .doc(userId)
-            .set({'imageUrl': ''});
+            .set({'image': ''});
       }
       return const ApiResult.success('');
     } on FirebaseException catch (e) {
