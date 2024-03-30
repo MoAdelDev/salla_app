@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/networking/api_result.dart';
@@ -19,6 +20,26 @@ class HomeRepo {
         return ApiResult.failure(response.message ?? '');
       }
     } on DioException catch (e) {
+      return ApiResult.failure(e.message ?? '');
+    }
+  }
+
+  Future<ApiResult<String>> getUserAvatar(String userId) async {
+    try {
+      final response = await FirebaseFirestore.instance
+          .collection('images')
+          .doc(userId)
+          .get();
+      if (response.exists && response.data() != null) {
+        return ApiResult.success(response.data()!['imageUrl']);
+      } else {
+        await FirebaseFirestore.instance
+            .collection('images')
+            .doc(userId)
+            .set({'imageUrl': ''});
+      }
+      return const ApiResult.success('');
+    } on FirebaseException catch (e) {
       return ApiResult.failure(e.message ?? '');
     }
   }
