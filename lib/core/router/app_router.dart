@@ -5,6 +5,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/screens/checkout_screen.dart';
+import 'package:salla_app/features/edit_profile/ui/screens/edit_profile_screen.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/ui/screens/home_screen.dart';
@@ -98,6 +99,11 @@ class AppRouter {
               products: args.products,
             ),
           ),
+        );
+
+      case Routes.editProfile:
+        return MaterialPageRoute(
+          builder: (context) => const EditProfileScreen(),
         );
       default:
         return null;

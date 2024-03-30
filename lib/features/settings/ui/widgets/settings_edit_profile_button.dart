@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 
 class SettingsEditProfileButton extends StatelessWidget {
@@ -7,7 +9,7 @@ class SettingsEditProfileButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      onPressed: () {},
+      onPressed: () => context.push(Routes.editProfile),
       text: 'Edit Profile',
     );
   }
