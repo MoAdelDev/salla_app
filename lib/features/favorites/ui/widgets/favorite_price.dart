@@ -12,7 +12,7 @@ class FavoritePrice extends StatelessWidget {
       children: [
         Text(
           'EGP ${product.price}',
-          style: AppTexts.text14BlackLatoBold,
+          style: AppTexts.text14WhiteLatoBold,
         ),
         const SizedBox(
           width: 5.0,
@@ -20,9 +20,9 @@ class FavoritePrice extends StatelessWidget {
         if (product.discount != 0)
           Text(
             'EGP ${product.oldPrice}',
-            style: AppTexts.text14GreyLatoBold.copyWith(
-              decoration: TextDecoration.lineThrough,
-            ),
+            style: AppTexts.text14BlackLatoBold.copyWith(
+                decoration: TextDecoration.lineThrough,
+                color: Colors.white.withOpacity(0.8)),
           ),
       ],
     );

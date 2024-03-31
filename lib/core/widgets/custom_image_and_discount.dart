@@ -15,31 +15,41 @@ class CustomImageAndDiscount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.bottomCenter,
-      children: [
-        CachedNetworkImage(
-          imageUrl: image,
-          height: 100.h,
-          width: 100.w,
-          errorWidget: (context, url, error) => const CustomShimmer(),
-          placeholder: (context, url) => const CustomShimmer(),
-          imageBuilder: (context, imageProvider) => Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: imageProvider,
-                onError: (exception, stackTrace) => const CustomShimmer(),
+    return Container(
+      height: 100.0.h,
+      width: 100.0.w,
+      margin: EdgeInsets.only(
+        top: 10.0.h,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        color: Colors.white,
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          CachedNetworkImage(
+            imageUrl: image,
+            errorWidget: (context, url, error) => const CustomShimmer(),
+            placeholder: (context, url) => const CustomShimmer(),
+            imageBuilder: (context, imageProvider) => Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: imageProvider,
+                  onError: (exception, stackTrace) => const CustomShimmer(),
+                ),
               ),
             ),
           ),
-        ),
-        if (discount != 0)
-          Positioned(
-            left: 0,
-            right: 0,
-            child: CustomDiscountContainer(discount: discount),
-          ),
-      ],
+          if (discount != 0)
+            Positioned(
+              left: 0,
+              right: 0,
+              child: CustomDiscountContainer(discount: discount),
+            ),
+        ],
+      ),
     );
   }
 }

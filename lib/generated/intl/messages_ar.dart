@@ -62,12 +62,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "هذا العنوان سيتم مسحه للأبد ."),
         "deleteAddressQuestionTitle":
             MessageLookupByLibrary.simpleMessage("هل تريد مسح العنوان ؟"),
+        "deleteTitle": MessageLookupByLibrary.simpleMessage("حذف"),
         "deliveryFeesTitle":
             MessageLookupByLibrary.simpleMessage("تكلفة التوصيل"),
         "deliveryTitle": MessageLookupByLibrary.simpleMessage("التوصيل"),
         "descriptionTitle": MessageLookupByLibrary.simpleMessage("الوصف"),
         "discountTitle": MessageLookupByLibrary.simpleMessage("خصم"),
         "editNewAddress": MessageLookupByLibrary.simpleMessage("تعديل العنوان"),
+        "editTitle": MessageLookupByLibrary.simpleMessage("تعديل"),
         "emailHintTitle":
             MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),

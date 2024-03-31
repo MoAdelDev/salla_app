@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
@@ -28,6 +29,7 @@ class CartRemove extends StatelessWidget {
                     0.0,
               ),
           text: S.of(context).removeTitle,
+          textStyle: AppTexts.text16WhiteLatoBold,
         );
       },
     );

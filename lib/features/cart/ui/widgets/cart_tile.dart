@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
-import 'package:salla_app/features/cart/ui/widgets/cart_name.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_price.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_quantity.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_remove.dart';
+import 'package:salla_app/features/cart/ui/widgets/product_name.dart';
 
 class CartTile extends StatelessWidget {
   final CartProductModel cartProduct;
@@ -14,12 +14,7 @@ class CartTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      padding: EdgeInsets.symmetric(
-        horizontal: 14.0.w,
-        vertical: 8.0.h,
-      ),
+    return CustomContainerTile(
       child: Column(
         children: [
           Row(

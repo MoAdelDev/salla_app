@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
-import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_no_products.dart';
 import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
@@ -25,7 +24,7 @@ class FavoritesList extends StatelessWidget {
           return const CustomNoProducts();
         }
         return Container(
-          color: AppColor.greyColor,
+          color: Colors.white,
           child: ListView.separated(
             itemCount: favorites.length,
             separatorBuilder: (context, index) => verticalSpace(10.0),

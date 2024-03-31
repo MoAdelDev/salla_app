@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_name.dart';
@@ -16,8 +16,7 @@ class FavoriteTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    return CustomContainerTile(
       child: InkWell(
         onTap: () => context.push(
           Routes.productDetails,
@@ -25,39 +24,36 @@ class FavoriteTile extends StatelessWidget {
             productId: favoriteModel.product.id,
           ),
         ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 14.0.w),
-          child: Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomImageAndDiscount(
-                    image: favoriteModel.product.image,
-                    discount: favoriteModel.product.discount,
-                  ),
-                  horizontalSpace(5.0),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          FavoriteName(name: favoriteModel.product.name),
-                          verticalSpace(8.0),
-                          FavoritePrice(product: favoriteModel.product)
-                        ],
-                      ),
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomImageAndDiscount(
+                  image: favoriteModel.product.image,
+                  discount: favoriteModel.product.discount,
+                ),
+                horizontalSpace(5.0),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        FavoriteName(name: favoriteModel.product.name),
+                        verticalSpace(8.0),
+                        FavoritePrice(product: favoriteModel.product)
+                      ],
                     ),
                   ),
-                ],
-              ),
-              Align(
-                alignment: AlignmentDirectional.centerEnd,
-                child: FavoriteRemove(favoriteModel: favoriteModel),
-              )
-            ],
-          ),
+                ),
+              ],
+            ),
+            Align(
+              alignment: AlignmentDirectional.centerEnd,
+              child: FavoriteRemove(favoriteModel: favoriteModel),
+            )
+          ],
         ),
       ),
     );

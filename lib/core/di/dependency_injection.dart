@@ -4,10 +4,11 @@ import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/core/stripe/stripe_api_service.dart';
 import 'package:salla_app/core/stripe/stripe_service.dart';
+import 'package:salla_app/features/addresses/data/repos/addresses_repo.dart';
+import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/cart/data/repos/cart_repo.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
-import 'package:salla_app/features/checkout/data/repos/addresses_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
@@ -70,7 +71,6 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
 
   // checkout
-  getIt.registerLazySingleton<AddressesRepo>(() => AddressesRepo(getIt()));
   getIt.registerLazySingleton<PromoCodeRepo>(() => PromoCodeRepo(getIt()));
   getIt.registerLazySingleton<AddOrderRepo>(() => AddOrderRepo(getIt()));
   getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(getIt()));
@@ -97,4 +97,8 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<EditProfileRepo>(
       () => EditProfileRepo(getIt<ApiService>()));
   getIt.registerFactory<EditProfileCubit>(() => EditProfileCubit(getIt()));
+
+  // Addresses
+  getIt.registerLazySingleton<AddressesRepo>(() => AddressesRepo(getIt()));
+  getIt.registerFactory<AddressesCubit>(() => AddressesCubit(getIt()));
 }

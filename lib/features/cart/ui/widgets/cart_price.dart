@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 
@@ -13,15 +12,17 @@ class ProductPrice extends StatelessWidget {
       children: [
         Text(
           'EGP ${product.price}',
-          style: AppTexts.text14BlackLatoBold,
+          style: AppTexts.text14WhiteLatoBold,
         ),
-        horizontalSpace(5.0),
+        const SizedBox(
+          width: 5.0,
+        ),
         if (product.discount != 0)
           Text(
             'EGP ${product.oldPrice}',
-            style: AppTexts.text14GreyLatoBold.copyWith(
-              decoration: TextDecoration.lineThrough,
-            ),
+            style: AppTexts.text14BlackLatoBold.copyWith(
+                decoration: TextDecoration.lineThrough,
+                color: Colors.white.withOpacity(0.8)),
           ),
       ],
     );

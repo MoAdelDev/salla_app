@@ -11,7 +11,7 @@ class CustomDiscountContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: context.colorScheme.primary.withOpacity(0.7),
-      margin: EdgeInsets.symmetric(horizontal: 10.0.w),
+      width: double.infinity,
       padding: EdgeInsets.symmetric(
         horizontal: 5.0.w,
         vertical: 3.0.h,
