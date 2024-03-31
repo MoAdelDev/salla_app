@@ -888,6 +888,8 @@ PODS:
   - fluttertoast (0.0.2):
     - Flutter
     - Toast
+  - geolocator_apple (1.2.0):
+    - Flutter
   - GoogleUtilities/Environment (7.13.0):
     - GoogleUtilities/Privacy
     - PromisesObjC (< 3.0, >= 1.2)
@@ -1043,6 +1045,7 @@ DEPENDENCIES:
   - flutter_localization (from `.symlinks/plugins/flutter_localization/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
@@ -1098,6 +1101,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
   fluttertoast:
     :path: ".symlinks/plugins/fluttertoast/ios"
+  geolocator_apple:
+    :path: ".symlinks/plugins/geolocator_apple/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   path_provider_foundation:
@@ -1132,6 +1137,7 @@ SPEC CHECKSUMS:
   flutter_localization: f43b18844a2b3d2c71fd64f04ffd6b1e64dd54d4
   flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
   fluttertoast: 31b00dabfa7fb7bacd9e7dbee580d7a2ff4bf265
+  geolocator_apple: 6cbaf322953988e009e5ecb481f07efece75c450
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   "gRPC-C++": 12f33a422dcab88dcd0c53e52cd549a929f0f244
   gRPC-Core: 6ec9002832e1e22c5bb8c54994b050b0ee4205c6
