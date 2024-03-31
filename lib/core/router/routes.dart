@@ -11,4 +11,5 @@ class Routes {
   static const String editProfile = '/edit_profile';
   static const String language = '/language';
   static const String addresses = '/addresses';
+  static const String addAddress = '/add_address';
 }

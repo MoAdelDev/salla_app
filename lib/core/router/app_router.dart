@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/features/add_address/ui/screens/add_address_screen.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/addresses/ui/screens/addresses_screen.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
@@ -123,6 +124,10 @@ class AppRouter {
             create: (context) => getIt<AddressesCubit>()..emitAddressState(),
             child: const AddressesScreen(),
           ),
+        );
+      case Routes.addAddress:
+        return MaterialPageRoute(
+          builder: (context) => const AddAddressScreen(),
         );
       default:
         return null;
