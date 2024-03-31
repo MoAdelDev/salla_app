@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
+import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_state.dart';
@@ -25,6 +26,7 @@ class AddressesList extends StatelessWidget {
           return Center(
             child: Text(
               S.of(context).noAddressTitle,
+              style: AppTexts.text18BlackLatoBold,
             ),
           );
         }
@@ -36,7 +38,6 @@ class AddressesList extends StatelessWidget {
                 motion: const DrawerMotion(),
                 children: [
                   SlidableAction(
-                    // An action can be bigger than the others.
                     onPressed: (context) {},
                     backgroundColor: AppColor.primaryColor,
                     foregroundColor: Colors.white,
@@ -45,7 +46,8 @@ class AddressesList extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   SlidableAction(
-                    onPressed: (context) {},
+                    onPressed: (context) =>
+                        cubit.emitDeleteAddress(addressModel.id),
                     backgroundColor: Colors.red,
                     foregroundColor: Colors.white,
                     borderRadius: BorderRadius.circular(20),

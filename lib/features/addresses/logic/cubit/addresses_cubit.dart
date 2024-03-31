@@ -21,4 +21,18 @@ class AddressesCubit extends BaseSafeCubit<AddressesState> {
       },
     );
   }
+
+  void emitDeleteAddress(int addressId) async {
+    safeEmit(const AddressesState.loading());
+    final response = await _addressesRepo.deleteAddress(addressId);
+    response.when(
+      success: (data) {
+        addresses?.removeWhere((element) => element.id == addressId);
+        safeEmit(AddressesState.success(addresses ?? []));
+      },
+      failure: (error) {
+        safeEmit(AddressesState.failure(error));
+      },
+    );
+  }
 }
