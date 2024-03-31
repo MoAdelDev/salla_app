@@ -1109,6 +1109,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete`
+  String get deleteTitle {
+    return Intl.message(
+      'Delete',
+      name: 'deleteTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get editTitle {
+    return Intl.message(
+      'Edit',
+      name: 'editTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

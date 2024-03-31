@@ -104,5 +104,7 @@
   "all" : "All",
   "searchTitle" : "Search",
   "enterProductName" : "Enter product name",
-  "pleaseWaitToLoadProducts" : "Please wait to load products"
+  "pleaseWaitToLoadProducts" : "Please wait to load products",
+  "deleteTitle" : "Delete",
+  "editTitle" : "Edit"
 }

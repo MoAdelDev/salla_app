@@ -65,12 +65,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "This address will be permanently deleted ."),
         "deleteAddressQuestionTitle":
             MessageLookupByLibrary.simpleMessage("Delete this address ?"),
+        "deleteTitle": MessageLookupByLibrary.simpleMessage("Delete"),
         "deliveryFeesTitle":
             MessageLookupByLibrary.simpleMessage("Delivery Fees"),
         "deliveryTitle": MessageLookupByLibrary.simpleMessage("Delivery"),
         "descriptionTitle": MessageLookupByLibrary.simpleMessage("Description"),
         "discountTitle": MessageLookupByLibrary.simpleMessage("DISCOUNT"),
         "editNewAddress": MessageLookupByLibrary.simpleMessage("Edit address"),
+        "editTitle": MessageLookupByLibrary.simpleMessage("Edit"),
         "emailHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),
