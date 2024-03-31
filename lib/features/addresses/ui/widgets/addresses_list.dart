@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
@@ -38,7 +41,16 @@ class AddressesList extends StatelessWidget {
                 motion: const DrawerMotion(),
                 children: [
                   SlidableAction(
-                    onPressed: (context) {},
+                    onPressed: (context) {
+                      AddOrEditScreenArgs args = AddOrEditScreenArgs(
+                        address: addressModel,
+                      );
+                      context
+                          .push(Routes.addAddress, arguments: args)
+                          .then((value) {
+                        cubit.emitAddressState();
+                      });
+                    },
                     backgroundColor: AppColor.primaryColor,
                     foregroundColor: Colors.white,
                     icon: Icons.edit,

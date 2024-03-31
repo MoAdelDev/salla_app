@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:salla_app/core/networking/api_constance.dart';
+import 'package:salla_app/features/add_or_edit_address/data/models/add_or_edit_address_request_body.dart';
+import 'package:salla_app/features/add_or_edit_address/data/models/add_or_edit_address_response_body.dart';
 import 'package:salla_app/features/addresses/data/models/delete_address_response_body.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/data/models/cart_update_request.dart';
@@ -139,6 +141,19 @@ abstract class ApiService {
   @DELETE('${ApiConstance.addresses}/{id}')
   Future<DeleteAddressResponseBody> deleteAddress(
     @Header('Authorization') String token,
+    @Path('id') int id,
+  );
+
+  @POST(ApiConstance.addresses)
+  Future<AddOrEditAddressResponseBody> addAddress(
+    @Header('Authorization') String token,
+    @Body() AddOrEditAddressRequestBody addOrEditAddressRequestBody,
+  );
+
+  @PUT('${ApiConstance.addresses}/{id}')
+  Future<AddOrEditAddressResponseBody> updateAddress(
+    @Header('Authorization') String token,
+    @Body() AddOrEditAddressRequestBody addOrEditAddressRequestBody,
     @Path('id') int id,
   );
 }

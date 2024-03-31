@@ -4,6 +4,9 @@ import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/core/stripe/stripe_api_service.dart';
 import 'package:salla_app/core/stripe/stripe_service.dart';
+import 'package:salla_app/features/add_or_edit_address/data/repos/add_address_repo.dart';
+import 'package:salla_app/features/add_or_edit_address/data/repos/edit_address_repo.dart';
+import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_cubit.dart';
 import 'package:salla_app/features/addresses/data/repos/addresses_repo.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/cart/data/repos/cart_repo.dart';
@@ -101,4 +104,11 @@ Future<void> setupGetIt() async {
   // Addresses
   getIt.registerLazySingleton<AddressesRepo>(() => AddressesRepo(getIt()));
   getIt.registerFactory<AddressesCubit>(() => AddressesCubit(getIt()));
+
+  // Add & Edit Address
+  getIt.registerLazySingleton<AddAddressRepo>(() => AddAddressRepo(getIt()));
+  getIt.registerLazySingleton<EditAddressRepo>(() => EditAddressRepo(getIt()));
+
+  getIt.registerFactory<AddOrEditAddressCubit>(
+      () => AddOrEditAddressCubit(getIt(), getIt()));
 }

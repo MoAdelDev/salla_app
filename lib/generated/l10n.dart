@@ -600,20 +600,20 @@ class S {
     );
   }
 
-  /// `Add new address`
+  /// `Add New Address`
   String get addNewAddress {
     return Intl.message(
-      'Add new address',
+      'Add New Address',
       name: 'addNewAddress',
       desc: '',
       args: [],
     );
   }
 
-  /// `Edit address`
+  /// `Edit Address`
   String get editNewAddress {
     return Intl.message(
-      'Edit address',
+      'Edit Address',
       name: 'editNewAddress',
       desc: '',
       args: [],
