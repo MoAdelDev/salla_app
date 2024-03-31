@@ -930,10 +930,10 @@ class S {
     );
   }
 
-  /// `Modify cart`
+  /// `Modify Cart`
   String get modifyCartTitle {
     return Intl.message(
-      'Modify cart',
+      'Modify Cart',
       name: 'modifyCartTitle',
       desc: '',
       args: [],
@@ -1135,6 +1135,26 @@ class S {
     return Intl.message(
       'Add',
       name: 'add',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Orders yet`
+  String get noOrders {
+    return Intl.message(
+      'No Orders yet',
+      name: 'noOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tax`
+  String get tax {
+    return Intl.message(
+      'Tax',
+      name: 'tax',
       desc: '',
       args: [],
     );

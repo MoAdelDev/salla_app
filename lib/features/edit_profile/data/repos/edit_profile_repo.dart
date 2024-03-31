@@ -44,12 +44,10 @@ class EditProfileRepo {
             .update({
           'image': downloadUrl,
         });
-
         return ApiResult.success(await response.ref.getDownloadURL());
       }
       return const ApiResult.failure('Failed to upload image');
     } on FirebaseException catch (e) {
-      print(e.message);
       return ApiResult.failure(e.message ?? '');
     }
   }

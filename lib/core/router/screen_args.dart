@@ -29,3 +29,8 @@ class AddOrEditScreenArgs extends ScreenArgs {
   final AddressModel? address;
   AddOrEditScreenArgs({required this.address});
 }
+
+class OrderDetailsScreenArgs extends ScreenArgs {
+  final int orderId;
+  OrderDetailsScreenArgs({required this.orderId});
+}

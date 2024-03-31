@@ -12,4 +12,6 @@ class Routes {
   static const String language = '/language';
   static const String addresses = '/addresses';
   static const String addAddress = '/add_address';
+  static const String orders = '/orders';
+  static const String orderDetails = '/order_details';
 }

@@ -106,5 +106,7 @@
   "pleaseWaitToLoadProducts" : "من فضلك إنتظر لتحميل المنتجات",
   "deleteTitle": "حذف",
   "editTitle": "تعديل",
-  "add": "إضافة"
+  "add": "إضافة",
+  "noOrders": "لا يوجد طلبات",
+  "tax" : "ضريبة"
 }

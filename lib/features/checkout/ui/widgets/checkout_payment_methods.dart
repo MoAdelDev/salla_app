@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
@@ -17,7 +18,13 @@ class CheckoutPaymentMethods extends StatelessWidget {
         CheckoutCubit cubit = context.read<CheckoutCubit>();
         return CheckoutCart(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                S.of(context).paymentMethodTitle,
+                style: AppTexts.text16WhiteLatoBold,
+              ),
+              verticalSpace(5.0),
               CheckoutPaymentMethodItem(
                 onChanged: (p0) => state is AddOrderLoading
                     ? null

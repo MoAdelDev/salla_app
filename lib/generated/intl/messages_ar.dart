@@ -107,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("لا يوجد عناوين"),
+        "noOrders": MessageLookupByLibrary.simpleMessage("لا يوجد طلبات"),
         "noProductsTitle":
             MessageLookupByLibrary.simpleMessage("لا توجد منتجات حتى الآن"),
         "noteHintTitle": MessageLookupByLibrary.simpleMessage("أدخل ملاحظاتك"),
@@ -159,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUpTitle": MessageLookupByLibrary.simpleMessage("طلب تسجيل حساب"),
+        "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("إجمالي"),
         "updateProfileTitle":
             MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية"),

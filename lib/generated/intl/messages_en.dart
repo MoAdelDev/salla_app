@@ -103,7 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "you have been logged in successfully"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "logoutTitle": MessageLookupByLibrary.simpleMessage("Log out"),
-        "modifyCartTitle": MessageLookupByLibrary.simpleMessage("Modify cart"),
+        "modifyCartTitle": MessageLookupByLibrary.simpleMessage("Modify Cart"),
         "myAddressesTitle":
             MessageLookupByLibrary.simpleMessage("My Addresses"),
         "nOfItemsTitle": MessageLookupByLibrary.simpleMessage("N of items"),
@@ -113,6 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("Night mode"),
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("No Addresses yet"),
+        "noOrders": MessageLookupByLibrary.simpleMessage("No Orders yet"),
         "noProductsTitle":
             MessageLookupByLibrary.simpleMessage("No Products yet"),
         "noteHintTitle":
@@ -172,6 +173,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Shipping Address"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUpTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("Total"),
         "updateProfileTitle":
             MessageLookupByLibrary.simpleMessage("Update profile"),

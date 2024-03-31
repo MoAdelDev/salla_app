@@ -25,6 +25,10 @@ import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/login/data/repos/login_repo.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
+import 'package:salla_app/features/order_details/data/repo/order_details_repo.dart';
+import 'package:salla_app/features/order_details/logic/cubit/order_details_cubit.dart';
+import 'package:salla_app/features/orders/data/repos/orders_repo.dart';
+import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/product_details/data/repos/product_details_repo.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/register/data/repos/register_repo.dart';
@@ -111,4 +115,14 @@ Future<void> setupGetIt() async {
 
   getIt.registerFactory<AddOrEditAddressCubit>(
       () => AddOrEditAddressCubit(getIt(), getIt()));
+
+  // Orders
+  getIt.registerLazySingleton<OrdersRepo>(() => OrdersRepo(getIt()));
+  getIt.registerFactory<OrdersCubit>(() => OrdersCubit(getIt()));
+
+  // Order Details
+  getIt
+      .registerLazySingleton<OrderDetailsRepo>(() => OrderDetailsRepo(getIt()));
+
+  getIt.registerFactory<OrderDetailsCubit>(() => OrderDetailsCubit(getIt()));
 }
