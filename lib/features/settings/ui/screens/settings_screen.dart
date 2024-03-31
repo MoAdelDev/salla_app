@@ -49,7 +49,7 @@ class SettingsScreen extends StatelessWidget {
                 SettingsItem(
                   title: S.of(context).ordersTitle,
                   icon: Icons.shopping_cart,
-                  onTap: () {},
+                  onTap: () => context.push(Routes.orders),
                 ),
                 SettingsItem(
                   title: S.of(context).languageTitle,
