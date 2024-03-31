@@ -107,5 +107,6 @@
   "pleaseWaitToLoadProducts" : "Please wait to load products",
   "deleteTitle" : "Delete",
   "editTitle" : "Edit",
-  "add" : "Add"
+  "add" : "Add",
+  "noOrders" : "No Orders yet"
 }

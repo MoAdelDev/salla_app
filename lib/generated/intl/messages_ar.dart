@@ -107,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("لا يوجد عناوين"),
+        "noOrders": MessageLookupByLibrary.simpleMessage("لا يوجد طلبات"),
         "noProductsTitle":
             MessageLookupByLibrary.simpleMessage("لا توجد منتجات حتى الآن"),
         "noteHintTitle": MessageLookupByLibrary.simpleMessage("أدخل ملاحظاتك"),

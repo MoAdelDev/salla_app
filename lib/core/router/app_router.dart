@@ -19,6 +19,8 @@ import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/on_boarding_screen.dart';
+import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
+import 'package:salla_app/features/orders/ui/screens/orders_screen.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/ui/screens/product_details_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
@@ -135,6 +137,13 @@ class AppRouter {
             child: AddOrEditAddressScreen(
               address: args?.address,
             ),
+          ),
+        );
+      case Routes.orders:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<OrdersCubit>()..emitOrdersState(),
+            child: const OrdersScreen(),
           ),
         );
       default:

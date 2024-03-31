@@ -23,6 +23,8 @@ import 'package:salla_app/features/home_body/data/models/change_favorite_respons
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
+import 'package:salla_app/features/orders/data/models/order_cancellation_response_body.dart';
+import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/product_details/data/models/add_to_cart_request.dart';
 import 'package:salla_app/features/product_details/data/models/add_to_cart_response.dart';
 import 'package:salla_app/features/product_details/data/models/product_details_response.dart';
@@ -154,6 +156,15 @@ abstract class ApiService {
   Future<AddOrEditAddressResponseBody> updateAddress(
     @Header('Authorization') String token,
     @Body() AddOrEditAddressRequestBody addOrEditAddressRequestBody,
+    @Path('id') int id,
+  );
+
+  @GET(ApiConstance.orders)
+  Future<OrdersResponseBody> getOrders(@Header('Authorization') String token);
+
+  @GET('${ApiConstance.orders}/{id}/cancel')
+  Future<OrderCacnellationResponseBody> cancelOrder(
+    @Header('Authorization') String token,
     @Path('id') int id,
   );
 }
