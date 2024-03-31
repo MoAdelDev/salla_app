@@ -38,7 +38,7 @@ class CheckoutAddressItem extends StatelessWidget {
                 style: AppTexts.text16WhiteLatoBold,
               ),
               Text(
-                '${address.city}, ${address.details}',
+                '${address.city}, ${address.region}, ${address.details}',
                 style: AppTexts.text14WhiteLatoRegular,
               ),
             ],

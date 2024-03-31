@@ -105,5 +105,6 @@
   "enterProductName": "اكتب اسم المنتج",
   "pleaseWaitToLoadProducts" : "من فضلك إنتظر لتحميل المنتجات",
   "deleteTitle": "حذف",
-  "editTitle": "تعديل"
+  "editTitle": "تعديل",
+  "add": "إضافة"
 }

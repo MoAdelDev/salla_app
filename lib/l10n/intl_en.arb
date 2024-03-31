@@ -106,5 +106,6 @@
   "enterProductName" : "Enter product name",
   "pleaseWaitToLoadProducts" : "Please wait to load products",
   "deleteTitle" : "Delete",
-  "editTitle" : "Edit"
+  "editTitle" : "Edit",
+  "add" : "Add"
 }
