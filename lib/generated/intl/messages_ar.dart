@@ -160,6 +160,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUpTitle": MessageLookupByLibrary.simpleMessage("طلب تسجيل حساب"),
+        "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("إجمالي"),
         "updateProfileTitle":
             MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية"),

@@ -21,7 +21,13 @@ class CheckoutSummary extends StatelessWidget {
   Widget build(BuildContext context) {
     return CheckoutCart(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text(
+            S.of(context).orderSummaryTitle,
+            style: AppTexts.text16WhiteLatoBold,
+          ),
+          verticalSpace(5.0),
           Row(
             children: [
               Text(

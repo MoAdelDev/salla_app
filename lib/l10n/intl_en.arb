@@ -87,7 +87,7 @@
   "cashOnDeliveryBody" : "COD is a type of transaction where the recipient pays for a good at the time of delivery rather than using credit",
   "changeTitle" : "CHANGE",
   "deliveryTitle" : "Delivery",
-  "modifyCartTitle" : "Modify cart",
+  "modifyCartTitle" : "Modify Cart",
   "quantityTitle" : "Quantity",
   "ordersTitle" : "Orders",
   "cancelOrder" : "Cancel order",
@@ -108,5 +108,6 @@
   "deleteTitle" : "Delete",
   "editTitle" : "Edit",
   "add" : "Add",
-  "noOrders" : "No Orders yet"
+  "noOrders" : "No Orders yet",
+  "tax" : "Tax"
 }
