@@ -107,5 +107,6 @@
   "deleteTitle": "حذف",
   "editTitle": "تعديل",
   "add": "إضافة",
-  "noOrders": "لا يوجد طلبات"
+  "noOrders": "لا يوجد طلبات",
+  "tax" : "ضريبة"
 }

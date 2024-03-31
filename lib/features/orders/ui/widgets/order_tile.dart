@@ -3,6 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_text_button.dart';
@@ -24,7 +27,12 @@ class OrderTile extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.only(top: 8.h),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () => context
+                .push(Routes.orderDetails,
+                    arguments: OrderDetailsScreenArgs(orderId: order.id))
+                .then((value) {
+              cubit.emitOrdersState();
+            }),
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -53,7 +61,7 @@ class OrderTile extends StatelessWidget {
                   child: OrderStatus(
                     status: order.status,
                   ),
-                )
+                ),
               ],
             ),
           ),
