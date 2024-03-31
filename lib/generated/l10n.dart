@@ -600,20 +600,20 @@ class S {
     );
   }
 
-  /// `Add new address`
+  /// `Add New Address`
   String get addNewAddress {
     return Intl.message(
-      'Add new address',
+      'Add New Address',
       name: 'addNewAddress',
       desc: '',
       args: [],
     );
   }
 
-  /// `Edit address`
+  /// `Edit Address`
   String get editNewAddress {
     return Intl.message(
-      'Edit address',
+      'Edit Address',
       name: 'editNewAddress',
       desc: '',
       args: [],
@@ -1105,6 +1105,36 @@ class S {
     return Intl.message(
       'Please wait to load products',
       name: 'pleaseWaitToLoadProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get deleteTitle {
+    return Intl.message(
+      'Delete',
+      name: 'deleteTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get editTitle {
+    return Intl.message(
+      'Edit',
+      name: 'editTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add`
+  String get add {
+    return Intl.message(
+      'Add',
+      name: 'add',
       desc: '',
       args: [],
     );

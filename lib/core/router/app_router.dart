@@ -3,6 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_cubit.dart';
+import 'package:salla_app/features/add_or_edit_address/ui/screens/add_or_edit_address_screen.dart';
+import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
+import 'package:salla_app/features/addresses/ui/screens/addresses_screen.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/screens/checkout_screen.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
@@ -114,6 +118,24 @@ class AppRouter {
       case Routes.language:
         return MaterialPageRoute(
           builder: (context) => const LanguageScreen(),
+        );
+      case Routes.addresses:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<AddressesCubit>()..emitAddressState(),
+            child: const AddressesScreen(),
+          ),
+        );
+      case Routes.addAddress:
+        AddOrEditScreenArgs? args = settings.arguments as AddOrEditScreenArgs?;
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<AddOrEditAddressCubit>()..emitControllers(args?.address),
+            child: AddOrEditAddressScreen(
+              address: args?.address,
+            ),
+          ),
         );
       default:
         return null;

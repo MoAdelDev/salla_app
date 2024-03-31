@@ -44,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
                 SettingsItem(
                   title: S.of(context).myAddressesTitle,
                   icon: Icons.location_history,
-                  onTap: () {},
+                  onTap: () => context.push(Routes.addresses),
                 ),
                 SettingsItem(
                   title: S.of(context).ordersTitle,

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
-import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/core/widgets/custom_no_products.dart';
 import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
@@ -37,18 +36,15 @@ class CartScreen extends StatelessWidget {
                 if (products.isEmpty) {
                   return const CustomNoProducts();
                 }
-                return Container(
-                  color: AppColor.greyColor,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: CartList(
-                          cartProducts: products,
-                        ),
+                return Column(
+                  children: [
+                    Expanded(
+                      child: CartList(
+                        cartProducts: products,
                       ),
-                      const CartCheckoutButton(),
-                    ],
-                  ),
+                    ),
+                    const CartCheckoutButton(),
+                  ],
                 );
               },
             ),

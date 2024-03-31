@@ -24,7 +24,7 @@ class _LoginFormState extends State<LoginForm> {
           CustomTextField(
             controller: context.read<LoginCubit>().emailController,
             hintText: S.of(context).emailHintTitle,
-            errorMsg: S.of(context).emailTitle,
+            errorMsg: S.of(context).emailHintTitle,
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
           ),

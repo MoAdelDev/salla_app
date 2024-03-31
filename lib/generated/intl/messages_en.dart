@@ -22,8 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add": MessageLookupByLibrary.simpleMessage("Add"),
         "addNewAddress":
-            MessageLookupByLibrary.simpleMessage("Add new address"),
+            MessageLookupByLibrary.simpleMessage("Add New Address"),
         "addToCartTitle": MessageLookupByLibrary.simpleMessage("Add to cart"),
         "addressHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your address"),
@@ -65,12 +66,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "This address will be permanently deleted ."),
         "deleteAddressQuestionTitle":
             MessageLookupByLibrary.simpleMessage("Delete this address ?"),
+        "deleteTitle": MessageLookupByLibrary.simpleMessage("Delete"),
         "deliveryFeesTitle":
             MessageLookupByLibrary.simpleMessage("Delivery Fees"),
         "deliveryTitle": MessageLookupByLibrary.simpleMessage("Delivery"),
         "descriptionTitle": MessageLookupByLibrary.simpleMessage("Description"),
         "discountTitle": MessageLookupByLibrary.simpleMessage("DISCOUNT"),
-        "editNewAddress": MessageLookupByLibrary.simpleMessage("Edit address"),
+        "editNewAddress": MessageLookupByLibrary.simpleMessage("Edit Address"),
+        "editTitle": MessageLookupByLibrary.simpleMessage("Edit"),
         "emailHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "emailTitle": MessageLookupByLibrary.simpleMessage("Email"),

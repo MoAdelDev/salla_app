@@ -9,7 +9,7 @@ class FavoriteName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       name,
-      style: AppTexts.text18BlackLatoBold,
+      style: AppTexts.text16WhiteLatoBold,
       overflow: TextOverflow.ellipsis,
       maxLines: 2,
     );

@@ -54,8 +54,8 @@
   "englishTitle": "English",
   "arabicTitle": "Arabic",
   "logoutTitle": "Log out",
-  "addNewAddress": "Add new address",
-  "editNewAddress": "Edit address",
+  "addNewAddress": "Add New Address",
+  "editNewAddress": "Edit Address",
   "fullNameTitle": "Full name",
   "fullNameHintTitle": "Enter your full name",
   "addressTitle": "Address",
@@ -104,5 +104,8 @@
   "all" : "All",
   "searchTitle" : "Search",
   "enterProductName" : "Enter product name",
-  "pleaseWaitToLoadProducts" : "Please wait to load products"
+  "pleaseWaitToLoadProducts" : "Please wait to load products",
+  "deleteTitle" : "Delete",
+  "editTitle" : "Edit",
+  "add" : "Add"
 }

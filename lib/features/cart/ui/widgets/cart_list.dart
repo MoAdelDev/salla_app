@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
-import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_tile.dart';
 
@@ -11,7 +10,7 @@ class CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColor.greyColor,
+      color: Colors.white,
       child: ListView.separated(
         itemBuilder: (context, index) {
           CartProductModel cartProduct = cartProducts[index];

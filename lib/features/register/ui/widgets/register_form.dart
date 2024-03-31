@@ -24,7 +24,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             controller: context.read<RegisterCubit>().nameController,
             hintText: S.of(context).nameHintTitle,
-            errorMsg: S.of(context).nameTitle,
+            errorMsg: S.of(context).nameHintTitle,
             keyboardType: TextInputType.name,
             textInputAction: TextInputAction.next,
           ),
@@ -32,7 +32,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             controller: context.read<RegisterCubit>().emailController,
             hintText: S.of(context).emailHintTitle,
-            errorMsg: S.of(context).emailTitle,
+            errorMsg: S.of(context).emailHintTitle,
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
           ),
@@ -40,7 +40,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             controller: context.read<RegisterCubit>().phoneController,
             hintText: S.of(context).phoneHintTitle,
-            errorMsg: S.of(context).phoneTitle,
+            errorMsg: S.of(context).phoneHintTitle,
             keyboardType: TextInputType.phone,
             textInputAction: TextInputAction.next,
           ),
@@ -48,7 +48,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             controller: context.read<RegisterCubit>().passwordController,
             hintText: S.of(context).passwordHintTitle,
-            errorMsg: S.of(context).passwordTitle,
+            errorMsg: S.of(context).passwordHintTitle,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.done,
             obscureText: isPasswordHidden,
@@ -60,7 +60,9 @@ class _RegisterFormState extends State<RegisterForm> {
                 isPasswordHidden = !isPasswordHidden;
               });
             },
-            onSubmit: (value) {},
+            onSubmit: (value) {
+              context.read<RegisterCubit>().emitRegisterState();
+            },
           ),
         ],
       ),

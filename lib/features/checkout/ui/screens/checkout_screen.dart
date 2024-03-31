@@ -1,10 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
+import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_addresses.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_button.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
@@ -54,8 +57,12 @@ class CheckoutScreen extends StatelessWidget {
                     const CheckoutPaymentMethods(),
                     CheckoutTitle(
                       text: S.of(context).myAddressesTitle,
-                      onTap: () {},
-                      textButton: S.of(context).changeTitle,
+                      onTap: () => context.push(Routes.addAddress).then(
+                        (value) {
+                          context.read<CheckoutCubit>().emitAddressesState();
+                        },
+                      ),
+                      textButton: S.of(context).add,
                     ),
                     const CheckoutAddresses(),
                     CheckoutTitle(

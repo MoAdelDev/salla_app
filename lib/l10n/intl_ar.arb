@@ -103,5 +103,8 @@
   "all": "الكل",
   "searchTitle": "بحث",
   "enterProductName": "اكتب اسم المنتج",
-  "pleaseWaitToLoadProducts" : "من فضلك إنتظر لتحميل المنتجات"
+  "pleaseWaitToLoadProducts" : "من فضلك إنتظر لتحميل المنتجات",
+  "deleteTitle": "حذف",
+  "editTitle": "تعديل",
+  "add": "إضافة"
 }
