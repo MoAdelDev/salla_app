@@ -8,6 +8,7 @@ import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/profile/logic/cubit/settings_cubit.dart';
 import 'package:salla_app/features/profile/logic/cubit/settings_state.dart';
@@ -33,47 +34,50 @@ class ProfileScreen extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          return SingleChildScrollView(
-            padding: EdgeInsets.symmetric(
-              horizontal: 8.0.w,
-              vertical: 20.0.h,
-            ),
-            child: Column(
-              children: [
-                const ProfileUserDataAndButton(),
-                verticalSpace(10.0),
-                ProfileItem(
-                  title: S.of(context).myAddressesTitle,
-                  icon: Icons.location_on_outlined,
-                  onTap: () => context.push(Routes.addresses),
-                ),
-                ProfileItem(
-                  title: S.of(context).ordersTitle,
-                  icon: CupertinoIcons.cart,
-                  onTap: () => context.push(Routes.orders),
-                ),
-                ProfileItem(
-                  title: S.of(context).languageTitle,
-                  icon: CupertinoIcons.globe,
-                  subTitle: AppData.isArabic ? 'العربية' : 'English',
-                  onTap: () => context.push(Routes.language),
-                ),
-                ProfileItem(
-                  title: S.of(context).contactsTitle,
-                  icon: CupertinoIcons.phone,
-                  onTap: () {},
-                ),
-                state is LogoutLoading
-                    ? const Center(child: CustomLoadingIndicator())
-                    : ProfileItem(
-                        title: S.of(context).logoutTitle,
-                        icon: CupertinoIcons.power,
-                        onTap: () {
-                          context.read<SettingsCubit>().emitLogoutState();
-                        },
-                        color: Colors.red[700],
-                      ),
-              ],
+          return Scaffold(
+            backgroundColor: AppColor.lightGreyColor,
+            body: SingleChildScrollView(
+              padding: EdgeInsets.symmetric(
+                horizontal: 8.0.w,
+                vertical: 20.0.h,
+              ),
+              child: Column(
+                children: [
+                  const ProfileUserDataAndButton(),
+                  verticalSpace(10.0),
+                  ProfileItem(
+                    title: S.of(context).myAddressesTitle,
+                    icon: Icons.location_on_outlined,
+                    onTap: () => context.push(Routes.addresses),
+                  ),
+                  ProfileItem(
+                    title: S.of(context).ordersTitle,
+                    icon: CupertinoIcons.cart,
+                    onTap: () => context.push(Routes.orders),
+                  ),
+                  ProfileItem(
+                    title: S.of(context).languageTitle,
+                    icon: CupertinoIcons.globe,
+                    subTitle: AppData.isArabic ? 'العربية' : 'English',
+                    onTap: () => context.push(Routes.language),
+                  ),
+                  ProfileItem(
+                    title: S.of(context).contactsTitle,
+                    icon: CupertinoIcons.phone,
+                    onTap: () {},
+                  ),
+                  state is LogoutLoading
+                      ? const Center(child: CustomLoadingIndicator())
+                      : ProfileItem(
+                          title: S.of(context).logoutTitle,
+                          icon: CupertinoIcons.power,
+                          onTap: () {
+                            context.read<SettingsCubit>().emitLogoutState();
+                          },
+                          color: Colors.red[700],
+                        ),
+                ],
+              ),
             ),
           );
         },

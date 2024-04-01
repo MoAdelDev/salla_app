@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/style/colors.dart';
+import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -35,64 +37,70 @@ class _LanguageScreenState extends State<LanguageScreen> {
       Language(S.of(context).arabicTitle, "ar", "🇪🇬"),
     ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text(S.of(context).selectLanguageTitle),
-      ),
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: languages.length,
-              itemBuilder: (context, index) {
-                Language lang = languages[index];
-                bool isSelected = lang.code == selectedLanguage.code;
+      backgroundColor: AppColor.lightGreyColor,
+      body: SafeArea(
+        child: Column(
+          children: [
+            CustomAppBar(
+              title: S.of(context).languageTitle,
+              onTap1: () => context.pop(),
+              icon1: Icons.chevron_left,
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: languages.length,
+                itemBuilder: (context, index) {
+                  Language lang = languages[index];
+                  bool isSelected = lang.code == selectedLanguage.code;
 
-                return GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedLanguage = lang;
-                    });
-                  },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.easeInOut,
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: isSelected ? AppColor.primaryColor : Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: isSelected
-                            ? AppColor.primaryColor
-                            : Colors.grey.shade300,
-                        width: 2,
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedLanguage = lang;
+                      });
+                    },
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeInOut,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color:
+                            isSelected ? AppColor.primaryColor : Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: isSelected
+                              ? AppColor.primaryColor
+                              : Colors.grey.shade300,
+                          width: 2,
+                        ),
                       ),
-                    ),
-                    child: ListTile(
-                      leading:
-                          Text(lang.flag, style: const TextStyle(fontSize: 24)),
-                      title: Text(
-                        lang.name,
-                        style: TextStyle(
-                          color: isSelected ? Colors.white : Colors.black,
+                      child: ListTile(
+                        leading: Text(lang.flag,
+                            style: const TextStyle(fontSize: 24)),
+                        title: Text(
+                          lang.name,
+                          style: TextStyle(
+                            color: isSelected ? Colors.white : Colors.black,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 20.0.h,
-              horizontal: 10.0.w,
-            ),
-            child: CustomButton(
-              onPressed: () => saveLanguageAndGetTheNewData(),
-              text: S.of(context).saveTitle,
-            ),
-          )
-        ],
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 20.0.h,
+                horizontal: 10.0.w,
+              ),
+              child: CustomButton(
+                onPressed: () => saveLanguageAndGetTheNewData(),
+                text: S.of(context).saveTitle,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

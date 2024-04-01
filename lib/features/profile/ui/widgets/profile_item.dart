@@ -22,11 +22,11 @@ class ProfileItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainerTile(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 8.0.h),
-        child: GestureDetector(
-          onTap: onTap,
+    return GestureDetector(
+      onTap: onTap,
+      child: CustomContainerTile(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 8.0.h),
           child: Row(
             children: [
               Icon(

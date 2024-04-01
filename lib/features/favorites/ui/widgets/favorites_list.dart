@@ -31,17 +31,14 @@ class FavoritesList extends StatelessWidget {
             text: S.of(context).noProductsTitle,
           );
         }
-        return Container(
-          color: Colors.white,
-          child: ListView.separated(
-            itemCount: favorites.length,
-            separatorBuilder: (context, index) => verticalSpace(10.0),
-            itemBuilder: (context, index) {
-              return FavoriteTile(
-                favoriteModel: favorites[index],
-              );
-            },
-          ),
+        return ListView.separated(
+          itemCount: favorites.length,
+          separatorBuilder: (context, index) => verticalSpace(10.0),
+          itemBuilder: (context, index) {
+            return FavoriteTile(
+              favoriteModel: favorites[index],
+            );
+          },
         );
       },
     );

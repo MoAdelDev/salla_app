@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/features/add_or_edit_address/ui/widgets/add_address_app_bar.dart';
 import 'package:salla_app/features/add_or_edit_address/ui/widgets/add_address_form.dart';
 import 'package:salla_app/features/add_or_edit_address/ui/widgets/add_address_submit.dart';
@@ -13,6 +14,7 @@ class AddOrEditAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.lightGreyColor,
       body: SafeArea(
         child: Column(
           children: [

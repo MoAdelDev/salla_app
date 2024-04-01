@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/addresses/ui/widgets/add_new_address_button.dart';
 import 'package:salla_app/features/addresses/ui/widgets/addresses_list.dart';
@@ -12,6 +13,7 @@ class AddressesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.lightGreyColor,
       body: SafeArea(
         child: Column(
           children: [

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +17,7 @@ class AddNewAddressButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 10.0.w,
+        vertical: Platform.isAndroid ? 10.0.h : 0,
       ),
       child: CustomButton(
         onPressed: () => context.push(Routes.addAddress).then(

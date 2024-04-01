@@ -16,6 +16,8 @@ class AppColor {
   static const Color onErrorColor = Color(0xffFFFFFF);
 
   static Color greyColor = Colors.grey.shade400;
+
+  static Color lightGreyColor = Colors.grey.shade200;
 }
 
 class MaterialColorGenerator {
