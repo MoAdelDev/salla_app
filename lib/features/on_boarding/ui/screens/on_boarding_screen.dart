@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
@@ -47,10 +48,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomAppBar(
-                onTap1: () => context.pop(),
-                icon1: Icons.chevron_left,
                 onTap2: () => context.push(Routes.login),
-                icon2: Icons.skip_next,
+                icon2: AppData.isArabic ? Icons.skip_previous : Icons.skip_next,
               ),
               Expanded(
                 child: CarouselSlider.builder(
