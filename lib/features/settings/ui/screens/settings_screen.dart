@@ -25,7 +25,7 @@ class SettingsScreen extends StatelessWidget {
         listener: (context, state) {
           if (state is LogoutSuccess) {
             showToast(state.message);
-            context.pushAndRemoveUntil(Routes.intro);
+            context.pushAndRemoveUntil(Routes.onBoarding);
           }
           if (state is LogoutError) {
             showToast(state.message, isError: true);

@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lottie/lottie.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
@@ -35,9 +34,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       S.of(context).appDescription3,
     ];
     final List<String> images = [
-      'assets/lottie/on_boarding_1.json',
-      'assets/lottie/on_boarding_3.json',
-      'assets/lottie/on_boarding_2.json',
+      'assets/images/onboarding1.jpg',
+      'assets/images/onboarding2.jpg',
+      'assets/images/onboarding3.jpg',
     ];
     return Scaffold(
       backgroundColor: context.colorScheme.background,
@@ -57,24 +56,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: CarouselSlider.builder(
                   itemCount: titles.length,
                   itemBuilder: (context, index, realIndex) {
-                    return Column(children: [
-                      Lottie.asset(
-                        images[index],
-                        animate: true,
-                        height: 300.h,
-                        width: 300.w,
-                      ),
-                      verticalSpace(10.0),
-                      Text(
-                        titles[index],
-                        style: AppTexts.text22BlackLatoBold,
-                      ),
-                      verticalSpace(10.0),
-                      Text(
-                        subtitles[index],
-                        style: AppTexts.text22BlackLatoNormal,
-                      )
-                    ]);
+                    return Column(
+                      children: [
+                        Image.asset(
+                          images[index],
+                          height: 300.h,
+                          width: 300.w,
+                        ),
+                        verticalSpace(10.0),
+                        Text(
+                          titles[index],
+                          style: AppTexts.text22BlackLatoBold,
+                        ),
+                        verticalSpace(10.0),
+                        Text(
+                          subtitles[index],
+                          style: AppTexts.text22BlackLatoNormal,
+                        )
+                      ],
+                    );
                   },
                   carouselController: carouselController,
                   options: CarouselOptions(

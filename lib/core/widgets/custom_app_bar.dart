@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String? title;
@@ -36,7 +37,7 @@ class CustomAppBar extends StatelessWidget {
                 width: 41.0.w,
                 margin: const EdgeInsets.all(1),
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: context.colorScheme.primary,
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),
@@ -65,7 +66,7 @@ class CustomAppBar extends StatelessWidget {
                 width: 41.0.w,
                 margin: const EdgeInsets.all(1),
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: context.colorScheme.primary,
                   border: Border.all(color: Colors.grey[300]!),
                   borderRadius: BorderRadius.circular(10.0.r),
                 ),

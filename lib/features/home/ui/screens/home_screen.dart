@@ -39,7 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomHomeNavigation(
-                iconData: Icons.home_filled,
+                iconData:
+                    currentIndex == 0 ? Icons.home_filled : Icons.home_outlined,
                 label: S.of(context).homeTitle,
                 isSelected: currentIndex == 0,
                 onTap: () => setState(() {

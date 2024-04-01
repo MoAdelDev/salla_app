@@ -17,7 +17,6 @@ import 'package:salla_app/features/home/ui/screens/home_screen.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
-import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:salla_app/features/order_details/logic/cubit/order_details_cubit.dart';
 import 'package:salla_app/features/order_details/ui/screens/order_details_screen.dart';
@@ -34,10 +33,6 @@ import 'package:salla_app/features/settings/ui/screens/language_screen.dart';
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case Routes.intro:
-        return MaterialPageRoute(
-          builder: (context) => const IntroScreen(),
-        );
       case Routes.onBoarding:
         return MaterialPageRoute(
           builder: (context) => const OnBoardingScreen(),
