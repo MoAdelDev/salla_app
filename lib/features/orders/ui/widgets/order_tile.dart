@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
-import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
-import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_status.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_total_and_date.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class OrderTile extends StatelessWidget {
   final OrderModel order;
@@ -38,19 +35,23 @@ class OrderTile extends StatelessWidget {
               children: [
                 CustomContainerTile(
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      Icon(
+                        order.status == 'New' || order.status == 'جديد'
+                            ? Icons.pending_actions
+                            : Icons.cancel,
+                        color: order.status == 'New' || order.status == 'جديد'
+                            ? Colors.blue
+                            : Colors.red,
+                        size: 30,
+                      ),
+                      horizontalSpace(10.0),
                       Expanded(
                         child: OrderTotalAndDate(
                           order: order,
                         ),
                       ),
-                      if (order.status == 'New' || order.status == 'جديد')
-                        CustomTextButton(
-                          onPressed: () => cubit.emitCancelOrderState(order.id),
-                          text: S.of(context).cancelOrder,
-                          textStyle: AppTexts.text14WhiteLatoBold,
-                        ),
                     ],
                   ),
                 ),

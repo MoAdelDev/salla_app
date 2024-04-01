@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/screen_args.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_addresses.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_button.dart';
@@ -22,6 +23,7 @@ class CheckoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.lightGreyColor,
       body: SafeArea(
         bottom: Platform.isAndroid,
         child: Column(
@@ -55,6 +57,7 @@ class CheckoutScreen extends StatelessWidget {
             CheckoutConfirmOrderButton(
               totalPrice: args.totalPrice,
             ),
+            if (Platform.isIOS) verticalSpace(8.0),
           ],
         ),
       ),

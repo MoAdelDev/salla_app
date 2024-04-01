@@ -9,18 +9,15 @@ class CartList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: ListView.separated(
-        itemBuilder: (context, index) {
-          CartProductModel cartProduct = cartProducts[index];
-          return CartTile(
-            cartProduct: cartProduct,
-          );
-        },
-        separatorBuilder: (context, index) => verticalSpace(10.0),
-        itemCount: cartProducts.length,
-      ),
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        CartProductModel cartProduct = cartProducts[index];
+        return CartTile(
+          cartProduct: cartProduct,
+        );
+      },
+      separatorBuilder: (context, index) => verticalSpace(10.0),
+      itemCount: cartProducts.length,
     );
   }
 }

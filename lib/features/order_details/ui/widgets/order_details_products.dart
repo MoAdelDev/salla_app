@@ -19,7 +19,7 @@ class OrderDetailsProducts extends StatelessWidget {
         children: [
           Text(
             S.of(context).productsTitle,
-            style: AppTexts.text16WhiteLatoBold,
+            style: AppTexts.text16BlackLatoBold,
           ),
           verticalSpace(5.0),
           ListView.separated(

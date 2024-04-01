@@ -10,4 +10,7 @@ sealed class HomeState with _$HomeState {
   const factory HomeState.userSuccess({required UserModel userModel}) =
       UserSuccess;
   const factory HomeState.userError({required String message}) = UserError;
+
+  const factory HomeState.changeIndex({required int currentIndex}) =
+      ChangeIndex;
 }

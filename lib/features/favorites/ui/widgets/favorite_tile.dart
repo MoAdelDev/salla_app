@@ -6,9 +6,9 @@ import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
-import 'package:salla_app/features/favorites/ui/widgets/favorite_name.dart';
-import 'package:salla_app/features/favorites/ui/widgets/favorite_price.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_remove.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_price.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_title.dart';
 
 class FavoriteTile extends StatelessWidget {
   final FavoriteModel favoriteModel;
@@ -24,35 +24,35 @@ class FavoriteTile extends StatelessWidget {
             productId: favoriteModel.product.id,
           ),
         ),
-        child: Column(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CustomImageAndDiscount(
-                  image: favoriteModel.product.image,
-                  discount: favoriteModel.product.discount,
-                ),
-                horizontalSpace(5.0),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        FavoriteName(name: favoriteModel.product.name),
-                        verticalSpace(8.0),
-                        FavoritePrice(product: favoriteModel.product)
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+            CustomImageAndDiscount(
+              image: favoriteModel.product.image,
+              discount: favoriteModel.product.discount,
             ),
-            Align(
-              alignment: AlignmentDirectional.centerEnd,
-              child: FavoriteRemove(favoriteModel: favoriteModel),
-            )
+            horizontalSpace(5.0),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ProductTitle(title: favoriteModel.product.name),
+                  verticalSpace(8.0),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ProductPrice(
+                          discount: favoriteModel.product.discount,
+                          oldPrice: favoriteModel.product.price,
+                          price: favoriteModel.product.oldPrice,
+                        ),
+                      ),
+                      FavoriteRemove(favoriteModel: favoriteModel),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

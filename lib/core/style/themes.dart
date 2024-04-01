@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'colors.dart';
 
 ThemeData lightTheme(context) => ThemeData(
@@ -36,5 +37,6 @@ ThemeData lightTheme(context) => ThemeData(
         ),
         titleSpacing: 10.0,
       ),
+      scaffoldBackgroundColor: AppColor.lightGreyColor,
       useMaterial3: true,
     );

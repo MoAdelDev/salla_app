@@ -7,11 +7,11 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_state.dart';
 import 'package:salla_app/features/addresses/ui/widgets/address_tile.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class AddressesList extends StatelessWidget {
@@ -23,7 +23,12 @@ class AddressesList extends StatelessWidget {
       builder: (context, state) {
         AddressesCubit cubit = context.read<AddressesCubit>();
         if (cubit.addresses == null) {
-          return const CustomShimmerList();
+          return ListView.separated(
+            itemBuilder: (context, index) => const ProductShimmer(),
+            separatorBuilder: (context, index) => verticalSpace(10.0),
+            itemCount: 30,
+            physics: const NeverScrollableScrollPhysics(),
+          );
         }
         if (cubit.addresses!.isEmpty) {
           return Center(

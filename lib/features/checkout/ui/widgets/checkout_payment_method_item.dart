@@ -29,13 +29,12 @@ class CheckoutPaymentMethodItem extends StatelessWidget {
           value: radioValue,
           groupValue: radioSelected,
           onChanged: onChanged,
-          activeColor: AppColor.onPrimaryColor,
-          fillColor: MaterialStateProperty.all(AppColor.onPrimaryColor),
+          fillColor: MaterialStateProperty.all(AppColor.primaryColor),
         ),
         Icon(
           icon,
           size: 35,
-          color: AppColor.onPrimaryColor,
+          color: AppColor.onSurfaceColor,
         ),
         horizontalSpace(10.0),
         Expanded(
@@ -44,11 +43,11 @@ class CheckoutPaymentMethodItem extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text14BlackCairoBold,
               ),
               Text(
                 subtitle,
-                style: AppTexts.text14WhiteLatoRegular,
+                style: AppTexts.text12BlackLatoRegular,
               ),
             ],
           ),

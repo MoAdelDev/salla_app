@@ -5,10 +5,9 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
+import 'package:salla_app/features/home_body/ui/widgets/category_shimmer.dart';
 import 'package:salla_app/features/home_body/ui/widgets/category_tile.dart';
 import 'package:salla_app/generated/l10n.dart';
-
-import '../../../../core/widgets/custom_shimmer.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({super.key});
@@ -22,6 +21,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.grey[200],
       padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
         builder: (context, state) {
@@ -32,13 +32,12 @@ class _HomeCategoriesState extends State<HomeCategories> {
               itemBuilder: (contex, index) => SizedBox(
                 height: 20.0.h,
                 width: 80.0.h,
-                child: const CustomShimmer(),
+                child: const CategoryShimmer(),
               ),
               separatorBuilder: (context, index) => horizontalSpace(10.0),
-              itemCount: 10,
+              itemCount: 6,
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
             );
           }
           return SizedBox(

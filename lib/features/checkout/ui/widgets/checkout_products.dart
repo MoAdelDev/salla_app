@@ -29,7 +29,7 @@ class CheckoutProducts extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).productsTitle,
-                    style: AppTexts.text16WhiteLatoBold,
+                    style: AppTexts.text16BlackCairoBold,
                   ),
                 ],
               ),

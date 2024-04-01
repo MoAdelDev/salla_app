@@ -17,7 +17,6 @@ import 'package:salla_app/features/home/ui/screens/home_screen.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/ui/screens/login_screen.dart';
-import 'package:salla_app/features/on_boarding/ui/screens/intro_screen.dart';
 import 'package:salla_app/features/on_boarding/ui/screens/on_boarding_screen.dart';
 import 'package:salla_app/features/order_details/logic/cubit/order_details_cubit.dart';
 import 'package:salla_app/features/order_details/ui/screens/order_details_screen.dart';
@@ -25,19 +24,15 @@ import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/screens/orders_screen.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/ui/screens/product_details_screen.dart';
+import 'package:salla_app/features/profile/ui/screens/language_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 import 'package:salla_app/features/search/ui/screens/search_screen.dart';
-import 'package:salla_app/features/settings/ui/screens/language_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case Routes.intro:
-        return MaterialPageRoute(
-          builder: (context) => const IntroScreen(),
-        );
       case Routes.onBoarding:
         return MaterialPageRoute(
           builder: (context) => const OnBoardingScreen(),

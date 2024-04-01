@@ -29,9 +29,9 @@ import 'package:salla_app/features/orders/data/models/orders_response_body.dart'
 import 'package:salla_app/features/product_details/data/models/add_to_cart_request.dart';
 import 'package:salla_app/features/product_details/data/models/add_to_cart_response.dart';
 import 'package:salla_app/features/product_details/data/models/product_details_response.dart';
+import 'package:salla_app/features/profile/data/models/logout_response_body.dart';
 import 'package:salla_app/features/register/data/models/register_body_request.dart';
 import 'package:salla_app/features/register/data/models/register_body_response.dart';
-import 'package:salla_app/features/settings/data/models/logout_response_body.dart';
 
 import '../../features/home/data/models/user_response_body.dart';
 

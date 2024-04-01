@@ -11,25 +11,28 @@ class OrderDetailsAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainerTile(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            S.of(context).shippingAddressTitle,
-            style: AppTexts.text16WhiteLatoBold,
-          ),
-          verticalSpace(5.0),
-          Text(
-            order.address.name,
-            style: AppTexts.text14WhiteLatoRegular,
-          ),
-          verticalSpace(5.0),
-          Text(
-            '${order.address.city}, ${order.address.region}\n${order.address.details}',
-            style: AppTexts.text14WhiteLatoRegular,
-          ),
-        ],
+    return SizedBox(
+      width: double.infinity,
+      child: CustomContainerTile(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              S.of(context).shippingAddressTitle,
+              style: AppTexts.text16BlackLatoBold,
+            ),
+            verticalSpace(5.0),
+            Text(
+              order.address.name,
+              style: AppTexts.text14BlackLatoRegular,
+            ),
+            verticalSpace(5.0),
+            Text(
+              '${order.address.city}, ${order.address.region}\n${order.address.details}',
+              style: AppTexts.text14BlackLatoRegular,
+            ),
+          ],
+        ),
       ),
     );
   }

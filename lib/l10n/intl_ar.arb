@@ -22,7 +22,7 @@
   "phoneHintTitle": "أدخل رقم الهاتف",
   "registerSuccessMsg": "تم طلب تسجيل الحساب بنجاح",
   "loginSuccessMsg": "تم تسجيل الدخول بنجاح",
-  "homeTitle" : "الصفحة الرئيسية",
+  "homeTitle" : "الرئيسية",
   "categoriesTitle": "التصنيفات",
   "cartTitle": "السلة",
   "settingsTitle": "الإعدادات",
@@ -35,7 +35,7 @@
   "loadingDataErrorTitle": "فشل في تحميل البيانات. حاول مرة أخرى",
   "addToCartTitle": "أضف الى السلة",
   "removeFromCartTitle": "إزالة من السلة",
-  "noProductsTitle": "لا توجد منتجات حتى الآن",
+  "noProductsTitle": "لم تقم بإضافة أي منتجات بعد",
   "removeTitle": "إزالة",
   "checkoutTitle": "الدفع",
   "onBoardingTitle": "تسوق المنتجات",
@@ -108,5 +108,6 @@
   "editTitle": "تعديل",
   "add": "إضافة",
   "noOrders": "لا يوجد طلبات",
-  "tax" : "ضريبة"
+  "tax" : "ضريبة",
+  "profile":"الحساب"
 }

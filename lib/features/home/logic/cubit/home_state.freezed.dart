@@ -22,6 +22,7 @@ mixin _$HomeState {
     required TResult Function() userLoading,
     required TResult Function(UserModel userModel) userSuccess,
     required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeState {
     TResult? Function()? userLoading,
     TResult? Function(UserModel userModel)? userSuccess,
     TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$HomeState {
     TResult Function()? userLoading,
     TResult Function(UserModel userModel)? userSuccess,
     TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$HomeState {
     required TResult Function(UserLoading value) userLoading,
     required TResult Function(UserSuccess value) userSuccess,
     required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$HomeState {
     TResult? Function(UserLoading value)? userLoading,
     TResult? Function(UserSuccess value)? userSuccess,
     TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$HomeState {
     TResult Function(UserLoading value)? userLoading,
     TResult Function(UserSuccess value)? userSuccess,
     TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() userLoading,
     required TResult Function(UserModel userModel) userSuccess,
     required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
   }) {
     return initial();
   }
@@ -138,6 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? userLoading,
     TResult? Function(UserModel userModel)? userSuccess,
     TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
   }) {
     return initial?.call();
   }
@@ -149,6 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? userLoading,
     TResult Function(UserModel userModel)? userSuccess,
     TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -164,6 +173,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UserLoading value) userLoading,
     required TResult Function(UserSuccess value) userSuccess,
     required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
   }) {
     return initial(this);
   }
@@ -175,6 +185,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UserLoading value)? userLoading,
     TResult? Function(UserSuccess value)? userSuccess,
     TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
   }) {
     return initial?.call(this);
   }
@@ -186,6 +197,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(UserLoading value)? userLoading,
     TResult Function(UserSuccess value)? userSuccess,
     TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,6 +253,7 @@ class _$UserLoadingImpl implements UserLoading {
     required TResult Function() userLoading,
     required TResult Function(UserModel userModel) userSuccess,
     required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
   }) {
     return userLoading();
   }
@@ -252,6 +265,7 @@ class _$UserLoadingImpl implements UserLoading {
     TResult? Function()? userLoading,
     TResult? Function(UserModel userModel)? userSuccess,
     TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
   }) {
     return userLoading?.call();
   }
@@ -263,6 +277,7 @@ class _$UserLoadingImpl implements UserLoading {
     TResult Function()? userLoading,
     TResult Function(UserModel userModel)? userSuccess,
     TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
     required TResult orElse(),
   }) {
     if (userLoading != null) {
@@ -278,6 +293,7 @@ class _$UserLoadingImpl implements UserLoading {
     required TResult Function(UserLoading value) userLoading,
     required TResult Function(UserSuccess value) userSuccess,
     required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
   }) {
     return userLoading(this);
   }
@@ -289,6 +305,7 @@ class _$UserLoadingImpl implements UserLoading {
     TResult? Function(UserLoading value)? userLoading,
     TResult? Function(UserSuccess value)? userSuccess,
     TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
   }) {
     return userLoading?.call(this);
   }
@@ -300,6 +317,7 @@ class _$UserLoadingImpl implements UserLoading {
     TResult Function(UserLoading value)? userLoading,
     TResult Function(UserSuccess value)? userSuccess,
     TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
     required TResult orElse(),
   }) {
     if (userLoading != null) {
@@ -382,6 +400,7 @@ class _$UserSuccessImpl implements UserSuccess {
     required TResult Function() userLoading,
     required TResult Function(UserModel userModel) userSuccess,
     required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
   }) {
     return userSuccess(userModel);
   }
@@ -393,6 +412,7 @@ class _$UserSuccessImpl implements UserSuccess {
     TResult? Function()? userLoading,
     TResult? Function(UserModel userModel)? userSuccess,
     TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
   }) {
     return userSuccess?.call(userModel);
   }
@@ -404,6 +424,7 @@ class _$UserSuccessImpl implements UserSuccess {
     TResult Function()? userLoading,
     TResult Function(UserModel userModel)? userSuccess,
     TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
     required TResult orElse(),
   }) {
     if (userSuccess != null) {
@@ -419,6 +440,7 @@ class _$UserSuccessImpl implements UserSuccess {
     required TResult Function(UserLoading value) userLoading,
     required TResult Function(UserSuccess value) userSuccess,
     required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
   }) {
     return userSuccess(this);
   }
@@ -430,6 +452,7 @@ class _$UserSuccessImpl implements UserSuccess {
     TResult? Function(UserLoading value)? userLoading,
     TResult? Function(UserSuccess value)? userSuccess,
     TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
   }) {
     return userSuccess?.call(this);
   }
@@ -441,6 +464,7 @@ class _$UserSuccessImpl implements UserSuccess {
     TResult Function(UserLoading value)? userLoading,
     TResult Function(UserSuccess value)? userSuccess,
     TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
     required TResult orElse(),
   }) {
     if (userSuccess != null) {
@@ -528,6 +552,7 @@ class _$UserErrorImpl implements UserError {
     required TResult Function() userLoading,
     required TResult Function(UserModel userModel) userSuccess,
     required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
   }) {
     return userError(message);
   }
@@ -539,6 +564,7 @@ class _$UserErrorImpl implements UserError {
     TResult? Function()? userLoading,
     TResult? Function(UserModel userModel)? userSuccess,
     TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
   }) {
     return userError?.call(message);
   }
@@ -550,6 +576,7 @@ class _$UserErrorImpl implements UserError {
     TResult Function()? userLoading,
     TResult Function(UserModel userModel)? userSuccess,
     TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
     required TResult orElse(),
   }) {
     if (userError != null) {
@@ -565,6 +592,7 @@ class _$UserErrorImpl implements UserError {
     required TResult Function(UserLoading value) userLoading,
     required TResult Function(UserSuccess value) userSuccess,
     required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
   }) {
     return userError(this);
   }
@@ -576,6 +604,7 @@ class _$UserErrorImpl implements UserError {
     TResult? Function(UserLoading value)? userLoading,
     TResult? Function(UserSuccess value)? userSuccess,
     TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
   }) {
     return userError?.call(this);
   }
@@ -587,6 +616,7 @@ class _$UserErrorImpl implements UserError {
     TResult Function(UserLoading value)? userLoading,
     TResult Function(UserSuccess value)? userSuccess,
     TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
     required TResult orElse(),
   }) {
     if (userError != null) {
@@ -602,5 +632,158 @@ abstract class UserError implements HomeState {
   String get message;
   @JsonKey(ignore: true)
   _$$UserErrorImplCopyWith<_$UserErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeIndexImplCopyWith<$Res> {
+  factory _$$ChangeIndexImplCopyWith(
+          _$ChangeIndexImpl value, $Res Function(_$ChangeIndexImpl) then) =
+      __$$ChangeIndexImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int currentIndex});
+}
+
+/// @nodoc
+class __$$ChangeIndexImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$ChangeIndexImpl>
+    implements _$$ChangeIndexImplCopyWith<$Res> {
+  __$$ChangeIndexImplCopyWithImpl(
+      _$ChangeIndexImpl _value, $Res Function(_$ChangeIndexImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currentIndex = null,
+  }) {
+    return _then(_$ChangeIndexImpl(
+      currentIndex: null == currentIndex
+          ? _value.currentIndex
+          : currentIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeIndexImpl implements ChangeIndex {
+  const _$ChangeIndexImpl({required this.currentIndex});
+
+  @override
+  final int currentIndex;
+
+  @override
+  String toString() {
+    return 'HomeState.changeIndex(currentIndex: $currentIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeIndexImpl &&
+            (identical(other.currentIndex, currentIndex) ||
+                other.currentIndex == currentIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, currentIndex);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeIndexImplCopyWith<_$ChangeIndexImpl> get copyWith =>
+      __$$ChangeIndexImplCopyWithImpl<_$ChangeIndexImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() userLoading,
+    required TResult Function(UserModel userModel) userSuccess,
+    required TResult Function(String message) userError,
+    required TResult Function(int currentIndex) changeIndex,
+  }) {
+    return changeIndex(currentIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? userLoading,
+    TResult? Function(UserModel userModel)? userSuccess,
+    TResult? Function(String message)? userError,
+    TResult? Function(int currentIndex)? changeIndex,
+  }) {
+    return changeIndex?.call(currentIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? userLoading,
+    TResult Function(UserModel userModel)? userSuccess,
+    TResult Function(String message)? userError,
+    TResult Function(int currentIndex)? changeIndex,
+    required TResult orElse(),
+  }) {
+    if (changeIndex != null) {
+      return changeIndex(currentIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UserLoading value) userLoading,
+    required TResult Function(UserSuccess value) userSuccess,
+    required TResult Function(UserError value) userError,
+    required TResult Function(ChangeIndex value) changeIndex,
+  }) {
+    return changeIndex(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UserLoading value)? userLoading,
+    TResult? Function(UserSuccess value)? userSuccess,
+    TResult? Function(UserError value)? userError,
+    TResult? Function(ChangeIndex value)? changeIndex,
+  }) {
+    return changeIndex?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UserLoading value)? userLoading,
+    TResult Function(UserSuccess value)? userSuccess,
+    TResult Function(UserError value)? userError,
+    TResult Function(ChangeIndex value)? changeIndex,
+    required TResult orElse(),
+  }) {
+    if (changeIndex != null) {
+      return changeIndex(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeIndex implements HomeState {
+  const factory ChangeIndex({required final int currentIndex}) =
+      _$ChangeIndexImpl;
+
+  int get currentIndex;
+  @JsonKey(ignore: true)
+  _$$ChangeIndexImplCopyWith<_$ChangeIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

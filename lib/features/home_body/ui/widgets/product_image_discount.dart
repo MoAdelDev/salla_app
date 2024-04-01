@@ -11,28 +11,32 @@ class ProductImageDiscount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.0.w),
-      child: Stack(
-        alignment: AlignmentDirectional.bottomStart,
-        children: [
-          CachedNetworkImage(
-            imageUrl: productModel.image,
-            placeholder: (context, url) => const CustomShimmer(),
-            errorWidget: (context, url, error) => const CustomShimmer(),
-            imageBuilder: (context, imageProvider) => Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: imageProvider,
-                  onError: (exception, stackTrace) => const CustomShimmer(),
-                ),
+    return Stack(
+      alignment: AlignmentDirectional.bottomStart,
+      children: [
+        CachedNetworkImage(
+          imageUrl: productModel.image,
+          width: 80.0.w,
+          height: 80.0.h,
+          placeholder: (context, url) => const CustomShimmer(),
+          errorWidget: (context, url, error) => const CustomShimmer(),
+          imageBuilder: (context, imageProvider) => Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: imageProvider,
+                onError: (exception, stackTrace) => const CustomShimmer(),
               ),
             ),
           ),
-          if (productModel.discount != 0)
-            CustomDiscountContainer(discount: productModel.discount),
-        ],
-      ),
+        ),
+        if (productModel.discount != 0)
+          SizedBox(
+            width: 80.0.w,
+            child: CustomDiscountContainer(
+              discount: productModel.discount,
+            ),
+          ),
+      ],
     );
   }
 }

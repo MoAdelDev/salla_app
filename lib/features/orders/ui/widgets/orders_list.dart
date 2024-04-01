@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
 import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_tile.dart';
@@ -17,7 +17,12 @@ class OrdersList extends StatelessWidget {
       builder: (context, state) {
         OrdersCubit cubit = context.read<OrdersCubit>();
         if (cubit.orders == null) {
-          return const CustomShimmerList();
+          return ListView.separated(
+            itemBuilder: (context, index) => const ProductShimmer(),
+            separatorBuilder: (context, index) => verticalSpace(10.0),
+            itemCount: 30,
+            physics: const NeverScrollableScrollPhysics(),
+          );
         }
         if (cubit.orders!.isEmpty) {
           return Center(

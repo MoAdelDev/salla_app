@@ -17,30 +17,33 @@ class OrderDetailsInfo extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        CustomContainerTile(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '${S.of(context).orderTitle} #${order.id}',
-                style: AppTexts.text16WhiteLatoBold,
-              ),
-              verticalSpace(5.0),
-              Text(
-                '${S.of(context).placedOnTitle}: ${order.date}',
-                style: AppTexts.text14WhiteLatoRegular,
-              ),
-              verticalSpace(5.0),
-              Text(
-                '${S.of(context).nOfItemsTitle}: ${order.products.map((e) => e.quantity).reduce((value, element) => value + element)}',
-                style: AppTexts.text14WhiteLatoRegular,
-              ),
-              verticalSpace(5.0),
-              Text(
-                '${S.of(context).totalTitle}: ${double.parse(order.total.toString()).toStringAsFixed(2)} EGP',
-                style: AppTexts.text14WhiteLatoRegular,
-              ),
-            ],
+        SizedBox(
+          width: double.infinity,
+          child: CustomContainerTile(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '${S.of(context).orderTitle} #${order.id}',
+                  style: AppTexts.text16BlackLatoBold,
+                ),
+                verticalSpace(5.0),
+                Text(
+                  '${S.of(context).placedOnTitle}: ${order.date}',
+                  style: AppTexts.text14BlackLatoRegular,
+                ),
+                verticalSpace(5.0),
+                Text(
+                  '${S.of(context).nOfItemsTitle}: ${order.products.map((e) => e.quantity).reduce((value, element) => value + element)}',
+                  style: AppTexts.text14BlackLatoRegular,
+                ),
+                verticalSpace(5.0),
+                Text(
+                  '${S.of(context).totalTitle}: ${double.parse(order.total.toString()).toStringAsFixed(2)} EGP',
+                  style: AppTexts.text14BlackLatoRegular,
+                ),
+              ],
+            ),
           ),
         ),
         Positioned(

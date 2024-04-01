@@ -17,37 +17,37 @@ class OrderDetailsPayment extends StatelessWidget {
         children: [
           Text(
             S.of(context).paymentTitle,
-            style: AppTexts.text16WhiteLatoBold,
+            style: AppTexts.text16BlackLatoBold,
           ),
           verticalSpace(5.0),
           Text(
             '${S.of(context).paymentMethodTitle}: ${order.paymentMethod}',
-            style: AppTexts.text14WhiteLatoRegular,
+            style: AppTexts.text14BlackLatoRegular,
           ),
           verticalSpace(3.0),
           const Divider(
-            color: Colors.white,
+            color: Colors.grey,
             thickness: 0.5,
           ),
           verticalSpace(5.0),
           Text(
             '${S.of(context).itemTotalTitle}: ${order.cost.toStringAsFixed(2)} EGP',
-            style: AppTexts.text14WhiteLatoRegular,
+            style: AppTexts.text14BlackLatoRegular,
           ),
           verticalSpace(5.0),
           Text(
             '${S.of(context).tax}: ${order.tax.toStringAsFixed(2)} EGP',
-            style: AppTexts.text14WhiteLatoRegular,
+            style: AppTexts.text14BlackLatoRegular,
           ),
           verticalSpace(5.0),
           Text(
             '${S.of(context).deliveryFeesTitle}: Free',
-            style: AppTexts.text14WhiteLatoRegular,
+            style: AppTexts.text14BlackLatoRegular,
           ),
           verticalSpace(5.0),
           Text(
             '${S.of(context).totalTitle}: ${order.total.toStringAsFixed(2)} EGP',
-            style: AppTexts.text14WhiteLatoRegular,
+            style: AppTexts.text14BlackLatoRegular,
           ),
         ],
       ),

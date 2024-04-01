@@ -21,7 +21,7 @@ class CustomHomeNavigation extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 800),
+        duration: const Duration(milliseconds: 1600),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -40,14 +40,16 @@ class CustomHomeNavigation extends StatelessWidget {
               ),
               child: Icon(
                 iconData,
-                color: isSelected ? Colors.white : Colors.black,
+                color: isSelected ? Colors.white : Colors.grey,
+                size: 25.0,
               ),
             ),
-            if (isSelected)
-              Text(
-                label,
-                style: AppTexts.text14BlackLatoBold,
-              ),
+            Text(
+              label,
+              style: isSelected
+                  ? AppTexts.text14BlueCairoBold
+                  : AppTexts.text14GreyCairoExtraBold,
+            ),
           ],
         ),
       ),

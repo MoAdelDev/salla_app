@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
-import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CartRemove extends StatelessWidget {
   final CartProductModel cartProduct;
@@ -19,8 +17,8 @@ class CartRemove extends StatelessWidget {
         if (context.read<CartCubit>().isCartUpdateLoading) {
           return const CustomLoadingIndicator();
         }
-        return CustomTextButton(
-          onPressed: () => context.read<CartCubit>().emitDeleteCartState(
+        return GestureDetector(
+          onTap: () => context.read<CartCubit>().emitDeleteCartState(
                 cartId: cartProduct.id,
                 price: -cartProduct.product.price *
                         context
@@ -28,8 +26,11 @@ class CartRemove extends StatelessWidget {
                             .cartQuantities[cartProduct.id] +
                     0.0,
               ),
-          text: S.of(context).removeTitle,
-          textStyle: AppTexts.text16WhiteLatoBold,
+          child: Icon(
+            Icons.delete,
+            size: 25.0,
+            color: context.colorScheme.primary,
+          ),
         );
       },
     );

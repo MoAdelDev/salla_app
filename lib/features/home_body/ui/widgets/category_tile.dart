@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 
@@ -15,18 +16,17 @@ class CategoryTile extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(24.0),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 800),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
           border: Border.all(
-            color: !isSelected ? Colors.grey : Colors.black,
+            color: isSelected ? Colors.black : Colors.grey[300]!,
             width: 1.0,
           ),
-          color: isSelected ? Colors.black : null,
+          color: isSelected ? context.colorScheme.primary : Colors.white,
         ),
         padding: EdgeInsets.symmetric(horizontal: 16.0.w),
         child: Center(

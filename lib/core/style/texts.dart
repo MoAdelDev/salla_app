@@ -23,6 +23,12 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text14BlueCairoBold => GoogleFonts.cairo(
+        fontSize: 14.0.sp,
+        color: AppColor.primaryColor,
+        fontWeight: AppFontWeight.extraBold,
+      );
+
   static TextStyle get text20WhiteLatoBold => GoogleFonts.lato(
         fontSize: 20.0.sp,
         color: Colors.white,
@@ -35,7 +41,13 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
-  static TextStyle get text14BlackLatoBold => GoogleFonts.lato(
+  static TextStyle get text14GreyCairoExtraBold => GoogleFonts.cairo(
+        fontSize: 14.0.sp,
+        color: Colors.grey,
+        fontWeight: AppFontWeight.extraBold,
+      );
+
+  static TextStyle get text14BlackCairoBold => GoogleFonts.cairo(
         fontSize: 14.0.sp,
         color: Colors.black,
         fontWeight: AppFontWeight.bold,
@@ -47,6 +59,18 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text16BlackCairoBold => GoogleFonts.cairo(
+        fontSize: 16.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.bold,
+      );
+
+  static TextStyle get text16BlackCairoRegular => GoogleFonts.cairo(
+        fontSize: 16.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.regular,
+      );
+
   static TextStyle get text18BlackLatoBold => GoogleFonts.lato(
         fontSize: 18.0.sp,
         color: Colors.black,
@@ -55,6 +79,12 @@ class AppTexts {
 
   static TextStyle get text14BlackLatoRegular => GoogleFonts.lato(
         fontSize: 14.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.regular,
+      );
+
+  static TextStyle get text12BlackLatoRegular => GoogleFonts.lato(
+        fontSize: 12.0.sp,
         color: Colors.black,
         fontWeight: AppFontWeight.regular,
       );

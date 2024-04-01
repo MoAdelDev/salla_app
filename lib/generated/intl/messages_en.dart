@@ -114,8 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("No Addresses yet"),
         "noOrders": MessageLookupByLibrary.simpleMessage("No Orders yet"),
-        "noProductsTitle":
-            MessageLookupByLibrary.simpleMessage("No Products yet"),
+        "noProductsTitle": MessageLookupByLibrary.simpleMessage(
+            "You haven\'t added any\nproducts yet"),
         "noteHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your notes"),
         "noteTitle": MessageLookupByLibrary.simpleMessage("Notes"),
@@ -148,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "Please wait to load products"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("Products"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("Quantity"),
         "regionHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your region"),
@@ -176,7 +177,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("Total"),
         "updateProfileTitle":
-            MessageLookupByLibrary.simpleMessage("Update profile"),
+            MessageLookupByLibrary.simpleMessage("Update Profile"),
         "welcomeMessage":
             MessageLookupByLibrary.simpleMessage("Let\'s get shopping"),
         "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome")

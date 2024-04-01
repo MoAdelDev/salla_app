@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_method_item.dart';
 import 'package:salla_app/generated/l10n.dart';
 
@@ -16,13 +16,13 @@ class CheckoutPaymentMethods extends StatelessWidget {
     return BlocBuilder<CheckoutCubit, CheckoutState>(
       builder: (context, state) {
         CheckoutCubit cubit = context.read<CheckoutCubit>();
-        return CheckoutCart(
+        return CustomContainerTile(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 S.of(context).paymentMethodTitle,
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackCairoBold,
               ),
               verticalSpace(5.0),
               CheckoutPaymentMethodItem(

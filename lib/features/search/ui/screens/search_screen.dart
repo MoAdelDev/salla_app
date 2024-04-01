@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
@@ -18,7 +19,7 @@ class SearchScreen extends StatelessWidget {
       builder: (context, state) {
         SearchCubit cubit = context.read<SearchCubit>();
         return Scaffold(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.lightGreyColor,
           appBar: AppBar(
             title: Text(S.of(context).searchTitle),
           ),
