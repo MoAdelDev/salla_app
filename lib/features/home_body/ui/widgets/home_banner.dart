@@ -13,22 +13,23 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-      child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
-        builder: (context, state) {
-          List<BannerModel> banners = context.read<HomeBodyCubit>().banners;
-          if (banners.isEmpty) {
-            return Container(
-              height: 200.0.h,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.0.r),
-              ),
-              child: const CustomShimmer(),
-            );
-          }
-          return CarouselSlider.builder(
+    return BlocBuilder<HomeBodyCubit, HomeBodyState>(
+      builder: (context, state) {
+        List<BannerModel> banners = context.read<HomeBodyCubit>().banners;
+        if (banners.isEmpty) {
+          return Container(
+            height: 200.0.h,
+            margin: EdgeInsets.only(bottom: 20.0.h),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.0.r),
+            ),
+            child: const CustomShimmer(),
+          );
+        }
+        return Padding(
+          padding: EdgeInsets.only(bottom: 10.0.h),
+          child: CarouselSlider.builder(
             itemCount: banners.length,
             itemBuilder: (context, index, realIndex) => CachedNetworkImage(
               imageUrl: banners[index].image,
@@ -55,7 +56,7 @@ class HomeBanner extends StatelessWidget {
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
-              viewportFraction: 1.0,
+              viewportFraction: 0.75,
               onPageChanged: (index, reason) {},
               scrollDirection: Axis.horizontal,
               pauseAutoPlayOnTouch: true,
@@ -64,9 +65,9 @@ class HomeBanner extends StatelessWidget {
               autoPlayInterval: const Duration(seconds: 7),
               pauseAutoPlayInFiniteScroll: true,
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

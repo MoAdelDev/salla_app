@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 
 class CustomContainerTile extends StatelessWidget {
   final Widget child;
@@ -8,30 +9,18 @@ class CustomContainerTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
       margin: EdgeInsets.symmetric(
         horizontal: 12.w,
         vertical: 6.h,
       ),
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            Colors.black87,
-            Colors.black12,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: context.colorScheme.surface,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-            blurRadius: 6,
-            offset: const Offset(0, 3),
-          ),
-        ],
+        border: Border.all(
+          color: Colors.grey[300]!,
+          width: 1.0,
+        ),
       ),
       child: child,
     );

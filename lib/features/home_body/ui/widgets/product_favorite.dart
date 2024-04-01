@@ -11,14 +11,14 @@ class ProductFavorite extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
       builder: (context, state) {
-        return IconButton(
-          onPressed: () {
+        return GestureDetector(
+          onTap: () {
             context.read<HomeBodyCubit>().emitChangeFavoriteState(
                   productId: productId,
                   context: context,
                 );
           },
-          icon: Icon(
+          child: Icon(
             context.read<HomeBodyCubit>().favorites[productId] ?? false
                 ? Icons.favorite
                 : Icons.favorite_border,
