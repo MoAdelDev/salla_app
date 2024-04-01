@@ -8,7 +8,6 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
-import 'package:salla_app/core/widgets/custom_text_button.dart';
 import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_status.dart';
@@ -46,10 +45,12 @@ class OrderTile extends StatelessWidget {
                         ),
                       ),
                       if (order.status == 'New' || order.status == 'جديد')
-                        CustomTextButton(
-                          onPressed: () => cubit.emitCancelOrderState(order.id),
-                          text: S.of(context).cancelOrder,
-                          textStyle: AppTexts.text14WhiteLatoBold,
+                        GestureDetector(
+                          onTap: () => cubit.emitCancelOrderState(order.id),
+                          child: Text(
+                            S.of(context).cancelOrder,
+                            style: AppTexts.text14BlackCairoBold,
+                          ),
                         ),
                     ],
                   ),

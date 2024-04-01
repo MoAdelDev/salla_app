@@ -24,11 +24,11 @@ import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/screens/orders_screen.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/ui/screens/product_details_screen.dart';
+import 'package:salla_app/features/profile/ui/screens/language_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
 import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 import 'package:salla_app/features/search/ui/screens/search_screen.dart';
-import 'package:salla_app/features/settings/ui/screens/language_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {

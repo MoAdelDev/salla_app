@@ -14,12 +14,12 @@ class OrderTotalAndDate extends StatelessWidget {
       children: [
         Text(
           '${double.parse(order.total.toString()).toStringAsFixed(2)} EGP',
-          style: AppTexts.text16WhiteLatoBold,
+          style: AppTexts.text16BlackLatoBold,
         ),
         verticalSpace(5.0),
         Text(
           order.date,
-          style: AppTexts.text16WhiteLatoBold,
+          style: AppTexts.text16BlackLatoBold,
         ),
       ],
     );

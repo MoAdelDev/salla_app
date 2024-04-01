@@ -36,7 +36,7 @@ class CheckoutApplyPromoCode extends StatelessWidget {
             }
           },
           text: 'Apply',
-          textStyle: AppTexts.text16WhiteLatoBold,
+          textStyle: AppTexts.text14BlueCairoBold,
         );
       },
     );

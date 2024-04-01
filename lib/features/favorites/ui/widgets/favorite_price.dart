@@ -20,7 +20,7 @@ class FavoritePrice extends StatelessWidget {
         if (product.discount != 0)
           Text(
             'EGP ${product.oldPrice}',
-            style: AppTexts.text14BlackLatoBold.copyWith(
+            style: AppTexts.text14BlackCairoBold.copyWith(
                 decoration: TextDecoration.lineThrough,
                 color: Colors.white.withOpacity(0.8)),
           ),

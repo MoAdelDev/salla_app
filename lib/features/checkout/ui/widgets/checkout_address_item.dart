@@ -25,8 +25,7 @@ class CheckoutAddressItem extends StatelessWidget {
           value: value,
           groupValue: radioSelected,
           onChanged: onChanged,
-          activeColor: AppColor.onPrimaryColor,
-          fillColor: MaterialStateProperty.all(AppColor.onPrimaryColor),
+          fillColor: MaterialStateProperty.all(AppColor.onSurfaceColor),
         ),
         horizontalSpace(5.0),
         Expanded(
@@ -35,11 +34,11 @@ class CheckoutAddressItem extends StatelessWidget {
             children: [
               Text(
                 address.name,
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackCairoBold,
               ),
               Text(
                 '${address.city}, ${address.region}, ${address.details}',
-                style: AppTexts.text14WhiteLatoRegular,
+                style: AppTexts.text14BlackLatoRegular,
               ),
             ],
           ),

@@ -21,7 +21,7 @@ class CustomHomeNavigation extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 2000),
+        duration: const Duration(milliseconds: 1600),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

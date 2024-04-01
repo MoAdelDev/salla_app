@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/style/texts.dart';
 
 class CustomNoProducts extends StatelessWidget {
-  const CustomNoProducts({super.key});
+  final String text;
+  const CustomNoProducts({
+    super.key,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset('assets/images/no.png'),
+      child: Text(
+        text,
+        style: AppTexts.text16BlackLatoBold,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

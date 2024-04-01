@@ -1,12 +1,11 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
-import 'package:salla_app/core/widgets/custom_shimmer.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_state.dart';
+import 'package:salla_app/features/profile/ui/widgets/user_avatar.dart';
 
 class EditProfileAvatar extends StatelessWidget {
   const EditProfileAvatar({super.key});
@@ -20,44 +19,24 @@ class EditProfileAvatar extends StatelessWidget {
           onTap: () => cubit.emitPickImageState(),
           child: Stack(
             children: [
-              CircleAvatar(
-                radius: 52.0.r,
-                backgroundColor: Colors.black,
-                child: ClipOval(
-                  child: CircleAvatar(
-                    radius: 50.0.r,
-                    backgroundColor: Colors.white,
-                    child: cubit.imageFile == null
-                        ? AppData.userModel.avatar == ''
-                            ? Image.asset(
-                                'assets/images/boy.png',
-                                fit: BoxFit.cover,
-                              )
-                            : CachedNetworkImage(
-                                imageUrl: AppData.userModel.avatar ?? '',
-                                placeholder: (context, url) =>
-                                    const CustomShimmer(),
-                                errorWidget: (context, url, error) =>
-                                    const CustomShimmer(),
-                                imageBuilder: (context, imageProvider) =>
-                                    Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: imageProvider,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                              )
-                        : Image.file(
+              cubit.imageFile == null
+                  ? UserAvatar(image: AppData.userModel.avatar ?? '')
+                  : CircleAvatar(
+                      radius: 52.0.r,
+                      backgroundColor: context.colorScheme.primary,
+                      child: ClipOval(
+                        child: CircleAvatar(
+                          radius: 50.0.r,
+                          backgroundColor: Colors.grey.shade400,
+                          child: Image.file(
                             cubit.imageFile!,
                             width: double.infinity,
                             height: double.infinity,
                             fit: BoxFit.cover,
                           ),
-                  ),
-                ),
-              ),
+                        ),
+                      ),
+                    ),
               Positioned(
                 bottom: 0,
                 right: 0,

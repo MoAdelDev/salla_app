@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
-import 'package:salla_app/features/settings/data/repos/logout_repo.dart';
-import 'package:salla_app/features/settings/logic/cubit/settings_state.dart';
+import 'package:salla_app/features/profile/data/repos/logout_repo.dart';
+import 'package:salla_app/features/profile/logic/cubit/settings_state.dart';
 
 class SettingsCubit extends Cubit<SettingsState> {
   final LogoutRepo _logoutRepo;

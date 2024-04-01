@@ -7,11 +7,11 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/core/widgets/custom_shimmer_list.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutAddresses extends StatelessWidget {
@@ -22,14 +22,17 @@ class CheckoutAddresses extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        CheckoutCart(
+        CustomContainerTile(
           child: BlocBuilder<CheckoutCubit, CheckoutState>(
             builder: (context, state) {
               CheckoutCubit cubit = context.read<CheckoutCubit>();
               if (cubit.addresses == null) {
-                return const CustomShimmerList(
+                return ListView.separated(
+                  itemBuilder: (context, index) => const ProductShimmer(),
+                  separatorBuilder: (context, index) => verticalSpace(5.0),
                   itemCount: 3,
-                  height: 50.0,
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                 );
               }
               return Column(
@@ -37,14 +40,14 @@ class CheckoutAddresses extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).myAddressesTitle,
-                    style: AppTexts.text16WhiteLatoBold,
+                    style: AppTexts.text16BlackCairoBold,
                   ),
                   verticalSpace(5.0),
                   if (cubit.addresses?.isEmpty ?? false)
                     Center(
                       child: Text(
                         S.of(context).noAddressTitle,
-                        style: AppTexts.text16WhiteLatoBold,
+                        style: AppTexts.text16BlackCairoBold,
                       ),
                     ),
                   if (cubit.addresses?.isNotEmpty ?? false)

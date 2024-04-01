@@ -41,7 +41,9 @@ class HomeProductTile extends StatelessWidget {
                     children: [
                       Expanded(
                         child: ProductPrice(
-                          productModel: productModel,
+                          discount: productModel.discount,
+                          oldPrice: productModel.price,
+                          price: productModel.oldPrice,
                         ),
                       ),
                       ProductFavorite(productId: productModel.id)

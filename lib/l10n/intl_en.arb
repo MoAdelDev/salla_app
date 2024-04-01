@@ -36,13 +36,13 @@
   "loadingDataErrorTitle": "Failed to load data, try again",
   "addToCartTitle": "Add to cart",
   "removeFromCartTitle": "Remove from cart",
-  "noProductsTitle": "No Products yet",
+  "noProductsTitle": "You haven't added any\nproducts yet",
   "removeTitle": "Remove",
   "checkoutTitle": "Checkout",
   "onBoardingTitle": "Shop Products",
   "continueTitle": "Continue",
   "forgotPasswordTitle": "Forgot password ?",
-  "updateProfileTitle": "Update profile",
+  "updateProfileTitle": "Update Profile",
   "myAddressesTitle": "My Addresses",
   "notificationsTitle": "Notifications",
   "languageTitle": "Language",
@@ -109,5 +109,6 @@
   "editTitle" : "Edit",
   "add" : "Add",
   "noOrders" : "No Orders yet",
-  "tax" : "Tax"
+  "tax" : "Tax",
+  "profile" :"Profile"
 }

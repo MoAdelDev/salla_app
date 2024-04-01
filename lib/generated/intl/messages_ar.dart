@@ -86,7 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل إسمك بالكامل"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("الإسم بالكامل"),
         "getStarted": MessageLookupByLibrary.simpleMessage("لنبدأ"),
-        "homeTitle": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
+        "homeTitle": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("عدد العناصر"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("العناصر"),
         "languageTitle": MessageLookupByLibrary.simpleMessage("اللغة"),
@@ -109,7 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا يوجد عناوين"),
         "noOrders": MessageLookupByLibrary.simpleMessage("لا يوجد طلبات"),
         "noProductsTitle":
-            MessageLookupByLibrary.simpleMessage("لا توجد منتجات حتى الآن"),
+            MessageLookupByLibrary.simpleMessage("لم تقم بإضافة أي منتجات بعد"),
         "noteHintTitle": MessageLookupByLibrary.simpleMessage("أدخل ملاحظاتك"),
         "noteTitle": MessageLookupByLibrary.simpleMessage("ملاحظات"),
         "notificationsTitle": MessageLookupByLibrary.simpleMessage("الإشعارات"),
@@ -137,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "من فضلك إنتظر لتحميل المنتجات"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "profile": MessageLookupByLibrary.simpleMessage("الحساب"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("الكمية"),
         "regionHintTitle": MessageLookupByLibrary.simpleMessage("أدخل منطقتك"),
         "regionTitle": MessageLookupByLibrary.simpleMessage("المنطقة"),

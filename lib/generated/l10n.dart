@@ -420,10 +420,10 @@ class S {
     );
   }
 
-  /// `No Products yet`
+  /// `You haven't added any\nproducts yet`
   String get noProductsTitle {
     return Intl.message(
-      'No Products yet',
+      'You haven\'t added any\nproducts yet',
       name: 'noProductsTitle',
       desc: '',
       args: [],
@@ -480,10 +480,10 @@ class S {
     );
   }
 
-  /// `Update profile`
+  /// `Update Profile`
   String get updateProfileTitle {
     return Intl.message(
-      'Update profile',
+      'Update Profile',
       name: 'updateProfileTitle',
       desc: '',
       args: [],
@@ -1155,6 +1155,16 @@ class S {
     return Intl.message(
       'Tax',
       name: 'tax',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
       desc: '',
       args: [],
     );

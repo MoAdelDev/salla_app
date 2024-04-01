@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,8 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomHomeNavigation(
-                iconData:
-                    currentIndex == 0 ? Icons.home_filled : Icons.home_outlined,
+                iconData: currentIndex == 0
+                    ? CupertinoIcons.house_fill
+                    : CupertinoIcons.house,
                 label: S.of(context).homeTitle,
                 isSelected: currentIndex == 0,
                 onTap: () => setState(() {
@@ -48,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
               ),
               CustomHomeNavigation(
-                iconData: Icons.favorite,
+                iconData: currentIndex == 1
+                    ? CupertinoIcons.heart_fill
+                    : CupertinoIcons.heart,
                 label: S.of(context).favoritesTitle,
                 isSelected: currentIndex == 1,
                 onTap: () => setState(() {
@@ -56,7 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
               ),
               CustomHomeNavigation(
-                iconData: Icons.shopping_cart,
+                iconData: currentIndex == 2
+                    ? CupertinoIcons.cart_fill
+                    : CupertinoIcons.cart,
                 label: S.of(context).cartTitle,
                 isSelected: currentIndex == 2,
                 onTap: () => setState(() {
@@ -64,8 +70,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
               ),
               CustomHomeNavigation(
-                iconData: Icons.settings,
-                label: S.of(context).settingsTitle,
+                iconData: currentIndex == 3
+                    ? CupertinoIcons.person_fill
+                    : CupertinoIcons.person,
+                label: S.of(context).profile,
                 isSelected: currentIndex == 3,
                 onTap: () => setState(() {
                   currentIndex = 3;

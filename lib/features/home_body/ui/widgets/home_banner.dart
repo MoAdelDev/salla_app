@@ -36,7 +36,7 @@ class HomeBanner extends StatelessWidget {
               placeholder: (context, url) => const CustomShimmer(),
               width: double.infinity,
               height: 200.0.h,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               errorWidget: (context, url, error) => const CustomShimmer(),
               imageBuilder: (context, imageProvider) => Container(
                 decoration: BoxDecoration(
@@ -56,7 +56,7 @@ class HomeBanner extends StatelessWidget {
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
-              viewportFraction: 0.75,
+              viewportFraction: 0.80,
               onPageChanged: (index, reason) {},
               scrollDirection: Axis.horizontal,
               pauseAutoPlayOnTouch: true,

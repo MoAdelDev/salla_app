@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_apply_promo_code.dart';
-import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutSummary extends StatelessWidget {
@@ -19,25 +19,25 @@ class CheckoutSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CheckoutCart(
+    return CustomContainerTile(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             S.of(context).orderSummaryTitle,
-            style: AppTexts.text16WhiteLatoBold,
+            style: AppTexts.text16BlackCairoBold,
           ),
           verticalSpace(5.0),
           Row(
             children: [
               Text(
                 '${S.of(context).itemTotalTitle} ( $totalItems )',
-                style: AppTexts.text14WhiteLatoRegular,
+                style: AppTexts.text14BlackLatoRegular,
               ),
               const Spacer(),
               Text(
                 '$totalPrice EGP',
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackLatoBold,
               ),
             ],
           ),
@@ -46,12 +46,12 @@ class CheckoutSummary extends StatelessWidget {
             children: [
               Text(
                 S.of(context).deliveryFeesTitle,
-                style: AppTexts.text14WhiteLatoRegular,
+                style: AppTexts.text14BlackLatoRegular,
               ),
               const Spacer(),
               Text(
                 S.of(context).freeTitle,
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackLatoBold,
               )
             ],
           ),
@@ -66,18 +66,18 @@ class CheckoutSummary extends StatelessWidget {
             children: [
               Text(
                 S.of(context).totalTitle,
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackLatoBold,
               ),
               const Spacer(),
               Text(
                 '$totalPrice EGP',
-                style: AppTexts.text16WhiteLatoBold,
+                style: AppTexts.text16BlackLatoBold,
               )
             ],
           ),
           verticalSpace(5.0),
           const Divider(
-            color: Colors.white,
+            color: Colors.grey,
             height: 1.0,
             thickness: 0.5,
           ),

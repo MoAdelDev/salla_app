@@ -7,7 +7,7 @@ import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
-import 'package:salla_app/features/settings/data/models/language.dart';
+import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
 import 'package:salla_app/salla_app/salla_app.dart';

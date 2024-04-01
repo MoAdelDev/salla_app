@@ -11,7 +11,7 @@ class ProductTitle extends StatelessWidget {
       title,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      style: AppTexts.text14BlackLatoBold,
+      style: AppTexts.text14BlackCairoBold,
     );
   }
 }

@@ -30,8 +30,14 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
       builder: (context, state) {
         CheckoutCubit cubit = context.read<CheckoutCubit>();
         if (state is AddOrderLoading) {
-          return const Center(
-            child: CustomLoadingIndicator(),
+          return Center(
+            child: Container(
+              margin: EdgeInsets.only(
+                top: 5.0.h,
+                bottom: 10.0.h,
+              ),
+              child: const CustomLoadingIndicator(),
+            ),
           );
         }
         return Container(

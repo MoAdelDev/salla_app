@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
@@ -15,10 +16,10 @@ class ProductDetailsPrice extends StatelessWidget {
         horizontal: 10.0.w,
         vertical: 2.0.h,
       ),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         border: Border.symmetric(
           horizontal: BorderSide(
-            color: Colors.blue,
+            color: context.colorScheme.primary,
             width: 2.0,
           ),
         ),

@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/networking/api_result.dart';
 import 'package:salla_app/core/networking/api_service.dart';
-import 'package:salla_app/features/settings/data/models/logout_response_body.dart';
+import 'package:salla_app/features/profile/data/models/logout_response_body.dart';
 
 class LogoutRepo {
   final ApiService _apiService;
