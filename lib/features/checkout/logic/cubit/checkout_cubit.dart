@@ -30,24 +30,29 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
 
   void emitPromoCodeState() async {
     isPromoCodeApplyLoading = true;
-    safeEmit(const CheckoutState.applyPromoCodeLoading());
-    if (promoCodeController.text.isNumber()) {
-      final result = await _promoCodeRepo.applyPromoCode(
-        PromoCodeRequestBody(code: int.parse(promoCodeController.text)),
-      );
-      result.when(
-        success: (response) {
-          safeEmit(CheckoutState.applyPromoCodeSuccess(response.message));
-        },
-        failure: (message) {
-          safeEmit(CheckoutState.applyPromoCodeFailure(message));
-        },
-      );
+    if (promoCodeController.text.isEmpty) {
       isPromoCodeApplyLoading = false;
+      safeEmit(const CheckoutState.applyPromoCodeFailure('Please enter code'));
     } else {
-      isPromoCodeApplyLoading = false;
-      safeEmit(
-          const CheckoutState.applyPromoCodeFailure('Please enter number'));
+      safeEmit(const CheckoutState.applyPromoCodeLoading());
+      if (promoCodeController.text.isNumber()) {
+        final result = await _promoCodeRepo.applyPromoCode(
+          PromoCodeRequestBody(code: int.parse(promoCodeController.text)),
+        );
+        result.when(
+          success: (response) {
+            safeEmit(CheckoutState.applyPromoCodeSuccess(response.message));
+          },
+          failure: (message) {
+            safeEmit(CheckoutState.applyPromoCodeFailure(message));
+          },
+        );
+        isPromoCodeApplyLoading = false;
+      } else {
+        isPromoCodeApplyLoading = false;
+        safeEmit(
+            const CheckoutState.applyPromoCodeFailure('Please enter number'));
+      }
     }
   }
 
@@ -104,6 +109,11 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
   }
 
   void emitPaymentState(double totalPrice) async {
+    safeEmit(const CheckoutState.addOrderLoading());
+    if (addressSelectedId == 0) {
+      showToast('Please select or add new address');
+      return;
+    }
     final String customerId = await CacheHelper.getString(key: 'customer_id');
 
     final result = await _paymentRepo.makePayment(

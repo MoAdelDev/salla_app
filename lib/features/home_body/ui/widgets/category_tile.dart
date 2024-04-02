@@ -23,8 +23,7 @@ class CategoryTile extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
           border: Border.all(
-            color: isSelected ? Colors.black : Colors.grey[300]!,
-            width: 1.0,
+            color: isSelected ? Colors.white : Colors.grey[300]!,
           ),
           color: isSelected ? context.colorScheme.primary : Colors.white,
         ),

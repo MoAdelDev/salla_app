@@ -43,7 +43,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       backgroundColor: context.colorScheme.background,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 20.0.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: 10.0.w,
+            vertical: 20.0.h,
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
