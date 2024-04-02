@@ -32,7 +32,7 @@ class SallaApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               theme: lightTheme(context),
-              initialRoute: token != '' ? Routes.home : Routes.onBoarding,
+              initialRoute: token == '' ? Routes.onBoarding : Routes.home,
               onGenerateRoute: (settings) =>
                   appRouter.onGenerateRoute(settings),
               locale: locale,
