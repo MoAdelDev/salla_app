@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
-import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/style/colors.dart';
-import 'package:salla_app/core/widgets/custom_app_bar.dart';
+import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -37,22 +37,39 @@ class _LanguageScreenState extends State<LanguageScreen> {
       Language(S.of(context).arabicTitle, "ar", "🇪🇬"),
     ];
     return Scaffold(
-      backgroundColor: AppColor.lightGreyColor,
-      body: SafeArea(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0.w),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomAppBar(
-              title: S.of(context).languageTitle,
-              onTap1: () => context.pop(),
-              icon1: Icons.chevron_left,
+            verticalSpace(10.0),
+            Center(
+              child: Container(
+                width: 100.0.w,
+                height: 10.0.h,
+                decoration: BoxDecoration(
+                  color: AppColor.greyColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ),
+            verticalSpace(10.0),
+            Text(
+              S.of(context).selectLanguage,
+              style: AppTexts.text18BlackCairoBold,
+            ),
+            verticalSpace(10.0),
+            Text(
+              S.of(context).selectLanguageBody,
+              style: AppTexts.text16BlackCairoRegular,
+            ),
+            verticalSpace(10.0),
             Expanded(
               child: ListView.builder(
                 itemCount: languages.length,
                 itemBuilder: (context, index) {
                   Language lang = languages[index];
                   bool isSelected = lang.code == selectedLanguage.code;
-
                   return GestureDetector(
                     onTap: () {
                       setState(() {
@@ -62,7 +79,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
-                      margin: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.symmetric(vertical: 10.0),
                       decoration: BoxDecoration(
                         color:
                             isSelected ? AppColor.primaryColor : Colors.white,
@@ -92,7 +109,6 @@ class _LanguageScreenState extends State<LanguageScreen> {
             Padding(
               padding: EdgeInsets.symmetric(
                 vertical: 20.0.h,
-                horizontal: 10.0.w,
               ),
               child: CustomButton(
                 onPressed: () => saveLanguageAndGetTheNewData(),

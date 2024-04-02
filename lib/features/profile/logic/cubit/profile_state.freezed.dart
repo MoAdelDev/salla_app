@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'settings_state.dart';
+part of 'profile_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,10 +15,11 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$SettingsState {
+mixin _$ProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() userData,
     required TResult Function() logoutLoading,
     required TResult Function(String message) logoutSuccess,
     required TResult Function(String message) logoutError,
@@ -27,6 +28,7 @@ mixin _$SettingsState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? userData,
     TResult? Function()? logoutLoading,
     TResult? Function(String message)? logoutSuccess,
     TResult? Function(String message)? logoutError,
@@ -35,6 +37,7 @@ mixin _$SettingsState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? userData,
     TResult Function()? logoutLoading,
     TResult Function(String message)? logoutSuccess,
     TResult Function(String message)? logoutError,
@@ -44,6 +47,7 @@ mixin _$SettingsState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
     required TResult Function(LogoutLoading value) logoutLoading,
     required TResult Function(LogoutSuccess value) logoutSuccess,
     required TResult Function(LogoutError value) logoutError,
@@ -52,6 +56,7 @@ mixin _$SettingsState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
     TResult? Function(LogoutLoading value)? logoutLoading,
     TResult? Function(LogoutSuccess value)? logoutSuccess,
     TResult? Function(LogoutError value)? logoutError,
@@ -60,6 +65,7 @@ mixin _$SettingsState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
     TResult Function(LogoutLoading value)? logoutLoading,
     TResult Function(LogoutSuccess value)? logoutSuccess,
     TResult Function(LogoutError value)? logoutError,
@@ -69,16 +75,16 @@ mixin _$SettingsState {
 }
 
 /// @nodoc
-abstract class $SettingsStateCopyWith<$Res> {
-  factory $SettingsStateCopyWith(
-          SettingsState value, $Res Function(SettingsState) then) =
-      _$SettingsStateCopyWithImpl<$Res, SettingsState>;
+abstract class $ProfileStateCopyWith<$Res> {
+  factory $ProfileStateCopyWith(
+          ProfileState value, $Res Function(ProfileState) then) =
+      _$ProfileStateCopyWithImpl<$Res, ProfileState>;
 }
 
 /// @nodoc
-class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
-    implements $SettingsStateCopyWith<$Res> {
-  _$SettingsStateCopyWithImpl(this._value, this._then);
+class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
+    implements $ProfileStateCopyWith<$Res> {
+  _$ProfileStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -95,7 +101,7 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$ProfileStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
@@ -109,7 +115,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'SettingsState.initial()';
+    return 'ProfileState.initial()';
   }
 
   @override
@@ -125,6 +131,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() userData,
     required TResult Function() logoutLoading,
     required TResult Function(String message) logoutSuccess,
     required TResult Function(String message) logoutError,
@@ -136,6 +143,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? userData,
     TResult? Function()? logoutLoading,
     TResult? Function(String message)? logoutSuccess,
     TResult? Function(String message)? logoutError,
@@ -147,6 +155,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? userData,
     TResult Function()? logoutLoading,
     TResult Function(String message)? logoutSuccess,
     TResult Function(String message)? logoutError,
@@ -162,6 +171,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
     required TResult Function(LogoutLoading value) logoutLoading,
     required TResult Function(LogoutSuccess value) logoutSuccess,
     required TResult Function(LogoutError value) logoutError,
@@ -173,6 +183,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
     TResult? Function(LogoutLoading value)? logoutLoading,
     TResult? Function(LogoutSuccess value)? logoutSuccess,
     TResult? Function(LogoutError value)? logoutError,
@@ -184,6 +195,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
     TResult Function(LogoutLoading value)? logoutLoading,
     TResult Function(LogoutSuccess value)? logoutSuccess,
     TResult Function(LogoutError value)? logoutError,
@@ -196,8 +208,128 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements SettingsState {
+abstract class _Initial implements ProfileState {
   const factory _Initial() = _$InitialImpl;
+}
+
+/// @nodoc
+abstract class _$$UserDataImplCopyWith<$Res> {
+  factory _$$UserDataImplCopyWith(
+          _$UserDataImpl value, $Res Function(_$UserDataImpl) then) =
+      __$$UserDataImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserDataImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$UserDataImpl>
+    implements _$$UserDataImplCopyWith<$Res> {
+  __$$UserDataImplCopyWithImpl(
+      _$UserDataImpl _value, $Res Function(_$UserDataImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UserDataImpl implements UserData {
+  const _$UserDataImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState.userData()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UserDataImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() userData,
+    required TResult Function() logoutLoading,
+    required TResult Function(String message) logoutSuccess,
+    required TResult Function(String message) logoutError,
+  }) {
+    return userData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? userData,
+    TResult? Function()? logoutLoading,
+    TResult? Function(String message)? logoutSuccess,
+    TResult? Function(String message)? logoutError,
+  }) {
+    return userData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? userData,
+    TResult Function()? logoutLoading,
+    TResult Function(String message)? logoutSuccess,
+    TResult Function(String message)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (userData != null) {
+      return userData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
+    required TResult Function(LogoutLoading value) logoutLoading,
+    required TResult Function(LogoutSuccess value) logoutSuccess,
+    required TResult Function(LogoutError value) logoutError,
+  }) {
+    return userData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
+    TResult? Function(LogoutLoading value)? logoutLoading,
+    TResult? Function(LogoutSuccess value)? logoutSuccess,
+    TResult? Function(LogoutError value)? logoutError,
+  }) {
+    return userData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
+    TResult Function(LogoutLoading value)? logoutLoading,
+    TResult Function(LogoutSuccess value)? logoutSuccess,
+    TResult Function(LogoutError value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (userData != null) {
+      return userData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UserData implements ProfileState {
+  const factory UserData() = _$UserDataImpl;
 }
 
 /// @nodoc
@@ -209,7 +341,7 @@ abstract class _$$LogoutLoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LogoutLoadingImplCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$LogoutLoadingImpl>
+    extends _$ProfileStateCopyWithImpl<$Res, _$LogoutLoadingImpl>
     implements _$$LogoutLoadingImplCopyWith<$Res> {
   __$$LogoutLoadingImplCopyWithImpl(
       _$LogoutLoadingImpl _value, $Res Function(_$LogoutLoadingImpl) _then)
@@ -223,7 +355,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
 
   @override
   String toString() {
-    return 'SettingsState.logoutLoading()';
+    return 'ProfileState.logoutLoading()';
   }
 
   @override
@@ -239,6 +371,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() userData,
     required TResult Function() logoutLoading,
     required TResult Function(String message) logoutSuccess,
     required TResult Function(String message) logoutError,
@@ -250,6 +383,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? userData,
     TResult? Function()? logoutLoading,
     TResult? Function(String message)? logoutSuccess,
     TResult? Function(String message)? logoutError,
@@ -261,6 +395,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? userData,
     TResult Function()? logoutLoading,
     TResult Function(String message)? logoutSuccess,
     TResult Function(String message)? logoutError,
@@ -276,6 +411,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
     required TResult Function(LogoutLoading value) logoutLoading,
     required TResult Function(LogoutSuccess value) logoutSuccess,
     required TResult Function(LogoutError value) logoutError,
@@ -287,6 +423,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
     TResult? Function(LogoutLoading value)? logoutLoading,
     TResult? Function(LogoutSuccess value)? logoutSuccess,
     TResult? Function(LogoutError value)? logoutError,
@@ -298,6 +435,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
     TResult Function(LogoutLoading value)? logoutLoading,
     TResult Function(LogoutSuccess value)? logoutSuccess,
     TResult Function(LogoutError value)? logoutError,
@@ -310,7 +448,7 @@ class _$LogoutLoadingImpl implements LogoutLoading {
   }
 }
 
-abstract class LogoutLoading implements SettingsState {
+abstract class LogoutLoading implements ProfileState {
   const factory LogoutLoading() = _$LogoutLoadingImpl;
 }
 
@@ -325,7 +463,7 @@ abstract class _$$LogoutSuccessImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LogoutSuccessImplCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$LogoutSuccessImpl>
+    extends _$ProfileStateCopyWithImpl<$Res, _$LogoutSuccessImpl>
     implements _$$LogoutSuccessImplCopyWith<$Res> {
   __$$LogoutSuccessImplCopyWithImpl(
       _$LogoutSuccessImpl _value, $Res Function(_$LogoutSuccessImpl) _then)
@@ -355,7 +493,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
 
   @override
   String toString() {
-    return 'SettingsState.logoutSuccess(message: $message)';
+    return 'ProfileState.logoutSuccess(message: $message)';
   }
 
   @override
@@ -379,6 +517,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() userData,
     required TResult Function() logoutLoading,
     required TResult Function(String message) logoutSuccess,
     required TResult Function(String message) logoutError,
@@ -390,6 +529,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? userData,
     TResult? Function()? logoutLoading,
     TResult? Function(String message)? logoutSuccess,
     TResult? Function(String message)? logoutError,
@@ -401,6 +541,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? userData,
     TResult Function()? logoutLoading,
     TResult Function(String message)? logoutSuccess,
     TResult Function(String message)? logoutError,
@@ -416,6 +557,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
     required TResult Function(LogoutLoading value) logoutLoading,
     required TResult Function(LogoutSuccess value) logoutSuccess,
     required TResult Function(LogoutError value) logoutError,
@@ -427,6 +569,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
     TResult? Function(LogoutLoading value)? logoutLoading,
     TResult? Function(LogoutSuccess value)? logoutSuccess,
     TResult? Function(LogoutError value)? logoutError,
@@ -438,6 +581,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
     TResult Function(LogoutLoading value)? logoutLoading,
     TResult Function(LogoutSuccess value)? logoutSuccess,
     TResult Function(LogoutError value)? logoutError,
@@ -450,7 +594,7 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   }
 }
 
-abstract class LogoutSuccess implements SettingsState {
+abstract class LogoutSuccess implements ProfileState {
   const factory LogoutSuccess(final String message) = _$LogoutSuccessImpl;
 
   String get message;
@@ -470,7 +614,7 @@ abstract class _$$LogoutErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LogoutErrorImplCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$LogoutErrorImpl>
+    extends _$ProfileStateCopyWithImpl<$Res, _$LogoutErrorImpl>
     implements _$$LogoutErrorImplCopyWith<$Res> {
   __$$LogoutErrorImplCopyWithImpl(
       _$LogoutErrorImpl _value, $Res Function(_$LogoutErrorImpl) _then)
@@ -500,7 +644,7 @@ class _$LogoutErrorImpl implements LogoutError {
 
   @override
   String toString() {
-    return 'SettingsState.logoutError(message: $message)';
+    return 'ProfileState.logoutError(message: $message)';
   }
 
   @override
@@ -524,6 +668,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() userData,
     required TResult Function() logoutLoading,
     required TResult Function(String message) logoutSuccess,
     required TResult Function(String message) logoutError,
@@ -535,6 +680,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? userData,
     TResult? Function()? logoutLoading,
     TResult? Function(String message)? logoutSuccess,
     TResult? Function(String message)? logoutError,
@@ -546,6 +692,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? userData,
     TResult Function()? logoutLoading,
     TResult Function(String message)? logoutSuccess,
     TResult Function(String message)? logoutError,
@@ -561,6 +708,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(UserData value) userData,
     required TResult Function(LogoutLoading value) logoutLoading,
     required TResult Function(LogoutSuccess value) logoutSuccess,
     required TResult Function(LogoutError value) logoutError,
@@ -572,6 +720,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(UserData value)? userData,
     TResult? Function(LogoutLoading value)? logoutLoading,
     TResult? Function(LogoutSuccess value)? logoutSuccess,
     TResult? Function(LogoutError value)? logoutError,
@@ -583,6 +732,7 @@ class _$LogoutErrorImpl implements LogoutError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(UserData value)? userData,
     TResult Function(LogoutLoading value)? logoutLoading,
     TResult Function(LogoutSuccess value)? logoutSuccess,
     TResult Function(LogoutError value)? logoutError,
@@ -595,7 +745,7 @@ class _$LogoutErrorImpl implements LogoutError {
   }
 }
 
-abstract class LogoutError implements SettingsState {
+abstract class LogoutError implements ProfileState {
   const factory LogoutError(final String message) = _$LogoutErrorImpl;
 
   String get message;

@@ -1169,6 +1169,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Select Language`
+  String get selectLanguage {
+    return Intl.message(
+      'Select Language',
+      name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What language do you prefer ?`
+  String get selectLanguageBody {
+    return Intl.message(
+      'What language do you prefer ?',
+      name: 'selectLanguageBody',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

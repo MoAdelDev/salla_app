@@ -167,6 +167,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchHereTitle":
             MessageLookupByLibrary.simpleMessage("Search here ..."),
         "searchTitle": MessageLookupByLibrary.simpleMessage("Search"),
+        "selectLanguage":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
+        "selectLanguageBody": MessageLookupByLibrary.simpleMessage(
+            "What language do you prefer ?"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("Select Language"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
