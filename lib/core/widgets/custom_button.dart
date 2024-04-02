@@ -18,7 +18,7 @@ class _CustomButtonState extends State<CustomButton> {
 
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(
+      child: MaterialButton(
         onPressed: () async {
           if (!isTapped) {
             setState(() {
@@ -33,12 +33,14 @@ class _CustomButtonState extends State<CustomButton> {
             });
           }
         },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: context.colorScheme.primary,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          foregroundColor: Colors.white,
+        color: context.colorScheme.primary,
+        splashColor: context.colorScheme.primary,
+        highlightColor: context.colorScheme.primary,
+        disabledElevation: 0.0,
+        disabledColor: context.colorScheme.primary,
+        disabledTextColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
           padding: const EdgeInsets.all(12.0),

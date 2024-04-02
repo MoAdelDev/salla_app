@@ -109,5 +109,7 @@
   "add": "إضافة",
   "noOrders": "لا يوجد طلبات",
   "tax" : "ضريبة",
-  "profile":"الحساب"
+  "profile":"الحساب",
+  "selectLanguage" : "إختار اللغة",
+  "selectLanguageBody" : "ماهو اللغة المفضلة لك؟"
 }

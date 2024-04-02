@@ -14,11 +14,11 @@ class UserAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      radius: 52.0.r,
+      radius: 48.0.r,
       backgroundColor: context.colorScheme.primary,
       child: ClipOval(
         child: CircleAvatar(
-          radius: 50.0.r,
+          radius: 45.0.r,
           backgroundColor: Colors.grey.shade400,
           child: CachedNetworkImage(
             imageUrl: image,

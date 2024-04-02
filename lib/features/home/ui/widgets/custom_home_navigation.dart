@@ -44,11 +44,12 @@ class CustomHomeNavigation extends StatelessWidget {
                 size: 25.0,
               ),
             ),
-            Text(
-              label,
+            AnimatedDefaultTextStyle(
               style: isSelected
                   ? AppTexts.text14BlueCairoBold
                   : AppTexts.text14GreyCairoExtraBold,
+              duration: const Duration(milliseconds: 800),
+              child: Text(label),
             ),
           ],
         ),

@@ -154,6 +154,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveTitle": MessageLookupByLibrary.simpleMessage("حفظ"),
         "searchHereTitle": MessageLookupByLibrary.simpleMessage("إبحث هنا"),
         "searchTitle": MessageLookupByLibrary.simpleMessage("بحث"),
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("إختار اللغة"),
+        "selectLanguageBody":
+            MessageLookupByLibrary.simpleMessage("ماهو اللغة المفضلة لك؟"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("إختار اللغة"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("الإعدادات"),

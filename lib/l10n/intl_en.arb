@@ -110,5 +110,7 @@
   "add" : "Add",
   "noOrders" : "No Orders yet",
   "tax" : "Tax",
-  "profile" :"Profile"
+  "profile" :"Profile",
+  "selectLanguage" : "Select Language",
+  "selectLanguageBody" : "What language do you prefer ?"
 }

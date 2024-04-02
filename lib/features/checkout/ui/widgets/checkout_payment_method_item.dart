@@ -22,37 +22,42 @@ class CheckoutPaymentMethodItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Radio(
-          value: radioValue,
-          groupValue: radioSelected,
-          onChanged: onChanged,
-          fillColor: MaterialStateProperty.all(AppColor.primaryColor),
-        ),
-        Icon(
-          icon,
-          size: 35,
-          color: AppColor.onSurfaceColor,
-        ),
-        horizontalSpace(10.0),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: AppTexts.text14BlackCairoBold,
-              ),
-              Text(
-                subtitle,
-                style: AppTexts.text12BlackLatoRegular,
-              ),
-            ],
+    return GestureDetector(
+      onTap: () {
+        onChanged(radioSelected);
+      },
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Radio(
+            value: radioValue,
+            groupValue: radioSelected,
+            onChanged: onChanged,
+            fillColor: MaterialStateProperty.all(AppColor.primaryColor),
           ),
-        ),
-      ],
+          Icon(
+            icon,
+            size: 35,
+            color: AppColor.onSurfaceColor,
+          ),
+          horizontalSpace(10.0),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: AppTexts.text14BlackCairoBold,
+                ),
+                Text(
+                  subtitle,
+                  style: AppTexts.text12BlackLatoRegular,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
