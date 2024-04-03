@@ -51,9 +51,8 @@ class _HomeCategoriesState extends State<HomeCategories> {
                     isSelected: selectedIndex == -1,
                     categoryModel: CategoryModel(0, S.of(context).all, ''),
                     onTap: () {
-                      if (selectedIndex != -1 &&
-                          context.read<HomeBodyCubit>().isProductsLoading ==
-                              false) {
+                      if (context.read<HomeBodyCubit>().isProductsLoading ==
+                          false) {
                         selectedIndex = -1;
                         context.read<HomeBodyCubit>().emitProductsState();
                       }

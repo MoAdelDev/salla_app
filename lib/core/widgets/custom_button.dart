@@ -43,7 +43,7 @@ class _CustomButtonState extends State<CustomButton> {
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(10.0),
           child: Text(
             widget.text,
             style: AppTexts.text20WhiteLatoBold,

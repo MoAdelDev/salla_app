@@ -7,13 +7,13 @@ import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_horizont
 import 'package:salla_app/features/home_body/ui/widgets/product_tile_horizontal.dart';
 
 class ProductsHorizontal extends StatelessWidget {
-  const ProductsHorizontal({super.key});
+  final List<ProductModel> products;
+  const ProductsHorizontal({super.key, required this.products});
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
       builder: (context, state) {
-        List<ProductModel> products = context.read<HomeBodyCubit>().products;
         if (products.isEmpty ||
             context.read<HomeBodyCubit>().isProductsLoading) {
           return GridView.count(

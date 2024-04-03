@@ -7,6 +7,7 @@ import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/products_action.dart';
 import 'package:salla_app/features/home_body/ui/widgets/products_header_shimmer.dart';
+import 'package:salla_app/features/home_body/ui/widgets/sort_by_bottom_sheet.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class ProductsHeader extends StatelessWidget {
@@ -36,13 +37,23 @@ class ProductsHeader extends StatelessWidget {
               Row(
                 children: [
                   ProductsAction(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(20.0),
+                          ),
+                        ),
+                        builder: (_) {
+                          return BlocProvider.value(
+                            value: context.read<HomeBodyCubit>(),
+                            child: const SortByBottomSheet(),
+                          );
+                        },
+                      );
+                    },
                     icon: 'assets/icons/sort.svg',
-                  ),
-                  horizontalSpace(10.0),
-                  ProductsAction(
-                    onTap: () {},
-                    icon: 'assets/icons/filter.svg',
                   ),
                   horizontalSpace(10.0),
                   ProductsAction(

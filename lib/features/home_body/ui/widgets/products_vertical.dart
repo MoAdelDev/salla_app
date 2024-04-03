@@ -8,13 +8,13 @@ import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical
 import 'package:salla_app/features/home_body/ui/widgets/product_tile_vertical.dart';
 
 class ProductsVertical extends StatelessWidget {
-  const ProductsVertical({super.key});
+  final List<ProductModel> products;
+  const ProductsVertical({super.key, required this.products});
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
       builder: (context, state) {
-        List<ProductModel> products = context.read<HomeBodyCubit>().products;
         if (products.isEmpty ||
             context.read<HomeBodyCubit>().isProductsLoading) {
           return ListView.separated(

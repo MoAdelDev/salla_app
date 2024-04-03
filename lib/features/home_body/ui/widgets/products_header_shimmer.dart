@@ -18,7 +18,7 @@ class ProductsHeaderShimmer extends StatelessWidget {
         const Spacer(),
         Row(
           children: List.generate(
-            3,
+            2,
             (index) => Row(
               children: [
                 Container(

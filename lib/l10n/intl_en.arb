@@ -112,5 +112,10 @@
   "tax" : "Tax",
   "profile" :"Profile",
   "selectLanguage" : "Select Language",
-  "selectLanguageBody" : "What language do you prefer ?"
+  "selectLanguageBody" : "What language do you prefer ?",
+  "sortBy" : "Sort By",
+  "lowestPrice" : "Lowest Price",
+  "highestPrice" : "Highest Price",
+  "hasDiscount" : "Has Discount",
+  "defaultTitle" : "Default"
 }
