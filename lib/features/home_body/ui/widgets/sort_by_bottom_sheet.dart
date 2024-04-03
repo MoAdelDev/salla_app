@@ -24,12 +24,12 @@ class SortByBottomSheet extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.symmetric(
               horizontal: 16.0.w,
+              vertical: 10.0.h,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpace(10.0),
                 Center(
                   child: Container(
                     width: 100.0.w,

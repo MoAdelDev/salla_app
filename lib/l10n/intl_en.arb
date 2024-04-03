@@ -117,5 +117,7 @@
   "lowestPrice" : "Lowest Price",
   "highestPrice" : "Highest Price",
   "hasDiscount" : "Has Discount",
-  "defaultTitle" : "Default"
+  "defaultTitle" : "Default",
+  "selectPaymentMethod" : "Select Payment Method",
+  "pay" : "Pay"
 }

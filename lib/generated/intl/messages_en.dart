@@ -140,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "paymentBody": MessageLookupByLibrary.simpleMessage(
             "Payment method via paypal or master card"),
         "paymentMethodTitle":
@@ -177,6 +178,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "What language do you prefer ?"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("Select Language"),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("Select Payment Method"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("Shipping Address"),

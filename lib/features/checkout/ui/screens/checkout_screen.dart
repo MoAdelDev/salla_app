@@ -56,6 +56,7 @@ class CheckoutScreen extends StatelessWidget {
             ),
             CheckoutConfirmOrderButton(
               totalPrice: args.totalPrice,
+              products: args.products,
             ),
             if (Platform.isIOS) verticalSpace(8.0),
           ],

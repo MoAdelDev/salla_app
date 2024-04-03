@@ -129,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "pay": MessageLookupByLibrary.simpleMessage("ادفع"),
         "paymentBody": MessageLookupByLibrary.simpleMessage(
             "طريقة الدفع عن طريق ماستر كارد او باي بال"),
         "paymentMethodTitle":
@@ -163,6 +164,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ماهو اللغة المفضلة لك؟"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("إختار اللغة"),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("إختار طريقة الدفع"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),

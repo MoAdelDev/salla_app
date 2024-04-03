@@ -1239,6 +1239,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Select Payment Method`
+  String get selectPaymentMethod {
+    return Intl.message(
+      'Select Payment Method',
+      name: 'selectPaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay`
+  String get pay {
+    return Intl.message(
+      'Pay',
+      name: 'pay',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

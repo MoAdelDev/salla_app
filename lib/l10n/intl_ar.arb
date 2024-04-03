@@ -116,5 +116,7 @@
   "lowestPrice" : "السعر الادنى",
   "highestPrice" : "السعر الاعلى",
   "hasDiscount" : "يحتوي على خصم",
-  "defaultTitle" : "الافتراضي"
+  "defaultTitle" : "الافتراضي",
+  "selectPaymentMethod" : "إختار طريقة الدفع",
+  "pay" : "ادفع"
 }
