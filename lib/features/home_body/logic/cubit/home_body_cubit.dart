@@ -109,4 +109,11 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
       },
     );
   }
+
+  bool isProductsHorizontal = false;
+  void emitChangeProductsViewState() {
+    safeEmit(const HomeBodyState.initial());
+    isProductsHorizontal = !isProductsHorizontal;
+    safeEmit(const HomeBodyState.changeProductsView());
+  }
 }

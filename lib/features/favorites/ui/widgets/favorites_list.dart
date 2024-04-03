@@ -6,7 +6,7 @@ import 'package:salla_app/features/favorites/data/models/favorites_response.dart
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_state.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_tile.dart';
-import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class FavoritesList extends StatelessWidget {
@@ -20,7 +20,7 @@ class FavoritesList extends StatelessWidget {
             context.read<FavoritesCubit>().favorites;
         if (state is Loading) {
           return ListView.separated(
-            itemBuilder: (context, index) => const ProductShimmer(),
+            itemBuilder: (context, index) => const ProductShimmerVertical(),
             separatorBuilder: (context, index) => verticalSpace(10.0),
             itemCount: 30,
             physics: const NeverScrollableScrollPhysics(),

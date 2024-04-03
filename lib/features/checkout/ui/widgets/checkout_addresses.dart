@@ -11,7 +11,7 @@ import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dart';
-import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutAddresses extends StatelessWidget {
@@ -28,7 +28,8 @@ class CheckoutAddresses extends StatelessWidget {
               CheckoutCubit cubit = context.read<CheckoutCubit>();
               if (cubit.addresses == null) {
                 return ListView.separated(
-                  itemBuilder: (context, index) => const ProductShimmer(),
+                  itemBuilder: (context, index) =>
+                      const ProductShimmerVertical(),
                   separatorBuilder: (context, index) => verticalSpace(5.0),
                   itemCount: 3,
                   physics: const NeverScrollableScrollPhysics(),

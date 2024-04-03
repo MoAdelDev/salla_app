@@ -11,7 +11,7 @@ import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_state.dart';
 import 'package:salla_app/features/addresses/ui/widgets/address_tile.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
-import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class AddressesList extends StatelessWidget {
@@ -24,7 +24,7 @@ class AddressesList extends StatelessWidget {
         AddressesCubit cubit = context.read<AddressesCubit>();
         if (cubit.addresses == null) {
           return ListView.separated(
-            itemBuilder: (context, index) => const ProductShimmer(),
+            itemBuilder: (context, index) => const ProductShimmerVertical(),
             separatorBuilder: (context, index) => verticalSpace(10.0),
             itemCount: 30,
             physics: const NeverScrollableScrollPhysics(),
