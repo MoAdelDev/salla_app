@@ -30,7 +30,7 @@ class ProductsHeader extends StatelessWidget {
             children: [
               Text(
                 '${cubit.products.length} ${S.of(context).productsTitle}',
-                style: AppTexts.text16BlackLatoBold,
+                style: AppTexts.text16BlackCairoBold,
               ),
               const Spacer(),
               Row(
