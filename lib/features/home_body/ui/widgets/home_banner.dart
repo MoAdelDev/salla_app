@@ -35,7 +35,7 @@ class HomeBanner extends StatelessWidget {
               imageUrl: banners[index].image,
               placeholder: (context, url) => const CustomShimmer(),
               width: double.infinity,
-              height: 200.0.h,
+              height: 140.0.h,
               fit: BoxFit.cover,
               errorWidget: (context, url, error) => const CustomShimmer(),
               imageBuilder: (context, imageProvider) => Container(
@@ -49,7 +49,7 @@ class HomeBanner extends StatelessWidget {
               ),
             ),
             options: CarouselOptions(
-              height: 200.0.h,
+              height: 140.0.h,
               enlargeCenterPage: true,
               autoPlay: true,
               aspectRatio: 16 / 9,

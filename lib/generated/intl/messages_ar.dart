@@ -59,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "contactsTitle": MessageLookupByLibrary.simpleMessage("وسائل التواصل"),
         "continueTitle": MessageLookupByLibrary.simpleMessage("إستمر"),
+        "defaultTitle": MessageLookupByLibrary.simpleMessage("الافتراضي"),
         "deleteAddressBodyTitle": MessageLookupByLibrary.simpleMessage(
             "هذا العنوان سيتم مسحه للأبد ."),
         "deleteAddressQuestionTitle":
@@ -86,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل إسمك بالكامل"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("الإسم بالكامل"),
         "getStarted": MessageLookupByLibrary.simpleMessage("لنبدأ"),
+        "hasDiscount": MessageLookupByLibrary.simpleMessage("يحتوي على خصم"),
+        "highestPrice": MessageLookupByLibrary.simpleMessage("السعر الاعلى"),
         "homeTitle": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("عدد العناصر"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("العناصر"),
@@ -99,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "logoutTitle": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "lowestPrice": MessageLookupByLibrary.simpleMessage("السعر الادنى"),
         "modifyCartTitle": MessageLookupByLibrary.simpleMessage("تعديل السلة"),
         "myAddressesTitle": MessageLookupByLibrary.simpleMessage("العناوين"),
         "nOfItemsTitle": MessageLookupByLibrary.simpleMessage("عدد العناصر"),
@@ -125,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "pay": MessageLookupByLibrary.simpleMessage("ادفع"),
         "paymentBody": MessageLookupByLibrary.simpleMessage(
             "طريقة الدفع عن طريق ماستر كارد او باي بال"),
         "paymentMethodTitle":
@@ -159,11 +164,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ماهو اللغة المفضلة لك؟"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("إختار اللغة"),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("إختار طريقة الدفع"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("عنوان التوصيل"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUpTitle": MessageLookupByLibrary.simpleMessage("طلب تسجيل حساب"),
+        "sortBy": MessageLookupByLibrary.simpleMessage("ترتيب حسب"),
         "tax": MessageLookupByLibrary.simpleMessage("ضريبة"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("إجمالي"),
         "updateProfileTitle":

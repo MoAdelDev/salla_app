@@ -4,10 +4,12 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_cubit.dart';
 import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_state.dart';
+import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class AddAddressForm extends StatelessWidget {
-  const AddAddressForm({super.key});
+  final AddressModel? address;
+  const AddAddressForm({super.key, this.address});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +58,13 @@ class AddAddressForm extends StatelessWidget {
                 errorMsg: S.of(context).regionHintTitle,
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.done,
-                onSubmit: (value) {},
+                onSubmit: (value) {
+                  if (address == null) {
+                    cubit.emitAddAddressState();
+                  } else {
+                    cubit.emitEditAddressState(address!.id);
+                  }
+                },
               ),
             ],
           ),

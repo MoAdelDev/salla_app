@@ -6,6 +6,7 @@ import 'package:salla_app/features/home_body/ui/widgets/home_app_bar.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_banner.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_categories.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_products.dart';
+import 'package:salla_app/features/home_body/ui/widgets/products_header.dart';
 
 class HomeBodyScreen extends StatelessWidget {
   const HomeBodyScreen({super.key});
@@ -35,6 +36,9 @@ class HomeBodyScreen extends StatelessWidget {
             foregroundColor: Colors.transparent,
             shadowColor: Colors.transparent,
             surfaceTintColor: Colors.white,
+          ),
+          const SliverToBoxAdapter(
+            child: ProductsHeader(),
           ),
           const SliverToBoxAdapter(
             child: HomeProducts(),

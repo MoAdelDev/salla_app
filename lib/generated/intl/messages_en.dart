@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm order"),
         "contactsTitle": MessageLookupByLibrary.simpleMessage("Contacts"),
         "continueTitle": MessageLookupByLibrary.simpleMessage("Continue"),
+        "defaultTitle": MessageLookupByLibrary.simpleMessage("Default"),
         "deleteAddressBodyTitle": MessageLookupByLibrary.simpleMessage(
             "This address will be permanently deleted ."),
         "deleteAddressQuestionTitle":
@@ -89,6 +90,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "fullNameTitle": MessageLookupByLibrary.simpleMessage("Full name"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "hasDiscount": MessageLookupByLibrary.simpleMessage("Has Discount"),
+        "highestPrice": MessageLookupByLibrary.simpleMessage("Highest Price"),
         "homeTitle": MessageLookupByLibrary.simpleMessage("Home"),
         "itemTotalTitle": MessageLookupByLibrary.simpleMessage("Item\'s total"),
         "itemsTitle": MessageLookupByLibrary.simpleMessage("Items"),
@@ -103,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "you have been logged in successfully"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "logoutTitle": MessageLookupByLibrary.simpleMessage("Log out"),
+        "lowestPrice": MessageLookupByLibrary.simpleMessage("Lowest Price"),
         "modifyCartTitle": MessageLookupByLibrary.simpleMessage("Modify Cart"),
         "myAddressesTitle":
             MessageLookupByLibrary.simpleMessage("My Addresses"),
@@ -136,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "passwordTitle": MessageLookupByLibrary.simpleMessage("Password"),
+        "pay": MessageLookupByLibrary.simpleMessage("Pay"),
         "paymentBody": MessageLookupByLibrary.simpleMessage(
             "Payment method via paypal or master card"),
         "paymentMethodTitle":
@@ -173,11 +178,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "What language do you prefer ?"),
         "selectLanguageTitle":
             MessageLookupByLibrary.simpleMessage("Select Language"),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("Select Payment Method"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shippingAddressTitle":
             MessageLookupByLibrary.simpleMessage("Shipping Address"),
         "signInTitle": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signUpTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "sortBy": MessageLookupByLibrary.simpleMessage("Sort By"),
         "tax": MessageLookupByLibrary.simpleMessage("Tax"),
         "totalTitle": MessageLookupByLibrary.simpleMessage("Total"),
         "updateProfileTitle":

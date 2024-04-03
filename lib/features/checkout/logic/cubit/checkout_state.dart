@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
+
 part 'checkout_state.freezed.dart';
 
 @freezed
@@ -35,4 +36,7 @@ class CheckoutState with _$CheckoutState {
 
   const factory CheckoutState.makePaymentFailure(String message) =
       MakePaymentFailure;
+
+  const factory CheckoutState.selectPaymentMethod(int index) =
+      SelectPaymentMethod;
 }

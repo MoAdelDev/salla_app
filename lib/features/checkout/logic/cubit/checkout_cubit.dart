@@ -134,4 +134,16 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
       },
     );
   }
+
+  List<String> paymentImages = [
+    'assets/images/paymob.png',
+    'assets/images/paypal.png',
+    'assets/images/stripe.png',
+  ];
+  int payemntSelected = 0;
+  void emitSelectPaymentMethodState(int index) {
+    safeEmit(const CheckoutState.initial());
+    payemntSelected = index;
+    safeEmit(CheckoutState.selectPaymentMethod(index));
+  }
 }

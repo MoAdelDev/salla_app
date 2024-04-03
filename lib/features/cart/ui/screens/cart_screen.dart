@@ -10,7 +10,7 @@ import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_state.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_checkout_button.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_list.dart';
-import 'package:salla_app/features/home_body/ui/widgets/product_shimmer.dart';
+import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/generated/l10n.dart';
 
 class CartScreen extends StatelessWidget {
@@ -34,7 +34,8 @@ class CartScreen extends StatelessWidget {
                       context.read<CartCubit>().cartProducts;
                   if (state is Loading) {
                     return ListView.separated(
-                      itemBuilder: (context, index) => const ProductShimmer(),
+                      itemBuilder: (context, index) =>
+                          const ProductShimmerVertical(),
                       separatorBuilder: (context, index) => verticalSpace(10.0),
                       itemCount: 30,
                       physics: const NeverScrollableScrollPhysics(),

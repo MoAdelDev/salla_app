@@ -53,7 +53,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 ),
               ),
             ),
-            verticalSpace(10.0),
+            verticalSpace(16.0),
             Text(
               S.of(context).selectLanguage,
               style: AppTexts.text18BlackCairoBold,
@@ -63,7 +63,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
               S.of(context).selectLanguageBody,
               style: AppTexts.text16BlackCairoRegular,
             ),
-            verticalSpace(10.0),
+            verticalSpace(16.0),
             Expanded(
               child: ListView.builder(
                 itemCount: languages.length,

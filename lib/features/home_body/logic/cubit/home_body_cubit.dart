@@ -8,6 +8,7 @@ import 'package:salla_app/features/home_body/data/models/change_favorite_request
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   final HomeBodyRepo _homeBodyRepo;
@@ -91,8 +92,10 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
     );
   }
 
+  int categoryId = -1;
   void emitGetProductsByCategoryState({required int categoryId}) async {
     isProductsLoading = true;
+    this.categoryId = categoryId;
     safeEmit(const HomeBodyState.productsLoading());
     final response = await _homeBodyRepo.getProductsByCategory(
       categoryId: categoryId,
@@ -108,5 +111,48 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
         safeEmit(const HomeBodyState.productsError());
       },
     );
+  }
+
+  bool isProductsHorizontal = false;
+  void emitChangeProductsViewState() {
+    safeEmit(const HomeBodyState.initial());
+    isProductsHorizontal = !isProductsHorizontal;
+    safeEmit(const HomeBodyState.changeProductsView());
+  }
+
+  List<String> sortByTitles = [
+    S.current.defaultTitle,
+    S.current.lowestPrice,
+    S.current.highestPrice,
+    S.current.hasDiscount,
+  ];
+
+  int sortByIndex = 0;
+
+  void emitChangeSortByState({required int index}) {
+    safeEmit(const HomeBodyState.initial());
+    sortByIndex = index;
+    safeEmit(const HomeBodyState.changeSortBy());
+  }
+
+  void emitSortByState(String title) {
+    safeEmit(const HomeBodyState.initial());
+    if (title == S.current.defaultTitle) {
+      if (categoryId == -1) {
+        emitProductsState();
+      } else {
+        emitGetProductsByCategoryState(categoryId: categoryId);
+      }
+    }
+    if (title == S.current.lowestPrice) {
+      products.sort((a, b) => a.price.compareTo(b.price));
+    }
+    if (title == S.current.highestPrice) {
+      products.sort((a, b) => b.price.compareTo(a.price));
+    }
+    if (title == S.current.hasDiscount) {
+      products.sort((a, b) => b.discount.compareTo(a.discount));
+    }
+    safeEmit(const HomeBodyState.changeSortBy());
   }
 }

@@ -111,5 +111,12 @@
   "tax" : "ضريبة",
   "profile":"الحساب",
   "selectLanguage" : "إختار اللغة",
-  "selectLanguageBody" : "ماهو اللغة المفضلة لك؟"
+  "selectLanguageBody" : "ماهو اللغة المفضلة لك؟",
+  "sortBy" : "ترتيب حسب",
+  "lowestPrice" : "السعر الادنى",
+  "highestPrice" : "السعر الاعلى",
+  "hasDiscount" : "يحتوي على خصم",
+  "defaultTitle" : "الافتراضي",
+  "selectPaymentMethod" : "إختار طريقة الدفع",
+  "pay" : "ادفع"
 }

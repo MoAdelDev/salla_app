@@ -31,4 +31,8 @@ sealed class HomeBodyState with _$HomeBodyState {
   const factory HomeBodyState.changeFavoriteError() = ChangeFavoriteError;
 
   const factory HomeBodyState.updateFavorites() = UpdateFavorites;
+
+  const factory HomeBodyState.changeProductsView() = ChangeProductsView;
+
+  const factory HomeBodyState.changeSortBy() = ChangeSortBy;
 }

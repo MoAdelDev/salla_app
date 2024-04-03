@@ -11,9 +11,9 @@ import 'package:salla_app/features/home_body/ui/widgets/product_image_discount.d
 import 'package:salla_app/features/home_body/ui/widgets/product_price.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_title.dart';
 
-class HomeProductTile extends StatelessWidget {
+class ProductTileVertical extends StatelessWidget {
   final ProductModel productModel;
-  const HomeProductTile({super.key, required this.productModel});
+  const ProductTileVertical({super.key, required this.productModel});
 
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,8 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
 
-class ProductShimmer extends StatelessWidget {
-  const ProductShimmer({super.key});
+class ProductShimmerVertical extends StatelessWidget {
+  const ProductShimmerVertical({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -29,13 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
             horizontal: 10.0.w,
             vertical: 10.0.h,
           ),
-          height: 70.0.h,
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 2,
-            )
-          ]),
+          height: 75.0.h,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+              )
+            ],
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -45,9 +48,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     : CupertinoIcons.house,
                 label: S.of(context).homeTitle,
                 isSelected: currentIndex == 0,
-                onTap: () => setState(() {
-                  currentIndex = 0;
-                }),
+                onTap: () => setState(
+                  () {
+                    currentIndex = 0;
+                  },
+                ),
               ),
               CustomHomeNavigation(
                 iconData: currentIndex == 1
