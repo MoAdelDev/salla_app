@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_model.dart';
-import 'package:salla_app/core/stripe/ephemeral_key_model/ephemeral_key_request_body.dart';
-import 'package:salla_app/core/stripe/payment_intent_model/payment_intent_model.dart';
-import 'package:salla_app/core/stripe/payment_intent_request_body.dart';
-import 'package:salla_app/core/stripe/stripe_api_service.dart';
+import 'package:salla_app/core/payment/stripe/ephemeral_key_model/ephemeral_key_model.dart';
+import 'package:salla_app/core/payment/stripe/ephemeral_key_model/ephemeral_key_request_body.dart';
+import 'package:salla_app/core/payment/stripe/payment_intent_model/payment_intent_model.dart';
+import 'package:salla_app/core/payment/stripe/payment_intent_request_body.dart';
+import 'package:salla_app/core/payment/stripe/stripe_api_service.dart';
 
 class StripeService {
   final StripeApiService stripeApiService;

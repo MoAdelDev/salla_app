@@ -3,8 +3,8 @@ import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/networking/api_result.dart';
 import 'package:salla_app/core/networking/api_service.dart';
-import 'package:salla_app/core/stripe/stripe_api_service.dart';
-import 'package:salla_app/core/stripe/stripe_service.dart';
+import 'package:salla_app/core/payment/stripe/stripe_api_service.dart';
+import 'package:salla_app/core/payment/stripe/stripe_service.dart';
 import 'package:salla_app/features/login/data/models/login_request_body.dart';
 import 'package:salla_app/features/login/data/models/login_response_body.dart';
 

@@ -3,8 +3,9 @@ import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
-import 'package:salla_app/core/stripe/payment_intent_request_body.dart';
+import 'package:salla_app/core/payment/stripe/payment_intent_request_body.dart';
 import 'package:salla_app/features/addresses/data/repos/addresses_repo.dart';
+import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/add_order_request_body.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_request_body.dart';
@@ -89,7 +90,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
   }
 
   void emitAddOrderState() async {
-    if (addressSelectedId == 0) {
+    if (addressSelectedId == 0 || addresses == null) {
       showToast('Please select or add new address');
       return;
     }
@@ -110,18 +111,46 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
 
   void emitPaymentState(double totalPrice) async {
     safeEmit(const CheckoutState.addOrderLoading());
-    if (addressSelectedId == 0) {
+    if (addressSelectedId == 0 || addresses == null) {
       showToast('Please select or add new address');
       return;
     }
     final String customerId = await CacheHelper.getString(key: 'customer_id');
 
-    final result = await _paymentRepo.makePayment(
+    final result = await _paymentRepo.makeStripePayment(
       PaymentIntentRequestBody(
         (totalPrice.toInt() * 100).toString(),
         'EGP',
         customerId,
       ),
+    );
+    result.when(
+      success: (response) {
+        emitAddOrderState();
+      },
+      failure: (message) {
+        safeEmit(
+          CheckoutState.addOrderFailure(message),
+        );
+      },
+    );
+  }
+
+  void emitPaymobState(
+    double totalPrice,
+    List<CartProductModel> products,
+  ) async {
+    safeEmit(const CheckoutState.addOrderLoading());
+    if (addressSelectedId == 0 || addresses == null) {
+      showToast('Please select or add new address');
+      return;
+    }
+    AddressModel addressModel =
+        addresses!.singleWhere((element) => element.id == addressSelectedId);
+    final result = await _paymentRepo.makePaymobPayment(
+      totalPrice,
+      products,
+      addressModel,
     );
     result.when(
       success: (response) {

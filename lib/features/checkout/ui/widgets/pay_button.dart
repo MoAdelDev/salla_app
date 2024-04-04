@@ -115,6 +115,12 @@ class PayButton extends StatelessWidget {
                 ),
               );
             }
+            if (cubit.payemntSelected == 0) {
+              cubit.emitPaymobState(
+                totalPrice,
+                products,
+              );
+            }
           },
           text: S.of(context).pay,
         );
