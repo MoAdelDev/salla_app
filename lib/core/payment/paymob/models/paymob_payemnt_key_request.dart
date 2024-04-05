@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'paymob_payemnt_key_request.g.dart';
 
@@ -12,7 +12,7 @@ class PaymobPaymentKeyRequest {
   @JsonKey(name: 'order_id')
   final String orderId;
   @JsonKey(name: 'billing_data')
-  final PaymobBillingData billingData;
+  final Map<String, dynamic> billingData;
   final String currency;
   @JsonKey(name: 'integration_id')
   final int integrationId;

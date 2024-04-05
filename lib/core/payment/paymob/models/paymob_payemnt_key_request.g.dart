@@ -13,8 +13,7 @@ PaymobPaymentKeyRequest _$PaymobPaymentKeyRequestFromJson(
       amountCents: json['amount_cents'] as String,
       expiration: json['expiration'] as int,
       orderId: json['order_id'] as String,
-      billingData: PaymobBillingData.fromJson(
-          json['billing_data'] as Map<String, dynamic>),
+      billingData: json['billing_data'] as Map<String, dynamic>,
       currency: json['currency'] as String,
       integrationId: json['integration_id'] as int,
       lockOrderWhenPaid: json['lock_order_when_paid'] as String,

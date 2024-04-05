@@ -21,86 +21,89 @@ class _PaymobApiService implements PaymobApiService {
   String? baseUrl;
 
   @override
-  Future<String> getAuthenticatorToken(
+  Future<PaymobTokenResponse> getAuthenticatorToken(
       PaymobTokenRequest paymobTokenRequest) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(paymobTokenRequest.toJson());
-    final _result = await _dio.fetch<String>(_setStreamType<String>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PaymobTokenResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'auth/tokens',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = _result.data!;
+            .compose(
+              _dio.options,
+              'auth/tokens',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PaymobTokenResponse.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<int> getOrderId(
+  Future<PaymobOrderResponse> getOrderId(
       PaymobOrderRegistrationRequest paymobOrderRegistrationRequest) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(paymobOrderRegistrationRequest.toJson());
-    final _result = await _dio.fetch<int>(_setStreamType<int>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PaymobOrderResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'ecommerce/orders',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = _result.data!;
+            .compose(
+              _dio.options,
+              'ecommerce/orders',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PaymobOrderResponse.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<String> getPaymentKey(
+  Future<PaymobPaymentKeyResponse> getPaymentKey(
       PaymobPaymentKeyRequest paymobOrderRegistrationRequest) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(paymobOrderRegistrationRequest.toJson());
-    final _result = await _dio.fetch<String>(_setStreamType<String>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PaymobPaymentKeyResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'acceptance/payment_keys',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
-    final value = _result.data!;
+            .compose(
+              _dio.options,
+              'acceptance/payment_keys',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = PaymobPaymentKeyResponse.fromJson(_result.data!);
     return value;
   }
 

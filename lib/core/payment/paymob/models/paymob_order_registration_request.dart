@@ -1,4 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'paymob_order_registration_request.g.dart';
 
@@ -11,18 +11,15 @@ class PaymobOrderRegistrationRequest {
   @JsonKey(name: 'amount_cents')
   final String amountCents;
   final String currency;
-  @JsonKey(name: 'merchant_order_id')
-  final String merchantOrderId;
-  final List<PaymobItem> items;
+  final List<Map<String, dynamic>> items;
   @JsonKey(name: 'shipping_data')
-  final PaymobShippingData shippingData;
+  final Map<String, dynamic> shippingData;
 
   PaymobOrderRegistrationRequest({
     required this.authToken,
     required this.deliveryNeeded,
     required this.amountCents,
     required this.currency,
-    required this.merchantOrderId,
     required this.items,
     required this.shippingData,
   });
@@ -32,21 +29,6 @@ class PaymobOrderRegistrationRequest {
 
   Map<String, dynamic> toJson() => _$PaymobOrderRegistrationRequestToJson(this);
 }
-// "shipping_data": {
-//     "apartment": "803",
-//     "email": "claudette09@exa.com",
-//     "floor": "42",
-//     "first_name": "Clifford",
-//     "street": "Ethan Land",
-//     "building": "8028",
-//     "phone_number": "+86(8)9135210487",
-//     "postal_code": "01898",
-//      "extra_description": "8 Ram , 128 Giga",
-//     "city": "Jaskolskiburgh",
-//     "country": "CR",
-//     "last_name": "Nicolas",
-//     "state": "Utah"
-//   },
 
 @JsonSerializable()
 class PaymobShippingData {
@@ -65,6 +47,7 @@ class PaymobShippingData {
   final String extraDescription;
   final String city;
   final String country;
+  @JsonKey(name: 'last_name')
   final String lastName;
   final String state;
 
@@ -93,6 +76,7 @@ class PaymobShippingData {
 @JsonSerializable()
 class PaymobItem {
   final String name;
+  @JsonKey(name: 'amount_cents')
   final String amountCents;
   final String description;
   final String quantity;

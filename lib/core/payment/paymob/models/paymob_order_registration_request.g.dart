@@ -13,12 +13,10 @@ PaymobOrderRegistrationRequest _$PaymobOrderRegistrationRequestFromJson(
       deliveryNeeded: json['delivery_needed'] as String,
       amountCents: json['amount_cents'] as String,
       currency: json['currency'] as String,
-      merchantOrderId: json['merchant_order_id'] as String,
       items: (json['items'] as List<dynamic>)
-          .map((e) => PaymobItem.fromJson(e as Map<String, dynamic>))
+          .map((e) => e as Map<String, dynamic>)
           .toList(),
-      shippingData: PaymobShippingData.fromJson(
-          json['shipping_data'] as Map<String, dynamic>),
+      shippingData: json['shipping_data'] as Map<String, dynamic>,
     );
 
 Map<String, dynamic> _$PaymobOrderRegistrationRequestToJson(
@@ -28,7 +26,6 @@ Map<String, dynamic> _$PaymobOrderRegistrationRequestToJson(
       'delivery_needed': instance.deliveryNeeded,
       'amount_cents': instance.amountCents,
       'currency': instance.currency,
-      'merchant_order_id': instance.merchantOrderId,
       'items': instance.items,
       'shipping_data': instance.shippingData,
     };
@@ -46,7 +43,7 @@ PaymobShippingData _$PaymobShippingDataFromJson(Map<String, dynamic> json) =>
       extraDescription: json['extra_description'] as String,
       city: json['city'] as String,
       country: json['country'] as String,
-      lastName: json['lastName'] as String,
+      lastName: json['last_name'] as String,
       state: json['state'] as String,
     );
 
@@ -63,13 +60,13 @@ Map<String, dynamic> _$PaymobShippingDataToJson(PaymobShippingData instance) =>
       'extra_description': instance.extraDescription,
       'city': instance.city,
       'country': instance.country,
-      'lastName': instance.lastName,
+      'last_name': instance.lastName,
       'state': instance.state,
     };
 
 PaymobItem _$PaymobItemFromJson(Map<String, dynamic> json) => PaymobItem(
       name: json['name'] as String,
-      amountCents: json['amountCents'] as String,
+      amountCents: json['amount_cents'] as String,
       description: json['description'] as String,
       quantity: json['quantity'] as String,
     );
@@ -77,7 +74,7 @@ PaymobItem _$PaymobItemFromJson(Map<String, dynamic> json) => PaymobItem(
 Map<String, dynamic> _$PaymobItemToJson(PaymobItem instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'amountCents': instance.amountCents,
+      'amount_cents': instance.amountCents,
       'description': instance.description,
       'quantity': instance.quantity,
     };
