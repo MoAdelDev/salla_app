@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
+import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
@@ -8,6 +11,7 @@ import 'package:salla_app/features/addresses/data/repos/addresses_repo.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/add_order_request_body.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
+import 'package:salla_app/features/checkout/data/models/paypal_transaction_model.dart';
 import 'package:salla_app/features/checkout/data/models/promo_code_request_body.dart';
 import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
@@ -109,12 +113,12 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     });
   }
 
-  void emitPaymentState(double totalPrice) async {
-    safeEmit(const CheckoutState.addOrderLoading());
+  void emitStripeState(double totalPrice) async {
     if (addressSelectedId == 0 || addresses == null) {
       showToast('Please select or add new address');
       return;
     }
+    safeEmit(const CheckoutState.addOrderLoading());
     final String customerId = await CacheHelper.getString(key: 'customer_id');
 
     final result = await _paymentRepo.makeStripePayment(
@@ -140,11 +144,12 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     double totalPrice,
     List<CartProductModel> products,
   ) async {
-    safeEmit(const CheckoutState.addOrderLoading());
     if (addressSelectedId == 0 || addresses == null) {
       showToast('Please select or add new address');
       return;
     }
+    safeEmit(const CheckoutState.addOrderLoading());
+
     AddressModel addressModel =
         addresses!.singleWhere((element) => element.id == addressSelectedId);
     final result = await _paymentRepo.makePaymobPayment(
@@ -174,5 +179,96 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     safeEmit(const CheckoutState.initial());
     payemntSelected = index;
     safeEmit(CheckoutState.selectPaymentMethod(index));
+  }
+
+  void emitPayPalState({
+    required totalPrice,
+    required List<CartProductModel> products,
+    required BuildContext context,
+  }) async {
+    if (addressSelectedId == 0 || addresses == null) {
+      showToast('Please select or add new address');
+      return;
+    }
+    safeEmit(const CheckoutState.addOrderLoading());
+    AmountDetailsModel amountDetails = AmountDetailsModel(
+      '${(totalPrice / 50).round()}',
+      '0',
+      '0',
+    );
+    AmountModel amount = AmountModel(
+      '${(totalPrice / 50).round()}',
+      'USD',
+      amountDetails,
+    );
+    AddressModel addressModel =
+        addresses!.singleWhere((element) => element.id == addressSelectedId);
+
+    PayPalShipphingAddress shipphingAddress = PayPalShipphingAddress(
+      addressModel.name,
+      addressModel.details,
+      '',
+      addressModel.city,
+      '',
+      AppData.userModel.phone,
+      'EG',
+      addressModel.region,
+    );
+
+    List<PayPalOrderModel> items = products
+        .map(
+          (e) => PayPalOrderModel(
+            e.product.name,
+            e.quantity.toString(),
+            '${(e.product.price / 50 as double).round()}',
+            'USD',
+          ),
+        )
+        .toList();
+    PayPalItems payPalItems = PayPalItems(
+      items,
+      shipphingAddress,
+    );
+    PayPalTransactionModel transaction = PayPalTransactionModel(
+      'Pay via PayPal Checkout',
+      payPalItems,
+      amount,
+    );
+    bool isSuccess = false;
+    Navigator.of(context)
+        .push(
+      MaterialPageRoute(
+        builder: (BuildContext context) => PaypalCheckoutView(
+          sandboxMode: true,
+          clientId: dotenv.env['PAYPAL_CLIENT_ID'],
+          secretKey: dotenv.env['PAYPAL_SECRET_KEY'],
+          transactions: [
+            transaction.toJson(),
+          ],
+          note: "Contact us for any questions on your order.",
+          onSuccess: (Map params) async {
+            context.pop();
+            isSuccess = true;
+          },
+          onError: (error) {
+            context.pop();
+            isSuccess = false;
+          },
+          onCancel: () {
+            context.pop();
+            isSuccess = false;
+          },
+        ),
+      ),
+    )
+        .then((value) {
+      if (isSuccess) {
+        emitAddOrderState();
+      } else {
+        safeEmit(
+          const CheckoutState.addOrderFailure('Payment cancelled'),
+        );
+      }
+    });
   }
 }

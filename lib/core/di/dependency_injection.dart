@@ -86,7 +86,10 @@ Future<void> setupGetIt() async {
   // checkout
   getIt.registerLazySingleton<PromoCodeRepo>(() => PromoCodeRepo(getIt()));
   getIt.registerLazySingleton<AddOrderRepo>(() => AddOrderRepo(getIt()));
-  getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(getIt(), getIt()));
+  getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(
+        getIt(),
+        getIt(),
+      ));
   getIt.registerFactory<CheckoutCubit>(
     () => CheckoutCubit(
       getIt<PromoCodeRepo>(),

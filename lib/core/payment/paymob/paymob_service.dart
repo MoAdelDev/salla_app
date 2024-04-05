@@ -16,33 +16,27 @@ class PaymobService {
 
   PaymobService(this.paymobApiService);
 
-  Future<void> payWithPaymob(
+  Future<String?> payWithPaymob(
     double totalPrice,
     List<CartProductModel> products,
     AddressModel address,
   ) async {
-    final String paymentKey = await getPaymentKey(
-      totalPrice,
-      products,
-      address,
-    );
-    canLaunchUrl(
-      Uri.parse(
-        'https://accept.paymob.com/api/acceptance/iframes/833389?payment_token=$paymentKey',
-      ),
-    ).then((value) {
-      if (value) {
-        launchUrl(
-          Uri.parse(
-            'https://accept.paymob.com/api/acceptance/iframes/833389?payment_token=$paymentKey',
-          ),
-        );
-        log('payment key: $paymentKey');
+    try {
+      final String paymentKey =
+          await getPaymentKey(totalPrice, products, address);
+      final paymentUrl = Uri.parse(
+          'https://accept.paymob.com/api/acceptance/iframes/833389?payment_token=$paymentKey');
+
+      if (await canLaunchUrl(paymentUrl)) {
+        await launchUrl(paymentUrl);
+        return paymentKey;
       } else {
-        log('payment key: error');
-        throw 'error';
+        return null;
       }
-    });
+    } catch (e) {
+      log('Payment error: $e');
+      return null;
+    }
   }
 
   Future<String> _getAuthenticatorToken() async {
