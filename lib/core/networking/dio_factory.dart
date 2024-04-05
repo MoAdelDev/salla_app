@@ -27,6 +27,21 @@ class DioFactory {
     return instance!;
   }
 
+  static Future<Dio> getPaymentInstance() async {
+    const Duration timeout = Duration(seconds: 60);
+    if (instance == null) {
+      BaseOptions baseOptions = BaseOptions(
+        receiveTimeout: timeout,
+        connectTimeout: timeout,
+        sendTimeout: timeout,
+        receiveDataWhenStatusError: true,
+      );
+      instance = Dio(baseOptions);
+    }
+    _addInterceptors();
+    return instance!;
+  }
+
   static void _addInterceptors() {
     instance!.interceptors.add(
       PrettyDioLogger(

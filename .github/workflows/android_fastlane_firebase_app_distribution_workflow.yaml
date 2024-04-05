@@ -36,6 +36,10 @@ jobs:
           echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
           echo "PAYPAL_CLIENT_ID=${{ secrets.PAYPAL_CLIENT_ID }}" >> .env
           echo "PAYPAL_SECRET_KEY=${{ secrets.PAYPAL_SECRET_KEY }}" >> .env
+          echo "PAYMOB_API_KEY=${{ secrets.PAYMOB_API_KEY }}" >> .env
+          echo "PAYMOB_MERCHANT_ORDER_ID=${{ secrets.PAYMOB_MERCHANT_ORDER_ID }}" >> .env
+          echo "PAYMOB_INTEGRATION_ID=${{ secrets.PAYMOB_INTEGRATION_ID }}" >> .env
+
 
       - name: Build and Distribute App
         env:

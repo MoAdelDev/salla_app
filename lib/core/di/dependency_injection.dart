@@ -2,8 +2,10 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:salla_app/core/networking/api_service.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
-import 'package:salla_app/core/stripe/stripe_api_service.dart';
-import 'package:salla_app/core/stripe/stripe_service.dart';
+import 'package:salla_app/core/payment/paymob/paymob_api_service.dart';
+import 'package:salla_app/core/payment/paymob/paymob_service.dart';
+import 'package:salla_app/core/payment/stripe/stripe_api_service.dart';
+import 'package:salla_app/core/payment/stripe/stripe_service.dart';
 import 'package:salla_app/features/add_or_edit_address/data/repos/add_address_repo.dart';
 import 'package:salla_app/features/add_or_edit_address/data/repos/edit_address_repo.dart';
 import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_cubit.dart';
@@ -47,6 +49,10 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<StripeApiService>(() => StripeApiService(dio));
   getIt.registerLazySingleton<StripeService>(() => StripeService(getIt()));
 
+  // Paymob Api Service
+  getIt.registerLazySingleton<PaymobApiService>(() => PaymobApiService(dio));
+  getIt.registerLazySingleton<PaymobService>(() => PaymobService(getIt()));
+
   // login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt<ApiService>()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
@@ -80,7 +86,10 @@ Future<void> setupGetIt() async {
   // checkout
   getIt.registerLazySingleton<PromoCodeRepo>(() => PromoCodeRepo(getIt()));
   getIt.registerLazySingleton<AddOrderRepo>(() => AddOrderRepo(getIt()));
-  getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(getIt()));
+  getIt.registerLazySingleton<PaymentRepo>(() => PaymentRepo(
+        getIt(),
+        getIt(),
+      ));
   getIt.registerFactory<CheckoutCubit>(
     () => CheckoutCubit(
       getIt<PromoCodeRepo>(),
