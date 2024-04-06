@@ -15,7 +15,7 @@ This project is a fully functional e-commerce application built using Flutter. I
 - Order Processing: Place orders, view order history.
 - Payment Integration: User can order the products via stripe or paypal
 - User Profile: Manage user information and view past orders.
-- Settings: User can change night mode and language of user interface.
+- Settings: User can change language of user interface.
 
 ## Design System
 
