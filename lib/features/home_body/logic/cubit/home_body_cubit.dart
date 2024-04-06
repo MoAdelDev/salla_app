@@ -67,23 +67,28 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
 
   void updateFavorites(int id, bool isFavorite) {
     favorites[id] = isFavorite;
-    safeEmit(const HomeBodyState.updateFavorites());
   }
 
   void emitChangeFavoriteState(
-      {required int productId, required FavoritesCubit favoritesCubit}) async {
-    favorites[productId] = !favorites[productId]!;
+      {required ProductModel product,
+      required FavoritesCubit favoritesCubit}) async {
+    favorites[product.id] = !favorites[product.id]!;
     safeEmit(const HomeBodyState.changeFavoriteLoading());
     final response = await _homeBodyRepo.changeFavorite(
-      changeFavoriteRequest: ChangeFavoriteRequest(productId),
+      changeFavoriteRequest: ChangeFavoriteRequest(product.id),
     );
     response.when(
       success: (favoriteResponse) {
-        favoritesCubit.emitFavoritesState();
+        if (favorites[product.id] ?? false) {
+          favoritesCubit.emitAddFavoriteState(
+              product, favoriteResponse.data?.id ?? 0);
+        } else {
+          favoritesCubit.emitRemoveFromFavoritesState(this, product.id);
+        }
         safeEmit(const HomeBodyState.changeFavoriteSuccess());
       },
       failure: (error) {
-        favorites[productId] = !favorites[productId]!;
+        favorites[product.id] = !favorites[product.id]!;
         safeEmit(const HomeBodyState.changeFavoriteError());
       },
     );

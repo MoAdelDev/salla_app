@@ -2,6 +2,7 @@ import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/favorites/data/repos/favorites_repo.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_state.dart';
+import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 
 class FavoritesCubit extends BaseSafeCubit<FavoritesState> {
@@ -25,13 +26,14 @@ class FavoritesCubit extends BaseSafeCubit<FavoritesState> {
   }
 
   Future<void> emitRemoveFavoriteState(
-      FavoriteModel favoriteModel, HomeBodyCubit cubit) async {
+    FavoriteModel favoriteModel,
+    HomeBodyCubit cubit,
+  ) async {
+    emitRemoveFromFavoritesState(cubit, favoriteModel.product.id);
     safeEmit(const FavoritesState.removeFavoriteLoading());
     final response = await favoritesRepo.removeFavorite(id: favoriteModel.id);
     response.when(
       success: (response) {
-        cubit.updateFavorites(favoriteModel.product.id, false);
-        favorites.removeWhere((element) => element.id == favoriteModel.id);
         safeEmit(
           FavoritesState.removeFavoriteSuccess(response),
         );
@@ -40,6 +42,34 @@ class FavoritesCubit extends BaseSafeCubit<FavoritesState> {
         FavoritesState.removeFavoriteFailure(error),
       ),
     );
+  }
+
+  void emitAddFavoriteState(ProductModel product, int favoriteId) async {
+    safeEmit(const FavoritesState.addFavoriteLoading());
+    favorites.add(
+      FavoriteModel(
+        favoriteId,
+        FavoriteProductModel(
+          product.id,
+          product.name,
+          product.description,
+          product.image,
+          product.price,
+          product.oldPrice,
+          product.discount,
+        ),
+      ),
+    );
+    safeEmit(const FavoritesState.addFavoriteSuccess());
+  }
+
+  void emitRemoveFromFavoritesState(
+    HomeBodyCubit cubit,
+    int productId,
+  ) async {
+    cubit.updateFavorites(productId, false);
+    favorites.removeWhere((element) => element.product.id == productId);
+    safeEmit(const FavoritesState.removeAllFavoritesLoading());
   }
 
   Future<void> emitRemoveAllFavoriteState(HomeBodyCubit cubit) async {

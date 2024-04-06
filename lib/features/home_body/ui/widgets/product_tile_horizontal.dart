@@ -54,7 +54,7 @@ class ProductTileHorizontal extends StatelessWidget {
               ],
             ),
             ProductFavorite(
-              productId: productModel.id,
+              productModel: productModel,
             ),
           ],
         ),
