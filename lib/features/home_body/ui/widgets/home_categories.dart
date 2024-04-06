@@ -17,7 +17,6 @@ class HomeCategories extends StatefulWidget {
 }
 
 class _HomeCategoriesState extends State<HomeCategories> {
-  int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,6 +24,7 @@ class _HomeCategoriesState extends State<HomeCategories> {
       padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
         builder: (context, state) {
+          int categoryId = context.read<HomeBodyCubit>().categoryId;
           List<CategoryModel> categories =
               context.read<HomeBodyCubit>().categories;
           if (categories.isEmpty) {
@@ -48,45 +48,43 @@ class _HomeCategoriesState extends State<HomeCategories> {
               child: Row(
                 children: [
                   CategoryTile(
-                    isSelected: selectedIndex == -1,
+                    isSelected: categoryId == -1,
                     categoryModel: CategoryModel(0, S.of(context).all, ''),
                     onTap: () {
                       if (context.read<HomeBodyCubit>().isProductsLoading ==
                           false) {
-                        selectedIndex = -1;
                         context.read<HomeBodyCubit>().emitProductsState();
                       }
                     },
                   ),
                   horizontalSpace(10.0),
                   ListView.separated(
-                      shrinkWrap: true,
-                      reverse: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 5,
-                      separatorBuilder: (BuildContext context, int index) {
-                        return horizontalSpace(10.0);
-                      },
-                      itemBuilder: (BuildContext context, int index) {
-                        return CategoryTile(
-                          onTap: () {
-                            if (selectedIndex != index &&
-                                context
-                                        .read<HomeBodyCubit>()
-                                        .isProductsLoading ==
-                                    false) {
-                              selectedIndex = index;
-                              context
-                                  .read<HomeBodyCubit>()
-                                  .emitGetProductsByCategoryState(
-                                      categoryId: categories[index].id);
-                            }
-                          },
-                          isSelected: selectedIndex == index,
-                          categoryModel: categories[index],
-                        );
-                      }),
+                    shrinkWrap: true,
+                    reverse: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    separatorBuilder: (BuildContext context, int index) {
+                      return horizontalSpace(10.0);
+                    },
+                    itemBuilder: (BuildContext context, int index) {
+                      CategoryModel categoryModel = categories[index];
+                      return CategoryTile(
+                        onTap: () {
+                          if (categoryId != index &&
+                              context.read<HomeBodyCubit>().isProductsLoading ==
+                                  false) {
+                            context
+                                .read<HomeBodyCubit>()
+                                .emitGetProductsByCategoryState(
+                                    categoryId: categories[index].id);
+                          }
+                        },
+                        isSelected: categoryId == categoryModel.id,
+                        categoryModel: categories[index],
+                      );
+                    },
+                  ),
                 ],
               ),
             ),

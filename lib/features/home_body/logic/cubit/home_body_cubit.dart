@@ -45,6 +45,7 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   bool isProductsLoading = false;
   void emitProductsState() async {
     isProductsLoading = true;
+    categoryId = -1;
     safeEmit(const HomeBodyState.productsLoading());
     final response = await _homeBodyRepo.getProducts();
     response.when(
