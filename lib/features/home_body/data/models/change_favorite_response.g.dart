@@ -11,6 +11,9 @@ ChangeFavoriteResponse _$ChangeFavoriteResponseFromJson(
     ChangeFavoriteResponse(
       json['status'] as bool,
       json['message'] as String?,
+      json['data'] == null
+          ? null
+          : ChangeFavoriteData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$ChangeFavoriteResponseToJson(
@@ -18,4 +21,15 @@ Map<String, dynamic> _$ChangeFavoriteResponseToJson(
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,
+      'data': instance.data,
+    };
+
+ChangeFavoriteData _$ChangeFavoriteDataFromJson(Map<String, dynamic> json) =>
+    ChangeFavoriteData(
+      json['id'] as int,
+    );
+
+Map<String, dynamic> _$ChangeFavoriteDataToJson(ChangeFavoriteData instance) =>
+    <String, dynamic>{
+      'id': instance.id,
     };

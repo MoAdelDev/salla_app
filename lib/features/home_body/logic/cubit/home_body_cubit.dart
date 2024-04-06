@@ -1,5 +1,3 @@
-import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
@@ -45,6 +43,7 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   bool isProductsLoading = false;
   void emitProductsState() async {
     isProductsLoading = true;
+    categoryId = -1;
     safeEmit(const HomeBodyState.productsLoading());
     final response = await _homeBodyRepo.getProducts();
     response.when(
@@ -68,25 +67,28 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
 
   void updateFavorites(int id, bool isFavorite) {
     favorites[id] = isFavorite;
-    safeEmit(const HomeBodyState.updateFavorites());
   }
 
   void emitChangeFavoriteState(
-      {required int productId, required BuildContext context}) async {
-    favorites[productId] = !favorites[productId]!;
+      {required ProductModel product,
+      required FavoritesCubit favoritesCubit}) async {
+    favorites[product.id] = !favorites[product.id]!;
     safeEmit(const HomeBodyState.changeFavoriteLoading());
     final response = await _homeBodyRepo.changeFavorite(
-      changeFavoriteRequest: ChangeFavoriteRequest(productId),
+      changeFavoriteRequest: ChangeFavoriteRequest(product.id),
     );
     response.when(
       success: (favoriteResponse) {
-        if (context.mounted) {
-          context.read<FavoritesCubit>().emitFavoritesState();
+        if (favorites[product.id] ?? false) {
+          favoritesCubit.emitAddFavoriteState(
+              product, favoriteResponse.data?.id ?? 0);
+        } else {
+          favoritesCubit.emitRemoveFromFavoritesState(this, product.id);
         }
         safeEmit(const HomeBodyState.changeFavoriteSuccess());
       },
       failure: (error) {
-        favorites[productId] = !favorites[productId]!;
+        favorites[product.id] = !favorites[product.id]!;
         safeEmit(const HomeBodyState.changeFavoriteError());
       },
     );

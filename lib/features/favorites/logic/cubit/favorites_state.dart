@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:salla_app/features/favorites/data/models/favorite_remove_response.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
+
 part 'favorites_state.freezed.dart';
 
 @freezed
@@ -18,6 +19,10 @@ sealed class FavoritesState with _$FavoritesState {
   const factory FavoritesState.removeFavoriteSuccess(
       FavoriteRemoveResponse response) = RemoveFavoriteSuccess;
 
+  const factory FavoritesState.addFavoriteLoading() = AddFavoriteLoading;
+
+  const factory FavoritesState.addFavoriteSuccess() = AddFavoriteSuccess;
+
   const factory FavoritesState.removeFavoriteFailure(String error) =
       RemoveFavoriteFailure;
 
@@ -26,7 +31,12 @@ sealed class FavoritesState with _$FavoritesState {
 
   const factory FavoritesState.removeAllFavoritesSuccess() =
       RemoveAllFavoritesSuccess;
-
   const factory FavoritesState.removeAllFavoritesFailure(String error) =
       RemoveAllFavoritesFailure;
+
+  const factory FavoritesState.removeFromFavoritesLoading() =
+      RemoveFromFavoritesLoading;
+
+  const factory FavoritesState.removeFromFavoritesSuccess() =
+      RemoveFromFavoritesSuccess;
 }

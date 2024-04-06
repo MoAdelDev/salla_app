@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
@@ -26,9 +27,12 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             icon2: Icons.clear_all,
             onTap2: () {
               if (mounted) {
-                context
-                    .read<FavoritesCubit>()
-                    .emitRemoveAllFavoriteState(context.read<HomeBodyCubit>());
+                if (context.read<HomeBodyCubit>().favorites.isEmpty) {
+                  showToast(S.of(context).pleaseWaitToLoadProducts);
+                } else {
+                  context.read<FavoritesCubit>().emitRemoveAllFavoriteState(
+                      context.read<HomeBodyCubit>());
+                }
               }
             },
           ),
