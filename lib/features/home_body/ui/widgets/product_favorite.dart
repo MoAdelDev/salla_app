@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 
@@ -15,7 +16,7 @@ class ProductFavorite extends StatelessWidget {
           onTap: () {
             context.read<HomeBodyCubit>().emitChangeFavoriteState(
                   productId: productId,
-                  context: context,
+                  favoritesCubit: context.read<FavoritesCubit>(),
                 );
           },
           child: Icon(
