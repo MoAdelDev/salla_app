@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
@@ -24,9 +27,30 @@ class HomeAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(
-            'assets/icons/logo.png',
-            height: 35.h,
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 5.0.w,
+            ),
+            decoration: BoxDecoration(
+              color: context.colorScheme.primary,
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Row(
+              children: [
+                GestureDetector(
+                  onTap: () {},
+                  child: SvgPicture.asset(
+                    'assets/icons/app.svg',
+                    height: 35.h,
+                  ),
+                ),
+                horizontalSpace(3.0),
+                Text(
+                  'Salla',
+                  style: AppTexts.text14WhiteCairoBold,
+                )
+              ],
+            ),
           ),
           horizontalSpace(10.0),
           Expanded(

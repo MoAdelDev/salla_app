@@ -14,22 +14,27 @@ class SearchContainer extends StatelessWidget {
       builder: (context, state) {
         HomeBodyCubit cubit = context.read<HomeBodyCubit>();
         if (cubit.isSearchContainerVisible) {
-          return Container(
-            height: 400.h,
-            width: double.infinity,
-            margin: EdgeInsets.only(
-              left: 30.w,
-              right: 30.w,
-              bottom: 20.h,
-            ),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20.0),
-              border: Border.all(
-                color: Colors.black12,
+          return GestureDetector(
+            onTap: () {
+              FocusManager.instance.primaryFocus?.unfocus();
+            },
+            child: Container(
+              height: 400.h,
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                left: 30.w,
+                right: 30.w,
+                bottom: 20.h,
               ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+                border: Border.all(
+                  color: Colors.black12,
+                ),
+              ),
+              child: const HomeSearchList(),
             ),
-            child: const HomeSearchList(),
           );
         }
         return Container();
