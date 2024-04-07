@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/notification_helper.dart';
+import 'package:salla_app/core/helpers/permissions.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
@@ -19,6 +21,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    requestNotificationPermission().then(
+      (value) {
+        if (value) {
+          NotificationHelper.initLocalNotifications();
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

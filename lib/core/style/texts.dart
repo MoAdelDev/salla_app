@@ -77,6 +77,12 @@ class AppTexts {
         fontWeight: AppFontWeight.regular,
       );
 
+  static TextStyle get text14BlackCairoSemiBold => GoogleFonts.cairo(
+        fontSize: 14.0.sp,
+        color: Colors.black,
+        fontWeight: AppFontWeight.semiBold,
+      );
+
   static TextStyle get text18BlackLatoBold => GoogleFonts.lato(
         fontSize: 18.0.sp,
         color: Colors.black,

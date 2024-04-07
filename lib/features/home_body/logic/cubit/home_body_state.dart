@@ -35,4 +35,8 @@ sealed class HomeBodyState with _$HomeBodyState {
   const factory HomeBodyState.changeProductsView() = ChangeProductsView;
 
   const factory HomeBodyState.changeSortBy() = ChangeSortBy;
+
+  const factory HomeBodyState.showSearchContainer() = ShowSearchContainer;
+
+  const factory HomeBodyState.searchProducts() = SearchProducts;
 }
