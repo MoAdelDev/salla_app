@@ -20,6 +20,7 @@ import 'package:salla_app/features/checkout/data/repos/add_order_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/payment_repo.dart';
 import 'package:salla_app/features/checkout/data/repos/promo_code_repo.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
   final PromoCodeRepo _promoCodeRepo;
@@ -98,7 +99,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
 
   void emitAddOrderState() async {
     if (addressSelectedId == 0 || addresses == null) {
-      showToast('Please select or add new address');
+      showToast(S.current.pleaseSelectOrAddNewAddress);
       return;
     }
     safeEmit(const CheckoutState.addOrderLoading());
@@ -113,7 +114,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
       safeEmit(CheckoutState.addOrderSuccess(response.message));
       int randomId = Random().nextInt(1000);
       NotificationHelper.showNotification(
-        title: 'Order Requested',
+        title: S.current.order,
         body: response.message,
         id: randomId,
       );
@@ -124,7 +125,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
 
   void emitStripeState(double totalPrice) async {
     if (addressSelectedId == 0 || addresses == null) {
-      showToast('Please select or add new address');
+      showToast(S.current.pleaseSelectOrAddNewAddress);
       return;
     }
     safeEmit(const CheckoutState.addOrderLoading());
@@ -154,7 +155,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     List<CartProductModel> products,
   ) async {
     if (addressSelectedId == 0 || addresses == null) {
-      showToast('Please select or add new address');
+      showToast(S.current.pleaseSelectOrAddNewAddress);
       return;
     }
     safeEmit(const CheckoutState.addOrderLoading());
@@ -196,7 +197,7 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     required BuildContext context,
   }) async {
     if (addressSelectedId == 0 || addresses == null) {
-      showToast('Please select or add new address');
+      showToast(S.current.pleaseSelectOrAddNewAddress);
       return;
     }
     safeEmit(const CheckoutState.addOrderLoading());

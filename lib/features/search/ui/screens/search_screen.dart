@@ -20,16 +20,18 @@ class SearchScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  const SearchAppBar(),
-                  verticalSpace(10.0),
-                  const SearchProductsHeader(),
-                  verticalSpace(10.0),
-                  const SearchFilteredProducts(),
-                ],
-              ),
+            child: Column(
+              children: [
+                const SearchAppBar(),
+                verticalSpace(10.0),
+                const SearchProductsHeader(),
+                verticalSpace(10.0),
+                const Expanded(
+                  child: SingleChildScrollView(
+                    child: SearchFilteredProducts(),
+                  ),
+                ),
+              ],
             ),
           ),
         );

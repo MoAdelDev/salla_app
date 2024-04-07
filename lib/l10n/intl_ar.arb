@@ -120,5 +120,9 @@
   "selectPaymentMethod" : "إختار طريقة الدفع",
   "pay" : "ادفع",
   "noProductsFound" : "لا يوجد منتجات",
-  "productsFound" : "المنتجات الموجودة"
+  "productsFound" : "المنتجات الموجودة",
+  "searchForProducts" : "ابحث عن المنتجات",
+  "seeAllSearchResults" : "اعرض كل نتائج البحث",
+  "order" : "الطلب",
+  "pleaseSelectOrAddNewAddress" : "يرجى تحديد عنوان او اضافة عنوان جديد"
 }
