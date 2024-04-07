@@ -42,7 +42,7 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   List<ProductModel> products = [];
   Map<int, bool> favorites = {};
   bool isProductsLoading = false;
-  Future<void> emitProductsState() async {
+  void emitProductsState() async {
     isProductsLoading = true;
     categoryId = -1;
     safeEmit(const HomeBodyState.productsLoading());

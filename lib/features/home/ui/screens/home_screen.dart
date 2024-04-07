@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/notification_helper.dart';
 import 'package:salla_app/core/helpers/permissions.dart';
-import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
 import 'package:salla_app/features/home/ui/widgets/custom_home_navigation.dart';
@@ -104,13 +103,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          if (state is UserLoading) {
-            return const Center(
-              child: CustomLoadingIndicator(
-                size: 60,
-              ),
-            );
-          }
           return SafeArea(
             bottom: false,
             child: context.read<HomeCubit>().screens[currentIndex],
