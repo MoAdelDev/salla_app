@@ -909,6 +909,8 @@ PODS:
   - flutter_inappwebview/Core (0.0.1):
     - Flutter
     - OrderedSet (~> 5.0)
+  - flutter_keyboard_visibility (0.0.1):
+    - Flutter
   - flutter_local_notifications (0.0.1):
     - Flutter
   - flutter_localization (0.0.1):
@@ -1099,6 +1101,7 @@ DEPENDENCIES:
   - firebase_storage (from `.symlinks/plugins/firebase_storage/ios`)
   - Flutter (from `Flutter`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
+  - flutter_keyboard_visibility (from `.symlinks/plugins/flutter_keyboard_visibility/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_localization (from `.symlinks/plugins/flutter_localization/ios`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
@@ -1163,6 +1166,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_inappwebview:
     :path: ".symlinks/plugins/flutter_inappwebview/ios"
+  flutter_keyboard_visibility:
+    :path: ".symlinks/plugins/flutter_keyboard_visibility/ios"
   flutter_local_notifications:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_localization:
@@ -1212,6 +1217,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: bc7bddc743548a89cfb896843a77cf4bdde2c231
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_inappwebview: 3d32228f1304635e7c028b0d4252937730bbc6cf
+  flutter_keyboard_visibility: 0339d06371254c3eb25eeb90ba8d17dca8f9c069
   flutter_local_notifications: 4cde75091f6327eb8517fa068a0a5950212d2086
   flutter_localization: f43b18844a2b3d2c71fd64f04ffd6b1e64dd54d4
   flutter_native_splash: edf599c81f74d093a4daf8e17bd7a018854bc778
