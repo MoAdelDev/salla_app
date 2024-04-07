@@ -34,6 +34,8 @@ mixin _$HomeBodyState {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,6 +56,8 @@ mixin _$HomeBodyState {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +78,8 @@ mixin _$HomeBodyState {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -97,6 +103,8 @@ mixin _$HomeBodyState {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -117,6 +125,8 @@ mixin _$HomeBodyState {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -137,6 +147,8 @@ mixin _$HomeBodyState {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -214,6 +226,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return initial();
   }
@@ -237,6 +251,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return initial?.call();
   }
@@ -260,6 +276,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -289,6 +307,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return initial(this);
   }
@@ -312,6 +332,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return initial?.call(this);
   }
@@ -335,6 +357,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -402,6 +426,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return bannersLoading();
   }
@@ -425,6 +451,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return bannersLoading?.call();
   }
@@ -448,6 +476,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -477,6 +507,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return bannersLoading(this);
   }
@@ -500,6 +532,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return bannersLoading?.call(this);
   }
@@ -523,6 +557,8 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -590,6 +626,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return bannersSuccess();
   }
@@ -613,6 +651,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return bannersSuccess?.call();
   }
@@ -636,6 +676,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -665,6 +707,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return bannersSuccess(this);
   }
@@ -688,6 +732,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return bannersSuccess?.call(this);
   }
@@ -711,6 +757,8 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -778,6 +826,8 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return bannersError();
   }
@@ -801,6 +851,8 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return bannersError?.call();
   }
@@ -824,6 +876,8 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -853,6 +907,8 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return bannersError(this);
   }
@@ -876,6 +932,8 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return bannersError?.call(this);
   }
@@ -899,6 +957,8 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -966,6 +1026,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return categoriesLoading();
   }
@@ -989,6 +1051,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return categoriesLoading?.call();
   }
@@ -1012,6 +1076,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1041,6 +1107,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return categoriesLoading(this);
   }
@@ -1064,6 +1132,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return categoriesLoading?.call(this);
   }
@@ -1087,6 +1157,8 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1154,6 +1226,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return categoriesSuccess();
   }
@@ -1177,6 +1251,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return categoriesSuccess?.call();
   }
@@ -1200,6 +1276,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1229,6 +1307,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return categoriesSuccess(this);
   }
@@ -1252,6 +1332,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return categoriesSuccess?.call(this);
   }
@@ -1275,6 +1357,8 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1342,6 +1426,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return categoriesError();
   }
@@ -1365,6 +1451,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return categoriesError?.call();
   }
@@ -1388,6 +1476,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1417,6 +1507,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return categoriesError(this);
   }
@@ -1440,6 +1532,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return categoriesError?.call(this);
   }
@@ -1463,6 +1557,8 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1530,6 +1626,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return productsLoading();
   }
@@ -1553,6 +1651,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return productsLoading?.call();
   }
@@ -1576,6 +1676,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1605,6 +1707,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return productsLoading(this);
   }
@@ -1628,6 +1732,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return productsLoading?.call(this);
   }
@@ -1651,6 +1757,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -1718,6 +1826,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return productsSuccess();
   }
@@ -1741,6 +1851,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return productsSuccess?.call();
   }
@@ -1764,6 +1876,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1793,6 +1907,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return productsSuccess(this);
   }
@@ -1816,6 +1932,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return productsSuccess?.call(this);
   }
@@ -1839,6 +1957,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -1906,6 +2026,8 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return productsError();
   }
@@ -1929,6 +2051,8 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return productsError?.call();
   }
@@ -1952,6 +2076,8 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1981,6 +2107,8 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return productsError(this);
   }
@@ -2004,6 +2132,8 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return productsError?.call(this);
   }
@@ -2027,6 +2157,8 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -2096,6 +2228,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return changeFavoriteLoading();
   }
@@ -2119,6 +2253,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return changeFavoriteLoading?.call();
   }
@@ -2142,6 +2278,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteLoading != null) {
@@ -2171,6 +2309,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return changeFavoriteLoading(this);
   }
@@ -2194,6 +2334,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return changeFavoriteLoading?.call(this);
   }
@@ -2217,6 +2359,8 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteLoading != null) {
@@ -2286,6 +2430,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return changeFavoriteSuccess();
   }
@@ -2309,6 +2455,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return changeFavoriteSuccess?.call();
   }
@@ -2332,6 +2480,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteSuccess != null) {
@@ -2361,6 +2511,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return changeFavoriteSuccess(this);
   }
@@ -2384,6 +2536,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return changeFavoriteSuccess?.call(this);
   }
@@ -2407,6 +2561,8 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteSuccess != null) {
@@ -2475,6 +2631,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return changeFavoriteError();
   }
@@ -2498,6 +2656,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return changeFavoriteError?.call();
   }
@@ -2521,6 +2681,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteError != null) {
@@ -2550,6 +2712,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return changeFavoriteError(this);
   }
@@ -2573,6 +2737,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return changeFavoriteError?.call(this);
   }
@@ -2596,6 +2762,8 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteError != null) {
@@ -2663,6 +2831,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return updateFavorites();
   }
@@ -2686,6 +2856,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return updateFavorites?.call();
   }
@@ -2709,6 +2881,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (updateFavorites != null) {
@@ -2738,6 +2912,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return updateFavorites(this);
   }
@@ -2761,6 +2937,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return updateFavorites?.call(this);
   }
@@ -2784,6 +2962,8 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (updateFavorites != null) {
@@ -2851,6 +3031,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return changeProductsView();
   }
@@ -2874,6 +3056,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return changeProductsView?.call();
   }
@@ -2897,6 +3081,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (changeProductsView != null) {
@@ -2926,6 +3112,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return changeProductsView(this);
   }
@@ -2949,6 +3137,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return changeProductsView?.call(this);
   }
@@ -2972,6 +3162,8 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeProductsView != null) {
@@ -3039,6 +3231,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     required TResult Function() updateFavorites,
     required TResult Function() changeProductsView,
     required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
   }) {
     return changeSortBy();
   }
@@ -3062,6 +3256,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult? Function()? updateFavorites,
     TResult? Function()? changeProductsView,
     TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
   }) {
     return changeSortBy?.call();
   }
@@ -3085,6 +3281,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult Function()? updateFavorites,
     TResult Function()? changeProductsView,
     TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
     required TResult orElse(),
   }) {
     if (changeSortBy != null) {
@@ -3114,6 +3312,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     required TResult Function(UpdateFavorites value) updateFavorites,
     required TResult Function(ChangeProductsView value) changeProductsView,
     required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
   }) {
     return changeSortBy(this);
   }
@@ -3137,6 +3337,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult? Function(UpdateFavorites value)? updateFavorites,
     TResult? Function(ChangeProductsView value)? changeProductsView,
     TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
   }) {
     return changeSortBy?.call(this);
   }
@@ -3160,6 +3362,8 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult Function(UpdateFavorites value)? updateFavorites,
     TResult Function(ChangeProductsView value)? changeProductsView,
     TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeSortBy != null) {
@@ -3171,4 +3375,405 @@ class _$ChangeSortByImpl implements ChangeSortBy {
 
 abstract class ChangeSortBy implements HomeBodyState {
   const factory ChangeSortBy() = _$ChangeSortByImpl;
+}
+
+/// @nodoc
+abstract class _$$ShowSearchContainerImplCopyWith<$Res> {
+  factory _$$ShowSearchContainerImplCopyWith(_$ShowSearchContainerImpl value,
+          $Res Function(_$ShowSearchContainerImpl) then) =
+      __$$ShowSearchContainerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ShowSearchContainerImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$ShowSearchContainerImpl>
+    implements _$$ShowSearchContainerImplCopyWith<$Res> {
+  __$$ShowSearchContainerImplCopyWithImpl(_$ShowSearchContainerImpl _value,
+      $Res Function(_$ShowSearchContainerImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ShowSearchContainerImpl implements ShowSearchContainer {
+  const _$ShowSearchContainerImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.showSearchContainer()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowSearchContainerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
+    required TResult Function() changeProductsView,
+    required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
+  }) {
+    return showSearchContainer();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
+    TResult? Function()? changeProductsView,
+    TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
+  }) {
+    return showSearchContainer?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
+    TResult Function()? changeProductsView,
+    TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (showSearchContainer != null) {
+      return showSearchContainer();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
+    required TResult Function(ChangeProductsView value) changeProductsView,
+    required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
+  }) {
+    return showSearchContainer(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
+    TResult? Function(ChangeProductsView value)? changeProductsView,
+    TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
+  }) {
+    return showSearchContainer?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
+    TResult Function(ChangeProductsView value)? changeProductsView,
+    TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (showSearchContainer != null) {
+      return showSearchContainer(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ShowSearchContainer implements HomeBodyState {
+  const factory ShowSearchContainer() = _$ShowSearchContainerImpl;
+}
+
+/// @nodoc
+abstract class _$$SearchProductsImplCopyWith<$Res> {
+  factory _$$SearchProductsImplCopyWith(_$SearchProductsImpl value,
+          $Res Function(_$SearchProductsImpl) then) =
+      __$$SearchProductsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SearchProductsImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$SearchProductsImpl>
+    implements _$$SearchProductsImplCopyWith<$Res> {
+  __$$SearchProductsImplCopyWithImpl(
+      _$SearchProductsImpl _value, $Res Function(_$SearchProductsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SearchProductsImpl implements SearchProducts {
+  const _$SearchProductsImpl();
+
+  @override
+  String toString() {
+    return 'HomeBodyState.searchProducts()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SearchProductsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
+    required TResult Function() changeProductsView,
+    required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
+  }) {
+    return searchProducts();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
+    TResult? Function()? changeProductsView,
+    TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
+  }) {
+    return searchProducts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
+    TResult Function()? changeProductsView,
+    TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (searchProducts != null) {
+      return searchProducts();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
+    required TResult Function(ChangeProductsView value) changeProductsView,
+    required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
+  }) {
+    return searchProducts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
+    TResult? Function(ChangeProductsView value)? changeProductsView,
+    TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
+  }) {
+    return searchProducts?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
+    TResult Function(ChangeProductsView value)? changeProductsView,
+    TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (searchProducts != null) {
+      return searchProducts(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchProducts implements HomeBodyState {
+  const factory SearchProducts() = _$SearchProductsImpl;
 }

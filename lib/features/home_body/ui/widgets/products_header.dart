@@ -17,7 +17,6 @@ class ProductsHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 20.h,
         horizontal: 10.w,
       ),
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(

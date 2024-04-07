@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
@@ -5,6 +7,7 @@ import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/core/helpers/cache_helper.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/notification_helper.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/payment/stripe/payment_intent_request_body.dart';
 import 'package:salla_app/features/addresses/data/repos/addresses_repo.dart';
@@ -108,6 +111,12 @@ class CheckoutCubit extends BaseSafeCubit<CheckoutState> {
     );
     result.when(success: (response) {
       safeEmit(CheckoutState.addOrderSuccess(response.message));
+      int randomId = Random().nextInt(1000);
+      NotificationHelper.showNotification(
+        title: 'Order Requested',
+        body: response.message,
+        id: randomId,
+      );
     }, failure: (message) {
       safeEmit(CheckoutState.addOrderFailure(message));
     });

@@ -1,17 +1,15 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
-import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 
-class HomeAppBar extends StatelessWidget {
-  final List<ProductModel> products;
-  const HomeAppBar({
+class SearchAppBar extends StatelessWidget {
+  const SearchAppBar({
     super.key,
-    required this.products,
   });
 
   @override
@@ -24,10 +22,23 @@ class HomeAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SvgPicture.asset(
-            'assets/icons/app.svg',
-            width: 35.w,
-            height: 35.h,
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: Container(
+              height: 38.0.h,
+              width: 38.0.w,
+              margin: const EdgeInsets.all(1),
+              decoration: BoxDecoration(
+                color: context.colorScheme.primary,
+                border: Border.all(color: Colors.grey[300]!),
+                borderRadius: BorderRadius.circular(10.0.r),
+              ),
+              child: const Icon(
+                Icons.chevron_left,
+                size: 30.0,
+                color: Colors.white,
+              ),
+            ),
           ),
           horizontalSpace(10.0),
           Expanded(
@@ -50,15 +61,6 @@ class HomeAppBar extends StatelessWidget {
                   context.read<HomeBodyCubit>().emitSearhcState(value);
                 },
               ),
-            ),
-          ),
-          horizontalSpace(10.0),
-          GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset(
-              'assets/icons/notification.svg',
-              width: 25.w,
-              height: 25.h,
             ),
           ),
         ],

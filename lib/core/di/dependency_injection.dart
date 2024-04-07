@@ -37,7 +37,6 @@ import 'package:salla_app/features/profile/data/repos/logout_repo.dart';
 import 'package:salla_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:salla_app/features/register/data/repos/register_repo.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
-import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -98,9 +97,6 @@ Future<void> setupGetIt() async {
       getIt<PaymentRepo>(),
     ),
   );
-
-  // search
-  getIt.registerFactory<SearchCubit>(() => SearchCubit());
 
   // settings
   getIt

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/base_safe_cubit.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
@@ -41,7 +42,7 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   List<ProductModel> products = [];
   Map<int, bool> favorites = {};
   bool isProductsLoading = false;
-  void emitProductsState() async {
+  Future<void> emitProductsState() async {
     isProductsLoading = true;
     categoryId = -1;
     safeEmit(const HomeBodyState.productsLoading());
@@ -156,5 +157,27 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
       products.sort((a, b) => b.discount.compareTo(a.discount));
     }
     safeEmit(const HomeBodyState.changeSortBy());
+  }
+
+  bool isSearchContainerVisible = false;
+  void emitShowSearchContainerState(bool isSearchContainerVisible) {
+    safeEmit(const HomeBodyState.initial());
+    this.isSearchContainerVisible = isSearchContainerVisible;
+    safeEmit(const HomeBodyState.showSearchContainer());
+  }
+
+  final TextEditingController searchController = TextEditingController();
+  List<ProductModel> filteredProducts = [];
+  void emitSearhcState(String text) {
+    safeEmit(const HomeBodyState.initial());
+    if (text.isEmpty) {
+      filteredProducts = [];
+    } else {
+      filteredProducts = products
+          .where((element) =>
+              element.name.toLowerCase().contains(text.toLowerCase()))
+          .toList();
+    }
+    safeEmit(const HomeBodyState.searchProducts());
   }
 }

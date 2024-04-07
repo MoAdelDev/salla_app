@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
-import 'package:salla_app/features/home_body/data/models/products_response.dart';
 
 class ScreenArgs {}
 
@@ -21,8 +21,8 @@ class CheckoutScreenArgs extends ScreenArgs {
 }
 
 class SearchScreenArgs extends ScreenArgs {
-  final List<ProductModel> products;
-  SearchScreenArgs({required this.products});
+  final BuildContext context;
+  SearchScreenArgs({required this.context});
 }
 
 class AddOrEditScreenArgs extends ScreenArgs {

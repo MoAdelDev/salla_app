@@ -118,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("No Addresses yet"),
         "noOrders": MessageLookupByLibrary.simpleMessage("No Orders yet"),
+        "noProductsFound":
+            MessageLookupByLibrary.simpleMessage("No Products Found"),
         "noProductsTitle": MessageLookupByLibrary.simpleMessage(
             "You haven\'t added any\nproducts yet"),
         "noteHintTitle":
@@ -152,6 +154,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("Placed On"),
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "Please wait to load products"),
+        "productsFound": MessageLookupByLibrary.simpleMessage("Products Found"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("Quantity"),
