@@ -118,5 +118,7 @@
   "hasDiscount" : "يحتوي على خصم",
   "defaultTitle" : "الافتراضي",
   "selectPaymentMethod" : "إختار طريقة الدفع",
-  "pay" : "ادفع"
+  "pay" : "ادفع",
+  "noProductsFound" : "لا يوجد منتجات",
+  "productsFound" : "المنتجات الموجودة"
 }

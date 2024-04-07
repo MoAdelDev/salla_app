@@ -119,5 +119,7 @@
   "hasDiscount" : "Has Discount",
   "defaultTitle" : "Default",
   "selectPaymentMethod" : "Select Payment Method",
-  "pay" : "Pay"
+  "pay" : "Pay",
+  "noProductsFound" : "No Products Found",
+  "productsFound" : "Products Found"
 }

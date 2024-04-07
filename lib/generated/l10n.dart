@@ -1259,6 +1259,26 @@ class S {
       args: [],
     );
   }
+
+  /// `No Products Found`
+  String get noProductsFound {
+    return Intl.message(
+      'No Products Found',
+      name: 'noProductsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products Found`
+  String get productsFound {
+    return Intl.message(
+      'Products Found',
+      name: 'productsFound',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

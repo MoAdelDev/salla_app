@@ -27,7 +27,6 @@ import 'package:salla_app/features/product_details/ui/screens/product_details_sc
 import 'package:salla_app/features/profile/ui/screens/language_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
-import 'package:salla_app/features/search/logic/cubit/search_cubit.dart';
 import 'package:salla_app/features/search/ui/screens/search_screen.dart';
 
 class AppRouter {
@@ -97,11 +96,17 @@ class AppRouter {
       case Routes.search:
         SearchScreenArgs args = settings.arguments as SearchScreenArgs;
         return MaterialPageRoute(
-          builder: (context) => BlocProvider(
-            create: (context) =>
-                getIt<SearchCubit>()..emitGetProducts(args.products),
+          builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider.value(
+                value: args.context.read<HomeBodyCubit>(),
+              ),
+              BlocProvider.value(
+                value: args.context.read<FavoritesCubit>(),
+              ),
+            ],
             child: SearchScreen(
-              products: args.products,
+              context: args.context,
             ),
           ),
         );

@@ -28,20 +28,23 @@ class _HomeCategoriesState extends State<HomeCategories> {
           List<CategoryModel> categories =
               context.read<HomeBodyCubit>().categories;
           if (categories.isEmpty) {
-            return ListView.separated(
-              itemBuilder: (contex, index) => SizedBox(
-                height: 20.0.h,
-                width: 80.0.h,
-                child: const CategoryShimmer(),
+            return SizedBox(
+              height: 50.0.h,
+              child: ListView.separated(
+                itemBuilder: (contex, index) => SizedBox(
+                  height: 20.0.h,
+                  width: 80.0.h,
+                  child: const CategoryShimmer(),
+                ),
+                separatorBuilder: (context, index) => horizontalSpace(10.0),
+                itemCount: 6,
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
               ),
-              separatorBuilder: (context, index) => horizontalSpace(10.0),
-              itemCount: 6,
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
             );
           }
           return SizedBox(
-            height: 60.0.h,
+            height: 50.0.h,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(vertical: 5.0),

@@ -112,6 +112,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("لا يوجد عناوين"),
         "noOrders": MessageLookupByLibrary.simpleMessage("لا يوجد طلبات"),
+        "noProductsFound":
+            MessageLookupByLibrary.simpleMessage("لا يوجد منتجات"),
         "noProductsTitle":
             MessageLookupByLibrary.simpleMessage("لم تقم بإضافة أي منتجات بعد"),
         "noteHintTitle": MessageLookupByLibrary.simpleMessage("أدخل ملاحظاتك"),
@@ -141,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("تم وضعه بتاريخ"),
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "من فضلك إنتظر لتحميل المنتجات"),
+        "productsFound":
+            MessageLookupByLibrary.simpleMessage("المنتجات الموجودة"),
         "productsTitle": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("الحساب"),
         "quantityTitle": MessageLookupByLibrary.simpleMessage("الكمية"),

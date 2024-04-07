@@ -4,6 +4,8 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final IconData? suffixIcon;
+  final IconData? prefixIcon;
+
   final VoidCallback? onSuffixIcon;
   final Function(String)? onSubmit;
   final Function(String)? onChange;
@@ -12,6 +14,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType keyboardType;
   final bool? isNextTabEnable;
   final TextInputAction textInputAction;
+  final Function()? onTap;
 
   const CustomTextField({
     super.key,
@@ -26,6 +29,8 @@ class CustomTextField extends StatelessWidget {
     this.onChange,
     this.onSubmit,
     required this.textInputAction,
+    this.prefixIcon,
+    this.onTap,
   });
 
   @override
@@ -34,27 +39,34 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       onFieldSubmitted: onSubmit,
+      onTap: onTap,
       cursorColor: Theme.of(context).colorScheme.primary,
       textInputAction: textInputAction,
       decoration: InputDecoration(
+        prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: const BorderSide(color: Color(0xffE8ECF4)),
+          borderRadius: BorderRadius.circular(12.0),
+          borderSide: BorderSide(color: Colors.grey[400]!),
         ),
         fillColor: const Color(0xffF7F8F9),
         filled: true,
         hintText: hintText,
-        hintStyle: const TextStyle(
+        alignLabelWithHint: true,
+        hintStyle: TextStyle(
           fontSize: 14.0,
-          color: Color(0xff8391A1),
+          color: Colors.grey[600]!,
         ),
         suffixIcon: IconButton(
           icon: Icon(suffixIcon),
           onPressed: onSuffixIcon,
           color: const Color(0xff6A707C),
+        ),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: 15.0,
+          horizontal: 10.0,
         ),
       ),
       style: Theme.of(context).textTheme.bodyMedium,
