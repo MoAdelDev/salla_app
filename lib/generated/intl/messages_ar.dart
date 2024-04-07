@@ -123,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle":
             MessageLookupByLibrary.simpleMessage("تسوق المنتجات"),
         "onTitle": MessageLookupByLibrary.simpleMessage("تشغيل"),
+        "order": MessageLookupByLibrary.simpleMessage("الطلب"),
         "orderDetailsTitle":
             MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
         "orderSummaryTitle": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
@@ -141,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل رقم الهاتف"),
         "phoneTitle": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("تم وضعه بتاريخ"),
+        "pleaseSelectOrAddNewAddress": MessageLookupByLibrary.simpleMessage(
+            "يرجى تحديد عنوان او اضافة عنوان جديد"),
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "من فضلك إنتظر لتحميل المنتجات"),
         "productsFound":
@@ -161,8 +164,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إزالة من السلة"),
         "removeTitle": MessageLookupByLibrary.simpleMessage("إزالة"),
         "saveTitle": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "searchForProducts":
+            MessageLookupByLibrary.simpleMessage("ابحث عن المنتجات"),
         "searchHereTitle": MessageLookupByLibrary.simpleMessage("إبحث هنا"),
         "searchTitle": MessageLookupByLibrary.simpleMessage("بحث"),
+        "seeAllSearchResults":
+            MessageLookupByLibrary.simpleMessage("اعرض كل نتائج البحث"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("إختار اللغة"),
         "selectLanguageBody":
             MessageLookupByLibrary.simpleMessage("ماهو اللغة المفضلة لك؟"),

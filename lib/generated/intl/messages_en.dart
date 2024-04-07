@@ -131,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle":
             MessageLookupByLibrary.simpleMessage("Shop Products"),
         "onTitle": MessageLookupByLibrary.simpleMessage("On"),
+        "order": MessageLookupByLibrary.simpleMessage("Order"),
         "orderDetailsTitle":
             MessageLookupByLibrary.simpleMessage("Order Details"),
         "orderSummaryTitle":
@@ -152,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your phone"),
         "phoneTitle": MessageLookupByLibrary.simpleMessage("Phone"),
         "placedOnTitle": MessageLookupByLibrary.simpleMessage("Placed On"),
+        "pleaseSelectOrAddNewAddress": MessageLookupByLibrary.simpleMessage(
+            "Please select or add new address"),
         "pleaseWaitToLoadProducts": MessageLookupByLibrary.simpleMessage(
             "Please wait to load products"),
         "productsFound": MessageLookupByLibrary.simpleMessage("Products Found"),
@@ -172,9 +175,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Remove from cart"),
         "removeTitle": MessageLookupByLibrary.simpleMessage("Remove"),
         "saveTitle": MessageLookupByLibrary.simpleMessage("Save"),
+        "searchForProducts":
+            MessageLookupByLibrary.simpleMessage("Search for Products"),
         "searchHereTitle":
             MessageLookupByLibrary.simpleMessage("Search here ..."),
         "searchTitle": MessageLookupByLibrary.simpleMessage("Search"),
+        "seeAllSearchResults":
+            MessageLookupByLibrary.simpleMessage("See all search results"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
         "selectLanguageBody": MessageLookupByLibrary.simpleMessage(

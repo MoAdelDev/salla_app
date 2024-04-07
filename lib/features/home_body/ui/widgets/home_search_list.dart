@@ -132,7 +132,7 @@ class HomeSearchList extends StatelessWidget {
                       ),
                       horizontalSpace(10.0),
                       Text(
-                        'See all search results',
+                        '',
                         style: AppTexts.text14BlackCairoSemiBold,
                       )
                     ],

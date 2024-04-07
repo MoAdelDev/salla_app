@@ -39,9 +39,9 @@ class ProductsHorizontal extends StatelessWidget {
           padding: EdgeInsets.zero,
           physics: const NeverScrollableScrollPhysics(),
           children: List.generate(
-            context.read<HomeBodyCubit>().products.length,
+            products.length,
             (index) => ProductTileHorizontal(
-              productModel: context.read<HomeBodyCubit>().products[index],
+              productModel: products[index],
             ),
           ),
         );

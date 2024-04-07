@@ -121,5 +121,9 @@
   "selectPaymentMethod" : "Select Payment Method",
   "pay" : "Pay",
   "noProductsFound" : "No Products Found",
-  "productsFound" : "Products Found"
+  "productsFound" : "Products Found",
+  "searchForProducts" : "Search for Products",
+  "seeAllSearchResults" : "See all search results",
+  "order" : "Order",
+  "pleaseSelectOrAddNewAddress" : "Please select or add new address"
 }
