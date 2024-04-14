@@ -5,14 +5,13 @@ import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
-import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
+import 'package:salla_app/features/home/ui/screens/home_screen.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
-import 'package:salla_app/salla_app/salla_app.dart';
 
 class LanguageScreen extends StatefulWidget {
   const LanguageScreen({super.key});
@@ -128,10 +127,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
       setupGetIt().then((value) {
         Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (context) => SallaApp(
-              appRouter: AppRouter(),
-              token: AppData.userModel.token,
-            ),
+            builder: (context) => const HomeScreen(),
           ),
           (route) => false,
         );

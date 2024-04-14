@@ -10,6 +10,12 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text50WhiteCairoBold => GoogleFonts.cairo(
+        fontSize: 50.0,
+        color: Colors.white,
+        fontWeight: AppFontWeight.bold,
+      );
+
   static TextStyle get text14WhiteLatoRegular => GoogleFonts.lato(
         fontSize: 14.0,
         color: Colors.white,

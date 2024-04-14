@@ -11,11 +11,9 @@ import 'package:salla_app/salla_app/locale_cubit.dart';
 
 class SallaApp extends StatelessWidget {
   final AppRouter appRouter;
-  final String token;
   const SallaApp({
     super.key,
     required this.appRouter,
-    required this.token,
   });
 
   @override
@@ -32,7 +30,7 @@ class SallaApp extends StatelessWidget {
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               theme: lightTheme(context),
-              initialRoute: token == '' ? Routes.onBoarding : Routes.home,
+              initialRoute: Routes.splash,
               onGenerateRoute: (settings) =>
                   appRouter.onGenerateRoute(settings),
               locale: locale,

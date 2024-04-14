@@ -23,9 +23,7 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   await dotenv.load(fileName: ".env");
   Stripe.publishableKey = dotenv.env['STRIPE_PUBLISHABLE_KEY'] ?? '';
-  final String token = await CacheHelper.token;
   runApp(SallaApp(
     appRouter: AppRouter(),
-    token: token,
   ));
 }
