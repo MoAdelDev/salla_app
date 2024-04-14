@@ -10,12 +10,16 @@ import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/payment_method_bottom_sheet.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutConfirmOrderButton extends StatelessWidget {
   final double totalPrice;
   final List<CartProductModel> products;
-  const CheckoutConfirmOrderButton(
-      {super.key, required this.totalPrice, required this.products});
+  const CheckoutConfirmOrderButton({
+    super.key,
+    required this.totalPrice,
+    required this.products,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +76,7 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
                       },
                     ),
                   },
-            text: 'Confirm Order',
+            text: S.of(context).confirmOrderTitle,
           ),
         );
       },
