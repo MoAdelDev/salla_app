@@ -28,10 +28,15 @@ import 'package:salla_app/features/profile/ui/screens/language_screen.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/ui/screens/register_screen.dart';
 import 'package:salla_app/features/search/ui/screens/search_screen.dart';
+import 'package:salla_app/features/splash/ui/screens/splash_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case Routes.splash:
+        return MaterialPageRoute(
+          builder: (context) => const SplashScreen(),
+        );
       case Routes.onBoarding:
         return MaterialPageRoute(
           builder: (context) => const OnBoardingScreen(),

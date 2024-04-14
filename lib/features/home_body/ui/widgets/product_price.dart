@@ -16,7 +16,7 @@ class ProductPrice extends StatelessWidget {
     return Row(
       children: [
         Text(
-          '$price EGP',
+          '$oldPrice EGP',
           style: AppTexts.text14BlackCairoBold,
           overflow: TextOverflow.ellipsis,
         ),
@@ -26,7 +26,7 @@ class ProductPrice extends StatelessWidget {
         if (discount != 0)
           Expanded(
             child: Text(
-              '$oldPrice EGP',
+              '$price EGP',
               overflow: TextOverflow.ellipsis,
               style: AppTexts.text14GreyLatoBold.copyWith(
                 decoration: TextDecoration.lineThrough,
