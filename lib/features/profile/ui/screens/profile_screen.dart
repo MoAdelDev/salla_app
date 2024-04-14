@@ -14,7 +14,7 @@ import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
 import 'package:salla_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:salla_app/features/profile/logic/cubit/profile_state.dart';
-import 'package:salla_app/features/profile/ui/screens/language_screen.dart';
+import 'package:salla_app/features/profile/ui/screens/language_bottom_sheet.dart';
 import 'package:salla_app/features/profile/ui/widgets/profile_item.dart';
 import 'package:salla_app/features/profile/ui/widgets/profile_shimmer.dart';
 import 'package:salla_app/features/profile/ui/widgets/profile_user_data_and_button.dart';
@@ -91,7 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                             clipBehavior: Clip.antiAlias,
-                            builder: (context) => const LanguageScreen(),
+                            builder: (context) => const LanguageBottomSheet(),
                           );
                         },
                       ),

@@ -3,24 +3,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/networking/dio_factory.dart';
+import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
-import 'package:salla_app/features/home/ui/screens/home_screen.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
 
-class LanguageScreen extends StatefulWidget {
-  const LanguageScreen({super.key});
+class LanguageBottomSheet extends StatefulWidget {
+  const LanguageBottomSheet({super.key});
 
   @override
-  State<LanguageScreen> createState() => _LanguageScreenState();
+  State<LanguageBottomSheet> createState() => _LanguageBottomSheetState();
 }
 
-class _LanguageScreenState extends State<LanguageScreen> {
+class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
   late Language selectedLanguage;
 
   @override
@@ -125,12 +126,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
     DioFactory.instance = null;
     getIt.reset().then((value) {
       setupGetIt().then((value) {
-        Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-          (route) => false,
-        );
+        context.pushAndRemoveUntil(Routes.home);
       });
     });
   }
