@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 
 class CustomButton extends StatefulWidget {
   final VoidCallback onPressed;
   final String text;
-  const CustomButton({super.key, required this.onPressed, required this.text});
+  final bool isLoading;
+  const CustomButton({
+    super.key,
+    required this.onPressed,
+    required this.text,
+    this.isLoading = false,
+  });
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
@@ -25,9 +33,9 @@ class _CustomButtonState extends State<CustomButton> {
               isTapped = true;
             });
             await Future.delayed(const Duration(milliseconds: 160));
-
-            widget.onPressed();
-
+            if (!widget.isLoading) {
+              widget.onPressed();
+            }
             setState(() {
               isTapped = false;
             });
@@ -44,9 +52,21 @@ class _CustomButtonState extends State<CustomButton> {
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(
-            widget.text,
-            style: AppTexts.text20WhiteLatoBold,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                widget.text,
+                style: AppTexts.text20WhiteLatoBold,
+              ),
+              if (widget.isLoading) ...[
+                horizontalSpace(5.0),
+                const CustomLoadingIndicator(
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+              ],
+            ],
           ),
         ),
       ),

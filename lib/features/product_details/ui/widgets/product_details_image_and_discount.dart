@@ -12,8 +12,7 @@ class ProductDetailsImageAndDiscount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double imageHeight = 400.h;
-
+    double imageHeight = 250.h;
     return Stack(
       children: [
         CarouselSlider(
@@ -23,8 +22,11 @@ class ProductDetailsImageAndDiscount extends StatelessWidget {
                   color: Colors.white,
                   child: CachedNetworkImage(
                     imageUrl: e,
+                    height: imageHeight,
                     placeholder: (context, url) => const CustomShimmer(),
                     errorWidget: (context, url, error) => const CustomShimmer(),
+                    fit: BoxFit.contain,
+                    width: double.infinity,
                   ),
                 ),
               )

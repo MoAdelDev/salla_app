@@ -5,7 +5,6 @@ import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
-import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/logic/cubit/register_state.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -28,17 +27,13 @@ class RegisterSubmit extends StatelessWidget {
         );
       },
       builder: (context, state) {
-        if (state is RegisterLoading) {
-          return const Center(
-            child: CustomLoadingIndicator(),
-          );
-        }
         return Container(
           width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: 20.0.w),
           child: CustomButton(
             onPressed: () => context.read<RegisterCubit>().emitRegisterState(),
             text: S.of(context).registerTitle,
+            isLoading: state is RegisterLoading,
           ),
         );
       },

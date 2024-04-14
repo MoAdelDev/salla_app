@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
+import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
+import 'package:salla_app/generated/l10n.dart';
 
 class ProductDetailsShimmer extends StatelessWidget {
   const ProductDetailsShimmer({super.key});
@@ -18,61 +21,99 @@ class ProductDetailsShimmer extends StatelessWidget {
                 expandedHeight: MediaQuery.sizeOf(context).height / 3,
                 stretch: true,
                 pinned: true,
-                iconTheme:
-                    IconThemeData(color: context.colorScheme.onBackground),
+                backgroundColor: Colors.transparent,
+                elevation: 0.0,
+                leading: InkWell(
+                  onTap: () => context.pop(),
+                  borderRadius: BorderRadius.circular(5.0),
+                  child: Container(
+                    margin: const EdgeInsets.all(1),
+                    decoration: BoxDecoration(
+                      color: context.colorScheme.primary,
+                      border: Border.all(color: Colors.grey[300]!),
+                      borderRadius: BorderRadius.circular(10.0.r),
+                    ),
+                    child: const Icon(
+                      Icons.chevron_left,
+                      size: 30.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                surfaceTintColor: Colors.transparent,
+                iconTheme: IconThemeData(
+                  color: context.colorScheme.onBackground,
+                ),
                 flexibleSpace: LayoutBuilder(
                   builder: (context, constraints) {
-                    return const CustomShimmer();
+                    return const FlexibleSpaceBar(
+                      background: CustomShimmer(),
+                    );
                   },
-                ),
-                leading: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(
-                    Icons.chevron_left,
-                    color: context.colorScheme.primary,
-                    size: 40.0,
-                  ),
                 ),
               ),
               SliverList(
                 delegate: SliverChildListDelegate(
                   [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
+                    CustomContainerTile(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           CustomShimmer(
-                            width: double.infinity,
-                            height: 30.0.h,
+                            height: 8.0.h,
+                            width: 250.w,
                           ),
-                          verticalSpace(10.0),
+                          verticalSpace(5.0),
                           CustomShimmer(
-                            width: 100.w,
-                            height: 30.0.h,
+                            height: 8.0.h,
+                            width: 250.w,
+                          ),
+                          verticalSpace(5.0),
+                          CustomShimmer(
+                            height: 8.0.h,
+                            width: 150.0.w,
                           ),
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: List.generate(
-                          4,
-                          (index) => Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 10.0.h,
-                            ),
-                            child: CustomShimmer(
-                              width: 300.w,
-                              height: 30.0.h,
+                    verticalSpace(10.0),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 10.0.w,
+                          ),
+                          child: Text(
+                            S.of(context).descriptionTitle,
+                            style: AppTexts.text16BlackLatoBold,
+                          ),
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CustomContainerTile(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomShimmer(
+                                  height: 8.0.h,
+                                  width: 250.w,
+                                ),
+                                verticalSpace(8),
+                                CustomShimmer(
+                                  height: 8.0.h,
+                                  width: 250.w,
+                                ),
+                                verticalSpace(8),
+                                CustomShimmer(
+                                  height: 8.0.h,
+                                  width: 250.w,
+                                )
+                              ],
                             ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
                     verticalSpace(300)
                   ],
@@ -81,15 +122,6 @@ class ProductDetailsShimmer extends StatelessWidget {
             ],
           ),
         ),
-        verticalSpace(10.0),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: CustomShimmer(
-            width: double.infinity,
-            height: 60.0.h,
-          ),
-        ),
-        verticalSpace(8.0),
       ],
     );
   }

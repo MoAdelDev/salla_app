@@ -4,12 +4,13 @@ import 'package:salla_app/core/helpers/extensions.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
   final double size;
-  const CustomLoadingIndicator({super.key, this.size = 50.0});
+  final Color? color;
+  const CustomLoadingIndicator({super.key, this.size = 50.0, this.color});
 
   @override
   Widget build(BuildContext context) {
-    return SpinKitChasingDots(
-      color: context.colorScheme.primary,
+    return SpinKitCircle(
+      color: color ?? context.colorScheme.primary,
       size: size,
       duration: const Duration(milliseconds: 2000),
     );

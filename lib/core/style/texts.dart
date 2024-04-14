@@ -142,6 +142,12 @@ class AppTexts {
         color: AppColor.primaryColor,
         fontWeight: AppFontWeight.bold,
       );
+
+  static TextStyle get text14PrimaryLatoBold => GoogleFonts.lato(
+        fontSize: 14.0,
+        color: AppColor.primaryColor,
+        fontWeight: AppFontWeight.bold,
+      );
   static TextStyle get text28BlackShadowLatoBold => GoogleFonts.lato(
         fontSize: 28.0,
         color: Colors.black,
