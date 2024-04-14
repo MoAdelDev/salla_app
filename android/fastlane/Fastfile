@@ -11,7 +11,7 @@ platform :android do
     android_artifact_type: "APK",
     android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
     groups: "me",
-    release_notes: "- Fix Bugs",
+    release_notes: "- Added Splash Screen",
   )
   end
 end
