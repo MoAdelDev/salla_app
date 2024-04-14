@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
-import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_state.dart';
@@ -32,11 +31,6 @@ class _AddToCartSubmitState extends State<AddToCartSubmit> {
         addToCartError: (error) => showToast(error, isError: true),
       );
     }, builder: (context, state) {
-      if (state is AddToCartLoading) {
-        return const Center(
-          child: CustomLoadingIndicator(),
-        );
-      }
       return Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 30.0.w,
@@ -52,6 +46,7 @@ class _AddToCartSubmitState extends State<AddToCartSubmit> {
             text: context.read<ProductDetailsCubit>().inCart
                 ? S.of(context).removeFromCartTitle
                 : S.of(context).addToCartTitle,
+            isLoading: state is AddToCartLoading,
           ),
         ),
       );

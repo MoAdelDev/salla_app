@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
-import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -23,15 +22,11 @@ class EditProfileButton extends StatelessWidget {
         });
       },
       builder: (context, state) {
-        if (state is Loading) {
-          return const Center(
-            child: CustomLoadingIndicator(),
-          );
-        }
         return CustomButton(
           onPressed: () =>
               context.read<EditProfileCubit>().emitEditProfileState(),
           text: S.of(context).updateProfileTitle,
+          isLoading: state is Loading,
         );
       },
     );
