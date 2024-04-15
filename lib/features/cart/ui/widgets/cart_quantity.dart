@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
@@ -37,7 +38,7 @@ class CartQuantity extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: context.colorScheme.primary,
                 ),
-                child: InkWell(
+                child: CustomInkwell(
                   onTap: () {
                     if (cubit.cartQuantities[cartProduct.id] == 1) {
                       cubit.emitDeleteCartState(
@@ -80,7 +81,7 @@ class CartQuantity extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: context.colorScheme.primary,
                 ),
-                child: InkWell(
+                child: CustomInkwell(
                   onTap: () {
                     cubit.emitUpdateCartState(
                       cartProduct.id,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/style/colors.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_app_bar.dart';
 import 'package:salla_app/features/home_body/ui/widgets/home_banner.dart';
@@ -45,7 +46,7 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: GestureDetector(
+      body: CustomInkwell(
         onTap: () {
           FocusManager.instance.primaryFocus?.unfocus();
           context.read<HomeBodyCubit>().emitShowSearchContainerState(false);

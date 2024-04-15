@@ -20,6 +20,7 @@ class SortByItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.max,
       children: [
         Radio(
           value: index,

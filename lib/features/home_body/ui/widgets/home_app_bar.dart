@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
@@ -35,21 +36,21 @@ class HomeAppBar extends StatelessWidget {
               color: context.colorScheme.primary,
               borderRadius: BorderRadius.circular(10.0),
             ),
-            child: Row(
-              children: [
-                GestureDetector(
-                  onTap: () {},
-                  child: SvgPicture.asset(
+            child: CustomInkwell(
+              onTap: () {},
+              child: Row(
+                children: [
+                  SvgPicture.asset(
                     'assets/icons/app.svg',
                     height: 35.h,
                   ),
-                ),
-                horizontalSpace(3.0),
-                Text(
-                  'Salla',
-                  style: AppTexts.text14WhiteCairoBold,
-                )
-              ],
+                  horizontalSpace(3.0),
+                  Text(
+                    'Salla',
+                    style: AppTexts.text14WhiteCairoBold,
+                  )
+                ],
+              ),
             ),
           ),
           horizontalSpace(10.0),

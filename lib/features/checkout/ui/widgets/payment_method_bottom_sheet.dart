@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
@@ -53,7 +54,7 @@ class PaymentMethodBottomSheet extends StatelessWidget {
                   children: List.generate(
                     3,
                     (index) => Expanded(
-                      child: GestureDetector(
+                      child: CustomInkwell(
                         onTap: () => cubit.emitSelectPaymentMethodState(index),
                         child: PaymentItem(
                           image: cubit.paymentImages[index],

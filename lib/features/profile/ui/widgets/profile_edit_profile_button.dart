@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/router/routes.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/profile/logic/cubit/profile_cubit.dart';
 
 class ProfileEditProfileButton extends StatelessWidget {
@@ -11,7 +12,7 @@ class ProfileEditProfileButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: () {
         context.push(Routes.editProfile).then((value) {
           context.read<ProfileCubit>().emitUserDataState();

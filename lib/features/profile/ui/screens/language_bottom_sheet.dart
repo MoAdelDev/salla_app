@@ -10,6 +10,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
 import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
@@ -70,7 +71,7 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                 itemBuilder: (context, index) {
                   Language lang = languages[index];
                   bool isSelected = lang.code == selectedLanguage.code;
-                  return GestureDetector(
+                  return CustomInkwell(
                     onTap: () {
                       setState(() {
                         selectedLanguage = lang;

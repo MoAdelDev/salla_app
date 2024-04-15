@@ -7,6 +7,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/generated/l10n.dart';
@@ -19,7 +20,7 @@ class AddressTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        GestureDetector(
+        CustomInkwell(
           onTap: () => context
               .push(
             Routes.addAddress,
@@ -55,7 +56,7 @@ class AddressTile extends StatelessWidget {
           left: AppData.isArabic ? 20.w : null,
           right: AppData.isArabic ? null : 20.w,
           top: 0,
-          child: GestureDetector(
+          child: CustomInkwell(
             onTap: () =>
                 context.read<AddressesCubit>().emitDeleteAddress(address.id),
             child: Container(

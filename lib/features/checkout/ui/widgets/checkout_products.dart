@@ -5,6 +5,7 @@ import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_product_item.dart';
@@ -54,7 +55,7 @@ class CheckoutProducts extends StatelessWidget {
           right: AppData.isArabic ? null : 20.w,
           left: AppData.isArabic ? 20.w : null,
           top: -4.h,
-          child: GestureDetector(
+          child: CustomInkwell(
             onTap: () => context.pop(),
             child: Container(
               decoration: BoxDecoration(

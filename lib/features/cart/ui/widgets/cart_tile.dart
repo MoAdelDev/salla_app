@@ -6,6 +6,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_quantity.dart';
@@ -19,7 +20,7 @@ class CartTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return CustomInkwell(
       onTap: () => context
           .push(
         Routes.productDetails,

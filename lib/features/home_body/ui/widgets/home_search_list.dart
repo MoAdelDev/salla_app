@@ -8,6 +8,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_image_discount.dart';
@@ -57,7 +58,7 @@ class HomeSearchList extends StatelessWidget {
                   ),
                   itemBuilder: (context, index) {
                     final product = cubit.filteredProducts[index];
-                    return GestureDetector(
+                    return CustomInkwell(
                       onTap: () {
                         context.push(
                           Routes.productDetails,
@@ -108,7 +109,7 @@ class HomeSearchList extends StatelessWidget {
                 height: 1.0,
               ),
               verticalSpace(10.0),
-              GestureDetector(
+              CustomInkwell(
                 onTap: () {
                   SearchScreenArgs args = SearchScreenArgs(
                     context: context,

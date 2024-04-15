@@ -27,6 +27,7 @@ class SplashTitle extends StatelessWidget {
             style: AppTexts.text50WhiteCairoBold,
           ),
           onFinish: (direction) async {
+            await Future.delayed(const Duration(milliseconds: 2000));
             CacheHelper.token.then((token) {
               if (token.isNotEmpty) {
                 context.pushAndRemoveUntil(Routes.home);
