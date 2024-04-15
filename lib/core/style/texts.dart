@@ -50,6 +50,18 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
+  static TextStyle get text14WhiteCairoRegular => GoogleFonts.cairo(
+        fontSize: 14.0,
+        color: Colors.white,
+        fontWeight: AppFontWeight.regular,
+      );
+
+  static TextStyle get text18WhiteCairoBold => GoogleFonts.cairo(
+        fontSize: 22.0,
+        color: Colors.white,
+        fontWeight: AppFontWeight.bold,
+      );
+
   static TextStyle get text14GreyCairoExtraBold => GoogleFonts.cairo(
         fontSize: 14.0,
         color: Colors.grey,
