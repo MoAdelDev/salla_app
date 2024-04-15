@@ -49,8 +49,8 @@ class CartTile extends StatelessWidget {
                         verticalSpace(8.0),
                         ProductPrice(
                           discount: cartProduct.product.discount,
-                          oldPrice: cartProduct.product.price,
-                          price: cartProduct.product.oldPrice,
+                          oldPrice: cartProduct.product.oldPrice,
+                          price: cartProduct.product.price,
                         ),
                       ],
                     ),

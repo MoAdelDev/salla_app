@@ -21,7 +21,7 @@ class ProductSliverAppBar extends StatelessWidget {
         onTap: () => context.pop(),
         borderRadius: BorderRadius.circular(5.0),
         child: Container(
-          margin: const EdgeInsets.all(1),
+          margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: context.colorScheme.primary,
             border: Border.all(color: Colors.grey[300]!),

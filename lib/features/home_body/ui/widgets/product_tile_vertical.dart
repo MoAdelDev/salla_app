@@ -43,8 +43,8 @@ class ProductTileVertical extends StatelessWidget {
                       Expanded(
                         child: ProductPrice(
                           discount: productModel.discount,
-                          oldPrice: productModel.price,
-                          price: productModel.oldPrice,
+                          oldPrice: productModel.oldPrice,
+                          price: productModel.price,
                         ),
                       ),
                       ProductFavorite(productModel: productModel)

@@ -155,7 +155,7 @@ class AppTexts {
         fontWeight: AppFontWeight.bold,
       );
 
-  static TextStyle get text14PrimaryLatoBold => GoogleFonts.lato(
+  static TextStyle get text14PrimaryCairoBold => GoogleFonts.cairo(
         fontSize: 14.0,
         color: AppColor.primaryColor,
         fontWeight: AppFontWeight.bold,

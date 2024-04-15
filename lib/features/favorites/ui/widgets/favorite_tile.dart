@@ -44,8 +44,8 @@ class FavoriteTile extends StatelessWidget {
                       Expanded(
                         child: ProductPrice(
                           discount: favoriteModel.product.discount,
-                          oldPrice: favoriteModel.product.price,
-                          price: favoriteModel.product.oldPrice,
+                          oldPrice: favoriteModel.product.oldPrice,
+                          price: favoriteModel.product.price,
                         ),
                       ),
                       FavoriteRemove(favoriteModel: favoriteModel),

@@ -16,8 +16,8 @@ class ProductPrice extends StatelessWidget {
     return Row(
       children: [
         Text(
-          '$oldPrice EGP',
-          style: AppTexts.text14BlackCairoBold,
+          '$price EGP',
+          style: AppTexts.text14PrimaryCairoBold,
           overflow: TextOverflow.ellipsis,
         ),
         const SizedBox(
@@ -26,7 +26,7 @@ class ProductPrice extends StatelessWidget {
         if (discount != 0)
           Expanded(
             child: Text(
-              '$price EGP',
+              '$oldPrice EGP',
               overflow: TextOverflow.ellipsis,
               style: AppTexts.text14GreyLatoBold.copyWith(
                 decoration: TextDecoration.lineThrough,

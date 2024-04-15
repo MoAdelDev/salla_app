@@ -80,8 +80,8 @@ class HomeSearchList extends StatelessWidget {
                                 verticalSpace(5.0),
                                 ProductPrice(
                                   discount: product.discount,
-                                  oldPrice: product.price,
-                                  price: product.oldPrice,
+                                  oldPrice: product.oldPrice,
+                                  price: product.price,
                                 ),
                               ],
                             ),
