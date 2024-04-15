@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
@@ -26,6 +27,7 @@ class _CustomButtonState extends State<CustomButton> {
 
     return SizedBox(
       width: double.infinity,
+      height: 40.h,
       child: MaterialButton(
         onPressed: () async {
           FocusManager.instance.primaryFocus?.unfocus();

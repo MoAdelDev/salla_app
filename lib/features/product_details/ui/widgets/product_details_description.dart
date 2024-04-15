@@ -58,7 +58,7 @@ class _ProductDetailsDescriptionState extends State<ProductDetailsDescription> {
                   if (widget.description.length > subStringLength)
                     TextSpan(
                       text: isTextFull ? 'Less' : 'See more',
-                      style: AppTexts.text14PrimaryLatoBold.copyWith(
+                      style: AppTexts.text14PrimaryCairoBold.copyWith(
                         decoration: TextDecoration.underline,
                         decorationColor: context.colorScheme.primary,
                       ),

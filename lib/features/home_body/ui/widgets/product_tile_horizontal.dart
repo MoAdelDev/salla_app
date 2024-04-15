@@ -46,8 +46,8 @@ class ProductTileHorizontal extends StatelessWidget {
                       const Spacer(),
                       ProductPrice(
                         discount: productModel.discount,
-                        oldPrice: productModel.price,
-                        price: productModel.oldPrice,
+                        oldPrice: productModel.oldPrice,
+                        price: productModel.price,
                       )
                     ],
                   ),
