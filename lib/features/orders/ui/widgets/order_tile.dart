@@ -7,6 +7,7 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_status.dart';
@@ -23,7 +24,7 @@ class OrderTile extends StatelessWidget {
         OrdersCubit cubit = context.read<OrdersCubit>();
         return Padding(
           padding: EdgeInsets.only(top: 8.h),
-          child: GestureDetector(
+          child: CustomInkwell(
             onTap: () => context
                 .push(Routes.orderDetails,
                     arguments: OrderDetailsScreenArgs(orderId: order.id))

@@ -5,6 +5,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_image_and_discount.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_remove.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_price.dart';
@@ -16,14 +17,14 @@ class FavoriteTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainerTile(
-      child: InkWell(
-        onTap: () => context.push(
-          Routes.productDetails,
-          arguments: ProductDetailsScreenArgs(
-            productId: favoriteModel.product.id,
-          ),
+    return CustomInkwell(
+      onTap: () => context.push(
+        Routes.productDetails,
+        arguments: ProductDetailsScreenArgs(
+          productId: favoriteModel.product.id,
         ),
+      ),
+      child: CustomContainerTile(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

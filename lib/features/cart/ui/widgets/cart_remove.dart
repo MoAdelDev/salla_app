@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/core/widgets/custom_loading_indicator.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
@@ -15,9 +16,11 @@ class CartRemove extends StatelessWidget {
     return BlocBuilder<CartCubit, CartState>(
       builder: (context, state) {
         if (context.read<CartCubit>().isCartUpdateLoading) {
-          return const CustomLoadingIndicator();
+          return const CustomLoadingIndicator(
+            size: 30.0,
+          );
         }
-        return GestureDetector(
+        return CustomInkwell(
           onTap: () => context.read<CartCubit>().emitDeleteCartState(
                 cartId: cartProduct.id,
                 price: -cartProduct.product.price *

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 
 class ProfileItem extends StatelessWidget {
   final VoidCallback onTap;
@@ -22,7 +23,7 @@ class ProfileItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: onTap,
       child: CustomContainerTile(
         child: Padding(

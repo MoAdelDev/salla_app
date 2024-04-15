@@ -9,14 +9,9 @@ import 'package:salla_app/features/home_body/ui/widgets/category_shimmer.dart';
 import 'package:salla_app/features/home_body/ui/widgets/category_tile.dart';
 import 'package:salla_app/generated/l10n.dart';
 
-class HomeCategories extends StatefulWidget {
+class HomeCategories extends StatelessWidget {
   const HomeCategories({super.key});
 
-  @override
-  State<HomeCategories> createState() => _HomeCategoriesState();
-}
-
-class _HomeCategoriesState extends State<HomeCategories> {
   @override
   Widget build(BuildContext context) {
     return Container(

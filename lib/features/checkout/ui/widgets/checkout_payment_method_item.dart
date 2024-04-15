@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 
 class CheckoutPaymentMethodItem extends StatelessWidget {
   final Function(int?) onChanged;
@@ -22,7 +23,7 @@ class CheckoutPaymentMethodItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: () {
         onChanged(radioSelected);
       },

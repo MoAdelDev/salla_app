@@ -6,6 +6,7 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/sort_by_item.dart';
@@ -50,7 +51,7 @@ class SortByBottomSheet extends StatelessWidget {
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return GestureDetector(
+                    return CustomInkwell(
                       onTap: () => cubit.emitChangeSortByState(index: index),
                       child: SortByItem(
                         title: cubit.sortByTitles[index],

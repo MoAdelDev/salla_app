@@ -5,6 +5,7 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_favorite.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_image_discount.dart';
@@ -17,7 +18,7 @@ class ProductTileVertical extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: () {
         context.push(
           Routes.productDetails,

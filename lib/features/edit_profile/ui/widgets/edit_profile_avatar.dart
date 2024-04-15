@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_state.dart';
 import 'package:salla_app/features/profile/ui/widgets/user_avatar.dart';
@@ -15,7 +16,7 @@ class EditProfileAvatar extends StatelessWidget {
     return BlocBuilder<EditProfileCubit, EditProfileState>(
       builder: (context, state) {
         EditProfileCubit cubit = context.read<EditProfileCubit>();
-        return GestureDetector(
+        return CustomInkwell(
           onTap: () => cubit.emitPickImageState(),
           child: Stack(
             children: [

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:salla_app/core/helpers/extensions.dart';
 
-class CustomInkwell extends StatefulWidget {
-  final VoidCallback onTap;
+class CustomInkwell extends StatelessWidget {
+  final Function() onTap;
   final Widget child;
   const CustomInkwell({
     super.key,
@@ -11,33 +10,16 @@ class CustomInkwell extends StatefulWidget {
   });
 
   @override
-  State<StatefulWidget> createState() {
-    return _CustomInkwellState();
-  }
-}
-
-class _CustomInkwellState extends State<CustomInkwell> {
-  @override
   Widget build(BuildContext context) {
-    bool isTapped = false;
     return InkWell(
-      onTap: () async {
-        if (!isTapped) {
-          setState(() {
-            isTapped = true;
-          });
-          await Future.delayed(const Duration(milliseconds: 160));
-
-          widget.onTap();
-
-          setState(() {
-            isTapped = false;
-          });
-        }
-      },
+      onTap: onTap,
       borderRadius: BorderRadius.circular(10.0),
-      splashColor: context.colorScheme.primary.withOpacity(0.2),
-      child: widget.child,
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      hoverColor: Colors.transparent,
+      focusColor: Colors.transparent,
+      overlayColor: MaterialStateProperty.all(Colors.transparent),
+      child: child,
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dart';
@@ -79,7 +80,7 @@ class CheckoutAddresses extends StatelessWidget {
           right: AppData.isArabic ? null : 20.w,
           left: AppData.isArabic ? 20.w : null,
           top: -4.h,
-          child: GestureDetector(
+          child: CustomInkwell(
             onTap: () => context.push(Routes.addAddress).then(
               (value) {
                 context.read<CheckoutCubit>().emitAddressesState();

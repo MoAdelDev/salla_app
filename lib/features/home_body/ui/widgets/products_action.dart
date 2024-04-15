@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 
 class ProductsAction extends StatelessWidget {
   final VoidCallback onTap;
@@ -13,7 +14,7 @@ class ProductsAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/style/texts.dart';
+import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 
 class CategoryTile extends StatelessWidget {
@@ -16,7 +17,7 @@ class CategoryTile extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return CustomInkwell(
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 800),

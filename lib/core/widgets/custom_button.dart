@@ -28,6 +28,7 @@ class _CustomButtonState extends State<CustomButton> {
       width: double.infinity,
       child: MaterialButton(
         onPressed: () async {
+          FocusManager.instance.primaryFocus?.unfocus();
           if (!isTapped) {
             setState(() {
               isTapped = true;
