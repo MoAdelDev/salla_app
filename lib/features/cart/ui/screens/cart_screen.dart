@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/di/dependency_injection.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
@@ -11,7 +12,6 @@ import 'package:salla_app/features/cart/logic/cubit/cart_state.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_checkout_button.dart';
 import 'package:salla_app/features/cart/ui/widgets/cart_list.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -25,7 +25,7 @@ class CartScreen extends StatelessWidget {
         body: Column(
           children: [
             CustomAppBar(
-              title: S.of(context).cartTitle,
+              title: context.locale.cartTitle,
             ),
             Expanded(
               child: BlocBuilder<CartCubit, CartState>(
@@ -43,7 +43,7 @@ class CartScreen extends StatelessWidget {
                   }
                   if (products.isEmpty) {
                     return CustomNoProducts(
-                      text: S.of(context).noProductsTitle,
+                      text: context.locale.noProductsTitle,
                     );
                   }
                   return Column(

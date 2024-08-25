@@ -11,7 +11,6 @@ import 'package:salla_app/features/checkout/ui/widgets/checkout_confirm_order_bu
 import 'package:salla_app/features/checkout/ui/widgets/checkout_payment_methods.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_products.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_summary.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutScreen extends StatelessWidget {
   final CheckoutScreenArgs args;
@@ -32,7 +31,7 @@ class CheckoutScreen extends StatelessWidget {
             CustomAppBar(
               onTap1: () => context.pop(),
               icon1: Icons.chevron_left,
-              title: S.of(context).checkoutTitle,
+              title: context.locale.checkoutTitle,
             ),
             Expanded(
               child: SingleChildScrollView(

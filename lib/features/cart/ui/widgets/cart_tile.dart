@@ -27,7 +27,9 @@ class CartTile extends StatelessWidget {
         arguments: ProductDetailsScreenArgs(productId: cartProduct.product.id),
       )
           .then((value) {
-        context.read<CartCubit>().emitCartState();
+        if (context.mounted) {
+          context.read<CartCubit>().emitCartState();
+        }
       }),
       child: CustomContainerTile(
         child: Column(

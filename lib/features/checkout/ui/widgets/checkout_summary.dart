@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_apply_promo_code.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutSummary extends StatelessWidget {
   final double totalPrice;
@@ -24,14 +24,14 @@ class CheckoutSummary extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            S.of(context).orderSummaryTitle,
+            context.locale.orderSummaryTitle,
             style: AppTexts.text16BlackCairoBold,
           ),
           verticalSpace(5.0),
           Row(
             children: [
               Text(
-                '${S.of(context).itemTotalTitle} ( $totalItems )',
+                '${context.locale.itemTotalTitle} ( $totalItems )',
                 style: AppTexts.text14BlackLatoRegular,
               ),
               const Spacer(),
@@ -45,12 +45,12 @@ class CheckoutSummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                S.of(context).deliveryFeesTitle,
+                context.locale.deliveryFeesTitle,
                 style: AppTexts.text14BlackLatoRegular,
               ),
               const Spacer(),
               Text(
-                S.of(context).freeTitle,
+                context.locale.freeTitle,
                 style: AppTexts.text16BlackLatoBold,
               )
             ],
@@ -65,7 +65,7 @@ class CheckoutSummary extends StatelessWidget {
           Row(
             children: [
               Text(
-                S.of(context).totalTitle,
+                context.locale.totalTitle,
                 style: AppTexts.text16BlackLatoBold,
               ),
               const Spacer(),

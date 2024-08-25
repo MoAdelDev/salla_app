@@ -1,4 +1,4 @@
-import 'package:salla_app/generated/l10n.dart';
+import '../../../../core/localization/generated/l10n.dart';
 
 class Language {
   final String name;
@@ -9,6 +9,6 @@ class Language {
 }
 
 List<Language> languages = [
-  Language(S.current.englishTitle, "en", "🇬🇧"),
-  Language(S.current.arabicTitle, "ar", "🇪🇬"),
+  Language(AppLocalizations.current.englishTitle, "en", "🇬🇧"),
+  Language(AppLocalizations.current.arabicTitle, "ar", "🇪🇬"),
 ];

@@ -7,7 +7,6 @@ import 'package:salla_app/features/register/ui/widgets/register_form.dart';
 import 'package:salla_app/features/register/ui/widgets/register_login_text.dart';
 import 'package:salla_app/features/register/ui/widgets/register_submit.dart';
 import 'package:salla_app/features/register/ui/widgets/register_welcome_text.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -30,7 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               CustomAppBar(
                 onTap1: () => context.pop(),
                 icon2: Icons.chevron_left,
-                title: S.of(context).registerTitle,
+                title: context.locale.registerTitle,
               ),
               Expanded(
                 child: Padding(

@@ -15,7 +15,7 @@ class ProfileEditProfileButton extends StatelessWidget {
     return CustomInkwell(
       onTap: () {
         context.push(Routes.editProfile).then((value) {
-          context.read<ProfileCubit>().emitUserDataState();
+          if (context.mounted) context.read<ProfileCubit>().emitUserDataState();
         });
       },
       child: Icon(

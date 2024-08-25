@@ -9,7 +9,6 @@ import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/payment_method_bottom_sheet.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutConfirmOrderButton extends StatelessWidget {
   final double totalPrice;
@@ -64,7 +63,7 @@ class CheckoutConfirmOrderButton extends StatelessWidget {
                       },
                     ),
                   },
-            text: S.of(context).confirmOrderTitle,
+            text: context.locale.confirmOrderTitle,
             isLoading: state is AddOrderLoading,
           ),
         );

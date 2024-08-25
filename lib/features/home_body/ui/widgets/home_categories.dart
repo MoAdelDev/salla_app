@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/category_shimmer.dart';
 import 'package:salla_app/features/home_body/ui/widgets/category_tile.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class HomeCategories extends StatelessWidget {
   const HomeCategories({super.key});
@@ -47,7 +47,7 @@ class HomeCategories extends StatelessWidget {
                 children: [
                   CategoryTile(
                     isSelected: categoryId == -1,
-                    categoryModel: CategoryModel(0, S.of(context).all, ''),
+                    categoryModel: CategoryModel(0, context.locale.all, ''),
                     onTap: () {
                       if (context.read<HomeBodyCubit>().isProductsLoading ==
                           false) {

@@ -29,10 +29,12 @@ class SplashTitle extends StatelessWidget {
           onFinish: (direction) async {
             await Future.delayed(const Duration(milliseconds: 2000));
             CacheHelper.token.then((token) {
-              if (token.isNotEmpty) {
-                context.pushAndRemoveUntil(Routes.home);
-              } else {
-                context.pushAndRemoveUntil(Routes.onBoarding);
+              if (context.mounted) {
+                if (token.isNotEmpty) {
+                  context.pushAndRemoveUntil(Routes.home);
+                } else {
+                  context.pushAndRemoveUntil(Routes.onBoarding);
+                }
               }
             });
           },

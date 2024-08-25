@@ -34,7 +34,7 @@ class CheckoutPaymentMethodItem extends StatelessWidget {
             value: radioValue,
             groupValue: radioSelected,
             onChanged: onChanged,
-            fillColor: MaterialStateProperty.all(AppColor.primaryColor),
+            fillColor: WidgetStateProperty.all(AppColor.primaryColor),
           ),
           Icon(
             icon,

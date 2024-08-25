@@ -4,7 +4,6 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_text_button.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class RegisterLoginText extends StatelessWidget {
   const RegisterLoginText({super.key});
@@ -15,13 +14,13 @@ class RegisterLoginText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          S.of(context).loginQuestion,
+          context.locale.loginQuestion,
           style: AppTexts.text14BlackLatoRegular,
         ),
         horizontalSpace(5.0),
         CustomTextButton(
           onPressed: () => context.pushReplacement(Routes.login),
-          text: S.of(context).loginTitle,
+          text: context.locale.loginTitle,
         ),
       ],
     );

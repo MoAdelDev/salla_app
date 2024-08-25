@@ -4,12 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/notification_helper.dart';
 import 'package:salla_app/core/helpers/permissions.dart';
 import 'package:salla_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:salla_app/features/home/logic/cubit/home_state.dart';
 import 'package:salla_app/features/home/ui/widgets/custom_home_navigation.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconData: currentIndex == 0
                     ? CupertinoIcons.house_fill
                     : CupertinoIcons.house,
-                label: S.of(context).homeTitle,
+                label: context.locale.homeTitle,
                 isSelected: currentIndex == 0,
                 onTap: () => setState(
                   () {
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconData: currentIndex == 1
                     ? CupertinoIcons.heart_fill
                     : CupertinoIcons.heart,
-                label: S.of(context).favoritesTitle,
+                label: context.locale.favoritesTitle,
                 isSelected: currentIndex == 1,
                 onTap: () => setState(() {
                   currentIndex = 1;
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconData: currentIndex == 2
                     ? CupertinoIcons.cart_fill
                     : CupertinoIcons.cart,
-                label: S.of(context).cartTitle,
+                label: context.locale.cartTitle,
                 isSelected: currentIndex == 2,
                 onTap: () => setState(() {
                   currentIndex = 2;
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconData: currentIndex == 3
                     ? CupertinoIcons.person_fill
                     : CupertinoIcons.person,
-                label: S.of(context).profile,
+                label: context.locale.profile,
                 isSelected: currentIndex == 3,
                 onTap: () => setState(() {
                   currentIndex = 3;

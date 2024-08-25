@@ -7,7 +7,6 @@ import 'package:salla_app/features/login/ui/widgets/login_form.dart';
 import 'package:salla_app/features/login/ui/widgets/login_register_text.dart';
 import 'package:salla_app/features/login/ui/widgets/login_submit.dart';
 import 'package:salla_app/features/login/ui/widgets/login_welcome_text.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -30,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomAppBar(
                 onTap1: () => context.pop(),
                 icon1: Icons.chevron_left,
-                title: S.of(context).loginTitle,
+                title: context.locale.loginTitle,
               ),
               Expanded(
                 child: Padding(

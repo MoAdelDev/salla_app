@@ -5,7 +5,6 @@ import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_shimmer.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class ProductDetailsShimmer extends StatelessWidget {
   const ProductDetailsShimmer({super.key});
@@ -42,7 +41,7 @@ class ProductDetailsShimmer extends StatelessWidget {
                 ),
                 surfaceTintColor: Colors.transparent,
                 iconTheme: IconThemeData(
-                  color: context.colorScheme.onBackground,
+                  color: context.colorScheme.onSurface,
                 ),
                 flexibleSpace: LayoutBuilder(
                   builder: (context, constraints) {
@@ -85,7 +84,7 @@ class ProductDetailsShimmer extends StatelessWidget {
                             horizontal: 10.0.w,
                           ),
                           child: Text(
-                            S.of(context).descriptionTitle,
+                            context.locale.descriptionTitle,
                             style: AppTexts.text16BlackLatoBold,
                           ),
                         ),

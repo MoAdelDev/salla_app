@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as cs;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/data/app_data.dart';
@@ -8,7 +8,6 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
-import 'package:salla_app/generated/l10n.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -20,19 +19,20 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   int currentIndex = 0;
-  final CarouselController carouselController = CarouselController();
+  final cs.CarouselSliderController carouselController =
+      cs.CarouselSliderController();
   @override
   Widget build(BuildContext context) {
     final List<String> titles = [
-      S.of(context).appTitle1,
-      S.of(context).appTitle2,
-      S.of(context).appTitle3,
+      context.locale.appTitle1,
+      context.locale.appTitle2,
+      context.locale.appTitle3,
     ];
 
     final List<String> subtitles = [
-      S.of(context).appDescription1,
-      S.of(context).appDescription2,
-      S.of(context).appDescription3,
+      context.locale.appDescription1,
+      context.locale.appDescription2,
+      context.locale.appDescription3,
     ];
     final List<String> images = [
       'assets/images/onboarding1.jpg',
@@ -40,7 +40,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       'assets/images/onboarding3.jpg',
     ];
     return Scaffold(
-      backgroundColor: context.colorScheme.background,
+      backgroundColor: context.colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -55,7 +55,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 icon2: AppData.isArabic ? Icons.skip_previous : Icons.skip_next,
               ),
               Expanded(
-                child: CarouselSlider.builder(
+                child: cs.CarouselSlider.builder(
                   itemCount: titles.length,
                   itemBuilder: (context, index, realIndex) {
                     return Column(
@@ -79,7 +79,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     );
                   },
                   carouselController: carouselController,
-                  options: CarouselOptions(
+                  options: cs.CarouselOptions(
                     height: 400.h,
                     viewportFraction: 1.0,
                     initialPage: 0,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/products_action.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class SearchProductsHeader extends StatelessWidget {
   const SearchProductsHeader({super.key});
@@ -22,7 +22,7 @@ class SearchProductsHeader extends StatelessWidget {
           return Row(
             children: [
               Text(
-                '${cubit.filteredProducts.length} ${S.of(context).productsTitle}',
+                '${cubit.filteredProducts.length} ${context.locale.productsTitle}',
                 style: AppTexts.text16BlackCairoBold,
               ),
               const Spacer(),

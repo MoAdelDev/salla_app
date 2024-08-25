@@ -14,7 +14,6 @@ import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_image_discount.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_price.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_title.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class HomeSearchList extends StatelessWidget {
   const HomeSearchList({
@@ -33,7 +32,7 @@ class HomeSearchList extends StatelessWidget {
           if (cubit.filteredProducts.isEmpty) {
             return Center(
               child: Text(
-                S.of(context).noProductsFound,
+                context.locale.noProductsFound,
                 style: AppTexts.text14BlackCairoBold,
               ),
             );
@@ -46,7 +45,7 @@ class HomeSearchList extends StatelessWidget {
                   horizontal: 10.0.w,
                 ),
                 child: Text(
-                  S.of(context).productsFound,
+                  context.locale.productsFound,
                   style: AppTexts.text14BlackCairoBold,
                 ),
               ),
@@ -133,7 +132,7 @@ class HomeSearchList extends StatelessWidget {
                       ),
                       horizontalSpace(10.0),
                       Text(
-                        S.of(context).seeAllSearchResults,
+                        context.locale.seeAllSearchResults,
                         style: AppTexts.text14BlackCairoSemiBold,
                       )
                     ],

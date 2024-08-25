@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_no_products.dart';
 import 'package:salla_app/features/favorites/data/models/favorites_response.dart';
@@ -7,7 +8,6 @@ import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_state.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorite_tile.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class FavoritesList extends StatelessWidget {
   const FavoritesList({super.key});
@@ -28,7 +28,7 @@ class FavoritesList extends StatelessWidget {
         }
         if (favorites.isEmpty) {
           return CustomNoProducts(
-            text: S.of(context).noProductsTitle,
+            text: context.locale.noProductsTitle,
           );
         }
         return ListView.separated(

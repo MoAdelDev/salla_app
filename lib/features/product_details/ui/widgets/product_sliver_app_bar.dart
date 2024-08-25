@@ -35,7 +35,7 @@ class ProductSliverAppBar extends StatelessWidget {
         ),
       ),
       surfaceTintColor: Colors.transparent,
-      iconTheme: IconThemeData(color: context.colorScheme.onBackground),
+      iconTheme: IconThemeData(color: context.colorScheme.onSurface),
       flexibleSpace: LayoutBuilder(
         builder: (context, constraints) {
           return FlexibleSpaceBar(

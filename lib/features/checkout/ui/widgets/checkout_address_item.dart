@@ -25,7 +25,7 @@ class CheckoutAddressItem extends StatelessWidget {
           value: value,
           groupValue: radioSelected,
           onChanged: onChanged,
-          fillColor: MaterialStateProperty.all(AppColor.onSurfaceColor),
+          fillColor: WidgetStateProperty.all(AppColor.onSurfaceColor),
         ),
         horizontalSpace(5.0),
         Expanded(

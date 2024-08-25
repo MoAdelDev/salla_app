@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -23,32 +23,32 @@ class _RegisterFormState extends State<RegisterForm> {
         children: [
           CustomTextField(
             controller: context.read<RegisterCubit>().nameController,
-            hintText: S.of(context).nameHintTitle,
-            errorMsg: S.of(context).nameHintTitle,
+            hintText: context.locale.nameHintTitle,
+            errorMsg: context.locale.nameHintTitle,
             keyboardType: TextInputType.name,
             textInputAction: TextInputAction.next,
           ),
           verticalSpace(10.0),
           CustomTextField(
             controller: context.read<RegisterCubit>().emailController,
-            hintText: S.of(context).emailHintTitle,
-            errorMsg: S.of(context).emailHintTitle,
+            hintText: context.locale.emailHintTitle,
+            errorMsg: context.locale.emailHintTitle,
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
           ),
           verticalSpace(10.0),
           CustomTextField(
             controller: context.read<RegisterCubit>().phoneController,
-            hintText: S.of(context).phoneHintTitle,
-            errorMsg: S.of(context).phoneHintTitle,
+            hintText: context.locale.phoneHintTitle,
+            errorMsg: context.locale.phoneHintTitle,
             keyboardType: TextInputType.phone,
             textInputAction: TextInputAction.next,
           ),
           verticalSpace(10.0),
           CustomTextField(
             controller: context.read<RegisterCubit>().passwordController,
-            hintText: S.of(context).passwordHintTitle,
-            errorMsg: S.of(context).passwordHintTitle,
+            hintText: context.locale.passwordHintTitle,
+            errorMsg: context.locale.passwordHintTitle,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.done,
             obscureText: isPasswordHidden,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/features/order_details/data/models/order_details_response_body.dart';
 import 'package:salla_app/features/order_details/ui/widgets/order_details_product_tile.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class OrderDetailsProducts extends StatelessWidget {
   final OrderDetailsData order;
@@ -18,7 +18,7 @@ class OrderDetailsProducts extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            S.of(context).productsTitle,
+            context.locale.productsTitle,
             style: AppTexts.text16BlackLatoBold,
           ),
           verticalSpace(5.0),

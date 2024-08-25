@@ -10,7 +10,6 @@ import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/sort_by_item.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class SortByBottomSheet extends StatelessWidget {
   const SortByBottomSheet({super.key});
@@ -43,7 +42,7 @@ class SortByBottomSheet extends StatelessWidget {
                 ),
                 verticalSpace(16.0),
                 Text(
-                  S.of(context).sortBy,
+                  context.locale.sortBy,
                   style: AppTexts.text18BlackCairoBold,
                 ),
                 verticalSpace(16.0),
@@ -79,7 +78,7 @@ class SortByBottomSheet extends StatelessWidget {
                     );
                     context.pop();
                   },
-                  text: S.of(context).applyTitle,
+                  text: context.locale.applyTitle,
                 ),
               ],
             ),

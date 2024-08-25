@@ -7,7 +7,6 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/register/logic/cubit/register_cubit.dart';
 import 'package:salla_app/features/register/logic/cubit/register_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class RegisterSubmit extends StatelessWidget {
   const RegisterSubmit({super.key});
@@ -32,7 +31,7 @@ class RegisterSubmit extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.0.w),
           child: CustomButton(
             onPressed: () => context.read<RegisterCubit>().emitRegisterState(),
-            text: S.of(context).registerTitle,
+            text: context.locale.registerTitle,
             isLoading: state is RegisterLoading,
           ),
         );

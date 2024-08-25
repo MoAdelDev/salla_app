@@ -9,7 +9,6 @@ import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/cart/data/models/cart_response_body.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_cart.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_product_item.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutProducts extends StatelessWidget {
   final List<CartProductModel> cartProducts;
@@ -29,7 +28,7 @@ class CheckoutProducts extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    S.of(context).productsTitle,
+                    context.locale.productsTitle,
                     style: AppTexts.text16BlackCairoBold,
                   ),
                 ],
@@ -67,7 +66,7 @@ class CheckoutProducts extends StatelessWidget {
                 vertical: 5.0.h,
               ),
               child: Text(
-                S.of(context).modifyCartTitle,
+                context.locale.modifyCartTitle,
                 style: AppTexts.text14WhiteLatoBold,
               ),
             ),

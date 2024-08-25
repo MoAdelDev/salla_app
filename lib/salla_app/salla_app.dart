@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/localization/generated/l10n.dart';
 import 'package:salla_app/core/router/app_router.dart';
 import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/style/themes.dart';
-import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
 
 class SallaApp extends StatelessWidget {
@@ -29,18 +29,18 @@ class SallaApp extends StatelessWidget {
             useInheritedMediaQuery: true,
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              theme: lightTheme(context),
+              theme: lightTheme(context, locale),
               initialRoute: Routes.splash,
               onGenerateRoute: (settings) =>
                   appRouter.onGenerateRoute(settings),
               locale: locale,
               localizationsDelegates: const [
-                S.delegate,
+                AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
               ],
-              supportedLocales: S.delegate.supportedLocales,
+              supportedLocales: AppLocalizations.delegate.supportedLocales,
             ),
           );
         },
