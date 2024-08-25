@@ -17,14 +17,19 @@ class HomeBanner extends StatelessWidget {
       builder: (context, state) {
         List<BannerModel> banners = context.read<HomeBodyCubit>().banners;
         if (banners.isEmpty) {
-          return Container(
-            height: 200.0.h,
-            margin: EdgeInsets.only(bottom: 20.0.h),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12.0.r),
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: 10.0.h,
+              left: 20.0.w,
+              right: 20.0.w,
             ),
-            child: const CustomShimmer(),
+            child: CustomShimmer(
+              width: double.infinity,
+              height: 140.0.h,
+              shapeBorder: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0.r),
+              ),
+            ),
           );
         }
         return Padding(

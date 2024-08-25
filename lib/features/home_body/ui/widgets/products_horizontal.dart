@@ -6,6 +6,8 @@ import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_horizontal.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_tile_horizontal.dart';
 
+import '../../../favorites/logic/cubit/favorites_cubit.dart';
+
 class ProductsHorizontal extends StatelessWidget {
   final List<ProductModel> products;
   const ProductsHorizontal({super.key, required this.products});
@@ -40,8 +42,17 @@ class ProductsHorizontal extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           children: List.generate(
             products.length,
-            (index) => ProductTileHorizontal(
-              productModel: products[index],
+            (index) => GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onDoubleTap: () {
+                context.read<HomeBodyCubit>().emitChangeFavoriteState(
+                      product: products[index],
+                      favoritesCubit: context.read<FavoritesCubit>(),
+                    );
+              },
+              child: ProductTileHorizontal(
+                productModel: products[index],
+              ),
             ),
           ),
         );
