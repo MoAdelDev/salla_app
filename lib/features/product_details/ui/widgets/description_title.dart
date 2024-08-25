@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/style/texts.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class DescriptionTitle extends StatelessWidget {
   const DescriptionTitle({super.key});
@@ -13,7 +12,7 @@ class DescriptionTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          S.of(context).descriptionTitle,
+          context.locale.descriptionTitle,
           style: AppTexts.text22BlackLatoBold,
         ),
         Container(

@@ -7,6 +7,8 @@ import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_tile_vertical.dart';
 
+import '../../../favorites/logic/cubit/favorites_cubit.dart';
+
 class ProductsVertical extends StatelessWidget {
   final List<ProductModel> products;
   const ProductsVertical({super.key, required this.products});
@@ -32,7 +34,16 @@ class ProductsVertical extends StatelessWidget {
         return ListView.separated(
           itemBuilder: (context, index) {
             ProductModel productModel = products[index];
-            return ProductTileVertical(productModel: productModel);
+            return GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onDoubleTap: () {
+                context.read<HomeBodyCubit>().emitChangeFavoriteState(
+                      product: productModel,
+                      favoritesCubit: context.read<FavoritesCubit>(),
+                    );
+              },
+              child: ProductTileVertical(productModel: productModel),
+            );
           },
           separatorBuilder: (context, index) {
             return verticalSpace(10.0);

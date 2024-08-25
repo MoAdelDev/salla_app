@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
 import 'package:salla_app/features/orders/data/models/orders_response_body.dart';
 import 'package:salla_app/features/orders/logic/cubit/orders_cubit.dart';
 import 'package:salla_app/features/orders/ui/widgets/order_tile.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class OrdersList extends StatelessWidget {
   const OrdersList({super.key});
@@ -27,7 +27,7 @@ class OrdersList extends StatelessWidget {
         if (cubit.orders!.isEmpty) {
           return Center(
             child: Text(
-              S.of(context).noOrders,
+              context.locale.noOrders,
               style: AppTexts.text18BlackLatoBold,
             ),
           );

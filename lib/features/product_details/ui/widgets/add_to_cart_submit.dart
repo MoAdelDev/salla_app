@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_cubit.dart';
 import 'package:salla_app/features/product_details/logic/cubit/product_details_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class AddToCartSubmit extends StatefulWidget {
   final ProductModel product;
@@ -44,8 +44,8 @@ class _AddToCartSubmitState extends State<AddToCartSubmit> {
                   .emitAddToCartState(productId: widget.product.id);
             },
             text: context.read<ProductDetailsCubit>().inCart
-                ? S.of(context).removeFromCartTitle
-                : S.of(context).addToCartTitle,
+                ? context.locale.removeFromCartTitle
+                : context.locale.addToCartTitle,
             isLoading: state is AddToCartLoading,
           ),
         ),

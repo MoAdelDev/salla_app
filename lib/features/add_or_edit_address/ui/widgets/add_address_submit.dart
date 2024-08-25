@@ -6,7 +6,6 @@ import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_cubit.dart';
 import 'package:salla_app/features/add_or_edit_address/logic/cubit/add_or_edit_address_state.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class AddAddressSubmit extends StatelessWidget {
   final AddressModel? address;
@@ -35,7 +34,7 @@ class AddAddressSubmit extends StatelessWidget {
               cubit.emitEditAddressState(address!.id);
             }
           },
-          text: S.of(context).saveTitle,
+          text: context.locale.saveTitle,
           isLoading: state is Loading,
         );
       },

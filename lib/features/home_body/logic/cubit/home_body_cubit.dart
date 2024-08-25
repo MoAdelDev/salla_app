@@ -7,7 +7,8 @@ import 'package:salla_app/features/home_body/data/models/change_favorite_request
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/data/repos/home_body_repo.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
-import 'package:salla_app/generated/l10n.dart';
+
+import '../../../../core/localization/generated/l10n.dart';
 
 class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   final HomeBodyRepo _homeBodyRepo;
@@ -124,10 +125,10 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   }
 
   List<String> sortByTitles = [
-    S.current.defaultTitle,
-    S.current.lowestPrice,
-    S.current.highestPrice,
-    S.current.hasDiscount,
+    AppLocalizations.current.defaultTitle,
+    AppLocalizations.current.lowestPrice,
+    AppLocalizations.current.highestPrice,
+    AppLocalizations.current.hasDiscount,
   ];
 
   int sortByIndex = 0;
@@ -140,20 +141,20 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
 
   void emitSortByState(String title) {
     safeEmit(const HomeBodyState.initial());
-    if (title == S.current.defaultTitle) {
+    if (title == AppLocalizations.current.defaultTitle) {
       if (categoryId == -1) {
         emitProductsState();
       } else {
         emitGetProductsByCategoryState(categoryId: categoryId);
       }
     }
-    if (title == S.current.lowestPrice) {
+    if (title == AppLocalizations.current.lowestPrice) {
       products.sort((a, b) => a.price.compareTo(b.price));
     }
-    if (title == S.current.highestPrice) {
+    if (title == AppLocalizations.current.highestPrice) {
       products.sort((a, b) => b.price.compareTo(a.price));
     }
-    if (title == S.current.hasDiscount) {
+    if (title == AppLocalizations.current.hasDiscount) {
       products.sort((a, b) => b.discount.compareTo(a.discount));
     }
     safeEmit(const HomeBodyState.changeSortBy());

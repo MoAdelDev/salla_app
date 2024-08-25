@@ -12,7 +12,6 @@ import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/profile/data/models/language.dart';
-import 'package:salla_app/generated/l10n.dart';
 import 'package:salla_app/salla_app/locale_cubit.dart';
 
 class LanguageBottomSheet extends StatefulWidget {
@@ -34,8 +33,8 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
   @override
   Widget build(BuildContext context) {
     languages = [
-      Language(S.of(context).englishTitle, "en", "🇬🇧"),
-      Language(S.of(context).arabicTitle, "ar", "🇪🇬"),
+      Language(context.locale.englishTitle, "en", "🇬🇧"),
+      Language(context.locale.arabicTitle, "ar", "🇪🇬"),
     ];
     return Scaffold(
       body: Padding(
@@ -56,12 +55,12 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
             ),
             verticalSpace(16.0),
             Text(
-              S.of(context).selectLanguage,
+              context.locale.selectLanguage,
               style: AppTexts.text18BlackCairoBold,
             ),
             verticalSpace(10.0),
             Text(
-              S.of(context).selectLanguageBody,
+              context.locale.selectLanguageBody,
               style: AppTexts.text16BlackCairoRegular,
             ),
             verticalSpace(16.0),
@@ -112,8 +111,8 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
                 vertical: 20.0.h,
               ),
               child: CustomButton(
-                onPressed: () => saveLanguageAndGetTheNewData(),
-                text: S.of(context).saveTitle,
+                onPressed: () => saveLanguageAndGetTheNewData(context),
+                text: context.locale.saveTitle,
               ),
             )
           ],
@@ -122,12 +121,14 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
     );
   }
 
-  void saveLanguageAndGetTheNewData() async {
+  void saveLanguageAndGetTheNewData(BuildContext context) async {
     await context.read<LocaleCubit>().changeLocale(selectedLanguage.code, '');
     DioFactory.instance = null;
     getIt.reset().then((value) {
       setupGetIt().then((value) {
-        context.pushAndRemoveUntil(Routes.home);
+        if (context.mounted) {
+          context.pushAndRemoveUntil(Routes.home);
+        }
       });
     });
   }

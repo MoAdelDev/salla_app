@@ -13,7 +13,6 @@ import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/checkout_address_item.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CheckoutAddresses extends StatelessWidget {
   const CheckoutAddresses({super.key});
@@ -41,14 +40,14 @@ class CheckoutAddresses extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    S.of(context).myAddressesTitle,
+                    context.locale.myAddressesTitle,
                     style: AppTexts.text16BlackCairoBold,
                   ),
                   verticalSpace(5.0),
                   if (cubit.addresses?.isEmpty ?? false)
                     Center(
                       child: Text(
-                        S.of(context).noAddressTitle,
+                        context.locale.noAddressTitle,
                         style: AppTexts.text16BlackCairoBold,
                       ),
                     ),
@@ -83,7 +82,9 @@ class CheckoutAddresses extends StatelessWidget {
           child: CustomInkwell(
             onTap: () => context.push(Routes.addAddress).then(
               (value) {
-                context.read<CheckoutCubit>().emitAddressesState();
+                if (context.mounted) {
+                  context.read<CheckoutCubit>().emitAddressesState();
+                }
               },
             ),
             child: Container(
@@ -96,7 +97,7 @@ class CheckoutAddresses extends StatelessWidget {
                 vertical: 5.0.h,
               ),
               child: Text(
-                S.of(context).add,
+                context.locale.add,
                 style: AppTexts.text14WhiteLatoBold,
               ),
             ),

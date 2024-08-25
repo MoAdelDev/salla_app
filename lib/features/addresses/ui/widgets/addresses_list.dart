@@ -12,7 +12,6 @@ import 'package:salla_app/features/addresses/logic/cubit/addresses_state.dart';
 import 'package:salla_app/features/addresses/ui/widgets/address_tile.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
 import 'package:salla_app/features/home_body/ui/widgets/product_shimmer_vertical.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class AddressesList extends StatelessWidget {
   const AddressesList({super.key});
@@ -33,7 +32,7 @@ class AddressesList extends StatelessWidget {
         if (cubit.addresses!.isEmpty) {
           return Center(
             child: Text(
-              S.of(context).noAddressTitle,
+              context.locale.noAddressTitle,
               style: AppTexts.text18BlackLatoBold,
             ),
           );
@@ -59,7 +58,7 @@ class AddressesList extends StatelessWidget {
                     backgroundColor: AppColor.primaryColor,
                     foregroundColor: Colors.white,
                     icon: Icons.edit,
-                    label: S.of(context).editTitle,
+                    label: context.locale.editTitle,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   SlidableAction(
@@ -69,7 +68,7 @@ class AddressesList extends StatelessWidget {
                     foregroundColor: Colors.white,
                     borderRadius: BorderRadius.circular(20),
                     icon: Icons.save,
-                    label: S.of(context).deleteTitle,
+                    label: context.locale.deleteTitle,
                   ),
                 ],
               ),

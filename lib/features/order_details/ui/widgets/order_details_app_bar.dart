@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/order_details/logic/cubit/order_details_cubit.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class OrderDetailsAppBar extends StatelessWidget {
   const OrderDetailsAppBar({super.key});
@@ -14,7 +13,7 @@ class OrderDetailsAppBar extends StatelessWidget {
       builder: (context, state) {
         OrderDetailsCubit cubit = context.read<OrderDetailsCubit>();
         return CustomAppBar(
-          title: S.of(context).orderDetailsTitle,
+          title: context.locale.orderDetailsTitle,
           onTap1: () => context.pop(),
           icon1: Icons.chevron_left,
           onTap2: cubit.order?.status == 'New' || cubit.order?.status == 'جديد'

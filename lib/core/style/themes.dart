@@ -4,22 +4,21 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 
-ThemeData lightTheme(context) => ThemeData(
+ThemeData lightTheme(context, Locale locale) => ThemeData(
       colorScheme: ColorScheme(
         primary: AppColor.primaryColor,
         primaryContainer: AppColor.primaryVariantColor,
-        background: AppColor.backgroundColor,
+        surface: AppColor.backgroundColor,
         secondary: AppColor.secondaryColor,
         secondaryContainer: AppColor.secondaryVariantColor,
         error: AppColor.errorColor,
-        surface: AppColor.surfaceColor,
-        onSurface: AppColor.onSurfaceColor,
         onPrimary: AppColor.onPrimaryColor,
         onSecondary: AppColor.onSecondaryColor,
         onError: AppColor.onErrorColor,
-        onBackground: AppColor.onBackgroundColor,
+        onSurface: AppColor.onBackgroundColor,
         brightness: Brightness.light,
       ),
+      fontFamily: locale.languageCode == 'en' ? 'SourceSans3' : 'Cairo',
       appBarTheme: AppBarTheme(
         backgroundColor: AppColor.backgroundColor,
         systemOverlayStyle: SystemUiOverlayStyle(

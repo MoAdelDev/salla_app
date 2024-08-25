@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
@@ -10,7 +11,6 @@ import 'package:salla_app/features/checkout/logic/cubit/checkout_cubit.dart';
 import 'package:salla_app/features/checkout/logic/cubit/checkout_state.dart';
 import 'package:salla_app/features/checkout/ui/widgets/pay_button.dart';
 import 'package:salla_app/features/checkout/ui/widgets/payment_item.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class PaymentMethodBottomSheet extends StatelessWidget {
   final double totalPrice;
@@ -46,7 +46,7 @@ class PaymentMethodBottomSheet extends StatelessWidget {
                 ),
                 verticalSpace(16.0),
                 Text(
-                  S.of(context).selectPaymentMethod,
+                  context.locale.selectPaymentMethod,
                   style: AppTexts.text18BlackCairoBold,
                 ),
                 verticalSpace(16.0),

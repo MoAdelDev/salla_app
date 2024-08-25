@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/helpers/spacing.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
@@ -8,7 +9,6 @@ import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/products_action.dart';
 import 'package:salla_app/features/home_body/ui/widgets/products_header_shimmer.dart';
 import 'package:salla_app/features/home_body/ui/widgets/sort_by_bottom_sheet.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class ProductsHeader extends StatelessWidget {
   const ProductsHeader({super.key});
@@ -29,7 +29,7 @@ class ProductsHeader extends StatelessWidget {
           return Row(
             children: [
               Text(
-                '${cubit.products.length} ${S.of(context).productsTitle}',
+                '${cubit.products.length} ${context.locale.productsTitle}',
                 style: AppTexts.text16BlackCairoBold,
               ),
               const Spacer(),

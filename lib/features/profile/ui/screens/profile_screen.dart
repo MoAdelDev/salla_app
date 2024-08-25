@@ -18,7 +18,6 @@ import 'package:salla_app/features/profile/ui/screens/language_bottom_sheet.dart
 import 'package:salla_app/features/profile/ui/widgets/profile_item.dart';
 import 'package:salla_app/features/profile/ui/widgets/profile_shimmer.dart';
 import 'package:salla_app/features/profile/ui/widgets/profile_user_data_and_button.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -60,25 +59,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       const ProfileUserDataAndButton(),
                       verticalSpace(10.0),
                       ProfileItem(
-                        title: S.of(context).profile,
+                        title: context.locale.profile,
                         icon: Icons.person_outline,
                         onTap: () {
-                          context.push(Routes.editProfile).then((value) =>
-                              context.read<ProfileCubit>().emitUserDataState());
+                          context.push(Routes.editProfile).then((value) {
+                            if (context.mounted) {
+                              context.read<ProfileCubit>().emitUserDataState();
+                            }
+                          });
                         },
                       ),
                       ProfileItem(
-                        title: S.of(context).myAddressesTitle,
+                        title: context.locale.myAddressesTitle,
                         icon: Icons.location_on_outlined,
                         onTap: () => context.push(Routes.addresses),
                       ),
                       ProfileItem(
-                        title: S.of(context).ordersTitle,
+                        title: context.locale.ordersTitle,
                         icon: CupertinoIcons.cart,
                         onTap: () => context.push(Routes.orders),
                       ),
                       ProfileItem(
-                        title: S.of(context).languageTitle,
+                        title: context.locale.languageTitle,
                         icon: CupertinoIcons.globe,
                         subTitle: AppData.isArabic ? 'العربية' : 'English',
                         onTap: () {
@@ -98,7 +100,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       state is LogoutLoading
                           ? const Center(child: CustomLoadingIndicator())
                           : ProfileItem(
-                              title: S.of(context).logoutTitle,
+                              title: context.locale.logoutTitle,
                               icon: CupertinoIcons.power,
                               onTap: () {
                                 context.read<ProfileCubit>().emitLogoutState();

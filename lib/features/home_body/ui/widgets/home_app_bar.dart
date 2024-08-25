@@ -9,7 +9,6 @@ import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/core/widgets/custom_text_field.dart';
 import 'package:salla_app/features/home_body/data/models/products_response.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class HomeAppBar extends StatelessWidget {
   final List<ProductModel> products;
@@ -59,7 +58,7 @@ class HomeAppBar extends StatelessWidget {
               height: 40.h,
               child: CustomTextField(
                 controller: context.read<HomeBodyCubit>().searchController,
-                hintText: S.of(context).searchForProducts,
+                hintText: context.locale.searchForProducts,
                 errorMsg: '',
                 onTap: () {},
                 prefixIcon: CupertinoIcons.search,

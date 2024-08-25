@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:salla_app/core/helpers/extensions.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_container_tile.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class ProductDetailsDescription extends StatefulWidget {
   final String description;
@@ -40,7 +39,7 @@ class _ProductDetailsDescriptionState extends State<ProductDetailsDescription> {
             horizontal: 10.0.w,
           ),
           child: Text(
-            S.of(context).descriptionTitle,
+            context.locale.descriptionTitle,
             style: AppTexts.text16BlackLatoBold,
           ),
         ),

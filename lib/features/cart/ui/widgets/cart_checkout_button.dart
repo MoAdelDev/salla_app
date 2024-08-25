@@ -7,7 +7,6 @@ import 'package:salla_app/core/router/screen_args.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:salla_app/features/cart/logic/cubit/cart_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class CartCheckoutButton extends StatelessWidget {
   const CartCheckoutButton({super.key});
@@ -41,7 +40,7 @@ class CartCheckoutButton extends StatelessWidget {
               );
             },
             text:
-                '${S.of(context).checkoutTitle} ${context.read<CartCubit>().totalPrice} EGP',
+                '${context.locale.checkoutTitle} ${context.read<CartCubit>().totalPrice} EGP',
           ),
         );
       },

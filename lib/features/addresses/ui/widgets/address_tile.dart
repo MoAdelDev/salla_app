@@ -10,7 +10,6 @@ import 'package:salla_app/core/widgets/custom_container_tile.dart';
 import 'package:salla_app/core/widgets/custom_inkwell.dart';
 import 'package:salla_app/features/addresses/logic/cubit/addresses_cubit.dart';
 import 'package:salla_app/features/checkout/data/models/addresses_response_body.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class AddressTile extends StatelessWidget {
   final AddressModel address;
@@ -29,7 +28,9 @@ class AddressTile extends StatelessWidget {
             ),
           )
               .then((value) {
-            context.read<AddressesCubit>().emitAddressState();
+            if (context.mounted) {
+              context.read<AddressesCubit>().emitAddressState();
+            }
           }),
           child: CustomContainerTile(
             child: ListTile(
@@ -68,7 +69,7 @@ class AddressTile extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  S.of(context).deleteTitle,
+                  context.locale.deleteTitle,
                   style: AppTexts.text14WhiteLatoBold,
                 ),
               ),

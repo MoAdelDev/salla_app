@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../localization/generated/l10n.dart';
+
 extension NavigationEx on BuildContext {
   Future push(String routeName, {Object? arguments}) {
     return Navigator.pushNamed(this, routeName, arguments: arguments);
@@ -21,6 +23,10 @@ extension NavigationEx on BuildContext {
 
 extension ThemeEx on BuildContext {
   ColorScheme get colorScheme => Theme.of(this).colorScheme;
+}
+
+extension LocalEx on BuildContext {
+  AppLocalizations get locale => AppLocalizations.of(this);
 }
 
 extension RegEx on String {

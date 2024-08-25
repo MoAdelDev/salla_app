@@ -5,7 +5,6 @@ import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_cubit.dart';
 import 'package:salla_app/features/edit_profile/logic/cubit/edit_profile_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class EditProfileButton extends StatelessWidget {
   const EditProfileButton({super.key});
@@ -25,7 +24,7 @@ class EditProfileButton extends StatelessWidget {
         return CustomButton(
           onPressed: () =>
               context.read<EditProfileCubit>().emitEditProfileState(),
-          text: S.of(context).updateProfileTitle,
+          text: context.locale.updateProfileTitle,
           isLoading: state is Loading,
         );
       },

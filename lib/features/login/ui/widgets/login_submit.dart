@@ -7,7 +7,6 @@ import 'package:salla_app/core/router/routes.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:salla_app/features/login/logic/cubit/login_state.dart';
-import 'package:salla_app/generated/l10n.dart';
 
 class LoginSubmit extends StatelessWidget {
   const LoginSubmit({super.key});
@@ -31,7 +30,7 @@ class LoginSubmit extends StatelessWidget {
             onPressed: () {
               context.read<LoginCubit>().emitLoginState();
             },
-            text: S.of(context).loginTitle,
+            text: context.locale.loginTitle,
             isLoading: state is LoginLoading,
           );
         },
