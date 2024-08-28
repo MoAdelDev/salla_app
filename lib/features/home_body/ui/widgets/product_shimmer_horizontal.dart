@@ -12,11 +12,10 @@ class ProductShimmerHorizontal extends StatelessWidget {
     return CustomContainerTile(
       child: Column(
         children: [
-          const CircleAvatar(
-            radius: 60.0,
-            child: ClipOval(
-              child: CustomShimmer(),
-            ),
+          CustomShimmer(
+            radius: 5.0,
+            width: 50.w,
+            height: 50.h,
           ),
           verticalSpace(10.0),
           Column(

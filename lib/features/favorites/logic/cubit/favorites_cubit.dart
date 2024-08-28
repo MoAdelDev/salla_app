@@ -25,6 +25,7 @@ class FavoritesCubit extends BaseSafeCubit<FavoritesState> {
     );
   }
 
+  bool isFavoritesLoading = false;
   Future<void> emitRemoveFavoriteState(
     FavoriteModel favoriteModel,
     HomeBodyCubit cubit,
@@ -69,14 +70,16 @@ class FavoritesCubit extends BaseSafeCubit<FavoritesState> {
   ) async {
     cubit.updateFavorites(productId, false);
     favorites.removeWhere((element) => element.product.id == productId);
-    safeEmit(const FavoritesState.removeAllFavoritesLoading());
   }
 
   Future<void> emitRemoveAllFavoriteState(HomeBodyCubit cubit) async {
+    isFavoritesLoading = true;
     safeEmit(const FavoritesState.removeAllFavoritesLoading());
     List<FavoriteModel> favoritesCopy = List.from(favorites);
     for (FavoriteModel favorite in favoritesCopy) {
       await emitRemoveFavoriteState(favorite, cubit);
     }
+    isFavoritesLoading = false;
+    safeEmit(const FavoritesState.removeAllFavoritesSuccess());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -62,6 +63,13 @@ class HomeAppBar extends StatelessWidget {
                 errorMsg: '',
                 onTap: () {},
                 prefixIcon: CupertinoIcons.search,
+                suffixIcon: Icons.close,
+                onSuffixIcon: () {
+                  context
+                      .read<HomeBodyCubit>()
+                      .emitShowSearchContainerState(false);
+                  context.read<HomeBodyCubit>().searchController.clear();
+                },
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.done,
                 onChange: (value) {

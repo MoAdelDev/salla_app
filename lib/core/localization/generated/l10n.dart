@@ -1319,6 +1319,56 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Clear all favorites`
+  String get clearAllFavorites {
+    return Intl.message(
+      'Clear all favorites',
+      name: 'clearAllFavorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to clear all favorites ?`
+  String get areYouWantToClearAllFavorites {
+    return Intl.message(
+      'Are you sure you want to clear all favorites ?',
+      name: 'areYouWantToClearAllFavorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Favorites yet`
+  String get noFavoritesYet {
+    return Intl.message(
+      'No Favorites yet',
+      name: 'noFavoritesYet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

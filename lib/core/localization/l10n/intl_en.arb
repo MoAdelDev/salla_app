@@ -125,5 +125,10 @@
     "searchForProducts" : "Search for Products",
     "seeAllSearchResults" : "See all search results",
     "order" : "Order",
-    "pleaseSelectOrAddNewAddress" : "Please select or add new address"
+    "pleaseSelectOrAddNewAddress" : "Please select or add new address",
+    "clearAllFavorites" : "Clear all favorites",
+    "areYouWantToClearAllFavorites" : "Are you sure you want to clear all favorites ?",
+    "cancel" : "Cancel",
+    "yes" : "Yes",
+    "noFavoritesYet" : "No Favorites yet"
   }

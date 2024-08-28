@@ -17,9 +17,10 @@ class CustomTextButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-      )),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+      ),
       child: Text(
         text,
         style: textStyle ?? AppTexts.text16PrimaryLatoBold,

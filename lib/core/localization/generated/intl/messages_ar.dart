@@ -43,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle3": MessageLookupByLibrary.simpleMessage("انضم إلينا اليوم"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("تطبيق"),
         "arabicTitle": MessageLookupByLibrary.simpleMessage("العربية"),
+        "areYouWantToClearAllFavorites":
+            MessageLookupByLibrary.simpleMessage("هل تريد مسح جميع المفضلات ؟"),
+        "cancel": MessageLookupByLibrary.simpleMessage("الغاء"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("إلغاء الطلب"),
         "cartTitle": MessageLookupByLibrary.simpleMessage("السلة"),
         "cashOnDeliveryBody": MessageLookupByLibrary.simpleMessage(
@@ -54,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "checkoutTitle": MessageLookupByLibrary.simpleMessage("الدفع"),
         "cityHintTitle": MessageLookupByLibrary.simpleMessage("أدخل مدينتك"),
         "cityTitle": MessageLookupByLibrary.simpleMessage("المدينة"),
+        "clearAllFavorites":
+            MessageLookupByLibrary.simpleMessage("مسح جميع المفضلات"),
         "codeHintTitle": MessageLookupByLibrary.simpleMessage("أدخل كود الخصم"),
         "confirmOrderTitle":
             MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
@@ -111,6 +116,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("لا يوجد عناوين"),
+        "noFavoritesYet":
+            MessageLookupByLibrary.simpleMessage("لا توجد مفضلات بعد"),
         "noOrders": MessageLookupByLibrary.simpleMessage("لا يوجد طلبات"),
         "noProductsFound":
             MessageLookupByLibrary.simpleMessage("لا يوجد منتجات"),
@@ -189,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تعديل الصفحة الشخصية"),
         "welcomeMessage":
             MessageLookupByLibrary.simpleMessage("لنبدأ التسوق الآن"),
-        "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا")
+        "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

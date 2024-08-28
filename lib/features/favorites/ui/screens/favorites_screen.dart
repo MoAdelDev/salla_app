@@ -5,6 +5,7 @@ import 'package:salla_app/core/helpers/toasts.dart';
 import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/widgets/custom_app_bar.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
+import 'package:salla_app/features/favorites/ui/widgets/favorites_clear_all_dialog.dart';
 import 'package:salla_app/features/favorites/ui/widgets/favorites_list.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 
@@ -18,6 +19,7 @@ class FavoritesScreen extends StatefulWidget {
 class _FavoritesScreenState extends State<FavoritesScreen> {
   @override
   Widget build(BuildContext context) {
+    FavoritesCubit favoritesCubit = context.read<FavoritesCubit>();
     return Scaffold(
       backgroundColor: AppColor.lightGreyColor,
       body: Column(
@@ -27,11 +29,23 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
             icon2: Icons.clear_all,
             onTap2: () {
               if (mounted) {
-                if (context.read<HomeBodyCubit>().favorites.isEmpty) {
-                  showToast(context.locale.pleaseWaitToLoadProducts);
+                if (favoritesCubit.favorites.isEmpty) {
+                  showToast(context.locale.noFavoritesYet);
                 } else {
-                  context.read<FavoritesCubit>().emitRemoveAllFavoriteState(
-                      context.read<HomeBodyCubit>());
+                  showDialog(
+                    context: context,
+                    builder: (_) => MultiBlocProvider(
+                      providers: [
+                        BlocProvider.value(
+                          value: favoritesCubit,
+                        ),
+                        BlocProvider.value(
+                          value: context.read<HomeBodyCubit>(),
+                        ),
+                      ],
+                      child: const FavoritesClearAllDialog(),
+                    ),
+                  );
                 }
               }
             },

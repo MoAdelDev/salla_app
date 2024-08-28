@@ -4,13 +4,12 @@ import 'package:shimmer/shimmer.dart';
 class CustomShimmer extends StatelessWidget {
   final double width;
   final double height;
-  final ShapeBorder shapeBorder;
-
+  final double radius;
   const CustomShimmer({
     super.key,
     this.width = double.infinity,
     this.height = double.infinity,
-    this.shapeBorder = const RoundedRectangleBorder(),
+    this.radius = 0.0,
   });
 
   @override
@@ -23,7 +22,9 @@ class CustomShimmer extends StatelessWidget {
         height: height,
         decoration: ShapeDecoration(
           color: Colors.grey[300],
-          shape: shapeBorder,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(radius),
+          ),
         ),
       ),
     );

@@ -25,7 +25,7 @@ class SearchFilteredProducts extends StatelessWidget {
             ),
           );
         }
-        if (context.read<HomeBodyCubit>().isProductsHorizontal) {
+        if (context.read<HomeBodyCubit>().isGridView) {
           return ProductsHorizontal(
             products: products,
           );

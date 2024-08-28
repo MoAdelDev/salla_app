@@ -7,6 +7,7 @@ import 'package:salla_app/core/style/colors.dart';
 import 'package:salla_app/core/style/texts.dart';
 import 'package:salla_app/core/widgets/custom_button.dart';
 import 'package:salla_app/core/widgets/custom_inkwell.dart';
+import 'package:salla_app/features/home_body/data/entities/products_sort.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_cubit.dart';
 import 'package:salla_app/features/home_body/logic/cubit/home_body_state.dart';
 import 'package:salla_app/features/home_body/ui/widgets/sort_by_item.dart';
@@ -53,7 +54,7 @@ class SortByBottomSheet extends StatelessWidget {
                     return CustomInkwell(
                       onTap: () => cubit.emitChangeSortByState(index: index),
                       child: SortByItem(
-                        title: cubit.sortByTitles[index],
+                        title: ProductsSort.sorts[index].title,
                         isSelected: cubit.sortByIndex == index,
                         index: index,
                         groupValue: cubit.sortByIndex,
@@ -68,14 +69,12 @@ class SortByBottomSheet extends StatelessWidget {
                       color: Colors.grey[400],
                     );
                   },
-                  itemCount: cubit.sortByTitles.length,
+                  itemCount: ProductsSort.sorts.length,
                 ),
                 verticalSpace(16.0),
                 CustomButton(
                   onPressed: () {
-                    cubit.emitSortByState(
-                      cubit.sortByTitles[cubit.sortByIndex],
-                    );
+                    cubit.emitSortByState();
                     context.pop();
                   },
                   text: context.locale.applyTitle,

@@ -20,10 +20,15 @@ class ProductsHeader extends StatelessWidget {
         horizontal: 10.w,
       ),
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
+        buildWhen: (previous, current) =>
+            current is ProductsSuccess ||
+            current is ProductsError ||
+            current is ProductsLoading,
         builder: (context, state) {
           HomeBodyCubit cubit = context.read<HomeBodyCubit>();
           if (cubit.products.isEmpty ||
-              context.read<HomeBodyCubit>().isProductsLoading) {
+              state is ProductsLoading ||
+              state is ProductsError) {
             return const ProductsHeaderShimmer();
           }
           return Row(
@@ -57,7 +62,7 @@ class ProductsHeader extends StatelessWidget {
                   horizontalSpace(10.0),
                   ProductsAction(
                     onTap: () => cubit.emitChangeProductsViewState(),
-                    icon: cubit.isProductsHorizontal
+                    icon: cubit.isGridView
                         ? 'assets/icons/vertical.svg'
                         : 'assets/icons/horizontal.svg',
                   ),

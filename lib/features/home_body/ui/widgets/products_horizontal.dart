@@ -15,9 +15,14 @@ class ProductsHorizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
+      buildWhen: (previous, current) =>
+          current is ProductsSuccess ||
+          current is ProductsError ||
+          current is ProductsLoading,
       builder: (context, state) {
         if (products.isEmpty ||
-            context.read<HomeBodyCubit>().isProductsLoading) {
+            state is ProductsLoading ||
+            state is ProductsError) {
           return GridView.count(
             crossAxisCount: 2,
             shrinkWrap: true,
