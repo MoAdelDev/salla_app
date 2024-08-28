@@ -9,7 +9,7 @@ part of 'change_favorite_request.dart';
 ChangeFavoriteRequest _$ChangeFavoriteRequestFromJson(
         Map<String, dynamic> json) =>
     ChangeFavoriteRequest(
-      json['product_id'] as int,
+      (json['product_id'] as num).toInt(),
     );
 
 Map<String, dynamic> _$ChangeFavoriteRequestToJson(

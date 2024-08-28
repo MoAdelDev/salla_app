@@ -11,11 +11,11 @@ PaymobPaymentKeyRequest _$PaymobPaymentKeyRequestFromJson(
     PaymobPaymentKeyRequest(
       authToken: json['auth_token'] as String,
       amountCents: json['amount_cents'] as String,
-      expiration: json['expiration'] as int,
+      expiration: (json['expiration'] as num).toInt(),
       orderId: json['order_id'] as String,
       billingData: json['billing_data'] as Map<String, dynamic>,
       currency: json['currency'] as String,
-      integrationId: json['integration_id'] as int,
+      integrationId: (json['integration_id'] as num).toInt(),
       lockOrderWhenPaid: json['lock_order_when_paid'] as String,
     );
 

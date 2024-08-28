@@ -8,7 +8,7 @@ part of 'paymob_order_response.dart';
 
 PaymobOrderResponse _$PaymobOrderResponseFromJson(Map<String, dynamic> json) =>
     PaymobOrderResponse(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
     );
 
 Map<String, dynamic> _$PaymobOrderResponseToJson(

@@ -8,7 +8,7 @@ part of 'cart_update_request.dart';
 
 CartUpdateRequest _$CartUpdateRequestFromJson(Map<String, dynamic> json) =>
     CartUpdateRequest(
-      json['quantity'] as int,
+      (json['quantity'] as num).toInt(),
     );
 
 Map<String, dynamic> _$CartUpdateRequestToJson(CartUpdateRequest instance) =>

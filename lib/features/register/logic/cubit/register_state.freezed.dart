@@ -84,6 +84,9 @@ class _$RegisterStateCopyWithImpl<T, $Res, $Val extends RegisterState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -100,6 +103,9 @@ class __$$InitialImplCopyWithImpl<T, $Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -214,6 +220,9 @@ class __$$RegisterLoadingImplCopyWithImpl<T, $Res>
   __$$RegisterLoadingImplCopyWithImpl(_$RegisterLoadingImpl<T> _value,
       $Res Function(_$RegisterLoadingImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -331,6 +340,8 @@ class __$$RegisterSuccessImplCopyWithImpl<T, $Res>
       $Res Function(_$RegisterSuccessImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -369,7 +380,9 @@ class _$RegisterSuccessImpl<T> implements RegisterSuccess<T> {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterSuccessImplCopyWith<T, _$RegisterSuccessImpl<T>> get copyWith =>
@@ -456,7 +469,10 @@ abstract class RegisterSuccess<T> implements RegisterState<T> {
       _$RegisterSuccessImpl<T>;
 
   RegisterBodyResponse get data;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegisterSuccessImplCopyWith<T, _$RegisterSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -478,6 +494,8 @@ class __$$RegisterErrorImplCopyWithImpl<T, $Res>
       $Res Function(_$RegisterErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -516,7 +534,9 @@ class _$RegisterErrorImpl<T> implements RegisterError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RegisterErrorImplCopyWith<T, _$RegisterErrorImpl<T>> get copyWith =>
@@ -602,7 +622,10 @@ abstract class RegisterError<T> implements RegisterState<T> {
   const factory RegisterError(final String message) = _$RegisterErrorImpl<T>;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RegisterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RegisterErrorImplCopyWith<T, _$RegisterErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

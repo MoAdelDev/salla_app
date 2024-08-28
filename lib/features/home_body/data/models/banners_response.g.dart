@@ -23,7 +23,7 @@ Map<String, dynamic> _$BannersResponseToJson(BannersResponse instance) =>
     };
 
 BannerModel _$BannerModelFromJson(Map<String, dynamic> json) => BannerModel(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['image'] as String,
     );
 

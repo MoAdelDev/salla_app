@@ -18,6 +18,11 @@ class HomeCategories extends StatelessWidget {
       color: Colors.grey[200],
       padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
+        buildWhen: (previous, current) =>
+            current is ChangeCategoryId ||
+            current is ProductsLoading ||
+            current is ProductsSuccess ||
+            current is ProductsError,
         builder: (context, state) {
           int categoryId = context.read<HomeBodyCubit>().categoryId;
           List<CategoryModel> categories =
@@ -32,7 +37,7 @@ class HomeCategories extends StatelessWidget {
                   child: const CategoryShimmer(),
                 ),
                 separatorBuilder: (context, index) => horizontalSpace(10.0),
-                itemCount: 6,
+                itemCount: 7,
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
               ),
@@ -49,10 +54,7 @@ class HomeCategories extends StatelessWidget {
                     isSelected: categoryId == -1,
                     categoryModel: CategoryModel(0, context.locale.all, ''),
                     onTap: () {
-                      if (context.read<HomeBodyCubit>().isProductsLoading ==
-                          false) {
-                        context.read<HomeBodyCubit>().emitProductsState();
-                      }
+                      context.read<HomeBodyCubit>().emitProductsState();
                     },
                   ),
                   horizontalSpace(10.0),
@@ -69,14 +71,10 @@ class HomeCategories extends StatelessWidget {
                       CategoryModel categoryModel = categories[index];
                       return CategoryTile(
                         onTap: () {
-                          if (categoryId != index &&
-                              context.read<HomeBodyCubit>().isProductsLoading ==
-                                  false) {
-                            context
-                                .read<HomeBodyCubit>()
-                                .emitGetProductsByCategoryState(
-                                    categoryId: categories[index].id);
-                          }
+                          context
+                              .read<HomeBodyCubit>()
+                              .emitGetProductsByCategoryState(
+                                  categoryId: categories[index].id);
                         },
                         isSelected: categoryId == categoryModel.id,
                         categoryModel: categories[index],

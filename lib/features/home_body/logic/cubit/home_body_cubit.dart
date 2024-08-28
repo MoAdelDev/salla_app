@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salla_app/core/helpers/base_safe_cubit.dart';
+import 'package:salla_app/core/helpers/debouncer.dart';
 import 'package:salla_app/features/favorites/logic/cubit/favorites_cubit.dart';
 import 'package:salla_app/features/home_body/data/models/banners_response.dart';
 import 'package:salla_app/features/home_body/data/models/categories_response.dart';
@@ -44,27 +45,33 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   Map<int, bool> favorites = {};
   bool isProductsLoading = false;
   void emitProductsState() async {
-    isProductsLoading = true;
-    categoryId = -1;
     safeEmit(const HomeBodyState.productsLoading());
-    final response = await _homeBodyRepo.getProducts();
-    response.when(
-      success: (productsResponse) {
-        isProductsLoading = false;
-        products = productsResponse.productsData.products ?? [];
-        List.generate(
-          products.length,
-          (index) => favorites.addAll(
-            {products[index].id: products[index].inFavorites},
-          ),
-        );
-        safeEmit(const HomeBodyState.productsSuccess());
-      },
-      failure: (error) {
-        isProductsLoading = false;
-        safeEmit(const HomeBodyState.productsError());
-      },
-    );
+    debouncer.run(() async {
+      isProductsLoading = true;
+      categoryId = -1;
+      lastRequestedCategoryId = -1;
+      safeEmit(HomeBodyState.changeCategoryId(categoryId));
+      final response = await _homeBodyRepo.getProducts();
+      response.when(
+        success: (productsResponse) {
+          if (lastRequestedCategoryId == categoryId) {
+            isProductsLoading = false;
+            products = productsResponse.productsData.products ?? [];
+            List.generate(
+              products.length,
+              (index) => favorites.addAll(
+                {products[index].id: products[index].inFavorites},
+              ),
+            );
+            safeEmit(const HomeBodyState.productsSuccess());
+          }
+        },
+        failure: (error) {
+          isProductsLoading = false;
+          safeEmit(const HomeBodyState.productsError());
+        },
+      );
+    });
   }
 
   void updateFavorites(int id, bool isFavorite) {
@@ -97,24 +104,32 @@ class HomeBodyCubit extends BaseSafeCubit<HomeBodyState> {
   }
 
   int categoryId = -1;
-  void emitGetProductsByCategoryState({required int categoryId}) async {
+  int lastRequestedCategoryId = -1;
+  Debouncer debouncer = Debouncer(milliseconds: 300);
+  void emitGetProductsByCategoryState({required int categoryId}) {
     isProductsLoading = true;
     this.categoryId = categoryId;
+    lastRequestedCategoryId = categoryId;
+    safeEmit(HomeBodyState.changeCategoryId(categoryId));
     safeEmit(const HomeBodyState.productsLoading());
-    final response = await _homeBodyRepo.getProductsByCategory(
-      categoryId: categoryId,
-    );
-    response.when(
-      success: (productsResponse) {
-        products = productsResponse.productsData.products ?? [];
-        isProductsLoading = false;
-        safeEmit(const HomeBodyState.productsSuccess());
-      },
-      failure: (error) {
-        isProductsLoading = false;
-        safeEmit(const HomeBodyState.productsError());
-      },
-    );
+    debouncer.run(() async {
+      final response = await _homeBodyRepo.getProductsByCategory(
+        categoryId: categoryId,
+      );
+      response.when(
+        success: (productsResponse) {
+          if (lastRequestedCategoryId == categoryId) {
+            products = productsResponse.productsData.products ?? [];
+            isProductsLoading = false;
+            safeEmit(const HomeBodyState.productsSuccess());
+          }
+        },
+        failure: (error) {
+          isProductsLoading = false;
+          safeEmit(const HomeBodyState.productsError());
+        },
+      );
+    });
   }
 
   bool isProductsHorizontal = false;

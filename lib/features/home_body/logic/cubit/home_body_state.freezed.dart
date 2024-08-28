@@ -25,6 +25,7 @@ mixin _$HomeBodyState {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -47,6 +48,7 @@ mixin _$HomeBodyState {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -69,6 +71,7 @@ mixin _$HomeBodyState {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -92,6 +95,7 @@ mixin _$HomeBodyState {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -116,6 +120,7 @@ mixin _$HomeBodyState {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -138,6 +143,7 @@ mixin _$HomeBodyState {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -170,6 +176,9 @@ class _$HomeBodyStateCopyWithImpl<$Res, $Val extends HomeBodyState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -186,6 +195,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -217,6 +229,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -242,6 +255,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -267,6 +281,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -296,6 +311,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -323,6 +339,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -348,6 +365,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -386,6 +404,9 @@ class __$$BannersLoadingImplCopyWithImpl<$Res>
   __$$BannersLoadingImplCopyWithImpl(
       _$BannersLoadingImpl _value, $Res Function(_$BannersLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -417,6 +438,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -442,6 +464,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -467,6 +490,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -496,6 +520,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -523,6 +548,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -548,6 +574,7 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -586,6 +613,9 @@ class __$$BannersSuccessImplCopyWithImpl<$Res>
   __$$BannersSuccessImplCopyWithImpl(
       _$BannersSuccessImpl _value, $Res Function(_$BannersSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -617,6 +647,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -642,6 +673,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -667,6 +699,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -696,6 +729,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -723,6 +757,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -748,6 +783,7 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -786,6 +822,9 @@ class __$$BannersErrorImplCopyWithImpl<$Res>
   __$$BannersErrorImplCopyWithImpl(
       _$BannersErrorImpl _value, $Res Function(_$BannersErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -817,6 +856,7 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -842,6 +882,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -867,6 +908,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -896,6 +938,7 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -923,6 +966,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -948,6 +992,7 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -986,6 +1031,9 @@ class __$$CategoriesLoadingImplCopyWithImpl<$Res>
   __$$CategoriesLoadingImplCopyWithImpl(_$CategoriesLoadingImpl _value,
       $Res Function(_$CategoriesLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1017,6 +1065,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -1042,6 +1091,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -1067,6 +1117,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -1096,6 +1147,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -1123,6 +1175,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -1148,6 +1201,7 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -1186,6 +1240,9 @@ class __$$CategoriesSuccessImplCopyWithImpl<$Res>
   __$$CategoriesSuccessImplCopyWithImpl(_$CategoriesSuccessImpl _value,
       $Res Function(_$CategoriesSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1217,6 +1274,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -1242,6 +1300,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -1267,6 +1326,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -1296,6 +1356,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -1323,6 +1384,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -1348,6 +1410,7 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -1386,6 +1449,9 @@ class __$$CategoriesErrorImplCopyWithImpl<$Res>
   __$$CategoriesErrorImplCopyWithImpl(
       _$CategoriesErrorImpl _value, $Res Function(_$CategoriesErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1417,6 +1483,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -1442,6 +1509,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -1467,6 +1535,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -1496,6 +1565,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -1523,6 +1593,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -1548,6 +1619,7 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -1573,6 +1645,252 @@ abstract class CategoriesError implements HomeBodyState {
 }
 
 /// @nodoc
+abstract class _$$ChangeCategoryIdImplCopyWith<$Res> {
+  factory _$$ChangeCategoryIdImplCopyWith(_$ChangeCategoryIdImpl value,
+          $Res Function(_$ChangeCategoryIdImpl) then) =
+      __$$ChangeCategoryIdImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int categoryId});
+}
+
+/// @nodoc
+class __$$ChangeCategoryIdImplCopyWithImpl<$Res>
+    extends _$HomeBodyStateCopyWithImpl<$Res, _$ChangeCategoryIdImpl>
+    implements _$$ChangeCategoryIdImplCopyWith<$Res> {
+  __$$ChangeCategoryIdImplCopyWithImpl(_$ChangeCategoryIdImpl _value,
+      $Res Function(_$ChangeCategoryIdImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? categoryId = null,
+  }) {
+    return _then(_$ChangeCategoryIdImpl(
+      null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeCategoryIdImpl implements ChangeCategoryId {
+  const _$ChangeCategoryIdImpl(this.categoryId);
+
+  @override
+  final int categoryId;
+
+  @override
+  String toString() {
+    return 'HomeBodyState.changeCategoryId(categoryId: $categoryId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeCategoryIdImpl &&
+            (identical(other.categoryId, categoryId) ||
+                other.categoryId == categoryId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, categoryId);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeCategoryIdImplCopyWith<_$ChangeCategoryIdImpl> get copyWith =>
+      __$$ChangeCategoryIdImplCopyWithImpl<_$ChangeCategoryIdImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() bannersLoading,
+    required TResult Function() bannersSuccess,
+    required TResult Function() bannersError,
+    required TResult Function() categoriesLoading,
+    required TResult Function() categoriesSuccess,
+    required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
+    required TResult Function() productsLoading,
+    required TResult Function() productsSuccess,
+    required TResult Function() productsError,
+    required TResult Function() changeFavoriteLoading,
+    required TResult Function() changeFavoriteSuccess,
+    required TResult Function() changeFavoriteError,
+    required TResult Function() updateFavorites,
+    required TResult Function() changeProductsView,
+    required TResult Function() changeSortBy,
+    required TResult Function() showSearchContainer,
+    required TResult Function() searchProducts,
+  }) {
+    return changeCategoryId(categoryId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? bannersLoading,
+    TResult? Function()? bannersSuccess,
+    TResult? Function()? bannersError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function()? categoriesSuccess,
+    TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
+    TResult? Function()? productsLoading,
+    TResult? Function()? productsSuccess,
+    TResult? Function()? productsError,
+    TResult? Function()? changeFavoriteLoading,
+    TResult? Function()? changeFavoriteSuccess,
+    TResult? Function()? changeFavoriteError,
+    TResult? Function()? updateFavorites,
+    TResult? Function()? changeProductsView,
+    TResult? Function()? changeSortBy,
+    TResult? Function()? showSearchContainer,
+    TResult? Function()? searchProducts,
+  }) {
+    return changeCategoryId?.call(categoryId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? bannersLoading,
+    TResult Function()? bannersSuccess,
+    TResult Function()? bannersError,
+    TResult Function()? categoriesLoading,
+    TResult Function()? categoriesSuccess,
+    TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
+    TResult Function()? productsLoading,
+    TResult Function()? productsSuccess,
+    TResult Function()? productsError,
+    TResult Function()? changeFavoriteLoading,
+    TResult Function()? changeFavoriteSuccess,
+    TResult Function()? changeFavoriteError,
+    TResult Function()? updateFavorites,
+    TResult Function()? changeProductsView,
+    TResult Function()? changeSortBy,
+    TResult Function()? showSearchContainer,
+    TResult Function()? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (changeCategoryId != null) {
+      return changeCategoryId(categoryId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_BannersLoading value) bannersLoading,
+    required TResult Function(BannersSuccess value) bannersSuccess,
+    required TResult Function(BannersError value) bannersError,
+    required TResult Function(CategoriesLoading value) categoriesLoading,
+    required TResult Function(CategoriesSuccess value) categoriesSuccess,
+    required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(ProductsError value) productsError,
+    required TResult Function(ChangeFavoriteLoading value)
+        changeFavoriteLoading,
+    required TResult Function(ChangeFavoriteSuccess value)
+        changeFavoriteSuccess,
+    required TResult Function(ChangeFavoriteError value) changeFavoriteError,
+    required TResult Function(UpdateFavorites value) updateFavorites,
+    required TResult Function(ChangeProductsView value) changeProductsView,
+    required TResult Function(ChangeSortBy value) changeSortBy,
+    required TResult Function(ShowSearchContainer value) showSearchContainer,
+    required TResult Function(SearchProducts value) searchProducts,
+  }) {
+    return changeCategoryId(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_BannersLoading value)? bannersLoading,
+    TResult? Function(BannersSuccess value)? bannersSuccess,
+    TResult? Function(BannersError value)? bannersError,
+    TResult? Function(CategoriesLoading value)? categoriesLoading,
+    TResult? Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+    TResult? Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult? Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult? Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult? Function(UpdateFavorites value)? updateFavorites,
+    TResult? Function(ChangeProductsView value)? changeProductsView,
+    TResult? Function(ChangeSortBy value)? changeSortBy,
+    TResult? Function(ShowSearchContainer value)? showSearchContainer,
+    TResult? Function(SearchProducts value)? searchProducts,
+  }) {
+    return changeCategoryId?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_BannersLoading value)? bannersLoading,
+    TResult Function(BannersSuccess value)? bannersSuccess,
+    TResult Function(BannersError value)? bannersError,
+    TResult Function(CategoriesLoading value)? categoriesLoading,
+    TResult Function(CategoriesSuccess value)? categoriesSuccess,
+    TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    TResult Function(ChangeFavoriteLoading value)? changeFavoriteLoading,
+    TResult Function(ChangeFavoriteSuccess value)? changeFavoriteSuccess,
+    TResult Function(ChangeFavoriteError value)? changeFavoriteError,
+    TResult Function(UpdateFavorites value)? updateFavorites,
+    TResult Function(ChangeProductsView value)? changeProductsView,
+    TResult Function(ChangeSortBy value)? changeSortBy,
+    TResult Function(ShowSearchContainer value)? showSearchContainer,
+    TResult Function(SearchProducts value)? searchProducts,
+    required TResult orElse(),
+  }) {
+    if (changeCategoryId != null) {
+      return changeCategoryId(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeCategoryId implements HomeBodyState {
+  const factory ChangeCategoryId(final int categoryId) = _$ChangeCategoryIdImpl;
+
+  int get categoryId;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeCategoryIdImplCopyWith<_$ChangeCategoryIdImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 abstract class _$$ProductsLoadingImplCopyWith<$Res> {
   factory _$$ProductsLoadingImplCopyWith(_$ProductsLoadingImpl value,
           $Res Function(_$ProductsLoadingImpl) then) =
@@ -1586,6 +1904,9 @@ class __$$ProductsLoadingImplCopyWithImpl<$Res>
   __$$ProductsLoadingImplCopyWithImpl(
       _$ProductsLoadingImpl _value, $Res Function(_$ProductsLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1617,6 +1938,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -1642,6 +1964,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -1667,6 +1990,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -1696,6 +2020,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -1723,6 +2048,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -1748,6 +2074,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -1786,6 +2113,9 @@ class __$$ProductsSuccessImplCopyWithImpl<$Res>
   __$$ProductsSuccessImplCopyWithImpl(
       _$ProductsSuccessImpl _value, $Res Function(_$ProductsSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1817,6 +2147,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -1842,6 +2173,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -1867,6 +2199,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -1896,6 +2229,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -1923,6 +2257,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -1948,6 +2283,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -1986,6 +2322,9 @@ class __$$ProductsErrorImplCopyWithImpl<$Res>
   __$$ProductsErrorImplCopyWithImpl(
       _$ProductsErrorImpl _value, $Res Function(_$ProductsErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2017,6 +2356,7 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -2042,6 +2382,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -2067,6 +2408,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -2096,6 +2438,7 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -2123,6 +2466,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -2148,6 +2492,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -2187,6 +2532,9 @@ class __$$ChangeFavoriteLoadingImplCopyWithImpl<$Res>
   __$$ChangeFavoriteLoadingImplCopyWithImpl(_$ChangeFavoriteLoadingImpl _value,
       $Res Function(_$ChangeFavoriteLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2219,6 +2567,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -2244,6 +2593,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -2269,6 +2619,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -2298,6 +2649,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -2325,6 +2677,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -2350,6 +2703,7 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -2389,6 +2743,9 @@ class __$$ChangeFavoriteSuccessImplCopyWithImpl<$Res>
   __$$ChangeFavoriteSuccessImplCopyWithImpl(_$ChangeFavoriteSuccessImpl _value,
       $Res Function(_$ChangeFavoriteSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2421,6 +2778,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -2446,6 +2804,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -2471,6 +2830,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -2500,6 +2860,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -2527,6 +2888,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -2552,6 +2914,7 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -2590,6 +2953,9 @@ class __$$ChangeFavoriteErrorImplCopyWithImpl<$Res>
   __$$ChangeFavoriteErrorImplCopyWithImpl(_$ChangeFavoriteErrorImpl _value,
       $Res Function(_$ChangeFavoriteErrorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2622,6 +2988,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -2647,6 +3014,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -2672,6 +3040,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -2701,6 +3070,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -2728,6 +3098,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -2753,6 +3124,7 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -2791,6 +3163,9 @@ class __$$UpdateFavoritesImplCopyWithImpl<$Res>
   __$$UpdateFavoritesImplCopyWithImpl(
       _$UpdateFavoritesImpl _value, $Res Function(_$UpdateFavoritesImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2822,6 +3197,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -2847,6 +3223,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -2872,6 +3249,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -2901,6 +3279,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -2928,6 +3307,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -2953,6 +3333,7 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -2991,6 +3372,9 @@ class __$$ChangeProductsViewImplCopyWithImpl<$Res>
   __$$ChangeProductsViewImplCopyWithImpl(_$ChangeProductsViewImpl _value,
       $Res Function(_$ChangeProductsViewImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3022,6 +3406,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -3047,6 +3432,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -3072,6 +3458,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -3101,6 +3488,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -3128,6 +3516,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -3153,6 +3542,7 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -3191,6 +3581,9 @@ class __$$ChangeSortByImplCopyWithImpl<$Res>
   __$$ChangeSortByImplCopyWithImpl(
       _$ChangeSortByImpl _value, $Res Function(_$ChangeSortByImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3222,6 +3615,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -3247,6 +3641,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -3272,6 +3667,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -3301,6 +3697,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -3328,6 +3725,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -3353,6 +3751,7 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -3391,6 +3790,9 @@ class __$$ShowSearchContainerImplCopyWithImpl<$Res>
   __$$ShowSearchContainerImplCopyWithImpl(_$ShowSearchContainerImpl _value,
       $Res Function(_$ShowSearchContainerImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3423,6 +3825,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -3448,6 +3851,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -3473,6 +3877,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -3502,6 +3907,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -3529,6 +3935,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -3554,6 +3961,7 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,
@@ -3592,6 +4000,9 @@ class __$$SearchProductsImplCopyWithImpl<$Res>
   __$$SearchProductsImplCopyWithImpl(
       _$SearchProductsImpl _value, $Res Function(_$SearchProductsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3623,6 +4034,7 @@ class _$SearchProductsImpl implements SearchProducts {
     required TResult Function() categoriesLoading,
     required TResult Function() categoriesSuccess,
     required TResult Function() categoriesError,
+    required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
     required TResult Function() productsSuccess,
     required TResult Function() productsError,
@@ -3648,6 +4060,7 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult? Function()? categoriesLoading,
     TResult? Function()? categoriesSuccess,
     TResult? Function()? categoriesError,
+    TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
     TResult? Function()? productsSuccess,
     TResult? Function()? productsError,
@@ -3673,6 +4086,7 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult Function()? categoriesLoading,
     TResult Function()? categoriesSuccess,
     TResult Function()? categoriesError,
+    TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
     TResult Function()? productsSuccess,
     TResult Function()? productsError,
@@ -3702,6 +4116,7 @@ class _$SearchProductsImpl implements SearchProducts {
     required TResult Function(CategoriesLoading value) categoriesLoading,
     required TResult Function(CategoriesSuccess value) categoriesSuccess,
     required TResult Function(CategoriesError value) categoriesError,
+    required TResult Function(ChangeCategoryId value) changeCategoryId,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
     required TResult Function(ProductsError value) productsError,
@@ -3729,6 +4144,7 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult? Function(CategoriesLoading value)? categoriesLoading,
     TResult? Function(CategoriesSuccess value)? categoriesSuccess,
     TResult? Function(CategoriesError value)? categoriesError,
+    TResult? Function(ChangeCategoryId value)? changeCategoryId,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
     TResult? Function(ProductsError value)? productsError,
@@ -3754,6 +4170,7 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult Function(CategoriesLoading value)? categoriesLoading,
     TResult Function(CategoriesSuccess value)? categoriesSuccess,
     TResult Function(CategoriesError value)? categoriesError,
+    TResult Function(ChangeCategoryId value)? changeCategoryId,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
     TResult Function(ProductsError value)? productsError,

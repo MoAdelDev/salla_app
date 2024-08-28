@@ -34,7 +34,7 @@ Map<String, dynamic> _$OrdersDataToJson(OrdersData instance) =>
     };
 
 OrderModel _$OrderModelFromJson(Map<String, dynamic> json) => OrderModel(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['total'],
       json['date'] as String,
       json['status'] as String,

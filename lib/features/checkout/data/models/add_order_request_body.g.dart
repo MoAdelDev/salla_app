@@ -8,8 +8,8 @@ part of 'add_order_request_body.dart';
 
 AddOrderRequestBody _$AddOrderRequestBodyFromJson(Map<String, dynamic> json) =>
     AddOrderRequestBody(
-      addressId: json['address_id'] as int,
-      paymentMethod: json['payment_method'] as int,
+      addressId: (json['address_id'] as num).toInt(),
+      paymentMethod: (json['payment_method'] as num).toInt(),
       usePoints: json['use_points'] as bool,
     );
 

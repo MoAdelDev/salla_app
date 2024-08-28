@@ -26,7 +26,7 @@ Map<String, dynamic> _$ChangeFavoriteResponseToJson(
 
 ChangeFavoriteData _$ChangeFavoriteDataFromJson(Map<String, dynamic> json) =>
     ChangeFavoriteData(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
     );
 
 Map<String, dynamic> _$ChangeFavoriteDataToJson(ChangeFavoriteData instance) =>
