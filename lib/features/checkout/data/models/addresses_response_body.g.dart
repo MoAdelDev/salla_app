@@ -37,7 +37,7 @@ Map<String, dynamic> _$AddressesDataToJson(AddressesData instance) =>
     };
 
 AddressModel _$AddressModelFromJson(Map<String, dynamic> json) => AddressModel(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       json['city'] as String,
       json['region'] as String,

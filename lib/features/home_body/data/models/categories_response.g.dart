@@ -24,7 +24,7 @@ CategoryData _$CategoryDataFromJson(Map<String, dynamic> json) => CategoryData(
       (json['data'] as List<dynamic>?)
           ?.map((e) => CategoryModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      json['total'] as int,
+      (json['total'] as num).toInt(),
     );
 
 Map<String, dynamic> _$CategoryDataToJson(CategoryData instance) =>
@@ -35,7 +35,7 @@ Map<String, dynamic> _$CategoryDataToJson(CategoryData instance) =>
 
 CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) =>
     CategoryModel(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       json['image'] as String,
     );

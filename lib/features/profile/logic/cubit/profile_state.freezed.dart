@@ -90,6 +90,9 @@ class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,6 +109,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -226,6 +232,9 @@ class __$$UserDataImplCopyWithImpl<$Res>
   __$$UserDataImplCopyWithImpl(
       _$UserDataImpl _value, $Res Function(_$UserDataImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -346,6 +355,9 @@ class __$$LogoutLoadingImplCopyWithImpl<$Res>
   __$$LogoutLoadingImplCopyWithImpl(
       _$LogoutLoadingImpl _value, $Res Function(_$LogoutLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -469,6 +481,8 @@ class __$$LogoutSuccessImplCopyWithImpl<$Res>
       _$LogoutSuccessImpl _value, $Res Function(_$LogoutSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -507,7 +521,9 @@ class _$LogoutSuccessImpl implements LogoutSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LogoutSuccessImplCopyWith<_$LogoutSuccessImpl> get copyWith =>
@@ -598,7 +614,10 @@ abstract class LogoutSuccess implements ProfileState {
   const factory LogoutSuccess(final String message) = _$LogoutSuccessImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LogoutSuccessImplCopyWith<_$LogoutSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -620,6 +639,8 @@ class __$$LogoutErrorImplCopyWithImpl<$Res>
       _$LogoutErrorImpl _value, $Res Function(_$LogoutErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -658,7 +679,9 @@ class _$LogoutErrorImpl implements LogoutError {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LogoutErrorImplCopyWith<_$LogoutErrorImpl> get copyWith =>
@@ -749,7 +772,10 @@ abstract class LogoutError implements ProfileState {
   const factory LogoutError(final String message) = _$LogoutErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LogoutErrorImplCopyWith<_$LogoutErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -8,7 +8,7 @@ part of 'add_to_cart_request.dart';
 
 AddToCartRequest _$AddToCartRequestFromJson(Map<String, dynamic> json) =>
     AddToCartRequest(
-      json['product_id'] as int,
+      (json['product_id'] as num).toInt(),
     );
 
 Map<String, dynamic> _$AddToCartRequestToJson(AddToCartRequest instance) =>

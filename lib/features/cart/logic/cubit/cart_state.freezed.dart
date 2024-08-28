@@ -119,6 +119,9 @@ class _$CartStateCopyWithImpl<$Res, $Val extends CartState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -135,6 +138,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -285,6 +291,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -438,6 +447,8 @@ class __$$SuccessImplCopyWithImpl<$Res>
       _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -476,7 +487,9 @@ class _$SuccessImpl implements Success {
   @override
   int get hashCode => Object.hash(runtimeType, data);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
@@ -597,7 +610,10 @@ abstract class Success implements CartState {
   const factory Success(final CartResponseBody data) = _$SuccessImpl;
 
   CartResponseBody get data;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -619,6 +635,8 @@ class __$$FailureImplCopyWithImpl<$Res>
       _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -657,7 +675,9 @@ class _$FailureImpl implements Failure {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
@@ -778,7 +798,10 @@ abstract class Failure implements CartState {
   const factory Failure(final String message) = _$FailureImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -797,6 +820,9 @@ class __$$UpdateCartLoadingImplCopyWithImpl<$Res>
   __$$UpdateCartLoadingImplCopyWithImpl(_$UpdateCartLoadingImpl _value,
       $Res Function(_$UpdateCartLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -947,6 +973,9 @@ class __$$UpdateCartSuccessImplCopyWithImpl<$Res>
   __$$UpdateCartSuccessImplCopyWithImpl(_$UpdateCartSuccessImpl _value,
       $Res Function(_$UpdateCartSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1097,6 +1126,9 @@ class __$$UpdateFailureCartImplCopyWithImpl<$Res>
   __$$UpdateFailureCartImplCopyWithImpl(_$UpdateFailureCartImpl _value,
       $Res Function(_$UpdateFailureCartImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1247,6 +1279,9 @@ class __$$DeleteCartLoadingImplCopyWithImpl<$Res>
   __$$DeleteCartLoadingImplCopyWithImpl(_$DeleteCartLoadingImpl _value,
       $Res Function(_$DeleteCartLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1397,6 +1432,9 @@ class __$$DeleteCartSuccessImplCopyWithImpl<$Res>
   __$$DeleteCartSuccessImplCopyWithImpl(_$DeleteCartSuccessImpl _value,
       $Res Function(_$DeleteCartSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1547,6 +1585,9 @@ class __$$DeleteCartFailureImplCopyWithImpl<$Res>
   __$$DeleteCartFailureImplCopyWithImpl(_$DeleteCartFailureImpl _value,
       $Res Function(_$DeleteCartFailureImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

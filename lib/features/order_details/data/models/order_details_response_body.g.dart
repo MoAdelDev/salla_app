@@ -26,7 +26,7 @@ Map<String, dynamic> _$OrderDetailsResponseBodyToJson(
 
 OrderDetailsData _$OrderDetailsDataFromJson(Map<String, dynamic> json) =>
     OrderDetailsData(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['cost'],
       json['vat'],
       json['total'],
@@ -56,8 +56,8 @@ Map<String, dynamic> _$OrderDetailsDataToJson(OrderDetailsData instance) =>
 OrderDetailsProductModel _$OrderDetailsProductModelFromJson(
         Map<String, dynamic> json) =>
     OrderDetailsProductModel(
-      json['id'] as int,
-      json['quantity'] as int,
+      (json['id'] as num).toInt(),
+      (json['quantity'] as num).toInt(),
       json['name'] as String,
       json['price'],
       json['image'] as String,

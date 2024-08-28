@@ -9,7 +9,7 @@ part of 'promo_code_request_body.dart';
 PromoCodeRequestBody _$PromoCodeRequestBodyFromJson(
         Map<String, dynamic> json) =>
     PromoCodeRequestBody(
-      code: json['code'] as int,
+      code: (json['code'] as num).toInt(),
     );
 
 Map<String, dynamic> _$PromoCodeRequestBodyToJson(

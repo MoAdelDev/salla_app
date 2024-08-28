@@ -89,6 +89,9 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -105,6 +108,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -225,6 +231,9 @@ class __$$UserLoadingImplCopyWithImpl<$Res>
   __$$UserLoadingImplCopyWithImpl(
       _$UserLoadingImpl _value, $Res Function(_$UserLoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -348,6 +357,8 @@ class __$$UserSuccessImplCopyWithImpl<$Res>
       _$UserSuccessImpl _value, $Res Function(_$UserSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -387,7 +398,9 @@ class _$UserSuccessImpl implements UserSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, userModel);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserSuccessImplCopyWith<_$UserSuccessImpl> get copyWith =>
@@ -479,7 +492,10 @@ abstract class UserSuccess implements HomeState {
       _$UserSuccessImpl;
 
   UserModel get userModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserSuccessImplCopyWith<_$UserSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -501,6 +517,8 @@ class __$$UserErrorImplCopyWithImpl<$Res>
       _$UserErrorImpl _value, $Res Function(_$UserErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -539,7 +557,9 @@ class _$UserErrorImpl implements UserError {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UserErrorImplCopyWith<_$UserErrorImpl> get copyWith =>
@@ -630,7 +650,10 @@ abstract class UserError implements HomeState {
   const factory UserError({required final String message}) = _$UserErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UserErrorImplCopyWith<_$UserErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -652,6 +675,8 @@ class __$$ChangeIndexImplCopyWithImpl<$Res>
       _$ChangeIndexImpl _value, $Res Function(_$ChangeIndexImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -691,7 +716,9 @@ class _$ChangeIndexImpl implements ChangeIndex {
   @override
   int get hashCode => Object.hash(runtimeType, currentIndex);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangeIndexImplCopyWith<_$ChangeIndexImpl> get copyWith =>
@@ -783,7 +810,10 @@ abstract class ChangeIndex implements HomeState {
       _$ChangeIndexImpl;
 
   int get currentIndex;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChangeIndexImplCopyWith<_$ChangeIndexImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
