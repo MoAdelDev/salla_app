@@ -20,14 +20,16 @@ class HomeCategories extends StatelessWidget {
       child: BlocBuilder<HomeBodyCubit, HomeBodyState>(
         buildWhen: (previous, current) =>
             current is ChangeCategoryId ||
-            current is ProductsLoading ||
-            current is ProductsSuccess ||
-            current is ProductsError,
+            current is CategoriesError ||
+            current is CategoriesLoading ||
+            current is CategoriesSuccess,
         builder: (context, state) {
           int categoryId = context.read<HomeBodyCubit>().categoryId;
           List<CategoryModel> categories =
               context.read<HomeBodyCubit>().categories;
-          if (categories.isEmpty) {
+          if (categories.isEmpty ||
+              state is CategoriesLoading ||
+              state is CategoriesError) {
             return SizedBox(
               height: 50.0.h,
               child: ListView.separated(
@@ -54,7 +56,9 @@ class HomeCategories extends StatelessWidget {
                     isSelected: categoryId == -1,
                     categoryModel: CategoryModel(0, context.locale.all, ''),
                     onTap: () {
-                      context.read<HomeBodyCubit>().emitProductsState();
+                      context.read<HomeBodyCubit>().changeCategoryId(
+                            categoryId: -1,
+                          );
                     },
                   ),
                   horizontalSpace(10.0),
@@ -71,10 +75,8 @@ class HomeCategories extends StatelessWidget {
                       CategoryModel categoryModel = categories[index];
                       return CategoryTile(
                         onTap: () {
-                          context
-                              .read<HomeBodyCubit>()
-                              .emitGetProductsByCategoryState(
-                                  categoryId: categories[index].id);
+                          context.read<HomeBodyCubit>().changeCategoryId(
+                              categoryId: categories[index].id);
                         },
                         isSelected: categoryId == categoryModel.id,
                         categoryModel: categories[index],

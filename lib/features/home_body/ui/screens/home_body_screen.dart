@@ -55,7 +55,9 @@ class _HomeBodyScreenState extends State<HomeBodyScreen> {
           color: AppColor.lightGreyColor,
           child: RefreshIndicator(
             onRefresh: () async {
-              context.read<HomeBodyCubit>().emitProductsState();
+              context.read<HomeBodyCubit>().changeCategoryId(
+                    categoryId: -1,
+                  );
             },
             notificationPredicate: (notification) => true,
             child: Column(

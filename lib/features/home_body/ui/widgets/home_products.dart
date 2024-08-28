@@ -14,7 +14,7 @@ class HomeProducts extends StatelessWidget {
     return BlocBuilder<HomeBodyCubit, HomeBodyState>(
       builder: (context, state) {
         List<ProductModel> products = context.read<HomeBodyCubit>().products;
-        if (context.read<HomeBodyCubit>().isProductsHorizontal) {
+        if (context.read<HomeBodyCubit>().isGridView) {
           return ProductsHorizontal(
             products: products,
           );

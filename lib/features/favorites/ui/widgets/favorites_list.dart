@@ -16,9 +16,9 @@ class FavoritesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FavoritesCubit, FavoritesState>(
       builder: (context, state) {
-        List<FavoriteModel> favorites =
-            context.read<FavoritesCubit>().favorites;
-        if (state is Loading) {
+        FavoritesCubit cubit = context.read<FavoritesCubit>();
+        List<FavoriteModel> favorites = cubit.favorites;
+        if (state is Loading || cubit.isFavoritesLoading) {
           return ListView.separated(
             itemBuilder: (context, index) => const ProductShimmerVertical(),
             separatorBuilder: (context, index) => verticalSpace(10.0),

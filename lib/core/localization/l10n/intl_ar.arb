@@ -124,5 +124,10 @@
   "searchForProducts" : "ابحث عن المنتجات",
   "seeAllSearchResults" : "اعرض كل نتائج البحث",
   "order" : "الطلب",
-  "pleaseSelectOrAddNewAddress" : "يرجى تحديد عنوان او اضافة عنوان جديد"
+  "pleaseSelectOrAddNewAddress" : "يرجى تحديد عنوان او اضافة عنوان جديد",
+  "clearAllFavorites" : "مسح جميع المفضلات",
+  "areYouWantToClearAllFavorites" : "هل تريد مسح جميع المفضلات ؟",
+  "cancel" : "الغاء",
+  "yes" : "نعم",
+  "noFavoritesYet" : "لا توجد مفضلات بعد"
 }

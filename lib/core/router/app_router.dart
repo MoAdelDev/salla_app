@@ -66,7 +66,7 @@ class AppRouter {
                 create: (context) => getIt()
                   ..emitBannersState()
                   ..emitCategoriesState()
-                  ..emitProductsState(),
+                  ..changeCategoryId(categoryId: -1),
               ),
               BlocProvider<FavoritesCubit>(
                 create: (context) => getIt()..emitFavoritesState(),

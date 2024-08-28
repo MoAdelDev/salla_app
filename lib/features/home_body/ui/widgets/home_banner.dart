@@ -26,9 +26,7 @@ class HomeBanner extends StatelessWidget {
             child: CustomShimmer(
               width: double.infinity,
               height: 140.0.h,
-              shapeBorder: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0.r),
-              ),
+              radius: 12.0,
             ),
           );
         }

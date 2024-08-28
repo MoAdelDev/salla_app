@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salla_app/core/helpers/extensions.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -47,6 +48,26 @@ class CustomTextField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
+        prefixIconColor:
+            WidgetStateColor.resolveWith((Set<WidgetState> states) {
+          if (states.contains(WidgetState.focused)) {
+            return context.colorScheme.primary;
+          }
+          if (states.contains(WidgetState.error)) {
+            return context.colorScheme.error;
+          }
+          return context.colorScheme.outlineVariant;
+        }),
+        suffixIconColor:
+            WidgetStateColor.resolveWith((Set<WidgetState> states) {
+          if (states.contains(WidgetState.focused)) {
+            return context.colorScheme.primary;
+          }
+          if (states.contains(WidgetState.error)) {
+            return context.colorScheme.error;
+          }
+          return context.colorScheme.outlineVariant;
+        }),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
           borderSide: BorderSide(color: Colors.grey[400]!),
@@ -62,7 +83,6 @@ class CustomTextField extends StatelessWidget {
         suffixIcon: IconButton(
           icon: Icon(suffixIcon),
           onPressed: onSuffixIcon,
-          color: const Color(0xff6A707C),
         ),
         contentPadding: const EdgeInsets.symmetric(
           vertical: 15.0,

@@ -28,7 +28,7 @@ class SearchProductsHeader extends StatelessWidget {
               const Spacer(),
               ProductsAction(
                 onTap: () => cubit.emitChangeProductsViewState(),
-                icon: cubit.isProductsHorizontal
+                icon: cubit.isGridView
                     ? 'assets/icons/vertical.svg'
                     : 'assets/icons/horizontal.svg',
               ),

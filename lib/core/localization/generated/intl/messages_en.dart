@@ -44,6 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "appTitle3": MessageLookupByLibrary.simpleMessage("Join Us Today"),
         "applyTitle": MessageLookupByLibrary.simpleMessage("APPLY"),
         "arabicTitle": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "areYouWantToClearAllFavorites": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to clear all favorites ?"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "cancelOrder": MessageLookupByLibrary.simpleMessage("Cancel order"),
         "cartTitle": MessageLookupByLibrary.simpleMessage("Cart"),
         "cashOnDeliveryBody": MessageLookupByLibrary.simpleMessage(
@@ -56,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cityHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter your city"),
         "cityTitle": MessageLookupByLibrary.simpleMessage("City"),
+        "clearAllFavorites":
+            MessageLookupByLibrary.simpleMessage("Clear all favorites"),
         "codeHintTitle":
             MessageLookupByLibrary.simpleMessage("Enter code here"),
         "confirmOrderTitle":
@@ -117,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "nightModeTitle": MessageLookupByLibrary.simpleMessage("Night mode"),
         "noAddressTitle":
             MessageLookupByLibrary.simpleMessage("No Addresses yet"),
+        "noFavoritesYet":
+            MessageLookupByLibrary.simpleMessage("No Favorites yet"),
         "noOrders": MessageLookupByLibrary.simpleMessage("No Orders yet"),
         "noProductsFound":
             MessageLookupByLibrary.simpleMessage("No Products Found"),
@@ -202,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Update Profile"),
         "welcomeMessage":
             MessageLookupByLibrary.simpleMessage("Let\'s get shopping"),
-        "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome")
+        "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

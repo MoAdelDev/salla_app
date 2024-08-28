@@ -27,16 +27,17 @@ mixin _$HomeBodyState {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,16 +51,16 @@ mixin _$HomeBodyState {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,16 +74,16 @@ mixin _$HomeBodyState {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -231,16 +232,17 @@ class _$InitialImpl implements _Initial {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return initial();
   }
@@ -257,16 +259,16 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return initial?.call();
   }
@@ -283,16 +285,16 @@ class _$InitialImpl implements _Initial {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -440,16 +442,17 @@ class _$BannersLoadingImpl implements _BannersLoading {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return bannersLoading();
   }
@@ -466,16 +469,16 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return bannersLoading?.call();
   }
@@ -492,16 +495,16 @@ class _$BannersLoadingImpl implements _BannersLoading {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersLoading != null) {
@@ -649,16 +652,17 @@ class _$BannersSuccessImpl implements BannersSuccess {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return bannersSuccess();
   }
@@ -675,16 +679,16 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return bannersSuccess?.call();
   }
@@ -701,16 +705,16 @@ class _$BannersSuccessImpl implements BannersSuccess {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersSuccess != null) {
@@ -858,16 +862,17 @@ class _$BannersErrorImpl implements BannersError {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return bannersError();
   }
@@ -884,16 +889,16 @@ class _$BannersErrorImpl implements BannersError {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return bannersError?.call();
   }
@@ -910,16 +915,16 @@ class _$BannersErrorImpl implements BannersError {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (bannersError != null) {
@@ -1067,16 +1072,17 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return categoriesLoading();
   }
@@ -1093,16 +1099,16 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return categoriesLoading?.call();
   }
@@ -1119,16 +1125,16 @@ class _$CategoriesLoadingImpl implements CategoriesLoading {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1276,16 +1282,17 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return categoriesSuccess();
   }
@@ -1302,16 +1309,16 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return categoriesSuccess?.call();
   }
@@ -1328,16 +1335,16 @@ class _$CategoriesSuccessImpl implements CategoriesSuccess {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1485,16 +1492,17 @@ class _$CategoriesErrorImpl implements CategoriesError {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return categoriesError();
   }
@@ -1511,16 +1519,16 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return categoriesError?.call();
   }
@@ -1537,16 +1545,16 @@ class _$CategoriesErrorImpl implements CategoriesError {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1723,16 +1731,17 @@ class _$ChangeCategoryIdImpl implements ChangeCategoryId {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return changeCategoryId(categoryId);
   }
@@ -1749,16 +1758,16 @@ class _$ChangeCategoryIdImpl implements ChangeCategoryId {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return changeCategoryId?.call(categoryId);
   }
@@ -1775,16 +1784,16 @@ class _$ChangeCategoryIdImpl implements ChangeCategoryId {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeCategoryId != null) {
@@ -1940,16 +1949,17 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return productsLoading();
   }
@@ -1966,16 +1976,16 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return productsLoading?.call();
   }
@@ -1992,16 +2002,16 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -2104,6 +2114,8 @@ abstract class _$$ProductsSuccessImplCopyWith<$Res> {
   factory _$$ProductsSuccessImplCopyWith(_$ProductsSuccessImpl value,
           $Res Function(_$ProductsSuccessImpl) then) =
       __$$ProductsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ProductModel> products});
 }
 
 /// @nodoc
@@ -2116,26 +2128,59 @@ class __$$ProductsSuccessImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? products = null,
+  }) {
+    return _then(_$ProductsSuccessImpl(
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<ProductModel>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ProductsSuccessImpl implements ProductsSuccess {
-  const _$ProductsSuccessImpl();
+  const _$ProductsSuccessImpl(final List<ProductModel> products)
+      : _products = products;
+
+  final List<ProductModel> _products;
+  @override
+  List<ProductModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
 
   @override
   String toString() {
-    return 'HomeBodyState.productsSuccess()';
+    return 'HomeBodyState.productsSuccess(products: $products)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ProductsSuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ProductsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProductsSuccessImplCopyWith<_$ProductsSuccessImpl> get copyWith =>
+      __$$ProductsSuccessImplCopyWithImpl<_$ProductsSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2149,18 +2194,19 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return productsSuccess();
+    return productsSuccess(products);
   }
 
   @override
@@ -2175,18 +2221,18 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return productsSuccess?.call();
+    return productsSuccess?.call(products);
   }
 
   @override
@@ -2201,20 +2247,20 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
-      return productsSuccess();
+      return productsSuccess(products);
     }
     return orElse();
   }
@@ -2305,7 +2351,16 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
 }
 
 abstract class ProductsSuccess implements HomeBodyState {
-  const factory ProductsSuccess() = _$ProductsSuccessImpl;
+  const factory ProductsSuccess(final List<ProductModel> products) =
+      _$ProductsSuccessImpl;
+
+  List<ProductModel> get products;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProductsSuccessImplCopyWith<_$ProductsSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2358,16 +2413,17 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return productsError();
   }
@@ -2384,16 +2440,16 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return productsError?.call();
   }
@@ -2410,16 +2466,16 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -2523,6 +2579,8 @@ abstract class _$$ChangeFavoriteLoadingImplCopyWith<$Res> {
           _$ChangeFavoriteLoadingImpl value,
           $Res Function(_$ChangeFavoriteLoadingImpl) then) =
       __$$ChangeFavoriteLoadingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int productId, bool inFavorites});
 }
 
 /// @nodoc
@@ -2535,27 +2593,62 @@ class __$$ChangeFavoriteLoadingImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? productId = null,
+    Object? inFavorites = null,
+  }) {
+    return _then(_$ChangeFavoriteLoadingImpl(
+      null == productId
+          ? _value.productId
+          : productId // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == inFavorites
+          ? _value.inFavorites
+          : inFavorites // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
-  const _$ChangeFavoriteLoadingImpl();
+  const _$ChangeFavoriteLoadingImpl(this.productId, this.inFavorites);
+
+  @override
+  final int productId;
+  @override
+  final bool inFavorites;
 
   @override
   String toString() {
-    return 'HomeBodyState.changeFavoriteLoading()';
+    return 'HomeBodyState.changeFavoriteLoading(productId: $productId, inFavorites: $inFavorites)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChangeFavoriteLoadingImpl);
+            other is _$ChangeFavoriteLoadingImpl &&
+            (identical(other.productId, productId) ||
+                other.productId == productId) &&
+            (identical(other.inFavorites, inFavorites) ||
+                other.inFavorites == inFavorites));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, productId, inFavorites);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeFavoriteLoadingImplCopyWith<_$ChangeFavoriteLoadingImpl>
+      get copyWith => __$$ChangeFavoriteLoadingImplCopyWithImpl<
+          _$ChangeFavoriteLoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2569,18 +2662,19 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return changeFavoriteLoading();
+    return changeFavoriteLoading(productId, inFavorites);
   }
 
   @override
@@ -2595,18 +2689,18 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return changeFavoriteLoading?.call();
+    return changeFavoriteLoading?.call(productId, inFavorites);
   }
 
   @override
@@ -2621,20 +2715,20 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteLoading != null) {
-      return changeFavoriteLoading();
+      return changeFavoriteLoading(productId, inFavorites);
     }
     return orElse();
   }
@@ -2725,7 +2819,18 @@ class _$ChangeFavoriteLoadingImpl implements ChangeFavoriteLoading {
 }
 
 abstract class ChangeFavoriteLoading implements HomeBodyState {
-  const factory ChangeFavoriteLoading() = _$ChangeFavoriteLoadingImpl;
+  const factory ChangeFavoriteLoading(
+          final int productId, final bool inFavorites) =
+      _$ChangeFavoriteLoadingImpl;
+
+  int get productId;
+  bool get inFavorites;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeFavoriteLoadingImplCopyWith<_$ChangeFavoriteLoadingImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2780,16 +2885,17 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return changeFavoriteSuccess();
   }
@@ -2806,16 +2912,16 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return changeFavoriteSuccess?.call();
   }
@@ -2832,16 +2938,16 @@ class _$ChangeFavoriteSuccessImpl implements ChangeFavoriteSuccess {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteSuccess != null) {
@@ -2990,16 +3096,17 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return changeFavoriteError();
   }
@@ -3016,16 +3123,16 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return changeFavoriteError?.call();
   }
@@ -3042,16 +3149,16 @@ class _$ChangeFavoriteErrorImpl implements ChangeFavoriteError {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeFavoriteError != null) {
@@ -3199,16 +3306,17 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
     return updateFavorites();
   }
@@ -3225,16 +3333,16 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
     return updateFavorites?.call();
   }
@@ -3251,16 +3359,16 @@ class _$UpdateFavoritesImpl implements UpdateFavorites {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (updateFavorites != null) {
@@ -3363,6 +3471,8 @@ abstract class _$$ChangeProductsViewImplCopyWith<$Res> {
   factory _$$ChangeProductsViewImplCopyWith(_$ChangeProductsViewImpl value,
           $Res Function(_$ChangeProductsViewImpl) then) =
       __$$ChangeProductsViewImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isGridView});
 }
 
 /// @nodoc
@@ -3375,26 +3485,53 @@ class __$$ChangeProductsViewImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isGridView = null,
+  }) {
+    return _then(_$ChangeProductsViewImpl(
+      null == isGridView
+          ? _value.isGridView
+          : isGridView // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ChangeProductsViewImpl implements ChangeProductsView {
-  const _$ChangeProductsViewImpl();
+  const _$ChangeProductsViewImpl(this.isGridView);
+
+  @override
+  final bool isGridView;
 
   @override
   String toString() {
-    return 'HomeBodyState.changeProductsView()';
+    return 'HomeBodyState.changeProductsView(isGridView: $isGridView)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ChangeProductsViewImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeProductsViewImpl &&
+            (identical(other.isGridView, isGridView) ||
+                other.isGridView == isGridView));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, isGridView);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeProductsViewImplCopyWith<_$ChangeProductsViewImpl> get copyWith =>
+      __$$ChangeProductsViewImplCopyWithImpl<_$ChangeProductsViewImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3408,18 +3545,19 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return changeProductsView();
+    return changeProductsView(isGridView);
   }
 
   @override
@@ -3434,18 +3572,18 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return changeProductsView?.call();
+    return changeProductsView?.call(isGridView);
   }
 
   @override
@@ -3460,20 +3598,20 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeProductsView != null) {
-      return changeProductsView();
+      return changeProductsView(isGridView);
     }
     return orElse();
   }
@@ -3564,7 +3702,16 @@ class _$ChangeProductsViewImpl implements ChangeProductsView {
 }
 
 abstract class ChangeProductsView implements HomeBodyState {
-  const factory ChangeProductsView() = _$ChangeProductsViewImpl;
+  const factory ChangeProductsView(final bool isGridView) =
+      _$ChangeProductsViewImpl;
+
+  bool get isGridView;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeProductsViewImplCopyWith<_$ChangeProductsViewImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3572,6 +3719,8 @@ abstract class _$$ChangeSortByImplCopyWith<$Res> {
   factory _$$ChangeSortByImplCopyWith(
           _$ChangeSortByImpl value, $Res Function(_$ChangeSortByImpl) then) =
       __$$ChangeSortByImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index});
 }
 
 /// @nodoc
@@ -3584,26 +3733,51 @@ class __$$ChangeSortByImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+  }) {
+    return _then(_$ChangeSortByImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ChangeSortByImpl implements ChangeSortBy {
-  const _$ChangeSortByImpl();
+  const _$ChangeSortByImpl(this.index);
+
+  @override
+  final int index;
 
   @override
   String toString() {
-    return 'HomeBodyState.changeSortBy()';
+    return 'HomeBodyState.changeSortBy(index: $index)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ChangeSortByImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeSortByImpl &&
+            (identical(other.index, index) || other.index == index));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, index);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeSortByImplCopyWith<_$ChangeSortByImpl> get copyWith =>
+      __$$ChangeSortByImplCopyWithImpl<_$ChangeSortByImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3617,18 +3791,19 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return changeSortBy();
+    return changeSortBy(index);
   }
 
   @override
@@ -3643,18 +3818,18 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return changeSortBy?.call();
+    return changeSortBy?.call(index);
   }
 
   @override
@@ -3669,20 +3844,20 @@ class _$ChangeSortByImpl implements ChangeSortBy {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (changeSortBy != null) {
-      return changeSortBy();
+      return changeSortBy(index);
     }
     return orElse();
   }
@@ -3773,7 +3948,15 @@ class _$ChangeSortByImpl implements ChangeSortBy {
 }
 
 abstract class ChangeSortBy implements HomeBodyState {
-  const factory ChangeSortBy() = _$ChangeSortByImpl;
+  const factory ChangeSortBy(final int index) = _$ChangeSortByImpl;
+
+  int get index;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ChangeSortByImplCopyWith<_$ChangeSortByImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3781,6 +3964,8 @@ abstract class _$$ShowSearchContainerImplCopyWith<$Res> {
   factory _$$ShowSearchContainerImplCopyWith(_$ShowSearchContainerImpl value,
           $Res Function(_$ShowSearchContainerImpl) then) =
       __$$ShowSearchContainerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool showSearchContainer});
 }
 
 /// @nodoc
@@ -3793,27 +3978,53 @@ class __$$ShowSearchContainerImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? showSearchContainer = null,
+  }) {
+    return _then(_$ShowSearchContainerImpl(
+      null == showSearchContainer
+          ? _value.showSearchContainer
+          : showSearchContainer // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$ShowSearchContainerImpl implements ShowSearchContainer {
-  const _$ShowSearchContainerImpl();
+  const _$ShowSearchContainerImpl(this.showSearchContainer);
+
+  @override
+  final bool showSearchContainer;
 
   @override
   String toString() {
-    return 'HomeBodyState.showSearchContainer()';
+    return 'HomeBodyState.showSearchContainer(showSearchContainer: $showSearchContainer)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShowSearchContainerImpl);
+            other is _$ShowSearchContainerImpl &&
+            (identical(other.showSearchContainer, showSearchContainer) ||
+                other.showSearchContainer == showSearchContainer));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, showSearchContainer);
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowSearchContainerImplCopyWith<_$ShowSearchContainerImpl> get copyWith =>
+      __$$ShowSearchContainerImplCopyWithImpl<_$ShowSearchContainerImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3827,18 +4038,19 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return showSearchContainer();
+    return showSearchContainer(this.showSearchContainer);
   }
 
   @override
@@ -3853,18 +4065,18 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return showSearchContainer?.call();
+    return showSearchContainer?.call(this.showSearchContainer);
   }
 
   @override
@@ -3879,20 +4091,20 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (showSearchContainer != null) {
-      return showSearchContainer();
+      return showSearchContainer(this.showSearchContainer);
     }
     return orElse();
   }
@@ -3983,7 +4195,16 @@ class _$ShowSearchContainerImpl implements ShowSearchContainer {
 }
 
 abstract class ShowSearchContainer implements HomeBodyState {
-  const factory ShowSearchContainer() = _$ShowSearchContainerImpl;
+  const factory ShowSearchContainer(final bool showSearchContainer) =
+      _$ShowSearchContainerImpl;
+
+  bool get showSearchContainer;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowSearchContainerImplCopyWith<_$ShowSearchContainerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3991,6 +4212,8 @@ abstract class _$$SearchProductsImplCopyWith<$Res> {
   factory _$$SearchProductsImplCopyWith(_$SearchProductsImpl value,
           $Res Function(_$SearchProductsImpl) then) =
       __$$SearchProductsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ProductModel> products});
 }
 
 /// @nodoc
@@ -4003,26 +4226,59 @@ class __$$SearchProductsImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeBodyState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? products = null,
+  }) {
+    return _then(_$SearchProductsImpl(
+      null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<ProductModel>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SearchProductsImpl implements SearchProducts {
-  const _$SearchProductsImpl();
+  const _$SearchProductsImpl(final List<ProductModel> products)
+      : _products = products;
+
+  final List<ProductModel> _products;
+  @override
+  List<ProductModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
 
   @override
   String toString() {
-    return 'HomeBodyState.searchProducts()';
+    return 'HomeBodyState.searchProducts(products: $products)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchProductsImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$SearchProductsImpl &&
+            const DeepCollectionEquality().equals(other._products, _products));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchProductsImplCopyWith<_$SearchProductsImpl> get copyWith =>
+      __$$SearchProductsImplCopyWithImpl<_$SearchProductsImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4036,18 +4292,19 @@ class _$SearchProductsImpl implements SearchProducts {
     required TResult Function() categoriesError,
     required TResult Function(int categoryId) changeCategoryId,
     required TResult Function() productsLoading,
-    required TResult Function() productsSuccess,
+    required TResult Function(List<ProductModel> products) productsSuccess,
     required TResult Function() productsError,
-    required TResult Function() changeFavoriteLoading,
+    required TResult Function(int productId, bool inFavorites)
+        changeFavoriteLoading,
     required TResult Function() changeFavoriteSuccess,
     required TResult Function() changeFavoriteError,
     required TResult Function() updateFavorites,
-    required TResult Function() changeProductsView,
-    required TResult Function() changeSortBy,
-    required TResult Function() showSearchContainer,
-    required TResult Function() searchProducts,
+    required TResult Function(bool isGridView) changeProductsView,
+    required TResult Function(int index) changeSortBy,
+    required TResult Function(bool showSearchContainer) showSearchContainer,
+    required TResult Function(List<ProductModel> products) searchProducts,
   }) {
-    return searchProducts();
+    return searchProducts(products);
   }
 
   @override
@@ -4062,18 +4319,18 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult? Function()? categoriesError,
     TResult? Function(int categoryId)? changeCategoryId,
     TResult? Function()? productsLoading,
-    TResult? Function()? productsSuccess,
+    TResult? Function(List<ProductModel> products)? productsSuccess,
     TResult? Function()? productsError,
-    TResult? Function()? changeFavoriteLoading,
+    TResult? Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult? Function()? changeFavoriteSuccess,
     TResult? Function()? changeFavoriteError,
     TResult? Function()? updateFavorites,
-    TResult? Function()? changeProductsView,
-    TResult? Function()? changeSortBy,
-    TResult? Function()? showSearchContainer,
-    TResult? Function()? searchProducts,
+    TResult? Function(bool isGridView)? changeProductsView,
+    TResult? Function(int index)? changeSortBy,
+    TResult? Function(bool showSearchContainer)? showSearchContainer,
+    TResult? Function(List<ProductModel> products)? searchProducts,
   }) {
-    return searchProducts?.call();
+    return searchProducts?.call(products);
   }
 
   @override
@@ -4088,20 +4345,20 @@ class _$SearchProductsImpl implements SearchProducts {
     TResult Function()? categoriesError,
     TResult Function(int categoryId)? changeCategoryId,
     TResult Function()? productsLoading,
-    TResult Function()? productsSuccess,
+    TResult Function(List<ProductModel> products)? productsSuccess,
     TResult Function()? productsError,
-    TResult Function()? changeFavoriteLoading,
+    TResult Function(int productId, bool inFavorites)? changeFavoriteLoading,
     TResult Function()? changeFavoriteSuccess,
     TResult Function()? changeFavoriteError,
     TResult Function()? updateFavorites,
-    TResult Function()? changeProductsView,
-    TResult Function()? changeSortBy,
-    TResult Function()? showSearchContainer,
-    TResult Function()? searchProducts,
+    TResult Function(bool isGridView)? changeProductsView,
+    TResult Function(int index)? changeSortBy,
+    TResult Function(bool showSearchContainer)? showSearchContainer,
+    TResult Function(List<ProductModel> products)? searchProducts,
     required TResult orElse(),
   }) {
     if (searchProducts != null) {
-      return searchProducts();
+      return searchProducts(products);
     }
     return orElse();
   }
@@ -4192,5 +4449,14 @@ class _$SearchProductsImpl implements SearchProducts {
 }
 
 abstract class SearchProducts implements HomeBodyState {
-  const factory SearchProducts() = _$SearchProductsImpl;
+  const factory SearchProducts(final List<ProductModel> products) =
+      _$SearchProductsImpl;
+
+  List<ProductModel> get products;
+
+  /// Create a copy of HomeBodyState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchProductsImplCopyWith<_$SearchProductsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
